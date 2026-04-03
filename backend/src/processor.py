@@ -1,7 +1,16 @@
-"""message = json.loads(message)
-                message_type = message['MessageType']
-                
-                if message_type == "PositionReport":
-                    ais_message = message['Message']['PositionReport']
-                    print(f"[{datetime.now(timezone.utc)}] ShipId: {ais_message['UserID']} Latitude: {ais_message['Latitude']} Longitude: {ais_message['Longitude']}")
-"""
+import asyncio
+import logging
+from plugins.MarineTraffic.processor import process_marine_traffic
+
+logger = logging.getLogger(__name__)
+
+
+async def process(queue: asyncio.Queue):
+    while True:
+        item = await queue.get()
+        logger.info(f"Got item from queue: source={item.get('source')}")
+
+        if item["source"] == "MarineTraffic":
+            await process_marine_traffic(item["data"])
+        
+        queue.task_done()

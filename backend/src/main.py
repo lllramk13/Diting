@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 import logging
-# from processor import process
+from processor import process
 
 from plugins.MarineTraffic.connection import connect_ais_stream
 
@@ -16,7 +16,7 @@ async def main(api_key):
     
     await asyncio.gather(
         connect_ais_stream(api_key["marine_traffic_api_key"], queue),
-        # process(queue),
+        process(queue),
     )
 
 
