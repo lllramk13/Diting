@@ -146,8 +146,8 @@ class SarAircraftPositionModel(BaseModel):
     
     latitude: float = Field(alias="Latitude")
     longitude: float = Field(alias="Longitude")
-    sog: float = Field(alias="SOG")
-    cog: float = Field(alias="COG")
+    sog: float = Field(alias="Sog")
+    cog: float = Field(alias="Cog")
     
     altitude: int = Field(alias="Altitude")
     alt_from_baro: bool = Field(alias="AltFromBaro")

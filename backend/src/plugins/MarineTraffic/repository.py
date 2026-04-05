@@ -142,6 +142,13 @@ async def save_aid_to_navigation(pool: asyncpg.Pool, aton: AidToNavigationModel)
     sql = """
         INSERT INTO aids_to_navigation (mmsi, name, location, aton_type, is_virtual, is_off_position)
         VALUES ($1, $2, ST_SetSRID(ST_MakePoint($4, $3), 4326), $5, $6, $7)
+        ON CONFLICT (mmsi) DO UPDATE SET
+            name = EXCLUDED.name,
+            location = EXCLUDED.location,
+            aton_type = EXCLUDED.aton_type,
+            is_virtual = EXCLUDED.is_virtual,
+            is_off_position = EXCLUDED.is_off_position,
+            last_updated = CURRENT_TIMESTAMP;
         """
     try:
         async with pool.acquire() as connection:
@@ -175,3 +182,26 @@ async def save_base_station(pool: asyncpg.Pool, station: BaseStationModel):
             logger.info(f"Saved base station for MMSI {station.mmsi}")
     except Exception as e:
         logger.error(f"Error saving base station for MMSI {station.mmsi}: {type(e).__name__}: {e}")
+
+
+async def get_ship(pool: asyncpg.Pool, mmsi: int) -> ShipModel:
+    sql = "SELECT * FROM ships WHERE mmsi = $1"
+    try:
+        async with pool.acquire() as connection:
+            row = await connection.fetchrow(sql, mmsi)
+            if row:
+                return ShipModel(
+                    mmsi=row["mmsi"],
+                    name=row["name"],
+                    imo=row["imo"],
+                    call_sign=row["call_sign"],
+                    ship_type=row["ship_type"],
+                    dimension_to_bow=row["dimension_to_bow"],
+                    dimension_to_stern=row["dimension_to_stern"],
+                    dimension_to_port=row["dimension_to_port"],
+                    dimension_to_starboard=row["dimension_to_starboard"],
+                    max_draught=row["max_draught"]
+                )
+    except Exception as e:
+        logger.error(f"Error fetching ship data for MMSI {mmsi}: {type(e).__name__}: {e}")
+    return None
