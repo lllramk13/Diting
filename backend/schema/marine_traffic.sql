@@ -3,7 +3,7 @@ CREATE EXTENSION pg_partman;
 
 CREATE TABLE IF NOT EXISTS ships (
     mmsi INTEGER PRIMARY KEY,              -- 船只唯一标识
-    imo_number INTEGER,                    -- 船舶终身识别码
+    imo INTEGER,                           -- 船舶终身识别码
     name VARCHAR(128),                     -- 船名
     call_sign VARCHAR(32),                 -- 呼号
     ship_type SMALLINT,                    -- 船舶类型代码
@@ -125,6 +125,6 @@ CREATE INDEX IF NOT EXISTS idx_alerts_unresolved ON marine_alerts (is_resolved) 
 SELECT partman.create_parent(
     p_parent_table => 'public.ship_positions',
     p_control      => 'timestamp',
-    p_interval     => 'monthly',
+    p_interval     => '1 month',
     p_premake      => 2
 );

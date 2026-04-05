@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, model_validator, ConfigDict, ValidationError
+from pydantic import BaseModel, Field, model_validator, ConfigDict, computed_field
 from typing import Any
 from typing import Optional
 from datetime import datetime, timezone
@@ -13,9 +13,6 @@ class ShipModel(BaseModel):
     dimension_to_stern: Optional[int] = None
     dimension_to_port: Optional[int] = None
     dimension_to_starboard: Optional[int] = None
-
-    length = dimension_to_starboard + dimension_to_port
-    width = dimension_to_bow + dimension_to_stern
 
     call_sign: Optional[str] = None
     ship_type: Optional[int] = None
@@ -34,6 +31,20 @@ class ShipModel(BaseModel):
                 data["dimension_to_port"] = dim.get("C")
                 data["dimension_to_starboard"] = dim.get("D")
         return data
+    
+    @computed_field
+    @property
+    def length(self) -> Optional[int]:
+        if self.dimension_to_bow is not None and self.dimension_to_stern is not None:
+            return self.dimension_to_bow + self.dimension_to_stern
+        return None
+
+    @computed_field
+    @property
+    def width(self) -> Optional[int]:
+        if self.dimension_to_port is not None and self.dimension_to_starboard is not None:
+            return self.dimension_to_port + self.dimension_to_starboard
+        return None
     
 
 class SarAircraftModel(BaseModel):

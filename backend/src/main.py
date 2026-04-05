@@ -14,7 +14,7 @@ import asyncpg
 
 async def main(api_key):
     queue = asyncio.Queue()
-    db_pool = await asyncpg.create_pool("postgresql://postgres:lmx513@localhost:5432/diting")
+    db_pool = await asyncpg.create_pool("postgresql://mark:lmx513@/diting")
     
     await asyncio.gather(
         connect_ais_stream(api_key["marine_traffic_api_key"], queue),
