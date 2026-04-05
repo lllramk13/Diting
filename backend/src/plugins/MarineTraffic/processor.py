@@ -20,7 +20,7 @@ MARINE_ROUTER = {
 }
 
 
-async def process_marine_traffic(data: dict):
+async def process_marine_traffic(data: dict, db_pool):
     message_type = data.get("MessageType")
     ModelClass = MARINE_ROUTER.get(message_type)        
 
@@ -33,19 +33,19 @@ async def process_marine_traffic(data: dict):
                 logger.info(f"Parsed {model.__name__}: MMSI {parsed.mmsi}")
 
                 if model == ShipModel:
-                    await save_ship(parsed)
+                    await save_ship(db_pool, parsed)
                 elif model == VoyageModel:
-                    await save_voyage(parsed)
+                    await save_voyage(db_pool, parsed)
                 elif model == ShipPositionModel:
-                    await save_ship_position(parsed)
+                    await save_ship_position(db_pool, parsed)
                 elif model == SarAircraftPositionModel:
-                    await save_sar_aircraft_position(parsed)
+                    await save_sar_aircraft_position(db_pool, parsed)
                 elif model == MarineAlertModel:
-                    await save_marine_alert(parsed)
+                    await save_marine_alert(db_pool, parsed)
                 elif model == AidToNavigationModel:
-                    await save_aid_to_navigation(parsed)
+                    await save_aid_to_navigation(db_pool, parsed)
                 elif model == BaseStationModel:
-                    await save_base_station(parsed)
+                    await save_base_station(db_pool, parsed)
 
         except ValidationError as e:
             logger.error(f"Dirty data: {e}")

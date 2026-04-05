@@ -14,6 +14,9 @@ class ShipModel(BaseModel):
     dimension_to_port: Optional[int] = None
     dimension_to_starboard: Optional[int] = None
 
+    length = dimension_to_starboard + dimension_to_port
+    width = dimension_to_bow + dimension_to_stern
+
     call_sign: Optional[str] = None
     ship_type: Optional[int] = None
     max_draught: Optional[float] = None
@@ -40,7 +43,7 @@ class SarAircraftModel(BaseModel):
 
 
 class AidToNavigationModel(BaseModel):
-    mmsi: int
+    mmsi: int = Field(alias="UserID")
     name: Optional[str] = None
     aton_type: Optional[int] = None
     latitude: Optional[float] = None

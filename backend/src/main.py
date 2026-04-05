@@ -9,14 +9,16 @@ import logging
 from processor import process
 
 from plugins.MarineTraffic.connection import connect_ais_stream
+import asyncpg
 
 
 async def main(api_key):
     queue = asyncio.Queue()
+    db_pool = await asyncpg.create_pool("postgresql://postgres:lmx513@localhost:5432/diting")
     
     await asyncio.gather(
         connect_ais_stream(api_key["marine_traffic_api_key"], queue),
-        process(queue),
+        process(queue, db_pool),
     )
 
 
