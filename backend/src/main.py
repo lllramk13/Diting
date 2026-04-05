@@ -14,7 +14,14 @@ import asyncpg
 
 async def main(api_key):
     queue = asyncio.Queue()
-    db_pool = await asyncpg.create_pool("postgresql://mark:lmx513@/diting")
+    db_pool = await asyncpg.create_pool("postgresql://{}:{}@{}:{}/{}".format(
+        api_key["db_user"],
+        api_key["db_password"],
+        api_key["db_host"],
+        api_key["db_port"],
+        api_key["db_name"]
+    ))
+    # do postgres://postgres:password@localhost:5432/diting for local testing
     
     await asyncio.gather(
         connect_ais_stream(api_key["marine_traffic_api_key"], queue),
@@ -34,6 +41,11 @@ if __name__ == "__main__":
     load_dotenv(dotenv_path=env_path)
     config = {
         "marine_traffic_api_key": os.getenv("MARINE_TRAFFIC_API_KEY"),
+        "db_host": os.getenv("DB_HOST"),
+        "db_port": os.getenv("DB_PORT"),
+        "db_name": os.getenv("DB_NAME"),
+        "db_user": os.getenv("DB_USER"),
+        "db_password": os.getenv("DB_PASSWORD"),
     }
 
     missing = [k for k, v in config.items() if not v]
