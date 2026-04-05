@@ -15,11 +15,23 @@ logger = logging.getLogger(__name__)
 
 async def save_ship(pool: asyncpg.Pool, ship: ShipModel):
     sql = """
-        INSERT INTO  ships (mmsi, name, imo, callsign, ship_type, 
-                            dimension_to_bow, dimension_to_stern,
-                            dimension_to_port, dimension_to_starboard,
-                            draught)
+        INSERT INTO ships (
+            mmsi, name, imo, call_sign, ship_type, 
+            dimension_to_bow, dimension_to_stern, 
+            dimension_to_port, dimension_to_starboard, max_draught
+        )
         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+        ON CONFLICT (mmsi) DO UPDATE SET
+            name = EXCLUDED.name,
+            imo = EXCLUDED.imo,
+            call_sign = EXCLUDED.call_sign,
+            ship_type = EXCLUDED.ship_type,
+            dimension_to_bow = EXCLUDED.dimension_to_bow,
+            dimension_to_stern = EXCLUDED.dimension_to_stern,
+            dimension_to_port = EXCLUDED.dimension_to_port,
+            dimension_to_starboard = EXCLUDED.dimension_to_starboard,
+            max_draught = EXCLUDED.max_draught,
+            last_updated = CURRENT_TIMESTAMP;
         """
     try:
         async with pool.acquire() as connection:
@@ -41,15 +53,22 @@ async def save_ship(pool: asyncpg.Pool, ship: ShipModel):
 
 async def save_voyage(pool: asyncpg.Pool, voyage: VoyageModel):
     sql = """
-        INSERT INTO voyage (mmsi, destination, eta)
-        VALUES ($1, $2, $3)
+        INSERT INTO voyage (mmsi, destination, eta, draught, is_active)
+        VALUES ($1, $2, $3, $4, TRUE)
+        ON CONFLICT (mmsi) WHERE (is_active = TRUE) 
+        DO UPDATE SET 
+            destination = EXCLUDED.destination,
+            eta = EXCLUDED.eta,
+            draught = EXCLUDED.draught,
+            last_updated = CURRENT_TIMESTAMP;
         """
     try:
         async with pool.acquire() as connection:
             await connection.execute(sql, 
                                      voyage.mmsi,
                                      voyage.destination,
-                                     voyage.eta)
+                                     voyage.eta,
+                                     voyage.draught)
             logger.info(f"Saved voyage data for MMSI {voyage.mmsi}")
     except Exception as e:
         logger.error(f"Error saving voyage data for MMSI {voyage.mmsi}: {type(e).__name__}: {e}")
@@ -121,7 +140,7 @@ async def save_marine_alert(pool: asyncpg.Pool, alert: MarineAlertModel):
 
 async def save_aid_to_navigation(pool: asyncpg.Pool, aton: AidToNavigationModel):
     sql = """
-        INSERT INTO aids_to_navigation (mmsi, name, location, aton_type, status, timestamp)
+        INSERT INTO aids_to_navigation (mmsi, name, location, aton_type, is_virtual, is_off_position)
         VALUES ($1, $2, ST_SetSRID(ST_MakePoint($4, $3), 4326), $5, $6, $7)
         """
     try:
@@ -143,6 +162,9 @@ async def save_base_station(pool: asyncpg.Pool, station: BaseStationModel):
     sql = """
         INSERT INTO base_stations (mmsi, location)
         VALUES ($1, ST_SetSRID(ST_MakePoint($3, $2), 4326))
+        ON CONFLICT (mmsi) DO UPDATE SET
+            location = EXCLUDED.location,
+            last_updated = CURRENT_TIMESTAMP;
         """
     try:
         async with pool.acquire() as connection:

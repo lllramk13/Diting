@@ -122,6 +122,10 @@ CREATE TABLE IF NOT EXISTS marine_alerts (
 CREATE INDEX IF NOT EXISTS idx_alerts_location ON marine_alerts USING GIST (location);
 CREATE INDEX IF NOT EXISTS idx_alerts_unresolved ON marine_alerts (is_resolved) WHERE is_resolved = FALSE;
 
+CREATE UNIQUE INDEX IF NOT EXISTS idx_active_voyage_unique 
+ON voyage (mmsi) 
+WHERE (is_active = TRUE);
+
 SELECT partman.create_parent(
     p_parent_table => 'public.ship_positions',
     p_control      => 'timestamp',

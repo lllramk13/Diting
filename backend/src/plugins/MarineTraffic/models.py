@@ -48,19 +48,23 @@ class ShipModel(BaseModel):
     
 
 class SarAircraftModel(BaseModel):
-    mmsi: int
-    name: Optional[str] = None
+    mmsi: int = Field(alias="UserID")
+    name: Optional[str] = Field(None, alias="Name")
     equipment_type: Optional[int] = None
+
+    model_config = ConfigDict(populate_by_name=True)
 
 
 class AidToNavigationModel(BaseModel):
     mmsi: int = Field(alias="UserID")
-    name: Optional[str] = None
+    name: Optional[str] = Field(None, alias="Name")
     aton_type: Optional[int] = None
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
+    latitude: Optional[float] = Field(None, alias="Latitude")
+    longitude: Optional[float] = Field(None, alias="Longitude")
     is_virtual: Optional[bool] = None
     is_off_position: Optional[bool] = None
+
+    model_config = ConfigDict(populate_by_name=True)
 
 
 class VoyageModel(BaseModel):
@@ -101,20 +105,24 @@ class VoyageModel(BaseModel):
 
 
 class BaseStationModel(BaseModel):
-    mmsi: int
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
+    mmsi: int = Field(alias="UserID")
+    latitude: Optional[float] = Field(alias="Latitude")
+    longitude: Optional[float] = Field(alias="Longitude")
+
+    model_config = ConfigDict(populate_by_name=True)
 
 
 class MarineAlertModel(BaseModel):
-    mmsi: int
+    mmsi: int = Field(alias="UserID")
     entity_type: Optional[str] = None
     alert_type: Optional[str] = None
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
+    latitude: Optional[float] = Field(alias="Latitude")
+    longitude: Optional[float] = Field(alias="Longitude")
     alert_text: Optional[str] = None
     timestamp: Optional[datetime] = None
     is_resolved: Optional[bool] = None
+
+    model_config = ConfigDict(populate_by_name=True)
 
 
 class ShipPositionModel(BaseModel):
@@ -134,11 +142,16 @@ class ShipPositionModel(BaseModel):
 
 
 class SarAircraftPositionModel(BaseModel):
-    mmsi: int
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
-    altitude: Optional[int] = None
-    alt_from_baro: Optional[bool] = None
-    sog: Optional[float] = None
-    cog: Optional[float] = None
-    timestamp: Optional[datetime] = None
+    mmsi: int = Field(alias="UserID")
+    
+    latitude: float = Field(alias="Latitude")
+    longitude: float = Field(alias="Longitude")
+    sog: float = Field(alias="SOG")
+    cog: float = Field(alias="COG")
+    
+    altitude: int = Field(alias="Altitude")
+    alt_from_baro: bool = Field(alias="AltFromBaro")
+    
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+
+    model_config = ConfigDict(populate_by_name=True)

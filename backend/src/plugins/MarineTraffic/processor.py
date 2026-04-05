@@ -29,7 +29,6 @@ async def process_marine_traffic(data: dict, db_pool):
             payload = data["Message"][message_type]
             for model in ModelClass:
                 parsed = model(**payload)
-                print(parsed)
                 logger.info(f"Parsed {model.__name__}: MMSI {parsed.mmsi}")
 
                 if model == ShipModel:
