@@ -14,14 +14,15 @@ import asyncpg
 
 async def main(api_key):
     queue = asyncio.Queue()
-    db_pool = await asyncpg.create_pool("postgresql://{}:{}@{}:{}/{}".format(
+    db_pool = await asyncpg.create_pool("postgresql://{}:{}@/{}".format(
         api_key["db_user"],
         api_key["db_password"],
-        api_key["db_host"],
-        api_key["db_port"],
+        # api_key["db_host"],
+        # api_key["db_port"],
         api_key["db_name"]
     ))
-    # do postgres://postgres:password@localhost:5432/diting for local testing
+    # postgresql://{}:{}@{}:{}/{} for win testing
+
     
     await asyncio.gather(
         connect_ais_stream(api_key["marine_traffic_api_key"], queue),
