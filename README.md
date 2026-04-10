@@ -2,6 +2,7 @@
 ## API finder
 https://github.com/marcelscruz/public-apis
 https://eonet.gsfc.nasa.gov
+https://data.chain.link/streams/btc-usd-cexprice-streams
 ## Marin Traffic Tracking: 
 AISSTREAM.IO 
 DOC: https://aisstream.io/documentation
