@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home/Home";
-import P2IS from "./pages/P2IS";
+import P2IS from "./pages/P2IS/P2IS";
 
 function App() {
     return (
