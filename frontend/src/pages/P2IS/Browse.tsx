@@ -21,6 +21,7 @@ type UserSession = { id: string } | null
 export default function Browse() {
   const [publicSets, setPublicSets] = useState<SetRow[]>([])
   const [mySets, setMySets] = useState<SetRow[]>([])
+  const [mergedCount, setMergedCount] = useState(0)
   const [user, setUser] = useState<UserSession>(null)
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
@@ -37,6 +38,12 @@ export default function Browse() {
           .neq('is_official', true)
           .order('created_at', { ascending: false })
           .then(({ data: mine }) => setMySets((mine as SetRow[]) ?? []))
+        supabase
+          .from('merge_requests')
+          .select('id', { count: 'exact' })
+          .eq('user_id', uid)
+          .eq('status', 'merged')
+          .then(({ count }) => setMergedCount(count ?? 0))
       }
     })
     supabase
@@ -87,7 +94,14 @@ export default function Browse() {
 
         {user && mySets.length > 0 && (
           <section className="browse-section">
-            <h2 className="section-title">我的译文集</h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+              <h2 className="section-title" style={{ marginBottom: 0 }}>我的译文集</h2>
+              {mergedCount > 0 && (
+                <span style={{ fontSize: 12, padding: '2px 10px', background: 'rgba(80,200,120,0.12)', border: '1px solid rgba(80,200,120,0.25)', borderRadius: 20, color: '#6ee7a0' }}>
+                  ✓ {mergedCount} 次采纳
+                </span>
+              )}
+            </div>
             <div className="sets-grid">
               {mySets.map(s => (
                 <div className="set-card" key={s.id}>

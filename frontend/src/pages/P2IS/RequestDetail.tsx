@@ -8,6 +8,7 @@ import './P2IS.css'
 
 type SourceRow = { id: string; jp: string; zh: string }
 type DiffEntry = { string_id: string; content: string; jp: string; original_zh: string }
+type MRComment = { id: string; user_id: string; body: string; created_at: string; username: string }
 
 export default function RequestDetail() {
   const { requestId } = useParams<{ requestId: string }>()
@@ -27,6 +28,9 @@ export default function RequestDetail() {
   const [loading, setLoading] = useState(true)
   const [showPRModal, setShowPRModal] = useState(false)
   const [merging, setMerging] = useState(false)
+  const [comments, setComments] = useState<MRComment[]>([])
+  const [commentBody, setCommentBody] = useState('')
+  const [submittingComment, setSubmittingComment] = useState(false)
 
   useEffect(() => {
     async function load() {
@@ -89,6 +93,17 @@ export default function RequestDetail() {
         const mine = votes?.find((v: { user_id: string; vote: number }) => v.user_id === uid)
         setMyVote(mine?.vote ?? 0)
       }
+      // comments
+      const { data: commentRows } = await supabase
+        .from('merge_request_comments')
+        .select('id, user_id, body, created_at, profiles(username)')
+        .eq('request_id', requestId)
+        .order('created_at')
+      setComments((commentRows ?? []).map((c: { id: string; user_id: string; body: string; created_at: string; profiles: { username: string } | null }) => ({
+        id: c.id, user_id: c.user_id, body: c.body, created_at: c.created_at,
+        username: c.profiles?.username ?? '未知用户',
+      })))
+
       setLoading(false)
     }
     load()
@@ -130,6 +145,27 @@ export default function RequestDetail() {
     if (!request || !isOwner) return
     await supabase.from('merge_requests').update({ status: 'rejected' }).eq('id', request.id)
     setRequest(r => r ? { ...r, status: 'rejected' } : r)
+  }
+
+  async function submitComment() {
+    if (!user || !commentBody.trim() || !requestId) return
+    setSubmittingComment(true)
+    const { data, error } = await supabase
+      .from('merge_request_comments')
+      .insert({ request_id: requestId, user_id: user.id, body: commentBody.trim() })
+      .select('id, user_id, body, created_at, profiles(username)')
+      .single()
+    if (error) { alert('发送失败：' + error.message); setSubmittingComment(false); return }
+    const c = data as { id: string; user_id: string; body: string; created_at: string; profiles: { username: string } | null }
+    setComments(prev => [...prev, { id: c.id, user_id: c.user_id, body: c.body, created_at: c.created_at, username: c.profiles?.username ?? '未知用户' }])
+    setCommentBody('')
+    setSubmittingComment(false)
+  }
+
+  async function deleteComment(id: string, commentUserId: string) {
+    if (!user || (user.id !== commentUserId && !isOwner)) return
+    await supabase.from('merge_request_comments').delete().eq('id', id)
+    setComments(prev => prev.filter(c => c.id !== id))
   }
 
   async function deleteRequest() {
@@ -212,6 +248,43 @@ export default function RequestDetail() {
             <button className="btn-ghost" style={{ color: '#f87171' }} onClick={deleteRequest}>删除请求</button>
           </div>
         )}
+
+        <section className="browse-section" style={{ marginTop: 32 }}>
+          <h2 className="section-title">留言 {comments.length > 0 ? `· ${comments.length}` : ''}</h2>
+          <div className="issue-comments">
+            {comments.map(c => (
+              <div key={c.id} className="issue-comment">
+                <div className="comment-meta">
+                  <span className="comment-author">{c.username}</span>
+                  <span className="muted">{new Date(c.created_at).toLocaleDateString('zh-CN')}</span>
+                  {(user?.id === c.user_id || isOwner) && (
+                    <button className="btn-ghost" style={{ fontSize: 11, padding: '2px 8px', color: '#f87171', marginLeft: 'auto' }} onClick={() => deleteComment(c.id, c.user_id)}>删除</button>
+                  )}
+                </div>
+                <div className="comment-body">{c.body}</div>
+              </div>
+            ))}
+            {comments.length === 0 && <p className="muted">暂无留言。</p>}
+          </div>
+          {user && (
+            <div className="comment-form" style={{ marginTop: 16 }}>
+              <textarea
+                className="entry-input"
+                rows={3}
+                placeholder="留下评论…"
+                value={commentBody}
+                onChange={e => setCommentBody(e.target.value)}
+                style={{ width: '100%', resize: 'vertical' }}
+              />
+              <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
+                <button className="btn-primary" onClick={submitComment} disabled={submittingComment || !commentBody.trim()}>
+                  {submittingComment ? '发送中…' : '发送'}
+                </button>
+              </div>
+            </div>
+          )}
+          {!user && <p className="muted" style={{ marginTop: 12 }}>登录后可留言。</p>}
+        </section>
       </div>
 
       {showPRModal && (
