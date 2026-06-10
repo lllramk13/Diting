@@ -1395,3 +1395,17 @@ button.btn-ghost:hover { background: rgba(255,255,255,0.1); }
 .glossary-panel-row:hover {
   background: rgba(255,255,255,0.06);
 }
+
+/* ===== Entry length hint ===== */
+.entry-len-hint {
+  font-size: 11px;
+  color: rgba(200,220,255,0.35);
+  text-align: right;
+  margin-top: 2px;
+}
+.entry-len-hint.over {
+  color: #f87171;
+}
+.entry-input-over {
+  border-color: rgba(248,113,113,0.5) !important;
+}
