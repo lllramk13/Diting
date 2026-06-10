@@ -1312,10 +1312,10 @@ button.btn-ghost:hover { background: rgba(255,255,255,0.1); }
 .set-source-tag {
   font-size: 11px;
   padding: 2px 8px;
-  background: rgba(80,128,255,0.1);
-  border: 1px solid rgba(80,128,255,0.2);
+  background: rgba(80,128,255,0.15);
+  border: 1px solid rgba(80,128,255,0.35);
   border-radius: 4px;
-  color: rgba(80,128,255,0.8);
+  color: #93b4ff;
   font-family: monospace;
 }
 /* ===== Glossary ===== */
