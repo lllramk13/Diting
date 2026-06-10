@@ -86,6 +86,20 @@ export default function Announce() {
                   <p>点击"提交修改请求"，填写标题和说明。社区成员可以对你的请求投票，管理员审核后合并到主集。</p>
                 </div>
               </li>
+              <li>
+                <span className="step-num">6</span>
+                <div>
+                  <strong>参与讨论</strong>
+                  <p>在问题区分享你的翻译经验，提出问题或建议。</p>
+                </div>
+              </li>
+              <li>
+                <span className="step-num">7</span>
+                <div>
+                  <strong>答谢</strong>
+                  <p>所有被采用翻译的译者未来会被放到游戏中的贡献名单中，感谢你们的付出！</p>
+                </div>
+              </li>
             </ol>
           </section>
 
