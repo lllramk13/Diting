@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import { getIsAdmin } from '../../lib/admin'
 import TopNav from '../Home/TopNav'
@@ -18,7 +17,6 @@ type GlossaryEntry = {
 const CATEGORIES = ['人名', '地名', '技能', '道具', '其他']
 
 export default function Glossary() {
-  const navigate = useNavigate()
   const [entries, setEntries] = useState<GlossaryEntry[]>([])
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(true)
