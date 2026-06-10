@@ -56,7 +56,7 @@ function EntryRow({
 }
 
 function EditorTips() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
   return (
     <div className="editor-tips">
       <button className="tips-toggle" onClick={() => setOpen(o => !o)}>
