@@ -14,7 +14,9 @@ type GlossaryEntry = {
   created_at: string
 }
 
-const CATEGORIES = ['人名', '地名', '技能', '道具', '其他']
+type EditState = { jp: string; zh: string; category: string; note: string }
+
+const CATEGORIES = ['人名', '地名', '技能', '道具', 'Arcana', '系统', '其他']
 
 export default function Glossary() {
   const [entries, setEntries] = useState<GlossaryEntry[]>([])
@@ -24,6 +26,8 @@ export default function Glossary() {
   const [showForm, setShowForm] = useState(false)
   const [form, setForm] = useState({ jp: '', zh: '', category: '', note: '' })
   const [saving, setSaving] = useState(false)
+  const [editingId, setEditingId] = useState<string | null>(null)
+  const [editState, setEditState] = useState<EditState>({ jp: '', zh: '', category: '', note: '' })
 
   useEffect(() => {
     supabase.auth.getUser().then(async ({ data }) => {
@@ -52,6 +56,28 @@ export default function Glossary() {
     setShowForm(false)
     setSaving(false)
     load()
+  }
+
+  function startEdit(e: GlossaryEntry) {
+    setEditingId(e.id)
+    setEditState({ jp: e.jp, zh: e.zh, category: e.category ?? '', note: e.note ?? '' })
+  }
+
+  async function saveEdit(id: string) {
+    setSaving(true)
+    const { error } = await supabase.from('glossary').update({
+      jp: editState.jp.trim(),
+      zh: editState.zh.trim(),
+      category: editState.category || null,
+      note: editState.note.trim() || null,
+    }).eq('id', id)
+    if (error) { alert('保存失败：' + error.message); setSaving(false); return }
+    setEntries(prev => prev.map(e => e.id === id
+      ? { ...e, jp: editState.jp.trim(), zh: editState.zh.trim(), category: editState.category || null, note: editState.note.trim() || null }
+      : e
+    ))
+    setEditingId(null)
+    setSaving(false)
   }
 
   async function remove(id: string) {
@@ -115,14 +141,31 @@ export default function Glossary() {
             <span>备注</span>
             {isAdmin && <span></span>}
           </div>
-          {filtered.map(e => (
+          {filtered.map(e => editingId === e.id ? (
+            <div key={e.id} className="glossary-row glossary-row-editing">
+              <input className="form-input" value={editState.jp} onChange={ev => setEditState(s => ({ ...s, jp: ev.target.value }))} />
+              <input className="form-input" value={editState.zh} onChange={ev => setEditState(s => ({ ...s, zh: ev.target.value }))} />
+              <select className="form-input" value={editState.category} onChange={ev => setEditState(s => ({ ...s, category: ev.target.value }))}>
+                <option value="">—</option>
+                {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+              </select>
+              <input className="form-input" value={editState.note} onChange={ev => setEditState(s => ({ ...s, note: ev.target.value }))} placeholder="备注" />
+              <div style={{ display: 'flex', gap: 4 }}>
+                <button className="btn-primary" style={{ fontSize: 12 }} onClick={() => saveEdit(e.id)} disabled={saving}>保存</button>
+                <button className="btn-ghost" style={{ fontSize: 12 }} onClick={() => setEditingId(null)}>取消</button>
+              </div>
+            </div>
+          ) : (
             <div key={e.id} className="glossary-row">
               <span className="glossary-jp">{e.jp}</span>
               <span className="glossary-zh">{e.zh}</span>
               <span>{e.category ? <span className="set-source-tag">{e.category}</span> : <span className="muted">—</span>}</span>
               <span className="muted">{e.note ?? '—'}</span>
               {isAdmin && (
-                <button className="btn-ghost" style={{ color: '#f87171', fontSize: 12 }} onClick={() => remove(e.id)}>删除</button>
+                <div style={{ display: 'flex', gap: 4 }}>
+                  <button className="btn-ghost" style={{ fontSize: 12 }} onClick={() => startEdit(e)}>编辑</button>
+                  <button className="btn-ghost" style={{ color: '#f87171', fontSize: 12 }} onClick={() => remove(e.id)}>删除</button>
+                </div>
               )}
             </div>
           ))}
