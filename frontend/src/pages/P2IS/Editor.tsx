@@ -22,12 +22,15 @@ function EntryRow({
   readonly,
   value,
   onChange,
+  warnLength,
 }: {
   row: SourceRow
   readonly: boolean
   value: string
   onChange: (id: string, val: string) => void
+  warnLength: boolean
 }) {
+  const over = warnLength && value.length > row.jp.length
   return (
     <div className="entry-row">
       <div className="entry-content">
@@ -39,12 +42,19 @@ function EntryRow({
         <div className="entry-ja">{row.jp}</div>
         <div className="entry-ds">{row.zh}</div>
         {!readonly ? (
-          <textarea
-            className="entry-input"
-            value={value}
-            placeholder="在此输入你的译文…"
-            onChange={e => onChange(row.id, e.target.value)}
-          />
+          <>
+            <textarea
+              className={`entry-input${over ? ' entry-input-over' : ''}`}
+              value={value}
+              placeholder="在此输入你的译文…"
+              onChange={e => onChange(row.id, e.target.value)}
+            />
+            {warnLength && value.length > 0 && (
+              <div className={`entry-len-hint${over ? ' over' : ''}`}>
+                {value.length} / {row.jp.length}{over ? ' ⚠ 超出原文长度' : ''}
+              </div>
+            )}
+          </>
         ) : (
           <div className="entry-user">
             {value || <span className="muted">(未翻译)</span>}
@@ -211,6 +221,7 @@ export default function Editor() {
   const [showPR, setShowPR] = useState(false)
   const [prTitle, setPrTitle] = useState('')
   const [prDesc, setPrDesc] = useState('')
+  const [isScript, setIsScript] = useState(false)
   const [search, setSearch] = useState('')
   const [page, setPage] = useState(0)
 
@@ -225,6 +236,7 @@ export default function Editor() {
       setTitle(setData.title)
       setIsPublic(setData.is_public)
       setReadonly(setData.user_id !== uid)
+      setIsScript((setData.source_file ?? '').startsWith('script'))
 
       if (setData.forked_from) {
         setForkedFromId(setData.forked_from)
@@ -368,6 +380,7 @@ export default function Editor() {
               readonly={readonly}
               value={entries[row.id]?.content ?? ''}
               onChange={handleChange}
+              warnLength={!isScript}
             />
           ))}
         </div>
