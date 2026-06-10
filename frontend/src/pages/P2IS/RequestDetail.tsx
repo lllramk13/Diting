@@ -99,9 +99,9 @@ export default function RequestDetail() {
         .select('id, user_id, body, created_at, profiles(username)')
         .eq('request_id', requestId)
         .order('created_at')
-      setComments((commentRows ?? []).map((c: { id: string; user_id: string; body: string; created_at: string; profiles: { username: string } | null }) => ({
+      setComments((commentRows ?? []).map((c: { id: string; user_id: string; body: string; created_at: string; profiles: { username: string }[] | null }) => ({
         id: c.id, user_id: c.user_id, body: c.body, created_at: c.created_at,
-        username: c.profiles?.username ?? '未知用户',
+        username: (Array.isArray(c.profiles) ? c.profiles[0]?.username : (c.profiles as { username: string } | null)?.username) ?? '未知用户',
       })))
 
       setLoading(false)
@@ -156,8 +156,9 @@ export default function RequestDetail() {
       .select('id, user_id, body, created_at, profiles(username)')
       .single()
     if (error) { alert('发送失败：' + error.message); setSubmittingComment(false); return }
-    const c = data as { id: string; user_id: string; body: string; created_at: string; profiles: { username: string } | null }
-    setComments(prev => [...prev, { id: c.id, user_id: c.user_id, body: c.body, created_at: c.created_at, username: c.profiles?.username ?? '未知用户' }])
+    const c = data as { id: string; user_id: string; body: string; created_at: string; profiles: { username: string }[] | null }
+    const username = (Array.isArray(c.profiles) ? c.profiles[0]?.username : (c.profiles as { username: string } | null)?.username) ?? '未知用户'
+    setComments(prev => [...prev, { id: c.id, user_id: c.user_id, body: c.body, created_at: c.created_at, username }])
     setCommentBody('')
     setSubmittingComment(false)
   }
