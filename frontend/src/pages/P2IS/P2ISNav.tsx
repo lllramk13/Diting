@@ -10,6 +10,7 @@ const links = [
   { label: '搜索', path: '/game/psx/p2is/search' },
   { label: '合并请求', path: '/game/psx/p2is/requests' },
   { label: '问题', path: '/game/psx/p2is/issues' },
+  { label: '术语表', path: '/game/psx/p2is/glossary' },
 ]
 
 export default function P2ISNav() {

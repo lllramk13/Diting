@@ -10,6 +10,7 @@ import Search from './pages/P2IS/Search'
 import Requests from './pages/P2IS/Requests'
 import RequestDetail from './pages/P2IS/RequestDetail'
 import Announce from './pages/P2IS/Announce'
+import Glossary from './pages/P2IS/Glossary'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/game/psx/p2is/announce" element={<Announce />} />
       <Route path="/game/psx/p2is/issues" element={<Issues />} />
       <Route path="/game/psx/p2is/issues/:issueId" element={<IssuesDetail/>} />
+      <Route path="/game/psx/p2is/glossary" element={<Glossary />} />
       <Route path="/auth" element={<Auth />} />
     </Routes>
   )

@@ -1318,3 +1318,80 @@ button.btn-ghost:hover { background: rgba(255,255,255,0.1); }
   color: rgba(80,128,255,0.8);
   font-family: monospace;
 }
+/* ===== Glossary ===== */
+.glossary-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.glossary-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.glossary-header-row,
+.glossary-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 80px 2fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.glossary-header-row {
+  font-size: 12px;
+  color: rgba(200,220,255,0.4);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.glossary-row {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.glossary-row:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.glossary-jp {
+  font-family: monospace;
+  color: rgba(200,220,255,0.8);
+}
+
+.glossary-zh {
+  color: #e0eaff;
+  font-weight: 500;
+}
+
+/* ===== Glossary Panel (in Editor) ===== */
+.glossary-panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.glossary-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.03);
+}
+
+.glossary-panel-row:hover {
+  background: rgba(255,255,255,0.06);
+}
