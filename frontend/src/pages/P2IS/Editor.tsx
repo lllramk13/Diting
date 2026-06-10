@@ -75,7 +75,7 @@ function EditorTips() {
       {open && (
         <div className="tips-body">
           <ul>
-            <li>译文长度尽量与原文接近，游戏文本框空间有限。</li>
+            <li>除了script集以外, 其他集的翻译字数需要小于等于原文，以免出现显示问题。Script集不受此限制, 也请尽量保持大概相同字数。</li>
             <li>控制符（如 <code>&lt;pause:30/&gt;</code>、<code>\n</code>、<code>&lt;c6/&gt;</code>）尽量保留在相同位置，不要删除。</li>
             <li><code>&lt;SURNAME/&gt;</code> 是角色姓氏占位符，会在游戏中自动替换为玩家输入的名字，请保留。</li>
             <li><code>&lt;c1d:11/&gt;</code> 等是颜色/样式代码，控制文字颜色，保留原位即可。</li>
