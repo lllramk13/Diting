@@ -28,6 +28,11 @@ export default function MainSets() {
     fetchAllOfficialSets().then(data => {
       setSets(data)
       setLoading(false)
+      const saved = sessionStorage.getItem('mainsets-scroll')
+      if (saved) {
+        requestAnimationFrame(() => window.scrollTo(0, parseInt(saved)))
+        sessionStorage.removeItem('mainsets-scroll')
+      }
     })
   }, [])
 
@@ -161,8 +166,8 @@ export default function MainSets() {
               <span className="main-badge">主</span>
               <span className="main-set-name">{s.source_file}</span>
               <div className="main-set-actions">
-                <button className="btn-ghost" onClick={() => navigate(`/game/psx/p2is/edit/${s.id}`)}>查看</button>
-                <button className="btn-primary" onClick={() => fork(s.id, s.source_file, s.title)}>Fork</button>
+                <button className="btn-ghost" onClick={() => { sessionStorage.setItem('mainsets-scroll', String(window.scrollY)); navigate(`/game/psx/p2is/edit/${s.id}`) }}>查看</button>
+                <button className="btn-primary" onClick={() => { sessionStorage.setItem('mainsets-scroll', String(window.scrollY)); fork(s.id, s.source_file, s.title) }}>Fork</button>
               </div>
             </div>
           ))}
