@@ -77,6 +77,73 @@ function EditorTips() {
   )
 }
 
+type GlossaryEntry = { id: string; jp: string; zh: string; category: string | null }
+
+function GlossaryPanel() {
+  const [open, setOpen] = useState(false)
+  const [entries, setEntries] = useState<GlossaryEntry[]>([])
+  const [search, setSearch] = useState('')
+  const [loaded, setLoaded] = useState(false)
+  const [copied, setCopied] = useState<string | null>(null)
+
+  async function toggle() {
+    if (!open && !loaded) {
+      const { data } = await supabase.from('glossary').select('id, jp, zh, category').order('category').order('jp')
+      setEntries((data as GlossaryEntry[]) ?? [])
+      setLoaded(true)
+    }
+    setOpen(o => !o)
+  }
+
+  function copy(text: string, id: string) {
+    navigator.clipboard.writeText(text)
+    setCopied(id)
+    setTimeout(() => setCopied(null), 1200)
+  }
+
+  const filtered = entries.filter(e => {
+    if (!search) return true
+    const q = search.toLowerCase()
+    return e.jp.toLowerCase().includes(q) || e.zh.toLowerCase().includes(q)
+  })
+
+  return (
+    <div className="editor-tips">
+      <button className="tips-toggle" onClick={toggle}>
+        {open ? '▲' : '▼'} 术语表
+      </button>
+      {open && (
+        <div className="tips-body">
+          <input
+            className="search-input"
+            placeholder="搜索日文 / 中文…"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            style={{ marginBottom: 8 }}
+          />
+          <div className="glossary-panel-list">
+            {filtered.map(e => (
+              <div key={e.id} className="glossary-panel-row">
+                <span className="glossary-jp">{e.jp}</span>
+                <span className="glossary-zh">{e.zh}</span>
+                {e.category && <span className="set-source-tag" style={{ fontSize: 11 }}>{e.category}</span>}
+                <button
+                  className="btn-ghost"
+                  style={{ fontSize: 11, padding: '2px 8px' }}
+                  onClick={() => copy(e.zh, e.id)}
+                >
+                  {copied === e.id ? '✓' : '复制'}
+                </button>
+              </div>
+            ))}
+            {filtered.length === 0 && <span className="muted">无匹配术语。</span>}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function PRModal({
   fromSetId, toSetId, prTitle, prDesc, setPrTitle, setPrDesc, onClose, onSubmitted,
 }: {
@@ -281,6 +348,7 @@ export default function Editor() {
         </div>
 
         <EditorTips />
+        <GlossaryPanel />
 
         <div className="editor-search-bar">
           <input
