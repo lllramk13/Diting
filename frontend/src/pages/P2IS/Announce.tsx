@@ -32,14 +32,14 @@ export default function Announce() {
                 <div className="download-icon">↓</div>
                 <div>
                   <div className="download-name">百度网盘</div>
-                  <div className="download-desc muted">v0.2.0</div>
+                  <div className="download-desc muted">最新版本：v0.3.1</div>
                 </div>
               </a>
               <a className="download-card" href={DOWNLOAD_LINK_2} target="_blank" rel="noreferrer">
                 <div className="download-icon">↓</div>
                 <div>
                   <div className="download-name">Mega Link</div>
-                  <div className="download-desc muted">v0.2.0</div>
+                  <div className="download-desc muted">最新版本：v0.3.1</div>
                 </div>
               </a>
             </div>
