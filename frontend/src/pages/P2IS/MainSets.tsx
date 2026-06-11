@@ -15,6 +15,7 @@ type MainSet = {
 export default function MainSets() {
   const [sets, setSets] = useState<MainSet[]>([])
   const [search, setSearch] = useState('')
+  const [filter, setFilter] = useState('')
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState<{ id: string } | null>(null)
   const [initializing, setInitializing] = useState(false)
@@ -130,9 +131,11 @@ export default function MainSets() {
     if (newSet) navigate(`/game/psx/p2is/edit/${newSet.id}`)
   }
 
-  const filtered = sets.filter(s =>
-    !search || s.source_file.toLowerCase().includes(search.toLowerCase())
-  )
+  const filtered = sets.filter(s => {
+    if (filter && !s.source_file.startsWith(filter)) return false
+    if (search && !s.source_file.toLowerCase().includes(search.toLowerCase())) return false
+    return true
+  })
 
   return (
     <div className="p2is-page">
@@ -146,6 +149,19 @@ export default function MainSets() {
               {initializing ? `创建中… ${initProgress}` : sets.length === 0 ? '初始化主集' : '补全主集'}
             </button>
           )}
+        </div>
+
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
+          {['', 'script', 'field', 'strtbl', 'config', 'contactui', 'mainmenu', 'map_names', 'names', 'nametable'].map(c => (
+            <button
+              key={c}
+              className={filter === c ? 'btn-primary' : 'btn-ghost'}
+              style={{ padding: '4px 12px', fontSize: 12 }}
+              onClick={() => setFilter(c)}
+            >
+              {c === '' ? '全部' : c}
+            </button>
+          ))}
         </div>
 
         <div className="editor-search-bar" style={{ marginBottom: 24 }}>

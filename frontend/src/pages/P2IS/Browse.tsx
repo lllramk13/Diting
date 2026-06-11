@@ -18,12 +18,18 @@ type SetRow = {
 
 type UserSession = { id: string } | null
 
+const CATEGORIES_BROWSE = ['', 'script', 'field', 'strtbl',
+  'config', 'contactui', 'mainmenu', 'map_names',
+  'names','nametable'
+]
+
 export default function Browse() {
   const [publicSets, setPublicSets] = useState<SetRow[]>([])
   const [mySets, setMySets] = useState<SetRow[]>([])
   const [mergedCount, setMergedCount] = useState(0)
   const [user, setUser] = useState<UserSession>(null)
   const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState<string>('')
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -83,6 +89,8 @@ export default function Browse() {
     setMySets(prev => prev.filter(s => s.id !== setId))
   }
 
+  const displayed = filter ? publicSets.filter(s => s.source_file?.startsWith(filter)) : publicSets
+
   return (
     <div className="p2is-page">
       <TopNav />
@@ -122,12 +130,24 @@ export default function Browse() {
 
         <section className="browse-section">
           <h2 className="section-title">公开译文</h2>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
+            {CATEGORIES_BROWSE.map(c => (
+              <button
+                key={c}
+                className={filter === c ? 'btn-primary' : 'btn-ghost'}
+                style={{ padding: '4px 12px', fontSize: 12 }}
+                onClick={() => setFilter(c)}
+              >
+                {c === '' ? '全部' : c}
+              </button>
+            ))}
+          </div>
           {loading && <p className="muted">加载中…</p>}
           {!loading && publicSets.length === 0 && (
             <p className="muted">还没有公开译文。去主集页面 Fork 一个开始翻译吧。</p>
           )}
           <div className="sets-grid">
-            {publicSets.map(s => (
+            {displayed.map(s => (
               <div className="set-card" key={s.id}>
                 <div className="set-card-title">{s.title}</div>
                 <div className="set-card-meta">
