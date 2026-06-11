@@ -170,13 +170,17 @@ function PRModal({
     const { data: userData } = await supabase.auth.getUser()
     const uid = userData.user?.id
     if (!uid) { setSubmitting(false); return }
-    const { data: entryData } = await supabase
-      .from('translation_entries').select('string_id, content').eq('set_id', fromSetId)
+    const [{ data: entryData }, { data: baseData }] = await Promise.all([
+      supabase.from('translation_entries').select('string_id, content').eq('set_id', fromSetId),
+      supabase.from('translation_entries').select('string_id, content').eq('set_id', toSetId),
+    ])
     const snapshot: Record<string, string> = {}
     entryData?.forEach((e: { string_id: string; content: string }) => { snapshot[e.string_id] = e.content })
+    const base_snapshot: Record<string, string> = {}
+    baseData?.forEach((e: { string_id: string; content: string }) => { base_snapshot[e.string_id] = e.content })
     const { data, error } = await supabase
       .from('merge_requests')
-      .insert({ from_set_id: fromSetId, to_set_id: toSetId, user_id: uid, title: prTitle, description: prDesc, snapshot })
+      .insert({ from_set_id: fromSetId, to_set_id: toSetId, user_id: uid, title: prTitle, description: prDesc, snapshot, base_snapshot })
       .select()
       .single()
     if (error) { alert('提交失败：' + error.message); setSubmitting(false); return }

@@ -53,15 +53,18 @@ export default function RequestDetail() {
         setIsAuthor(uid === req.user_id)
       }
 
-      // load diff — use snapshot if available, fall back to live entries
+      // load diff — use snapshots if available, fall back to live entries
       const snapshot = req.snapshot as Record<string, string> | null
+      const base_snapshot = req.base_snapshot as Record<string, string> | null
       const fromEntries: { string_id: string; content: string }[] = snapshot
         ? Object.entries(snapshot).map(([string_id, content]) => ({ string_id, content }))
         : (await supabase.from('translation_entries').select('string_id, content').eq('set_id', req.from_set_id)).data ?? []
-      const { data: toEntries } = await supabase
-        .from('translation_entries').select('string_id, content').eq('set_id', req.to_set_id)
-      const toMap: Record<string, string> = {}
-      toEntries?.forEach((e: { string_id: string; content: string }) => { toMap[e.string_id] = e.content })
+      const toMap: Record<string, string> = base_snapshot ?? {}
+      if (!base_snapshot) {
+        const { data: toEntries } = await supabase
+          .from('translation_entries').select('string_id, content').eq('set_id', req.to_set_id)
+        toEntries?.forEach((e: { string_id: string; content: string }) => { toMap[e.string_id] = e.content })
+      }
 
       if (fromEntries.length > 0 && toSet?.source_file) {
         const groupFile = toSet.source_file.replace(':', '_')
