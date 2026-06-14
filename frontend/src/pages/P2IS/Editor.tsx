@@ -17,6 +17,10 @@ type SourceRow = {
 
 type EntryMap = Record<string, { content: string; sort_order: number }>
 
+function formatControlNewlines(text: string) {
+  return text.replace(/\r\n/g, '\\n').replace(/\n/g, '\\n')
+}
+
 function EntryRow({
   row,
   readonly,
@@ -39,8 +43,8 @@ function EntryRow({
             {row.speaker_jp}{row.speaker_zh ? ` / ${row.speaker_zh}` : ''}
           </div>
         )}
-        <div className="entry-ja">{row.jp}</div>
-        <div className="entry-ds">{row.zh}</div>
+        <div className="entry-ja">{formatControlNewlines(row.jp)}</div>
+        <div className="entry-ds">{formatControlNewlines(row.zh)}</div>
         {!readonly ? (
           <>
             <textarea
@@ -57,7 +61,7 @@ function EntryRow({
           </>
         ) : (
           <div className="entry-user">
-            {value || <span className="muted">(未翻译)</span>}
+            {value ? formatControlNewlines(value) : <span className="muted">(未翻译)</span>}
           </div>
         )}
       </div>

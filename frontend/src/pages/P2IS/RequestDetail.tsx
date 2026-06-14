@@ -10,6 +10,10 @@ type SourceRow = { id: string; jp: string; zh: string }
 type DiffEntry = { string_id: string; content: string; jp: string; original_zh: string }
 type MRComment = { id: string; user_id: string; body: string; created_at: string; username: string }
 
+function formatControlNewlines(text: string) {
+  return text.replace(/\r\n/g, '\\n').replace(/\n/g, '\\n')
+}
+
 export default function RequestDetail() {
   const { requestId } = useParams<{ requestId: string }>()
   const navigate = useNavigate()
@@ -223,16 +227,16 @@ export default function RequestDetail() {
           <div className="diff-list">
             {diff.map(d => (
               <div key={d.string_id} className="diff-row">
-                <div className="entry-ja">{d.jp}</div>
+                <div className="entry-ja">{formatControlNewlines(d.jp)}</div>
                 <div className="diff-compare">
                   <div className="diff-before">
                     <span className="diff-label">原</span>
-                    <span>{d.original_zh || <span className="muted">(空)</span>}</span>
+                    <span>{d.original_zh ? formatControlNewlines(d.original_zh) : <span className="muted">(空)</span>}</span>
                   </div>
                   <div className="diff-arrow">→</div>
                   <div className="diff-after">
                     <span className="diff-label">新</span>
-                    <span>{d.content}</span>
+                    <span>{formatControlNewlines(d.content)}</span>
                   </div>
                 </div>
               </div>
