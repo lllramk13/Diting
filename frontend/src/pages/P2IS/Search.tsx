@@ -4,6 +4,10 @@ import { supabase } from '../../lib/supabase'
 import TopNav from '../Home/TopNav'
 import './P2IS.css'
 
+function formatControlNewlines(text: string) {
+  return text.replace(/\r\n/g, '\\n').replace(/\n/g, '\\n')
+}
+
 type SourceRow = { id: string; jp: string; zh: string; speaker_jp?: string; speaker_zh?: string }
 type ResultGroup = { group: string; officialSetId: string | null; entries: SourceRow[] }
 
@@ -152,8 +156,8 @@ export default function Search() {
               <div className="search-entries">
                 {g.entries.slice(0, 5).map(s => (
                   <div key={s.id} className="search-entry">
-                    <div className="entry-ja">{s.jp}</div>
-                    <div className="entry-ds">{s.zh}</div>
+                    <div className="entry-ja">{formatControlNewlines(s.jp)}</div>
+                    <div className="entry-ds">{formatControlNewlines(s.zh)}</div>
                   </div>
                 ))}
                 {g.entries.length > 5 && (
