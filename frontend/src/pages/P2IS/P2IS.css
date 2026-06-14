@@ -473,6 +473,7 @@ button.btn-ghost:hover { background: rgba(255,255,255,0.1); }
     color: rgba(200,220,255,0.7);
     line-height: 1.6;
     margin-top: 8px;
+    white-space: pre-wrap;
 }
 
 .comments-list {
@@ -1032,6 +1033,7 @@ button.btn-ghost:hover { background: rgba(255,255,255,0.1); }
   color: rgba(200,220,255,0.6);
   line-height: 1.6;
   margin-top: 10px;
+  white-space: pre-wrap;
 }
 
 .request-status-badge {
@@ -1104,10 +1106,15 @@ button.btn-ghost:hover { background: rgba(255,255,255,0.1); }
   flex-direction: column;
   gap: 4px;
   font-size: 13px;
+  white-space: pre-wrap;
 }
 
 .diff-before { color: rgba(248,81,73,0.8); }
 .diff-after { color: rgba(63,185,80,0.9); }
+
+.comment-body {
+  white-space: pre-wrap;
+}
 
 .diff-label {
   font-size: 10px;
