@@ -79,26 +79,24 @@ export default function Requests() {
   const closed = requests.filter(r => r.status !== 'open')
 
   function downloadOpenChanges() {
-    const rows: string[] = ['文件\tstring_id\t原文\t新译\t请求标题']
-    for (const r of open) {
+    const result = open.map(r => {
       const snap = r.snapshot ?? {}
       const base = r.base_snapshot ?? {}
+      const changes: Record<string, { original: string; new: string }> = {}
       for (const [sid, newContent] of Object.entries(snap)) {
         const orig = base[sid] ?? ''
         if (newContent.trim() && newContent.trim() !== orig.trim()) {
-          rows.push(
-            [r.source_file ?? '', sid, orig, newContent, r.title]
-              .map(s => s.replace(/\t/g, ' ').replace(/\n/g, '\\n'))
-              .join('\t')
-          )
+          changes[sid] = { original: orig, new: newContent }
         }
       }
-    }
-    const blob = new Blob(['﻿' + rows.join('\n')], { type: 'text/tab-separated-values;charset=utf-8' })
+      return { id: r.id, title: r.title, source_file: r.source_file ?? '', changes }
+    }).filter(r => Object.keys(r.changes).length > 0)
+
+    const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json;charset=utf-8' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = 'open_requests_changes.tsv'
+    a.download = 'open_requests_changes.json'
     a.click()
     URL.revokeObjectURL(url)
   }
