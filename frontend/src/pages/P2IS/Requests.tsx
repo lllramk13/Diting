@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
+import { getIsAdmin } from '../../lib/admin'
 import TopNav from '../Home/TopNav'
 import P2ISNav from './P2ISNav'
 import './P2IS.css'
@@ -24,10 +25,17 @@ type RequestRow = {
 export default function Requests() {
   const [requests, setRequests] = useState<RequestRow[]>([])
   const [loading, setLoading] = useState(true)
+  const [isAdmin, setIsAdmin] = useState(false)
+  const [bulkMerging, setBulkMerging] = useState(false)
+  const [showBulkModal, setShowBulkModal] = useState(false)
   const navigate = useNavigate()
 
   useEffect(() => {
     async function load() {
+      const { data: userData } = await supabase.auth.getUser()
+      const uid = userData.user?.id ?? null
+      if (uid) setIsAdmin(await getIsAdmin(uid))
+
       const { data } = await supabase
         .from('merge_requests')
         .select('*')
@@ -101,6 +109,47 @@ export default function Requests() {
     URL.revokeObjectURL(url)
   }
 
+  async function mergeAll() {
+    setBulkMerging(true)
+    const mergedIds: string[] = []
+    const skipped: string[] = []
+
+    for (const r of open) {
+      if (!r.snapshot) { skipped.push(r.title); continue }
+      const snap = r.snapshot
+      const base = r.base_snapshot ?? {}
+      const rows = Object.entries(snap)
+        .filter(([sid, content]) => content.trim() && content.trim() !== (base[sid] ?? '').trim())
+        .map(([sid, content]) => ({
+          set_id: r.to_set_id,
+          string_id: sid,
+          content,
+          sort_order: 0,
+          updated_at: new Date().toISOString(),
+        }))
+
+      if (rows.length > 0) {
+        const { error } = await supabase
+          .from('translation_entries')
+          .upsert(rows, { onConflict: 'set_id,string_id' })
+        if (error) { alert(`合并「${r.title}」失败：${error.message}`); setBulkMerging(false); return }
+      }
+      mergedIds.push(r.id)
+    }
+
+    if (mergedIds.length > 0) {
+      await supabase.from('merge_requests').update({ status: 'merged' }).in('id', mergedIds)
+      setRequests(prev => prev.map(r => mergedIds.includes(r.id) ? { ...r, status: 'merged' } : r))
+    }
+
+    setBulkMerging(false)
+    setShowBulkModal(false)
+    if (skipped.length > 0) alert(`已合并 ${mergedIds.length} 个。\n以下请求因无快照数据被跳过：\n${skipped.join('\n')}`)
+  }
+
+  // count of requests that can actually be merged (have snapshot data)
+  const mergeableCount = open.filter(r => r.snapshot).length
+
   return (
     <div className="p2is-page">
       <TopNav />
@@ -118,6 +167,11 @@ export default function Requests() {
               <button className="btn-ghost" style={{ fontSize: 12, padding: '3px 10px' }} onClick={downloadOpenChanges}>
                 下载改动
               </button>
+              {isAdmin && (
+                <button className="btn-primary" style={{ fontSize: 12, padding: '3px 10px' }} onClick={() => setShowBulkModal(true)}>
+                  一键合并全部
+                </button>
+              )}
             </div>
             <div className="requests-list">
               {open.map(r => (
@@ -172,6 +226,30 @@ export default function Requests() {
           <p className="muted">暂无合并请求。Fork 主集并修改后，可以在编辑器中提交。</p>
         )}
       </div>
+
+      {showBulkModal && (
+        <div className="modal-overlay" onClick={() => setShowBulkModal(false)}>
+          <div className="modal-box" onClick={e => e.stopPropagation()}>
+            <h3 className="modal-title">确认一键合并</h3>
+            <div className="modal-form">
+              <p style={{ fontSize: 14, color: 'rgba(200,220,255,0.7)' }}>
+                将合并 <strong>{mergeableCount}</strong> 个开放请求的所有变更，此操作不可撤销。
+                {mergeableCount < open.length && (
+                  <span style={{ display: 'block', marginTop: 6 }}>
+                    （另有 {open.length - mergeableCount} 个请求因缺少快照数据将被跳过）
+                  </span>
+                )}
+              </p>
+            </div>
+            <div className="modal-footer">
+              <button className="btn-ghost" onClick={() => setShowBulkModal(false)}>取消</button>
+              <button className="btn-primary" onClick={mergeAll} disabled={bulkMerging}>
+                {bulkMerging ? '合并中…' : '确认合并'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
