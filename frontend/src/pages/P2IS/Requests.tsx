@@ -17,6 +17,8 @@ type RequestRow = {
   username?: string
   source_file?: string
   vote_score?: number
+  snapshot?: Record<string, string> | null
+  base_snapshot?: Record<string, string> | null
 }
 
 export default function Requests() {
@@ -76,6 +78,31 @@ export default function Requests() {
   const open = requests.filter(r => r.status === 'open')
   const closed = requests.filter(r => r.status !== 'open')
 
+  function downloadOpenChanges() {
+    const rows: string[] = ['文件\tstring_id\t原文\t新译\t请求标题']
+    for (const r of open) {
+      const snap = r.snapshot ?? {}
+      const base = r.base_snapshot ?? {}
+      for (const [sid, newContent] of Object.entries(snap)) {
+        const orig = base[sid] ?? ''
+        if (newContent.trim() && newContent.trim() !== orig.trim()) {
+          rows.push(
+            [r.source_file ?? '', sid, orig, newContent, r.title]
+              .map(s => s.replace(/\t/g, ' ').replace(/\n/g, '\\n'))
+              .join('\t')
+          )
+        }
+      }
+    }
+    const blob = new Blob(['﻿' + rows.join('\n')], { type: 'text/tab-separated-values;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'open_requests_changes.tsv'
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
   return (
     <div className="p2is-page">
       <TopNav />
@@ -88,7 +115,12 @@ export default function Requests() {
 
         {open.length > 0 && (
           <section className="browse-section">
-            <h2 className="section-title">开放中 {open.length}</h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+              <h2 className="section-title" style={{ margin: 0 }}>开放中 {open.length}</h2>
+              <button className="btn-ghost" style={{ fontSize: 12, padding: '3px 10px' }} onClick={downloadOpenChanges}>
+                下载改动
+              </button>
+            </div>
             <div className="requests-list">
               {open.map(r => (
                 <div key={r.id} className="request-row" onClick={() => navigate(`/game/psx/p2is/requests/${r.id}`)}>
