@@ -4,7 +4,10 @@ import { supabase } from '../../lib/supabase'
 import { getIsAdmin } from '../../lib/admin'
 import { getGameBySlug } from '../../games/registry'
 import GamePageShell from './GamePageShell'
-import '../P2IS/P2IS.css'
+import { getGameTheme } from './gameTheme'
+
+const mono = "'Space Mono', monospace"
+const cnf = "'Noto Sans SC', sans-serif"
 
 type RequestRow = {
   id: string
@@ -41,6 +44,8 @@ type VoteRow = {
 
 type ActiveGame = NonNullable<ReturnType<typeof getGameBySlug>>
 
+type TabKey = 'open' | 'merged' | 'closed' | 'all'
+
 export default function GameRequests() {
   const { gameSlug } = useParams<{ gameSlug: string }>()
   const navigate = useNavigate()
@@ -52,6 +57,9 @@ export default function GameRequests() {
   const [isAdmin, setIsAdmin] = useState(false)
   const [bulkMerging, setBulkMerging] = useState(false)
   const [showBulkModal, setShowBulkModal] = useState(false)
+
+  const [tab, setTab] = useState<TabKey>('open')
+  const [query, setQuery] = useState('')
 
   useEffect(() => {
     const currentGame = getGameBySlug(gameSlug ?? '')
@@ -154,16 +162,41 @@ export default function GameRequests() {
 
   if (!game) {
     return (
-      <main className="p2is-page">
-        <div className="browse-wrap">
-          <p className="muted">找不到这个游戏项目。</p>
-        </div>
-      </main>
+      <GamePageShell game={getGameBySlug('p2is')!}>
+        <main style={{ minHeight: '100vh', background: '#0A0E18', color: '#EAEEF7', padding: 40 }}>
+          <p>找不到这个游戏项目。</p>
+        </main>
+      </GamePageShell>
     )
   }
 
-  const open = requests.filter(r => r.status === 'open')
-  const closed = requests.filter(r => r.status !== 'open')
+  const t = getGameTheme(game)
+
+  const statusMeta: Record<string, { icon: string; label: string; color: string; bg: string; border: string }> = {
+    open: { icon: '⇅', label: '开放', color: t.warning, bg: 'rgba(240,184,74,0.12)', border: 'rgba(240,184,74,0.3)' },
+    merged: { icon: '✓', label: '已合并', color: t.success, bg: 'rgba(45,140,80,0.14)', border: 'rgba(45,140,80,0.32)' },
+    closed: { icon: '✕', label: '已关闭', color: t.danger, bg: 'rgba(240,136,138,0.12)', border: 'rgba(240,136,138,0.3)' },
+  }
+
+  const statusOf = (r: RequestRow) => (r.status === 'merged' ? 'merged' : r.status === 'open' ? 'open' : 'closed')
+
+  const counts = {
+    all: requests.length,
+    open: requests.filter(r => statusOf(r) === 'open').length,
+    merged: requests.filter(r => statusOf(r) === 'merged').length,
+    closed: requests.filter(r => statusOf(r) === 'closed').length,
+  }
+
+  const q = query.toLowerCase().trim()
+
+  const visible = requests
+    .filter(r => tab === 'all' || statusOf(r) === tab)
+    .filter(r =>
+      !q ||
+      (r.title + (r.username ?? '') + (r.source_file ?? '')).toLowerCase().includes(q),
+    )
+
+  const open = requests.filter(r => statusOf(r) === 'open')
   const mergeableCount = open.filter(r => r.snapshot).length
 
   function openRequest(id: string) {
@@ -291,154 +324,353 @@ export default function GameRequests() {
     }
   }
 
+  const tabs: { key: TabKey; label: string; count: number }[] = [
+    { key: 'open', label: '开放', count: counts.open },
+    { key: 'merged', label: '已合并', count: counts.merged },
+    { key: 'closed', label: '已关闭', count: counts.closed },
+    { key: 'all', label: '全部', count: counts.all },
+  ]
+
   return (
     <GamePageShell game={game}>
-      <main className="p2is-page">
-        <div className="browse-wrap">
-          <div className="browse-header">
-            <h1>{game.shortTitle} 合并请求</h1>
-            <p className="muted">
-              查看社区提交的修改请求。管理员可以合并到主集。
-            </p>
+      <main
+        style={{
+          minHeight: '100vh',
+          background: t.page,
+          color: t.ink,
+          fontFamily: "'Space Grotesk', 'Noto Sans SC', sans-serif",
+        }}
+      >
+        <div style={{ height: 3, background: t.accent }} />
+
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '28px 32px 90px' }}>
+          {/* intro */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              justifyContent: 'space-between',
+              gap: 20,
+              flexWrap: 'wrap',
+              marginBottom: 24,
+            }}
+          >
+            <div style={{ maxWidth: 580 }}>
+              <h1 style={{ fontFamily: cnf, fontWeight: 900, fontSize: 30, margin: 0, letterSpacing: 1 }}>
+                {game.shortTitle} 合并请求
+              </h1>
+              <p style={{ fontSize: 14.5, color: t.muted, margin: '10px 0 0', lineHeight: 1.6 }}>
+                把社区翻译集的修订并入主集前，先在这里逐条审阅改动。维护者通过后改动才会落到主集。
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', gap: 9, flexWrap: 'wrap' }}>
+              <button
+                onClick={downloadOpenChanges}
+                style={{
+                  cursor: 'pointer',
+                  fontFamily: cnf,
+                  fontSize: 13,
+                  padding: '10px 16px',
+                  borderRadius: 9,
+                  background: t.inkSoft,
+                  border: `1px solid ${t.line2}`,
+                  color: t.ink,
+                }}
+              >
+                下载改动
+              </button>
+
+              {isAdmin && (
+                <button
+                  onClick={() => setShowBulkModal(true)}
+                  style={{
+                    cursor: 'pointer',
+                    fontFamily: cnf,
+                    fontSize: 14,
+                    fontWeight: 700,
+                    padding: '10px 18px',
+                    borderRadius: 9,
+                    background: t.accent,
+                    border: 'none',
+                    color: t.buttonText,
+                  }}
+                >
+                  一键合并全部
+                </button>
+              )}
+            </div>
           </div>
 
-          {loading && <p className="muted">加载中…</p>}
-
-          {!loading && open.length > 0 && (
-            <section className="browse-section">
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
-                <h2 className="section-title" style={{ margin: 0 }}>
-                  开放中 {open.length}
-                </h2>
-
-                <button
-                  className="btn-ghost"
-                  style={{ fontSize: 12, padding: '3px 10px' }}
-                  onClick={downloadOpenChanges}
-                >
-                  下载改动
-                </button>
-
-                {isAdmin && (
+          {/* filter tabs + search */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 11,
+              flexWrap: 'wrap',
+              marginBottom: 18,
+            }}
+          >
+            <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
+              {tabs.map(tabItem => {
+                const on = tab === tabItem.key
+                return (
                   <button
-                    className="btn-primary"
-                    style={{ fontSize: 12, padding: '3px 10px' }}
-                    onClick={() => setShowBulkModal(true)}
+                    key={tabItem.key}
+                    onClick={() => setTab(tabItem.key)}
+                    style={{
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      fontFamily: cnf,
+                      fontSize: 13,
+                      padding: '8px 15px',
+                      borderRadius: 20,
+                      background: on ? t.inkSoft : t.card,
+                      color: on ? t.ink : t.muted,
+                      border: `1px solid ${on ? t.inkBorder : t.line2}`,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 7,
+                    }}
                   >
-                    一键合并全部
+                    {tabItem.label}
+                    <span style={{ fontFamily: mono, fontSize: 11, opacity: 0.7 }}>{tabItem.count}</span>
                   </button>
-                )}
-              </div>
+                )
+              })}
+            </div>
 
-              <div className="requests-list">
-                {open.map(r => (
+            <input
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              placeholder="搜索标题 · 作者 · 文件…"
+              style={{
+                marginLeft: 'auto',
+                background: t.card,
+                border: `1px solid ${t.line2}`,
+                borderRadius: 8,
+                color: t.ink,
+                fontFamily: 'inherit',
+                fontSize: 13,
+                padding: '9px 13px',
+                outline: 'none',
+                width: 240,
+              }}
+            />
+          </div>
+
+          {loading && (
+            <p style={{ fontFamily: mono, fontSize: 13, color: t.label }}>加载中…</p>
+          )}
+
+          {/* MR list */}
+          {!loading && (
+            <div
+              style={{
+                border: `1px solid ${t.line2}`,
+                borderRadius: 13,
+                background: t.card,
+                overflow: 'hidden',
+              }}
+            >
+              {visible.map(r => {
+                const sm = statusMeta[statusOf(r)]
+                const score = r.vote_score ?? 0
+
+                return (
                   <div
                     key={r.id}
-                    className="request-row"
                     onClick={() => openRequest(r.id)}
+                    style={{
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 14,
+                      padding: '16px 20px',
+                      borderBottom: `1px solid ${t.line}`,
+                    }}
                   >
-                    <div className="request-main">
-                      <span className="request-status-dot open" />
+                    <span
+                      style={{
+                        flexShrink: 0,
+                        width: 26,
+                        height: 26,
+                        borderRadius: '50%',
+                        background: sm.bg,
+                        color: sm.color,
+                        border: `1px solid ${sm.border}`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontFamily: mono,
+                        fontSize: 13,
+                        fontWeight: 700,
+                      }}
+                    >
+                      {sm.icon}
+                    </span>
 
-                      <div>
-                        <div className="request-title">{r.title}</div>
+                    <div style={{ minWidth: 0, flex: 1 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 9, flexWrap: 'wrap' }}>
+                        <span style={{ fontFamily: cnf, fontWeight: 700, fontSize: 15.5, color: t.ink }}>
+                          {r.title}
+                        </span>
+                        <span
+                          style={{
+                            fontFamily: cnf,
+                            fontSize: 10.5,
+                            padding: '2px 9px',
+                            borderRadius: 20,
+                            background: sm.bg,
+                            color: sm.color,
+                            border: `1px solid ${sm.border}`,
+                          }}
+                        >
+                          {sm.label}
+                        </span>
+                      </div>
 
-                        <div className="request-meta muted">
-                          {r.source_file && (
-                            <span className="set-source-tag">{r.source_file}</span>
-                          )}
-                          <span>{r.username}</span>
-                          <span>{new Date(r.created_at).toLocaleDateString('zh-CN')}</span>
-                        </div>
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 8,
+                          flexWrap: 'wrap',
+                          marginTop: 5,
+                        }}
+                      >
+                        {r.source_file && (
+                          <span
+                            style={{
+                              fontFamily: mono,
+                              fontSize: 11.5,
+                              padding: '1px 7px',
+                              borderRadius: 5,
+                              background: t.inkSoft,
+                              color: t.ink,
+                              border: `1px solid ${t.line2}`,
+                            }}
+                          >
+                            {r.source_file}
+                          </span>
+                        )}
+                        <span style={{ fontFamily: cnf, fontSize: 11.5, color: t.muted }}>
+                          {r.username} 提交 · {new Date(r.created_at).toLocaleDateString('zh-CN')}
+                        </span>
                       </div>
                     </div>
 
-                    <div className="request-score">
-                      <span className={(r.vote_score ?? 0) >= 0 ? 'vote-pos' : 'vote-neg'}>
-                        {(r.vote_score ?? 0) > 0 ? '+' : ''}
-                        {r.vote_score ?? 0}
+                    <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 13 }}>
+                      <span
+                        style={{
+                          fontFamily: mono,
+                          fontSize: 12,
+                          color: score > 0 ? t.success : score < 0 ? t.danger : t.label,
+                        }}
+                      >
+                        {score > 0 ? '+' : ''}
+                        {score}
                       </span>
+                      <span style={{ fontFamily: mono, fontSize: 13, color: t.label }}>▸</span>
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
-          )}
+                )
+              })}
 
-          {!loading && closed.length > 0 && (
-            <section className="browse-section">
-              <h2 className="section-title">已关闭 {closed.length}</h2>
-
-              <div className="requests-list">
-                {closed.map(r => (
-                  <div
-                    key={r.id}
-                    className="request-row closed"
-                    onClick={() => openRequest(r.id)}
-                  >
-                    <div className="request-main">
-                      <span className={`request-status-dot ${r.status}`} />
-
-                      <div>
-                        <div className="request-title">{r.title}</div>
-
-                        <div className="request-meta muted">
-                          {r.source_file && (
-                            <span className="set-source-tag">{r.source_file}</span>
-                          )}
-                          <span>{r.username}</span>
-                          <span>{new Date(r.created_at).toLocaleDateString('zh-CN')}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="request-score muted">
-                      {r.vote_score ?? 0}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {!loading && requests.length === 0 && (
-            <p className="muted">
-              暂无合并请求。Fork 主集并修改后，可以在编辑器中提交。
-            </p>
+              {visible.length === 0 && (
+                <div
+                  style={{
+                    textAlign: 'center',
+                    padding: '56px 20px',
+                    fontFamily: mono,
+                    fontSize: 13,
+                    color: t.label,
+                  }}
+                >
+                  {requests.length === 0
+                    ? 'Fork 主集并修改后，可以在编辑器中提交合并请求'
+                    : '没有匹配的合并请求'}
+                </div>
+              )}
+            </div>
           )}
         </div>
 
         {showBulkModal && (
-          <div className="modal-overlay" onClick={() => setShowBulkModal(false)}>
-            <div className="modal-box" onClick={e => e.stopPropagation()}>
-              <h3 className="modal-title">确认一键合并</h3>
-
-              <div className="modal-form">
-                <p style={{ fontSize: 14, color: 'rgba(200,220,255,0.7)' }}>
-                  将合并 <strong>{mergeableCount}</strong> 个开放请求的所有变更，此操作不可撤销。
+          <div
+            onClick={() => setShowBulkModal(false)}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              zIndex: 60,
+              background: 'rgba(5,8,15,0.6)',
+              backdropFilter: 'blur(3px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 24,
+            }}
+          >
+            <div
+              onClick={e => e.stopPropagation()}
+              style={{
+                width: '100%',
+                maxWidth: 470,
+                background: t.card,
+                border: `1px solid ${t.line2}`,
+                borderRadius: 16,
+                overflow: 'hidden',
+              }}
+            >
+              <div style={{ height: 3, background: t.accent }} />
+              <div style={{ padding: '24px 26px' }}>
+                <div style={{ fontFamily: cnf, fontWeight: 700, fontSize: 19, marginBottom: 14 }}>
+                  确认一键合并
+                </div>
+                <p style={{ fontSize: 14, color: t.muted, lineHeight: 1.7, margin: 0 }}>
+                  将合并 <strong style={{ color: t.ink }}>{mergeableCount}</strong> 个开放请求的所有变更，此操作不可撤销。
                   {mergeableCount < open.length && (
                     <span style={{ display: 'block', marginTop: 6 }}>
                       （另有 {open.length - mergeableCount} 个请求因缺少快照数据将被跳过）
                     </span>
                   )}
                 </p>
-              </div>
 
-              <div className="modal-footer">
-                <button
-                  className="btn-ghost"
-                  onClick={() => setShowBulkModal(false)}
-                >
-                  取消
-                </button>
-
-                <button
-                  className="btn-primary"
-                  onClick={mergeAll}
-                  disabled={bulkMerging}
-                >
-                  {bulkMerging ? '合并中…' : '确认合并'}
-                </button>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, marginTop: 22 }}>
+                  <button
+                    onClick={() => setShowBulkModal(false)}
+                    style={{
+                      cursor: 'pointer',
+                      fontFamily: cnf,
+                      fontSize: 13.5,
+                      padding: '10px 18px',
+                      borderRadius: 9,
+                      background: t.inkSoft,
+                      border: `1px solid ${t.line2}`,
+                      color: t.muted,
+                    }}
+                  >
+                    取消
+                  </button>
+                  <button
+                    onClick={mergeAll}
+                    disabled={bulkMerging}
+                    style={{
+                      cursor: bulkMerging ? 'not-allowed' : 'pointer',
+                      fontFamily: cnf,
+                      fontSize: 13.5,
+                      fontWeight: 700,
+                      padding: '10px 18px',
+                      borderRadius: 9,
+                      background: t.accent,
+                      border: 'none',
+                      color: t.buttonText,
+                    }}
+                  >
+                    {bulkMerging ? '合并中…' : '确认合并'}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
