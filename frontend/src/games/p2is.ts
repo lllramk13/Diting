@@ -8,8 +8,13 @@ export const p2is: GameConfig = {
     platform: 'psx',
     series: 'Persona',
 
+    titleZh: '女神异闻录2 · 罪',
+    accent: '#5E8BFF',
+    accentSoft: '#9FB8FF',
+    ghostChar: '罪',
+
     status: 'in_progress',
-    progress: 0,
+    progress: 61,
 
     coverImage: "/games/p2is/cover.jpg",
 
@@ -41,18 +46,20 @@ export const p2is: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.4.0',
+    version: 'v0.6.0',
+    size: '',
+    updated: '2026-06-24',
     videoUrl: '',
     downloadLinks: [
         {
         label: '百度网盘',
-        url: '#',
-        note: '链接待更新',
+        url: 'https://pan.baidu.com/s/1h6dE4ICZu62mjCRD8kTpGA?pwd=bvmp',
+        note: '链接已更新',
         },
         {
         label: 'MEGA',
-        url: '#',
-        note: '链接待更新',
+        url: 'https://mega.nz/folder/yZI10bwI#LN9E1oFAgAPpSK2CyWzK5A',
+        note: '链接已更新',
         },
     ],
     notes: [
@@ -65,10 +72,18 @@ export const p2is: GameConfig = {
         '根据发布说明将补丁应用到对应版本的游戏镜像。',
         '使用模拟器或实机测试补丁。',
     ],
+    knownIssues: [
+        '部分菜单与系统文本在长字符串下可能溢出。',
+        '个别人名与术语仍在统一校对中。',
+        '战斗中较长的技能名可能出现换行异常。',
+    ],
+    changelog: [
+        { version: 'v0.6.0', text: '翻译校对' },
+    ],
     copyrightNotice:
         '本项目仅用于学习、研究和交流。游戏版权、商标和相关素材版权均属于 ATLUS 及原权利方。',
     resaleNotice:
-        '禁止倒卖、禁止打包收费、禁止将本补丁用于任何商业用途。',
+        '禁止打包转载、禁止转载资源、禁止倒卖、禁止打包收费、禁止将本补丁用于任何商业用途。',
     sponsorNote:
         '如果你喜欢这个项目，可以选择赞助支持。赞助完全自愿，公开版本仍会正常发布。',
     },

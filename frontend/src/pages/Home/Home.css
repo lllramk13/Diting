@@ -30,9 +30,15 @@ html, body, #root {
 /* ===== 页面 ===== */
 .home-page {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: #07111e;
   position: relative;
+}
+
+/* 首屏英雄区：占满视口高度（减去 sticky 导航），向下滚动露出其余内容 */
+.home-hero {
+  position: relative;
+  height: calc(100vh - clamp(56px, 6.5vh, 76px));
   overflow: hidden;
 }
 
@@ -46,9 +52,7 @@ html, body, #root {
   grid-template-columns: auto 1fr auto;
   align-items: stretch;
   z-index: 10;
-  background: rgba(7, 17, 30, 0.35);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(8, 12, 22, 0.94);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -85,16 +89,43 @@ html, body, #root {
 .nav-right {
   display: flex;
   align-items: center;
-  padding: 0 24px;
-  gap: 8px;
+  padding: 0 16px;
+  gap: 4px;
   border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.nav-right span {
-  font-size: clamp(10px, 0.85vw, 12px);
-  letter-spacing: 0.12em;
-  color: rgba(200, 220, 255, 0.4);
+.nav-link {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: rgba(200, 220, 255, 0.6);
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
 }
+.nav-link:hover { color: #eaeef7; background: rgba(255, 255, 255, 0.04); }
+.nav-link.active { color: #e8b23a; }
+.nav-link.disabled {
+  color: rgba(200, 220, 255, 0.3);
+  cursor: default;
+}
+.nav-link.disabled:hover { background: none; color: rgba(200, 220, 255, 0.3); }
+
+.nav-login {
+  margin-left: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #eaeef7;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.nav-login:hover { background: rgba(255, 255, 255, 0.1); }
 
 .dl {
   width: 5px;
@@ -155,10 +186,13 @@ html, body, #root {
   flex-shrink: 0;
 }
 
-.ri { display: inline-block; }
+.ri { display: inline-block; will-change: transform; }
 .ri.fwd { animation: mq-fwd 220s linear infinite; }
 .ri.rev { animation: mq-rev 270s linear infinite; }
 .ri.slw { animation: mq-fwd 340s linear infinite; }
+
+/* 滚出首屏后暂停动画，避免持续合成开销 */
+.marquee-bg.paused .ri { animation-play-state: paused; }
 
 .rt {
   font-size: clamp(22px, 1.9vw, 38px);

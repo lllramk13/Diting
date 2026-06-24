@@ -13,12 +13,21 @@ export type GameDownloadLink = {
   note?: string
 }
 
+export type GameChangelogEntry = {
+  version: string
+  text: string
+}
+
 export type GameAnnouncement = {
   version: string
+  size?: string          // 补丁包大小，如「48.6 MB」
+  updated?: string       // 更新日期，如「2026-05-30」
   videoUrl?: string
   downloadLinks: GameDownloadLink[]
   notes: string[]
   installGuide: string[]
+  knownIssues?: string[]            // 已知问题
+  changelog?: GameChangelogEntry[]  // 更新说明
   copyrightNotice: string
   resaleNotice: string
   sponsorNote: string
@@ -30,6 +39,12 @@ export type GameConfig = {
     shortTitle: string
     platform: GamePlatform
     series?: string
+
+    /* 卡片展示用 */
+    titleZh?: string      // 中文标题，如「女神异闻录2 · 罪」
+    accent?: string       // 主强调色
+    accentSoft?: string   // 浅强调色（状态徽标文字）
+    ghostChar?: string    // 卡片右侧巨大幽灵字，如「罪」
 
     status: GameStatus
     progress: number
