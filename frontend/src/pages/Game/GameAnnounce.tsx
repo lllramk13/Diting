@@ -62,7 +62,7 @@ const secretConfigs: Record<string, SecretConfig> = {
       '这是 P2EP 公告页专属的隐藏秘籍。',
     links: [
       {
-        label: 'P2EP 测试补丁',
+        label: '隐藏版',
         url: 'https://pan.baidu.com/s/1njGANWf7os-WfrYcpVf0-Q?pwd=5ud5',
         note: '完整游戏镜像',
         primary: true,

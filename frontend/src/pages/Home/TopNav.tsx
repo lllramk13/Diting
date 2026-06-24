@@ -1,10 +1,75 @@
+import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { supabase } from '../../lib/supabase'
 import './Home.css'
+
+type SessionUser = {
+  id: string
+  email: string | null
+  username: string
+}
+
+function deriveUsername(user: { email?: string | null; user_metadata?: Record<string, unknown> }): string {
+  const metaName = user.user_metadata?.username
+  if (typeof metaName === 'string' && metaName.trim()) return metaName.trim()
+  if (user.email) return user.email.split('@')[0]
+  return '用户'
+}
 
 function TopNav() {
   const navigate = useNavigate()
   const location = useLocation()
   const isHome = location.pathname === '/'
+
+  const [user, setUser] = useState<SessionUser | null>(null)
+
+  useEffect(() => {
+    let active = true
+
+    async function loadUsername(id: string, fallback: string): Promise<string> {
+      const { data } = await supabase
+        .from('profiles')
+        .select('username')
+        .eq('id', id)
+        .single()
+
+      const name = (data as { username?: string } | null)?.username
+      return name?.trim() ? name.trim() : fallback
+    }
+
+    async function apply(authUser: { id: string; email?: string | null; user_metadata?: Record<string, unknown> } | null) {
+      if (!authUser) {
+        if (active) setUser(null)
+        return
+      }
+
+      const fallback = deriveUsername(authUser)
+      const username = await loadUsername(authUser.id, fallback)
+
+      if (active) {
+        setUser({ id: authUser.id, email: authUser.email ?? null, username })
+      }
+    }
+
+    supabase.auth.getSession().then(({ data }) => {
+      apply(data.session?.user ?? null)
+    })
+
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
+      apply(session?.user ?? null)
+    })
+
+    return () => {
+      active = false
+      sub.subscription.unsubscribe()
+    }
+  }, [])
+
+  async function signOut() {
+    await supabase.auth.signOut()
+    setUser(null)
+    navigate('/')
+  }
 
   return (
     <div className="nav">
@@ -26,9 +91,21 @@ function TopNav() {
           赞助
         </button>
         <span className="nav-link disabled">关于</span>
-        <button className="nav-login" onClick={() => navigate('/auth')}>
-          登录
-        </button>
+
+        {user ? (
+          <>
+            <span className="nav-user" title={user.email ?? undefined}>
+              {user.username}
+            </span>
+            <button className="nav-login" onClick={signOut}>
+              退出
+            </button>
+          </>
+        ) : (
+          <button className="nav-login" onClick={() => navigate('/auth')}>
+            登录
+          </button>
+        )}
       </div>
     </div>
   )
