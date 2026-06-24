@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import './Home.css'
 
 const FRAGMENTS = [
@@ -49,8 +49,22 @@ function Marquee() {
     }))
   }, [])
 
+  const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const io = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0 }
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+
   return (
-    <div className="marquee-bg">
+    <div className={`marquee-bg${visible ? '' : ' paused'}`} ref={ref}>
       <div className="mq-rows">
         {rows.map((row, i) => (
           <div className="row" key={i}>

@@ -4,8 +4,12 @@ import { supabase } from '../../lib/supabase'
 import { getIsAdmin } from '../../lib/admin'
 import { getGameBySlug } from '../../games/registry'
 import GamePageShell from './GamePageShell'
-import './GameMainSets.css'
-import '../P2IS/P2IS.css'
+import { getGameTheme } from './gameTheme'
+
+const mono = "'Space Mono', monospace"
+const cnf = "'Noto Sans SC', sans-serif"
+const DONE = '#2D8C50'
+const DANGER = '#F0888A'
 
 type MainSet = {
   id: string
@@ -133,7 +137,7 @@ export default function GameMainSets() {
     }
 
     setSets(prev =>
-      prev.map(s => (s.id === setId ? { ...s, is_completed: next } : s))
+      prev.map(s => (s.id === setId ? { ...s, is_completed: next } : s)),
     )
   }
 
@@ -239,7 +243,7 @@ export default function GameMainSets() {
           string_id: e.string_id,
           content: e.content,
           sort_order: e.sort_order,
-        }))
+        })),
       )
     }
 
@@ -250,152 +254,486 @@ export default function GameMainSets() {
 
   if (!game) {
     return (
-      <main className="game-mainsets-page">
+      <main
+        style={{
+          minHeight: '100vh',
+          background: '#0A0E18',
+          color: '#EAEEF7',
+          padding: 40,
+        }}
+      >
         <h1>Game not found</h1>
-        <Link to="/game">返回游戏列表</Link>
+        <Link to="/game" style={{ color: '#E8B23A' }}>
+          返回游戏列表
+        </Link>
       </main>
     )
   }
 
-  const filtered = sets.filter(s => {
-    if (filter && !s.source_file.startsWith(filter)) return false
-    if (search && !s.source_file.toLowerCase().includes(search.toLowerCase())) return false
-    return true
-  })
+  const t = getGameTheme(game)
+  const cats = game.categories
+
+  const catOf = (file: string) => cats.find(c => file.startsWith(c)) ?? '其他'
+
+  const searched = sets.filter(
+    s => !search || s.source_file.toLowerCase().includes(search.toLowerCase()),
+  )
 
   const completedCount = sets.filter(s => s.is_completed).length
   const totalCount = sets.length
+  const pct = totalCount ? Math.round((completedCount / totalCount) * 100) : 0
+
+  const presentCats = [...cats, '其他'].filter(c =>
+    sets.some(s => catOf(s.source_file) === c),
+  )
+
+  const catCounts: Record<string, number> = {}
+
+  sets.forEach(s => {
+    const c = catOf(s.source_file)
+    catCounts[c] = (catCounts[c] ?? 0) + 1
+  })
+
+  const groups = presentCats
+    .filter(c => !filter || c === filter)
+    .map(c => {
+      const all = sets.filter(s => catOf(s.source_file) === c)
+      const rows = searched.filter(s => catOf(s.source_file) === c)
+      const doneN = all.filter(s => s.is_completed).length
+
+      return {
+        cat: c,
+        rows,
+        totalN: all.length,
+        doneN,
+      }
+    })
+    .filter(g => g.rows.length > 0)
+
+  const shownSets = groups.reduce((n, g) => n + g.rows.length, 0)
+
+  const chip = (active: boolean): React.CSSProperties => ({
+    cursor: 'pointer',
+    fontFamily: mono,
+    fontSize: 11.5,
+    padding: '7px 13px',
+    borderRadius: 20,
+    background: active ? t.accentSoft : t.card,
+    color: active ? t.accent : t.muted,
+    border: `1px solid ${active ? t.accentBorder : t.line2}`,
+  })
+
+  const stat = (value: string | number, label: string, color: string) => (
+    <div>
+      <div
+        style={{
+          fontFamily: mono,
+          fontSize: 22,
+          fontWeight: 700,
+          color,
+        }}
+      >
+        {value}
+      </div>
+
+      <div
+        style={{
+          fontFamily: mono,
+          fontSize: 9.5,
+          letterSpacing: 1.5,
+          color: t.label,
+        }}
+      >
+        {label}
+      </div>
+    </div>
+  )
 
   return (
     <GamePageShell game={game}>
-      <main className="game-mainsets-page">
-        <div className="browse-wrap">
-          <div className="browse-header">
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-              <h1 style={{ margin: 0 }}>{game.shortTitle} 主集</h1>
+      <main
+        style={{
+          minHeight: '100vh',
+          background: t.page,
+          color: t.ink,
+          fontFamily: "'Space Grotesk', 'Noto Sans SC', sans-serif",
+        }}
+      >
+        <div style={{ height: 3, background: t.accent }} />
 
-              {!loading && totalCount > 0 && (
-                <div style={{ display: 'flex', gap: 8 }}>
-                  <span
-                    style={{
-                      fontSize: 12,
-                      padding: '3px 10px',
-                      background: 'rgba(80,200,120,0.12)',
-                      border: '1px solid rgba(80,200,120,0.25)',
-                      borderRadius: 20,
-                      color: '#6ee7a0',
-                    }}
-                  >
-                    ✓ 已完成 {completedCount}
-                  </span>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '26px 32px 90px' }}>
+          <section
+            style={{
+              border: `1px solid ${t.line2}`,
+              borderRadius: 14,
+              background: t.card,
+              padding: '24px 26px',
+              marginBottom: 22,
+              display: 'grid',
+              gridTemplateColumns: 'auto 1fr',
+              gap: 34,
+              alignItems: 'center',
+            }}
+          >
+            <div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+                <span
+                  style={{
+                    fontFamily: mono,
+                    fontSize: 52,
+                    fontWeight: 700,
+                    lineHeight: 1,
+                    color: t.ink,
+                  }}
+                >
+                  {pct}
+                </span>
 
-                  <span
-                    style={{
-                      fontSize: 12,
-                      padding: '3px 10px',
-                      background: 'rgba(255,255,255,0.05)',
-                      border: '1px solid rgba(255,255,255,0.1)',
-                      borderRadius: 20,
-                      color: 'rgba(200,220,255,0.5)',
-                    }}
-                  >
-                    未完成 {totalCount - completedCount}
-                  </span>
-                </div>
-              )}
+                <span style={{ fontFamily: mono, fontSize: 20, color: t.muted }}>
+                  %
+                </span>
+              </div>
+
+              <div
+                style={{
+                  fontFamily: mono,
+                  fontSize: 10,
+                  letterSpacing: 2,
+                  color: t.label,
+                  marginTop: 8,
+                }}
+              >
+                主集完成度 · {completedCount} / {totalCount}
+              </div>
             </div>
+
+            <div>
+              <div
+                style={{
+                  height: 8,
+                  borderRadius: 5,
+                  background: t.inkSoft,
+                  border: `1px solid ${t.line}`,
+                  overflow: 'hidden',
+                  marginBottom: 18,
+                }}
+              >
+                <div
+                  style={{
+                    width: `${pct}%`,
+                    height: '100%',
+                    background: DONE,
+                    transition: 'width 0.5s ease',
+                  }}
+                />
+              </div>
+
+              <div style={{ display: 'flex', gap: 30, flexWrap: 'wrap' }}>
+                {stat(completedCount, '已完成主集', DONE)}
+                {stat(totalCount - completedCount, '进行中', t.muted)}
+                {stat(totalCount, '主集总数', t.ink)}
+                {stat(presentCats.length, '文件分类', t.ink)}
+              </div>
+            </div>
+          </section>
+
+          <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap', marginBottom: 14 }}>
+            <button onClick={() => setFilter('')} style={chip(filter === '')}>
+              全部
+              <span style={{ opacity: 0.55, marginLeft: 6 }}>{totalCount}</span>
+            </button>
+
+            {presentCats.map(c => (
+              <button key={c} onClick={() => setFilter(c)} style={chip(filter === c)}>
+                {c}
+                <span style={{ opacity: 0.55, marginLeft: 6 }}>{catCounts[c]}</span>
+              </button>
+            ))}
+          </div>
+
+          <section
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 11,
+              flexWrap: 'wrap',
+              padding: '11px 13px',
+              border: `1px solid ${t.line2}`,
+              borderRadius: 11,
+              background: t.card,
+              marginBottom: 22,
+            }}
+          >
+            <input
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              placeholder="搜索文件组，例如 script · field · strtbl…"
+              style={{
+                flex: 1,
+                minWidth: 200,
+                background: t.inkSoft,
+                border: `1px solid ${t.line2}`,
+                borderRadius: 8,
+                color: t.ink,
+                fontFamily: 'inherit',
+                fontSize: 14,
+                padding: '9px 12px',
+                outline: 'none',
+              }}
+            />
+
+            <span
+              style={{
+                fontFamily: mono,
+                fontSize: 11,
+                color: t.label,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {shownSets} 个主集
+            </span>
 
             {user && !loading && (
               <button
-                className="btn-ghost"
                 onClick={initOfficialSets}
                 disabled={initializing}
+                style={{
+                  cursor: initializing ? 'not-allowed' : 'pointer',
+                  fontFamily: cnf,
+                  fontSize: 12.5,
+                  padding: '9px 14px',
+                  borderRadius: 8,
+                  background: t.accentSoft,
+                  border: `1px solid ${t.accentBorder}`,
+                  color: t.accent,
+                  fontWeight: 600,
+                }}
               >
                 {initializing
                   ? `创建中… ${initProgress}`
-                  : sets.length === 0
+                  : totalCount === 0
                     ? '初始化主集'
                     : '补全主集'}
               </button>
             )}
-          </div>
+          </section>
 
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
-            {['', ...game.categories].map(c => (
-              <button
-                key={c}
-                className={filter === c ? 'btn-primary' : 'btn-ghost'}
-                style={{ padding: '4px 12px', fontSize: 12 }}
-                onClick={() => setFilter(c)}
-              >
-                {c === '' ? '全部' : c}
-              </button>
-            ))}
-          </div>
+          {loading && (
+            <p style={{ fontFamily: mono, fontSize: 13, color: t.label }}>
+              加载中…
+            </p>
+          )}
 
-          <div className="editor-search-bar" style={{ marginBottom: 24 }}>
-            <input
-              className="search-input"
-              placeholder="搜索文件组，例如 field · script · strtbl"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-            />
-            <span className="muted">{filtered.length} 个</span>
-          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 26 }}>
+            {groups.map(grp => {
+              const barW = grp.totalN ? Math.round((grp.doneN / grp.totalN) * 100) : 0
 
-          {loading && <p className="muted">加载中…</p>}
-
-          <div className="main-sets-list">
-            {filtered.map(s => (
-              <div
-                key={s.id}
-                className={`main-set-row${s.is_completed ? ' main-set-completed' : ''}`}
-              >
-                <span className="main-badge">主</span>
-
-                {s.is_completed && (
-                  <span className="completed-badge">✓ 已完成</span>
-                )}
-
-                <span className="main-set-name">{s.source_file}</span>
-
-                <div className="main-set-actions">
-                  <button
-                    className="btn-ghost"
-                    onClick={() => {
-                      sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
-                      navigate(`${game.basePath}/edit/${s.id}`)
+              return (
+                <section key={grp.cat}>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 12,
+                      marginBottom: 11,
                     }}
                   >
-                    查看
-                  </button>
-
-                  <button
-                    className="btn-primary"
-                    onClick={() => {
-                      sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
-                      fork(s.id, s.source_file, s.title)
-                    }}
-                  >
-                    Fork
-                  </button>
-
-                  {isAdmin && (
-                    <button
-                      className="btn-ghost"
+                    <span
                       style={{
-                        fontSize: 11,
-                        color: s.is_completed ? 'rgba(248,81,73,0.7)' : '#6ee7a0',
+                        fontFamily: mono,
+                        fontSize: 13,
+                        fontWeight: 700,
+                        letterSpacing: 1,
+                        color: t.ink,
                       }}
-                      onClick={() => toggleCompleted(s.id, !!s.is_completed)}
                     >
-                      {s.is_completed ? '取消完成' : '标记完成'}
-                    </button>
-                  )}
-                </div>
-              </div>
-            ))}
+                      {grp.cat}
+                    </span>
+
+                    <span
+                      style={{
+                        fontFamily: mono,
+                        fontSize: 11,
+                        color: grp.doneN === grp.totalN ? DONE : t.muted,
+                      }}
+                    >
+                      {grp.doneN} / {grp.totalN} 完成
+                    </span>
+
+                    <div
+                      style={{
+                        flex: 1,
+                        height: 4,
+                        borderRadius: 3,
+                        background: t.inkSoft,
+                        border: `1px solid ${t.line}`,
+                        overflow: 'hidden',
+                        maxWidth: 200,
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: `${barW}%`,
+                          height: '100%',
+                          background: DONE,
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {grp.rows.map(s => {
+                      const done = !!s.is_completed
+
+                      return (
+                        <div
+                          key={s.id}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 13,
+                            padding: '13px 16px',
+                            border: `1px solid ${t.line2}`,
+                            borderLeft: `3px solid ${done ? DONE : t.line2}`,
+                            borderRadius: 11,
+                            background: t.card,
+                          }}
+                        >
+                          <span
+                            style={{
+                              flexShrink: 0,
+                              width: 24,
+                              height: 24,
+                              borderRadius: 6,
+                              background: t.accentSoft,
+                              color: t.accent,
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontFamily: cnf,
+                              fontWeight: 700,
+                              fontSize: 12,
+                            }}
+                          >
+                            主
+                          </span>
+
+                          <div style={{ minWidth: 0, flex: 1 }}>
+                            <div
+                              style={{
+                                fontFamily: mono,
+                                fontSize: 14,
+                                color: t.ink,
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                whiteSpace: 'nowrap',
+                              }}
+                            >
+                              {s.source_file}
+                            </div>
+                          </div>
+
+                          <span
+                            style={{
+                              flexShrink: 0,
+                              fontFamily: cnf,
+                              fontSize: 11.5,
+                              padding: '3px 10px',
+                              borderRadius: 20,
+                              background: done ? 'rgba(45,140,80,0.10)' : t.inkSoft,
+                              color: done ? DONE : t.muted,
+                              border: `1px solid ${
+                                done ? 'rgba(45,140,80,0.28)' : t.line2
+                              }`,
+                            }}
+                          >
+                            {done ? '✓ 已完成' : '进行中'}
+                          </span>
+
+                          <div style={{ flexShrink: 0, display: 'flex', gap: 7 }}>
+                            <button
+                              onClick={() => {
+                                sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
+                                navigate(`${game.basePath}/edit/${s.id}`)
+                              }}
+                              style={{
+                                cursor: 'pointer',
+                                fontFamily: cnf,
+                                fontSize: 12.5,
+                                padding: '8px 14px',
+                                borderRadius: 8,
+                                background: t.inkSoft,
+                                border: `1px solid ${t.line2}`,
+                                color: t.ink,
+                              }}
+                            >
+                              查看
+                            </button>
+
+                            <button
+                              onClick={() => {
+                                sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
+                                fork(s.id, s.source_file, s.title)
+                              }}
+                              style={{
+                                cursor: 'pointer',
+                                fontFamily: cnf,
+                                fontSize: 12.5,
+                                padding: '8px 14px',
+                                borderRadius: 8,
+                                background: t.accent,
+                                border: 'none',
+                                color: '#0A0E18',
+                                fontWeight: 700,
+                              }}
+                            >
+                              Fork
+                            </button>
+
+                            {isAdmin && (
+                              <button
+                                onClick={() => toggleCompleted(s.id, done)}
+                                style={{
+                                  cursor: 'pointer',
+                                  fontFamily: cnf,
+                                  fontSize: 12,
+                                  padding: '8px 12px',
+                                  borderRadius: 8,
+                                  background: 'none',
+                                  border: `1px solid ${
+                                    done
+                                      ? 'rgba(248,81,73,0.3)'
+                                      : 'rgba(45,140,80,0.3)'
+                                  }`,
+                                  color: done ? DANGER : DONE,
+                                }}
+                              >
+                                {done ? '取消完成' : '标记完成'}
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </section>
+              )
+            })}
           </div>
+
+          {!loading && groups.length === 0 && (
+            <div
+              style={{
+                textAlign: 'center',
+                padding: '60px 20px',
+                fontFamily: mono,
+                fontSize: 13,
+                color: t.label,
+              }}
+            >
+              没有匹配的主集
+            </div>
+          )}
         </div>
       </main>
     </GamePageShell>
