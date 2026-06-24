@@ -64,7 +64,7 @@ const secretConfigs: Record<string, SecretConfig> = {
       {
         label: 'P2EP 测试补丁',
         url: 'https://pan.baidu.com/s/1njGANWf7os-WfrYcpVf0-Q?pwd=5ud5',
-        note: '这里换成 P2EP 自己的链接。',
+        note: '完整游戏镜像',
         primary: true,
       },
       {
