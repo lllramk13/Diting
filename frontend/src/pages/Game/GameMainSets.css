@@ -1,0 +1,13 @@
+/* frontend/src/pages/Game/GameMainSets.css */
+
+.game-mainsets-page {
+  min-height: 100vh;
+  padding: 32px 24px 72px;
+  color: #e8ecff;
+  background: #080a12;
+}
+
+.game-mainsets-page .browse-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}

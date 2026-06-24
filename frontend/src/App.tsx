@@ -1,31 +1,35 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
-import Browse from './pages/P2IS/Browse'
-import MainSets from './pages/P2IS/MainSets'
-import Editor from './pages/P2IS/Editor'
 import Auth from './pages/P2IS/Auth'
-import Issues from  './pages/P2IS/Issues'
-import IssuesDetail from './pages/P2IS/IssuesDetail'
-import Search from './pages/P2IS/Search'
-import Requests from './pages/P2IS/Requests'
-import RequestDetail from './pages/P2IS/RequestDetail'
-import Announce from './pages/P2IS/Announce'
-import Glossary from './pages/P2IS/Glossary'
+import GameIndex from  './pages/Game/GameIndex'
+import GameAnnounce from "./pages/Game/GameAnnounce"
+import GameMainSets from './pages/Game/GameMainSets'
+import GameEditor from './pages/Game/GameEditor'
+import GameRequests from './pages/Game/GameRequests'
+import GameRequestDetail from './pages/Game/GameRequestDetail'
+import GameSearch from './pages/Game/GameSearch'
+import GameIssues from './pages/Game/GameIssues'
+import GameIssueDetail from './pages/Game/GameIssueDetail'
+import GameGlossary from './pages/Game/GameGlossary'
+import GameBrowse from './pages/Game/GameBrowse'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/game/psx/p2is" element={<Browse />} />
-      <Route path="/game/psx/p2is/main" element={<MainSets />} />
-      <Route path="/game/psx/p2is/edit/:setId" element={<Editor />} />
-      <Route path="/game/psx/p2is/search" element={<Search />} />
-      <Route path="/game/psx/p2is/requests" element={<Requests />} />
-      <Route path="/game/psx/p2is/requests/:requestId" element={<RequestDetail />} />
-      <Route path="/game/psx/p2is/announce" element={<Announce />} />
-      <Route path="/game/psx/p2is/issues" element={<Issues />} />
-      <Route path="/game/psx/p2is/issues/:issueId" element={<IssuesDetail/>} />
-      <Route path="/game/psx/p2is/glossary" element={<Glossary />} />
+      
+      <Route path="/game" element={<GameIndex />} />
+      <Route path="/game/:platform/:gameSlug/announce" element={<GameAnnounce />} />
+      <Route path="/game/:platform/:gameSlug/main" element={<GameMainSets />} />
+      <Route path="/game/:platform/:gameSlug/edit/:setId" element={<GameEditor />} />
+      <Route path="/game/:platform/:gameSlug/requests" element={<GameRequests />} />
+      <Route path="/game/:platform/:gameSlug/requests/:requestId" element={<GameRequestDetail />}/>
+      <Route path="/game/:platform/:gameSlug/search" element={<GameSearch />} />
+      <Route path="/game/:platform/:gameSlug/issues" element={<GameIssues />} />
+      <Route path="/game/:platform/:gameSlug/issues/:issueId" element={<GameIssueDetail />} />
+      <Route path="/game/:platform/:gameSlug/glossary" element={<GameGlossary />} />
+      <Route path="/game/:platform/:gameSlug" element={<GameBrowse />} />
+
       <Route path="/auth" element={<Auth />} />
     </Routes>
   )
