@@ -1,0 +1,1 @@
+[{"id": "field:11610", "jp": "<c5/><c2f/>倒れ、正面<前後><WAIT>\\n", "zh": "<c5/><c2f/>倒地、正面<前後><WAIT>\\n", "srcs": ["field:516_449:dec:0xc", "strtbl:516_449:raw:0x8#0"]}, {"id": "field:11611", "jp": "<c5/><c2f/>倒れ、横<前後><WAIT>\\n", "zh": "<c5/><c2f/>倒地、侧面<前後><WAIT>\\n", "srcs": ["field:516_449:dec:0x2c", "strtbl:516_449:raw:0x8#1"]}]

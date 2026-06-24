@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
-import Auth from './pages/P2IS/Auth'
+import Auth from './pages/Auth'
 import GameIndex from  './pages/Game/GameIndex'
 import GameAnnounce from "./pages/Game/GameAnnounce"
 import GameMainSets from './pages/Game/GameMainSets'
