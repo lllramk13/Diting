@@ -24,7 +24,7 @@ export default function HomeSections() {
               <div style={{ fontSize: 14, color: 'rgba(200,220,255,0.55)' }}>Persona 2: Innocent Sin</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 22 }}>
                 <div style={{ flex: 1, height: 6, borderRadius: 3, background: 'rgba(255,255,255,0.08)' }}><div style={{ width: '62%', height: '100%', borderRadius: 3, background: '#5E8BFF' }} /></div>
-                <span style={{ fontFamily: mono, fontSize: 13, color: '#5E8BFF' }}>62%</span>
+                <span style={{ fontFamily: mono, fontSize: 13, color: '#5E8BFF' }}>61%</span>
               </div>
               <div style={{ marginTop: 14, display: 'flex', gap: 8 }}>
                 <span style={{ fontSize: 12, padding: '4px 10px', borderRadius: 20, background: 'rgba(94,139,255,0.15)', color: '#9FB8FF' }}>进行中</span>
@@ -41,7 +41,7 @@ export default function HomeSections() {
               <div style={{ fontSize: 14, color: 'rgba(200,220,255,0.55)' }}>Persona 2: Eternal Punishment</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 22 }}>
                 <div style={{ flex: 1, height: 6, borderRadius: 3, background: 'rgba(255,255,255,0.08)' }}><div style={{ width: '40%', height: '100%', borderRadius: 3, background: '#E8455A' }} /></div>
-                <span style={{ fontFamily: mono, fontSize: 13, color: '#E8455A' }}>40%</span>
+                <span style={{ fontFamily: mono, fontSize: 13, color: '#E8455A' }}>50%</span>
               </div>
               <div style={{ marginTop: 14, display: 'flex', gap: 8 }}>
                 <span style={{ fontSize: 12, padding: '4px 10px', borderRadius: 20, background: 'rgba(232,69,90,0.15)', color: '#FF8A98' }}>初翻完成 · 校对中</span>
