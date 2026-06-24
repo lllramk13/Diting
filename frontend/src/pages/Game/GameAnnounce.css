@@ -1,0 +1,114 @@
+.game-announce-page {
+  min-height: 100vh;
+  padding: 96px 24px 72px;
+  color: #e8ecff;
+  background: #080a12;
+}
+
+.game-announce-hero,
+.game-announce-section {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.game-announce-hero {
+  margin-bottom: 48px;
+}
+
+.game-announce-hero h1 {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.game-announce-kicker {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(180, 195, 255, 0.72);
+}
+
+.game-announce-hero > p {
+  max-width: 680px;
+  line-height: 1.8;
+  color: rgba(225, 232, 255, 0.72);
+}
+
+.game-announce-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.game-announce-meta span {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(180, 195, 255, 0.14);
+}
+
+.game-announce-section {
+  margin-bottom: 28px;
+  padding: 24px;
+  border-radius: 22px;
+  border: 1px solid rgba(180, 195, 255, 0.14);
+  background: rgba(14, 18, 32, 0.78);
+}
+
+.game-announce-section h2 {
+  margin-top: 0;
+}
+
+.game-announce-section li {
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+.game-download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.game-download-card,
+.game-announce-actions a,
+.game-announce-section a {
+  color: #f4f6ff;
+}
+
+.game-download-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(120, 110, 255, 0.2);
+  border: 1px solid rgba(180, 195, 255, 0.18);
+}
+
+.game-download-card span {
+  font-size: 13px;
+  color: rgba(225, 232, 255, 0.7);
+}
+
+.game-announce-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.game-announce-actions a {
+  padding: 9px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: rgba(120, 110, 255, 0.22);
+  border: 1px solid rgba(180, 195, 255, 0.18);
+}
+
+.game-announce-section.warning {
+  border-color: rgba(255, 190, 120, 0.28);
+}

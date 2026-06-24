@@ -38,10 +38,9 @@ html, body, #root {
 
 /* ===== 导航 ===== */
 .nav {
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
+  z-index: 50;
   height: clamp(56px, 6.5vh, 76px);
   display: grid;
   grid-template-columns: auto 1fr auto;
