@@ -127,6 +127,19 @@ html, body, #root {
 }
 .nav-login:hover { background: rgba(255, 255, 255, 0.1); }
 
+.nav-user {
+  margin-left: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8b23a;
+  padding: 8px 6px;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .dl {
   width: 5px;
   height: 5px;
