@@ -217,10 +217,16 @@ function PRModal({
   onClose,
   onSubmitted,
 }: PRModalProps) {
+  const [prTitle, setPrTitle] = useState(title)
   const [description, setDescription] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
   async function submit() {
+    if (!prTitle.trim()) {
+      alert('请填写标题。')
+      return
+    }
+
     setSubmitting(true)
 
     const { data: userData } = await supabase.auth.getUser()
@@ -235,7 +241,7 @@ function PRModal({
     const { data, error } = await supabase
       .from('merge_requests')
       .insert({
-        title,
+        title: prTitle.trim(),
         description: description.trim() || null,
         from_set_id: fromSetId,
         to_set_id: toSetId,
@@ -266,8 +272,9 @@ function PRModal({
           <label className="form-label">标题</label>
           <input
             className="form-input"
-            value={title}
-            disabled
+            value={prTitle}
+            onChange={e => setPrTitle(e.target.value)}
+            placeholder="给这次合并请求起个标题"
           />
 
           <label className="form-label">说明</label>
