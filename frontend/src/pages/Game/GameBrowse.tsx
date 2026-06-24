@@ -4,57 +4,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import { getGameBySlug } from '../../games/registry'
 import GamePageShell from './GamePageShell'
-import { getGameTheme, type GameTheme } from './gameTheme'
+import { getGameTheme } from './gameTheme'
 
 const mono = "'Space Mono', monospace"
 const cnf = "'Noto Sans SC', sans-serif"
 const DONE = '#2D8C50'
-
-type Theme = {
-  page: string
-  card: string
-  line: string
-  line2: string
-  label: string
-  muted: string
-  ink: string
-  inkSoft: string
-  inkBorder: string
-  accent: string
-  accentSoft: string
-  accentBorder: string
-}
-
-const THEMES: Record<string, Theme> = {
-  p2is: {
-    page: '#EFEBE2',
-    card: '#FBFAF6',
-    line: '#E5DFD2',
-    line2: '#D8D1C1',
-    label: '#A89E8C',
-    muted: '#85806F',
-    ink: '#2E2A23',
-    inkSoft: 'rgba(46,42,35,0.06)',
-    inkBorder: 'rgba(46,42,35,0.24)',
-    accent: '#2F62C4',
-    accentSoft: 'rgba(47,98,196,0.10)',
-    accentBorder: 'rgba(47,98,196,0.30)',
-  },
-  p2ep: {
-    page: '#F0EAE4',
-    card: '#FCF9F6',
-    line: '#E8DDD6',
-    line2: '#DCCFC6',
-    label: '#AE9E94',
-    muted: '#8C8076',
-    ink: '#2E2A23',
-    inkSoft: 'rgba(46,42,35,0.06)',
-    inkBorder: 'rgba(46,42,35,0.24)',
-    accent: '#B8443C',
-    accentSoft: 'rgba(184,68,60,0.10)',
-    accentBorder: 'rgba(184,68,60,0.30)',
-  },
-}
 
 type TranslationSetRow = {
   id: string
@@ -206,7 +160,14 @@ export default function GameBrowse() {
 
   if (!game) {
     return (
-      <main style={{ minHeight: '100vh', background: '#EFEBE2', color: t.ink, padding: 40 }}>
+      <main
+        style={{
+          minHeight: '100vh',
+          background: '#0A0E18',
+          color: '#EAEEF7',
+          padding: 40,
+        }}
+      >
         <h1>Game not found</h1>
       </main>
     )
@@ -475,7 +436,7 @@ export default function GameBrowse() {
       <main
         style={{
           minHeight: '100vh',
-          background: t.inkSoft,
+          background: t.page,
           color: t.ink,
           fontFamily: "'Space Grotesk', 'Noto Sans SC', -apple-system, sans-serif",
           lineHeight: 1.5,
@@ -743,7 +704,7 @@ export default function GameBrowse() {
               style={{
                 width: '100%',
                 maxWidth: 460,
-                background: t.inkSoft,
+                background: t.card,
                 border: `1px solid ${t.line2}`,
                 borderRadius: 16,
                 boxShadow: '0 24px 60px rgba(30,26,20,0.25)',

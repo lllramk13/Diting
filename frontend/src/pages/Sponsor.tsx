@@ -19,7 +19,7 @@ const t = {
   danger: '#F0888A',
   success: '#2D8C50',
 }
-
+{/*
 type SponsorCardProps = {
   title: string
   desc: string
@@ -27,8 +27,9 @@ type SponsorCardProps = {
   link?: string
   button?: string
   note?: string
-}
+}*/}
 
+{/*
 function SponsorCard({ title, desc, image, link, button, note }: SponsorCardProps) {
   return (
     <section
@@ -126,7 +127,7 @@ function SponsorCard({ title, desc, image, link, button, note }: SponsorCardProp
     </section>
   )
 }
-
+*/}
 export default function Sponsor() {
   return (
     <>
