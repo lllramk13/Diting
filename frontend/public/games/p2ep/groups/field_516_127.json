@@ -1,0 +1,1 @@
+[{"id": "field:11314", "jp": "<c5/><c2f/>ナイフで髭を剃る<後><WAIT>\\n", "zh": "<c5/><c2f/>用刀刮胡子<後><WAIT>\\n", "srcs": ["field:516_127:dec:0x14", "strtbl:516_127:raw:0x8#0"]}, {"id": "field:11315", "jp": "<c5/><c2f/>刀を振りかざす<前><WAIT>\\n", "zh": "<c5/><c2f/>高举刀挥舞<前><WAIT>\\n", "srcs": ["field:516_127:dec:0x5a", "strtbl:516_127:raw:0x8#2"]}]

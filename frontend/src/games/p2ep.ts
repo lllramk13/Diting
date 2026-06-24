@@ -36,13 +36,8 @@ export const p2ep: GameConfig = {
         'script',
         'field',
         'strtbl',
-        'config',
-        'contactui',
-        'mainmenu',
-        'map_names',
-        'names',
-        'nametable',
-    ],  
+        'SLUS',
+    ],
 
     announcement: {
     version: 'v0.1.0',
