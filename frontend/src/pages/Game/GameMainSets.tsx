@@ -582,26 +582,56 @@ export default function GameMainSets() {
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {dupSets.map(s => (
-                  <button
+                  <div
                     key={s.id}
-                    onClick={() => {
-                      sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
-                      navigate(`${game.basePath}/edit/${s.id}`)
-                    }}
                     style={{
-                      cursor: 'pointer',
-                      fontFamily: cnf,
-                      fontSize: 13,
-                      padding: '10px 16px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 1,
                       borderRadius: 10,
-                      background: t.accentSoft,
+                      overflow: 'hidden',
                       border: `1px solid ${t.accentBorder}`,
-                      color: t.accent,
-                      fontWeight: 600,
                     }}
                   >
-                    {s.title || s.source_file}
-                  </button>
+                    <button
+                      onClick={() => {
+                        sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
+                        navigate(`${game.basePath}/edit/${s.id}`)
+                      }}
+                      style={{
+                        cursor: 'pointer',
+                        fontFamily: cnf,
+                        fontSize: 13,
+                        padding: '10px 14px',
+                        background: t.accentSoft,
+                        border: 'none',
+                        color: t.accent,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {s.title || s.source_file}
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
+                        fork(s.id, s.source_file, s.title)
+                      }}
+                      title="Fork 这个重复集来修改，改完提交合并请求"
+                      style={{
+                        cursor: 'pointer',
+                        fontFamily: cnf,
+                        fontSize: 12.5,
+                        padding: '10px 12px',
+                        background: t.accent,
+                        border: 'none',
+                        color: '#0A0E18',
+                        fontWeight: 700,
+                      }}
+                    >
+                      Fork
+                    </button>
+                  </div>
                 ))}
               </div>
             </section>

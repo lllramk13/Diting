@@ -1611,6 +1611,55 @@ export default function GameEditor() {
     navigate(game?.routes.main ?? '/game')
   }
 
+  async function forkThisSet() {
+    if (!setData || !game) return
+
+    const { data: u } = await supabase.auth.getUser()
+    const uid = u.user?.id
+    if (!uid) {
+      navigate('/auth')
+      return
+    }
+
+    const { data: srcEntries } = await supabase
+      .from('translation_entries')
+      .select('string_id, content, sort_order')
+      .eq('set_id', setData.id)
+
+    const { data: newSet, error } = await supabase
+      .from('translation_sets')
+      .insert({
+        user_id: uid,
+        title: `Fork - ${setData.title}`,
+        forked_from: setData.id,
+        source_file: setData.source_file,
+        is_public: false,
+        is_official: false,
+        is_completed: false,
+        game_slug: game.slug,
+      })
+      .select()
+      .single()
+
+    if (error || !newSet) {
+      alert('Fork 失败：' + (error?.message ?? '未知错误'))
+      return
+    }
+
+    if (srcEntries && srcEntries.length > 0) {
+      await supabase.from('translation_entries').insert(
+        srcEntries.map((e: { string_id: string; content: string; sort_order: number }) => ({
+          set_id: newSet.id,
+          string_id: e.string_id,
+          content: e.content,
+          sort_order: e.sort_order,
+        })),
+      )
+    }
+
+    navigate(`${game.basePath}/edit/${newSet.id}`)
+  }
+
   if (!game) {
     return (
       <main style={{ minHeight: '100vh', background: '#0A0E18', color: '#EAEEF7', padding: 40 }}>
@@ -1824,8 +1873,33 @@ export default function GameEditor() {
                     )}
 
                     {readonly && (
-                      <span style={{ fontSize: 12.5, color: t.muted }}>
+                      <span
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 9,
+                          fontSize: 12.5,
+                          color: t.muted,
+                        }}
+                      >
                         只读模式
+                        <button
+                          onClick={forkThisSet}
+                          title="Fork 一份可编辑的副本，改完提交合并请求"
+                          style={{
+                            cursor: 'pointer',
+                            fontFamily: cnf,
+                            fontSize: 12.5,
+                            fontWeight: 700,
+                            padding: '6px 12px',
+                            borderRadius: 8,
+                            background: t.accent,
+                            border: 'none',
+                            color: '#0A0E18',
+                          }}
+                        >
+                          Fork 编辑
+                        </button>
                       </span>
                     )}
 
