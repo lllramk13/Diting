@@ -273,7 +273,12 @@ function EntryRow({
 }: EntryRowProps) {
   const { chips, dirty, hasError } = validation
 
-  const speaker = row.meta ?? row.speaker_jp ?? row.speaker
+  const speakerJp = row.meta ?? row.speaker_jp ?? row.speaker
+  const speakerZh = row.speaker_zh
+  const speaker =
+    speakerJp && speakerZh && speakerJp !== speakerZh
+      ? `${speakerJp} / ${speakerZh}`
+      : speakerJp ?? speakerZh
   const srcs = row.srcs ?? []
   const occurrences = srcs.length
 
