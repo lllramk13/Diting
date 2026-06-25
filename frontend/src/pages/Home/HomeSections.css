@@ -1,0 +1,209 @@
+.home-sections {
+  --mono: 'Space Mono', monospace;
+  --cn: 'Noto Sans SC', sans-serif;
+
+  background: #0a0e18;
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  color: #eaeef7;
+}
+
+.hs-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 40px 20px;
+}
+.hs-section.is-sponsor {
+  padding: 50px 40px 90px;
+}
+
+.hs-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.hs-eyebrow {
+  font-size: 13px;
+  font-family: var(--mono);
+  letter-spacing: 3px;
+  color: rgba(200, 220, 255, 0.5);
+  margin: 0;
+  text-transform: uppercase;
+}
+.hs-panel .hs-eyebrow {
+  margin: 0 0 18px;
+}
+.hs-all-btn {
+  background: none;
+  border: none;
+  color: #e8b23a;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.hs-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hs-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 30px;
+  border-radius: 16px;
+}
+.hs-card.is-sin {
+  --hs-accent: #5e8bff;
+  --hs-ghost: rgba(94, 139, 255, 0.1);
+  --hs-tag-bg: rgba(94, 139, 255, 0.15);
+  --hs-tag-fg: #9fb8ff;
+  background: linear-gradient(135deg, rgba(94, 139, 255, 0.14), rgba(94, 139, 255, 0.03));
+  border: 1px solid rgba(94, 139, 255, 0.28);
+}
+.hs-card.is-punish {
+  --hs-accent: #e8455a;
+  --hs-ghost: rgba(232, 69, 90, 0.1);
+  --hs-tag-bg: rgba(232, 69, 90, 0.15);
+  --hs-tag-fg: #ff8a98;
+  background: linear-gradient(135deg, rgba(232, 69, 90, 0.14), rgba(232, 69, 90, 0.03));
+  border: 1px solid rgba(232, 69, 90, 0.28);
+}
+
+.hs-ghost {
+  position: absolute;
+  right: -10px;
+  top: -30px;
+  font-family: var(--cn);
+  font-weight: 900;
+  font-size: 160px;
+  color: var(--hs-ghost);
+  line-height: 1;
+}
+.hs-card-body {
+  position: relative;
+}
+.hs-platform {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--hs-accent);
+  letter-spacing: 2px;
+}
+.hs-title {
+  font-family: var(--cn);
+  font-weight: 700;
+  font-size: 26px;
+  margin: 8px 0 4px;
+}
+.hs-subtitle {
+  font-size: 14px;
+  color: rgba(200, 220, 255, 0.55);
+}
+
+.hs-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.hs-progress {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.hs-progress-bar {
+  width: var(--hs-pct, 0%);
+  height: 100%;
+  border-radius: 3px;
+  background: var(--hs-accent);
+}
+.hs-percent {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--hs-accent);
+}
+
+.hs-tags {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+}
+.hs-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.hs-tag--status {
+  background: var(--hs-tag-bg);
+  color: var(--hs-tag-fg);
+}
+.hs-tag--ver {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(200, 220, 255, 0.6);
+  font-family: var(--mono);
+}
+
+.hs-sponsor-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+.hs-panel {
+  padding: 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.hs-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hs-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #eaeef7;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.hs-link-tag {
+  font-family: var(--mono);
+  color: #e8b23a;
+  font-size: 13px;
+}
+
+.hs-sponsor-card {
+  padding: 28px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(232, 178, 58, 0.12), rgba(232, 178, 58, 0.02));
+  border: 1px solid rgba(232, 178, 58, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hs-sponsor-title {
+  font-family: var(--cn);
+  font-weight: 700;
+  font-size: 20px;
+  color: #e8b23a;
+}
+.hs-sponsor-text {
+  font-size: 14px;
+  color: rgba(220, 228, 245, 0.65);
+  margin: 12px 0 0;
+  line-height: 1.6;
+}
+.hs-sponsor-link {
+  font-family: var(--mono);
+  color: #e8b23a;
+  font-size: 14px;
+  margin-top: 24px;
+  text-decoration: none;
+}

@@ -1,0 +1,327 @@
+.req-notfound {
+  min-height: 100vh;
+  background: #0a0e18;
+  color: #eaeef7;
+  padding: 40px;
+}
+
+.req-main {
+  min-height: 100vh;
+  background: var(--gt-bg);
+  color: var(--gt-text);
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+}
+.req-topline {
+  height: 3px;
+  background: var(--gt-accent);
+}
+.req-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 32px 90px;
+}
+
+.req-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.req-intro-text {
+  max-width: 580px;
+}
+.req-h1 {
+  font-family: var(--cnf);
+  font-weight: 900;
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.req-intro-p {
+  font-size: 14.5px;
+  color: var(--gt-muted);
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+.req-actions {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.req-download-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 13px;
+  padding: 10px 16px;
+  border-radius: 9px;
+  background: var(--gt-card-strong);
+  border: 1px solid var(--gt-line);
+  color: var(--gt-text);
+}
+.req-mergeall-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 9px;
+  background: var(--gt-accent);
+  border: none;
+  color: var(--gt-bg);
+}
+
+.req-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.req-tabs {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.req-tab {
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--cnf);
+  font-size: 13px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: var(--gt-card);
+  color: var(--gt-muted);
+  border: 1px solid var(--gt-line);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.req-tab.is-active {
+  background: var(--gt-card-strong);
+  color: var(--gt-text);
+  border-color: var(--gt-line-strong);
+}
+.req-tab-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  opacity: 0.7;
+}
+.req-search {
+  margin-left: auto;
+  background: var(--gt-card);
+  border: 1px solid var(--gt-line);
+  border-radius: 8px;
+  color: var(--gt-text);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 9px 13px;
+  outline: none;
+  width: 240px;
+}
+
+.req-loading {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--gt-faint);
+}
+
+.req-list {
+  border: 1px solid var(--gt-line);
+  border-radius: 13px;
+  background: var(--gt-card);
+  overflow: hidden;
+}
+
+/* per-status color tokens */
+.req-st-open {
+  --st-color: var(--gt-warning);
+  --st-bg: rgba(240, 184, 74, 0.12);
+  --st-border: rgba(240, 184, 74, 0.3);
+}
+.req-st-merged {
+  --st-color: var(--gt-success);
+  --st-bg: rgba(45, 140, 80, 0.14);
+  --st-border: rgba(45, 140, 80, 0.32);
+}
+.req-st-closed {
+  --st-color: var(--gt-danger);
+  --st-bg: rgba(240, 136, 138, 0.12);
+  --st-border: rgba(240, 136, 138, 0.3);
+}
+
+.req-row {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gt-line);
+}
+.req-status-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--st-bg);
+  color: var(--st-color);
+  border: 1px solid var(--st-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+}
+.req-row-body {
+  min-width: 0;
+  flex: 1;
+}
+.req-title-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.req-title {
+  font-family: var(--cnf);
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--gt-text);
+}
+.req-status-badge {
+  font-family: var(--cnf);
+  font-size: 10.5px;
+  padding: 2px 9px;
+  border-radius: 20px;
+  background: var(--st-bg);
+  color: var(--st-color);
+  border: 1px solid var(--st-border);
+}
+.req-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+.req-srcfile {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  padding: 1px 7px;
+  border-radius: 5px;
+  background: var(--gt-card-strong);
+  color: var(--gt-text);
+  border: 1px solid var(--gt-line);
+}
+.req-meta-text {
+  font-family: var(--cnf);
+  font-size: 11.5px;
+  color: var(--gt-muted);
+}
+.req-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.req-score {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--gt-faint);
+}
+.req-score.is-pos {
+  color: var(--gt-success);
+}
+.req-score.is-neg {
+  color: var(--gt-danger);
+}
+.req-chevron {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--gt-faint);
+}
+.req-empty {
+  text-align: center;
+  padding: 56px 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--gt-faint);
+}
+
+.req-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(5, 8, 15, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.req-modal {
+  width: 100%;
+  max-width: 470px;
+  background: var(--gt-card);
+  border: 1px solid var(--gt-line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.req-modal-top {
+  height: 3px;
+  background: var(--gt-accent);
+}
+.req-modal-body {
+  padding: 24px 26px;
+}
+.req-modal-title {
+  font-family: var(--cnf);
+  font-weight: 700;
+  font-size: 19px;
+  margin-bottom: 14px;
+}
+.req-modal-text {
+  font-size: 14px;
+  color: var(--gt-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+.req-strong {
+  color: var(--gt-text);
+}
+.req-skip-note {
+  display: block;
+  margin-top: 6px;
+}
+.req-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+.req-cancel-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 13.5px;
+  padding: 10px 18px;
+  border-radius: 9px;
+  background: var(--gt-card-strong);
+  border: 1px solid var(--gt-line);
+  color: var(--gt-muted);
+}
+.req-confirm-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 9px;
+  background: var(--gt-accent);
+  border: none;
+  color: var(--gt-bg);
+}
+.req-confirm-btn:disabled {
+  cursor: not-allowed;
+}

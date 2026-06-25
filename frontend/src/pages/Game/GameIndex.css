@@ -1,178 +1,168 @@
-.game-index-page {
+.game-index {
+  --mono: 'Space Mono', monospace;
+  --cn: 'Noto Sans SC', sans-serif;
+
   min-height: 100vh;
-  padding: 96px 24px 72px;
-  color: #e8ecff;
-  background:
-    radial-gradient(circle at top left, rgba(120, 110, 255, 0.18), transparent 32rem),
-    radial-gradient(circle at bottom right, rgba(80, 180, 255, 0.12), transparent 28rem),
-    #080a12;
+  background: #0a0e18;
+  color: #eaeef7;
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
 }
 
-.game-index-hero {
-  max-width: 980px;
-  margin: 0 auto 56px;
+.gi-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 40px 90px;
 }
-
-.game-index-hero p:first-child {
-  margin: 0 0 12px;
+.gi-eyebrow {
+  font-family: var(--mono);
   font-size: 13px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(180, 195, 255, 0.72);
+  color: rgba(200, 220, 255, 0.45);
+  letter-spacing: 2px;
 }
-
-.game-index-hero h1 {
-  margin: 0;
-  font-size: clamp(40px, 7vw, 78px);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
+.gi-h1 {
+  font-family: var(--cn);
+  font-weight: 900;
+  font-size: 54px;
+  margin: 14px 0 8px;
+  letter-spacing: 2px;
 }
-
-.game-index-hero p:last-child {
-  max-width: 640px;
-  margin-top: 20px;
+.gi-intro {
   font-size: 17px;
-  line-height: 1.8;
-  color: rgba(225, 232, 255, 0.72);
+  color: rgba(220, 228, 245, 0.6);
+  max-width: 560px;
+  margin: 0 0 32px;
 }
 
-.game-platform-section {
-  max-width: 980px;
-  margin: 0 auto 48px;
+.gi-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.gi-filter {
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(200, 220, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.gi-filter.is-active {
+  background: rgba(232, 178, 58, 0.15);
+  color: #e8b23a;
+  border-color: rgba(232, 178, 58, 0.3);
 }
 
-.game-platform-section h2 {
-  margin: 0 0 20px;
-  font-size: 15px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(225, 232, 255, 0.62);
+.gi-group {
+  margin-bottom: 40px;
 }
-
-.game-card-grid {
+.gi-group-label {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: rgba(200, 220, 255, 0.4);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.gi-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.game-card {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 18px;
-  padding: 18px;
-  border: 1px solid rgba(180, 195, 255, 0.14);
-  border-radius: 22px;
-  background: rgba(14, 18, 32, 0.78);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(18px);
-}
-
-.game-card-cover {
-  width: 130px;
-  aspect-ratio: 3 / 4;
+.gi-card {
+  position: relative;
   overflow: hidden;
+  cursor: pointer;
+  padding: 28px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.06);
+  background: linear-gradient(135deg, rgba(var(--gi-rgb), 0.14), rgba(var(--gi-rgb), 0.03));
+  border: 1px solid rgba(var(--gi-rgb), 0.28);
 }
-
-.game-card-cover img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
+.gi-ghost {
+  position: absolute;
+  right: -10px;
+  top: -34px;
+  font-family: var(--cn);
+  font-weight: 900;
+  font-size: 170px;
+  color: rgba(var(--gi-rgb), 0.1);
+  line-height: 1;
+  pointer-events: none;
 }
-
-.game-card-cover-placeholder {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  font-size: 22px;
+.gi-card-body {
+  position: relative;
+}
+.gi-platform {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--gi-accent);
+  letter-spacing: 2px;
+}
+.gi-title {
+  font-family: var(--cn);
   font-weight: 700;
-  color: rgba(225, 232, 255, 0.8);
-  background:
-    linear-gradient(135deg, rgba(120, 110, 255, 0.28), rgba(80, 180, 255, 0.18));
+  font-size: 25px;
+  margin: 8px 0 4px;
 }
-
-.game-card-body {
-  min-width: 0;
+.gi-subtitle {
+  font-size: 14px;
+  color: rgba(200, 220, 255, 0.55);
+}
+.gi-progress-row {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.game-card-platform {
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(180, 195, 255, 0.64);
-}
-
-.game-card h3 {
-  margin: 0;
-  font-size: 22px;
-  line-height: 1.2;
-}
-
-.game-card-body > p:not(.game-card-platform) {
-  margin: 0;
-  line-height: 1.6;
-  color: rgba(225, 232, 255, 0.7);
-}
-
-.game-card-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: auto;
-}
-
-.game-card-meta span {
-  padding: 6px 10px;
-  border: 1px solid rgba(180, 195, 255, 0.12);
-  border-radius: 999px;
-  font-size: 12px;
-  color: rgba(225, 232, 255, 0.78);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.game-card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.game-card-actions a {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 0 14px;
-  border-radius: 999px;
-  text-decoration: none;
+  gap: 10px;
+  margin-top: 24px;
+}
+.gi-progress {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.gi-progress-bar {
+  width: var(--gi-pct, 0%);
+  height: 100%;
+  border-radius: 3px;
+  background: var(--gi-accent);
+}
+.gi-percent {
+  font-family: var(--mono);
   font-size: 13px;
-  font-weight: 600;
-  color: #f4f6ff;
-  background: rgba(120, 110, 255, 0.22);
-  border: 1px solid rgba(180, 195, 255, 0.18);
+  color: var(--gi-accent);
 }
-
-.game-card-actions a:hover {
-  background: rgba(120, 110, 255, 0.34);
+.gi-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
 }
-
-@media (max-width: 700px) {
-  .game-index-page {
-    padding: 72px 16px 48px;
-  }
-
-  .game-card {
-    grid-template-columns: 1fr;
-  }
-
-  .game-card-cover {
-    width: 100%;
-    max-width: 220px;
-  }
+.gi-tags {
+  display: flex;
+  gap: 8px;
+}
+.gi-tag--status {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(var(--gi-rgb), 0.15);
+  color: var(--gi-accent-soft);
+}
+.gi-tag--ver {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(200, 220, 255, 0.6);
+  font-family: var(--mono);
+}
+.gi-enter {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--gi-accent);
+}
+.gi-empty {
+  color: rgba(200, 220, 255, 0.5);
 }
