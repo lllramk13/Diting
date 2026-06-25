@@ -20,6 +20,9 @@ type SourceRow = {
   jp?: string
   zh?: string
   speaker?: string
+  speaker_jp?: string
+  speaker_zh?: string
+  meta?: string
   context?: string
   srcs?: string[]
   maxLen?: number
@@ -270,6 +273,10 @@ function EntryRow({
 }: EntryRowProps) {
   const { chips, dirty, hasError } = validation
 
+  const speaker = row.meta ?? row.speaker_jp ?? row.speaker
+  const srcs = row.srcs ?? []
+  const occurrences = srcs.length
+
   const len = visibleLength(value)
   const maxLen = typeof row.maxLen === 'number' && row.maxLen > 0 ? row.maxLen : null
   const over = maxLen !== null && len > maxLen
@@ -312,7 +319,7 @@ function EntryRow({
           {row.id}
         </span>
 
-        {row.speaker && (
+        {speaker && (
           <span
             style={{
               fontFamily: cnf,
@@ -323,8 +330,74 @@ function EntryRow({
               color: t.accent,
             }}
           >
-            {row.speaker}
+            🗣 {speaker}
           </span>
+        )}
+
+        {occurrences > 1 && (
+          <details style={{ position: 'relative' }}>
+            <summary
+              style={{
+                listStyle: 'none',
+                cursor: 'pointer',
+                fontFamily: mono,
+                fontSize: 11,
+                padding: '2px 9px',
+                borderRadius: 20,
+                border: `1px solid ${t.line2}`,
+                color: t.muted,
+                userSelect: 'none',
+              }}
+              title="这句原文在游戏里出现的所有位置；翻译一次会应用到全部位置"
+            >
+              出现 {occurrences} 处 ▾
+            </summary>
+
+            <div
+              style={{
+                position: 'absolute',
+                zIndex: 5,
+                top: '100%',
+                left: 0,
+                marginTop: 6,
+                maxHeight: 200,
+                overflow: 'auto',
+                minWidth: 220,
+                padding: '8px 10px',
+                borderRadius: 9,
+                background: t.card,
+                border: `1px solid ${t.line2}`,
+                boxShadow: '0 6px 20px rgba(0,0,0,0.28)',
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: mono,
+                  fontSize: 9.5,
+                  letterSpacing: 1,
+                  color: t.label,
+                  marginBottom: 6,
+                }}
+              >
+                应用到以下 {occurrences} 个位置
+              </div>
+
+              {srcs.map(src => (
+                <div
+                  key={src}
+                  style={{
+                    fontFamily: mono,
+                    fontSize: 11.5,
+                    color: t.muted,
+                    lineHeight: 1.7,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {src}
+                </div>
+              ))}
+            </div>
+          </details>
         )}
 
         {dirty && (
@@ -947,6 +1020,7 @@ export default function GameEditor() {
   const [entries, setEntries] = useState<EntryMap>({})
   const [loadingStrings, setLoadingStrings] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [deleting, setDeleting] = useState(false)
 
   const [forkedFromId, setForkedFromId] = useState<string | null>(null)
   const [forkedFrom, setForkedFrom] = useState<ForkedFromInfo | null>(null)
@@ -1333,6 +1407,47 @@ export default function GameEditor() {
     alert('已保存。')
   }
 
+  async function deleteSet() {
+    if (!setId || readonly || !setData) return
+
+    if (setData.is_official) {
+      alert('官方主集不能删除。')
+      return
+    }
+
+    if (!confirm(`确定要删除这个翻译集「${title}」吗？\n此操作不可撤销，集内的所有翻译内容都会一起删除。`)) {
+      return
+    }
+
+    setDeleting(true)
+
+    const { error: entriesError } = await supabase
+      .from('translation_entries')
+      .delete()
+      .eq('set_id', setId)
+
+    if (entriesError) {
+      alert('删除失败：' + entriesError.message)
+      setDeleting(false)
+      return
+    }
+
+    const { error: setError } = await supabase
+      .from('translation_sets')
+      .delete()
+      .eq('id', setId)
+      .eq('game_slug', game?.slug ?? '')
+
+    if (setError) {
+      alert('删除失败：' + setError.message)
+      setDeleting(false)
+      return
+    }
+
+    setDeleting(false)
+    navigate(game?.routes.main ?? '/game')
+  }
+
   if (!game) {
     return (
       <main style={{ minHeight: '100vh', background: '#0A0E18', color: '#EAEEF7', padding: 40 }}>
@@ -1664,6 +1779,25 @@ export default function GameEditor() {
                       >
                         提交合并请求
                       </button>
+
+                      {!setData.is_official && (
+                        <button
+                          onClick={deleteSet}
+                          disabled={deleting}
+                          style={{
+                            background: 'none',
+                            border: `1px solid ${ERR}`,
+                            color: ERR,
+                            cursor: deleting ? 'not-allowed' : 'pointer',
+                            padding: '10px 16px',
+                            fontFamily: 'inherit',
+                            fontSize: 13,
+                            borderRadius: 9,
+                          }}
+                        >
+                          {deleting ? '删除中…' : '删除此集'}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
