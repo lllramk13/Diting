@@ -65,6 +65,7 @@ export type GameConfig = {
         issues: string
         glossary: string
         requests: string
+        font?: string       // 字库校对（可选；仅设置了的游戏在导航里显示入口）
     }
 
     categories: string[]
