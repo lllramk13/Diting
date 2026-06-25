@@ -12,6 +12,7 @@ import GameIssues from './pages/Game/GameIssues'
 import GameIssueDetail from './pages/Game/GameIssueDetail'
 import GameGlossary from './pages/Game/GameGlossary'
 import GameBrowse from './pages/Game/GameBrowse'
+import GameFontProof from './pages/Game/GameFontProof'
 import Sponsor from './pages/Sponsor'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Route path="/game/:platform/:gameSlug/issues" element={<GameIssues />} />
       <Route path="/game/:platform/:gameSlug/issues/:issueId" element={<GameIssueDetail />} />
       <Route path="/game/:platform/:gameSlug/glossary" element={<GameGlossary />} />
+      <Route path="/game/:platform/:gameSlug/font" element={<GameFontProof />} />
       <Route path="/game/:platform/:gameSlug" element={<GameBrowse />} />
       <Route path="/sponsor" element={<Sponsor />} />
 

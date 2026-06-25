@@ -15,6 +15,7 @@ export default function GameNav({ game }: GameNavProps) {
     { label: "合并请求", path: game.routes.requests },
     { label: "问题", path: game.routes.issues },
     { label: "术语表", path: game.routes.glossary },
+    { label: "字库校对", path: game.routes.font ?? `${game.basePath}/font` },
   ]
 
   return (
