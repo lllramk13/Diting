@@ -238,7 +238,7 @@ export default function GameRequestDetail() {
       <main className="p2is-page">
         <div className="browse-wrap">
           <div className="request-detail-header">
-            <button className="btn-ghost" style={{ marginBottom: 16 }} onClick={() => navigate(game.routes.requests)}>← 返回</button>
+            <button className="btn-ghost mr-back" onClick={() => navigate(game.routes.requests)}>← 返回</button>
             <div className="request-detail-top">
               <div>
                 <h2 className="request-detail-title">{request.title}</h2>
@@ -292,12 +292,12 @@ export default function GameRequestDetail() {
             </div>
           )}
           {(isAuthor || isOwner) && isOpen && (
-            <div className="request-actions" style={{ marginTop: 8 }}>
-              <button className="btn-ghost" style={{ color: '#f87171' }} onClick={deleteRequest}>删除请求</button>
+            <div className="request-actions mr-actions-danger">
+              <button className="btn-ghost is-danger" onClick={deleteRequest}>删除请求</button>
             </div>
           )}
 
-          <section className="browse-section" style={{ marginTop: 32 }}>
+          <section className="browse-section mr-comments-section">
             <h2 className="section-title">留言 {comments.length > 0 ? `· ${comments.length}` : ''}</h2>
             <div className="issue-comments">
               {comments.map(c => (
@@ -306,7 +306,7 @@ export default function GameRequestDetail() {
                     <span className="comment-author">{c.username}</span>
                     <span className="muted">{new Date(c.created_at).toLocaleDateString('zh-CN')}</span>
                     {(user?.id === c.user_id || isOwner) && (
-                      <button className="btn-ghost" style={{ fontSize: 11, padding: '2px 8px', color: '#f87171', marginLeft: 'auto' }} onClick={() => deleteComment(c.id, c.user_id)}>删除</button>
+                      <button className="btn-ghost is-danger mr-comment-del" onClick={() => deleteComment(c.id, c.user_id)}>删除</button>
                     )}
                   </div>
                   <div className="comment-body">{c.body}</div>
@@ -315,23 +315,22 @@ export default function GameRequestDetail() {
               {comments.length === 0 && <p className="muted">暂无留言。</p>}
             </div>
             {user && (
-              <div className="comment-form" style={{ marginTop: 16 }}>
+              <div className="comment-form mr-comment-form">
                 <textarea
-                  className="entry-input"
+                  className="entry-input mr-comment-input"
                   rows={3}
                   placeholder="留下评论…"
                   value={commentBody}
                   onChange={e => setCommentBody(e.target.value)}
-                  style={{ width: '100%', resize: 'vertical' }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
+                <div className="mr-form-actions">
                   <button className="btn-primary" onClick={submitComment} disabled={submittingComment || !commentBody.trim()}>
                     {submittingComment ? '发送中…' : '发送'}
                   </button>
                 </div>
               </div>
             )}
-            {!user && <p className="muted" style={{ marginTop: 12 }}>登录后可留言。</p>}
+            {!user && <p className="muted mr-login-hint">登录后可留言。</p>}
           </section>
         </div>
 
@@ -340,7 +339,7 @@ export default function GameRequestDetail() {
             <div className="modal-box" onClick={e => e.stopPropagation()}>
               <h3 className="modal-title">确认合并</h3>
               <div className="modal-form">
-                <p style={{ fontSize: 14, color: 'rgba(200,220,255,0.7)' }}>
+                <p className="mr-modal-text">
                   将 {diff.length} 句变更写入主集 <strong>{sourceFile}</strong>，此操作不可撤销。
                 </p>
               </div>

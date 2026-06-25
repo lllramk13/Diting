@@ -290,7 +290,7 @@ export default function GameIssueDetail() {
     <GamePageShell game={game}>
       <main className="p2is-page">
         <div className="browse-wrap">
-          <div className="browse-header">
+          <div className="id-head">
             <p className="muted">
               <Link to={game.routes.issues}>← 返回问题列表</Link>
             </p>
@@ -306,13 +306,13 @@ export default function GameIssueDetail() {
             </p>
 
             {issue.body && (
-              <p style={{ whiteSpace: 'pre-wrap' }}>
+              <p className="pre-wrap">
                 {issue.body}
               </p>
             )}
 
             {isAdmin && (
-              <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+              <div className="issue-actions">
                 <button
                   className="btn-ghost"
                   onClick={togglePin}
@@ -341,14 +341,14 @@ export default function GameIssueDetail() {
 
             <div className="requests-list">
               {comments.map(c => (
-                <div key={c.id} className="request-row" style={{ cursor: 'default' }}>
+                <div key={c.id} className="request-row is-static">
                   <div>
                     <div className="request-meta muted">
                       <span>{c.username ?? '未知用户'}</span>
                       <span>{new Date(c.created_at).toLocaleString('zh-CN')}</span>
                     </div>
 
-                    <p style={{ whiteSpace: 'pre-wrap', marginBottom: 0 }}>
+                    <p className="id-comment-body">
                       {c.body}
                     </p>
                   </div>
@@ -360,7 +360,7 @@ export default function GameIssueDetail() {
               )}
             </div>
 
-            <div style={{ marginTop: 16 }}>
+            <div className="id-comment-form">
               <textarea
                 className="editor-textarea"
                 value={commentBody}
@@ -370,7 +370,7 @@ export default function GameIssueDetail() {
                 rows={4}
               />
 
-              <div style={{ marginTop: 8 }}>
+              <div className="id-form-actions">
                 <button
                   className="btn-primary"
                   onClick={submitComment}

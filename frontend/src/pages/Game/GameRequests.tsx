@@ -4,10 +4,9 @@ import { supabase } from '../../lib/supabase'
 import { getIsAdmin } from '../../lib/admin'
 import { getGameBySlug } from '../../games/registry'
 import GamePageShell from './GamePageShell'
-import { getGameTheme } from './gameTheme'
-
-const mono = "'Space Mono', monospace"
-const cnf = "'Noto Sans SC', sans-serif"
+import { themeVars } from './gameTheme'
+import './gameTheme.css'
+import './GameRequests.css'
 
 type RequestRow = {
   id: string
@@ -163,19 +162,17 @@ export default function GameRequests() {
   if (!game) {
     return (
       <GamePageShell game={getGameBySlug('p2is')!}>
-        <main style={{ minHeight: '100vh', background: '#0A0E18', color: '#EAEEF7', padding: 40 }}>
+        <main className="req-notfound">
           <p>找不到这个游戏项目。</p>
         </main>
       </GamePageShell>
     )
   }
 
-  const t = getGameTheme(game)
-
-  const statusMeta: Record<string, { icon: string; label: string; color: string; bg: string; border: string }> = {
-    open: { icon: '⇅', label: '开放', color: t.warning, bg: 'rgba(240,184,74,0.12)', border: 'rgba(240,184,74,0.3)' },
-    merged: { icon: '✓', label: '已合并', color: t.success, bg: 'rgba(45,140,80,0.14)', border: 'rgba(45,140,80,0.32)' },
-    closed: { icon: '✕', label: '已关闭', color: t.danger, bg: 'rgba(240,136,138,0.12)', border: 'rgba(240,136,138,0.3)' },
+  const statusMeta: Record<string, { icon: string; label: string }> = {
+    open: { icon: '⇅', label: '开放' },
+    merged: { icon: '✓', label: '已合并' },
+    closed: { icon: '✕', label: '已关闭' },
   }
 
   const statusOf = (r: RequestRow) => (r.status === 'merged' ? 'merged' : r.status === 'open' ? 'open' : 'closed')
@@ -333,69 +330,26 @@ export default function GameRequests() {
 
   return (
     <GamePageShell game={game}>
-      <main
-        style={{
-          minHeight: '100vh',
-          background: t.page,
-          color: t.ink,
-          fontFamily: "'Space Grotesk', 'Noto Sans SC', sans-serif",
-        }}
-      >
-        <div style={{ height: 3, background: t.accent }} />
+      <main className="game-theme req-main" style={themeVars(game)}>
+        <div className="req-topline" />
 
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '28px 32px 90px' }}>
+        <div className="req-wrap">
           {/* intro */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              justifyContent: 'space-between',
-              gap: 20,
-              flexWrap: 'wrap',
-              marginBottom: 24,
-            }}
-          >
-            <div style={{ maxWidth: 580 }}>
-              <h1 style={{ fontFamily: cnf, fontWeight: 900, fontSize: 30, margin: 0, letterSpacing: 1 }}>
-                {game.shortTitle} 合并请求
-              </h1>
-              <p style={{ fontSize: 14.5, color: t.muted, margin: '10px 0 0', lineHeight: 1.6 }}>
+          <div className="req-intro">
+            <div className="req-intro-text">
+              <h1 className="req-h1">{game.shortTitle} 合并请求</h1>
+              <p className="req-intro-p">
                 把社区翻译集的修订并入主集前，先在这里逐条审阅改动。维护者通过后改动才会落到主集。
               </p>
             </div>
 
-            <div style={{ display: 'flex', gap: 9, flexWrap: 'wrap' }}>
-              <button
-                onClick={downloadOpenChanges}
-                style={{
-                  cursor: 'pointer',
-                  fontFamily: cnf,
-                  fontSize: 13,
-                  padding: '10px 16px',
-                  borderRadius: 9,
-                  background: t.inkSoft,
-                  border: `1px solid ${t.line2}`,
-                  color: t.ink,
-                }}
-              >
+            <div className="req-actions">
+              <button className="req-download-btn" onClick={downloadOpenChanges}>
                 下载改动
               </button>
 
               {isAdmin && (
-                <button
-                  onClick={() => setShowBulkModal(true)}
-                  style={{
-                    cursor: 'pointer',
-                    fontFamily: cnf,
-                    fontSize: 14,
-                    fontWeight: 700,
-                    padding: '10px 18px',
-                    borderRadius: 9,
-                    background: t.accent,
-                    border: 'none',
-                    color: t.buttonText,
-                  }}
-                >
+                <button className="req-mergeall-btn" onClick={() => setShowBulkModal(true)}>
                   一键合并全部
                 </button>
               )}
@@ -403,191 +357,71 @@ export default function GameRequests() {
           </div>
 
           {/* filter tabs + search */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 11,
-              flexWrap: 'wrap',
-              marginBottom: 18,
-            }}
-          >
-            <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
-              {tabs.map(tabItem => {
-                const on = tab === tabItem.key
-                return (
-                  <button
-                    key={tabItem.key}
-                    onClick={() => setTab(tabItem.key)}
-                    style={{
-                      cursor: 'pointer',
-                      whiteSpace: 'nowrap',
-                      fontFamily: cnf,
-                      fontSize: 13,
-                      padding: '8px 15px',
-                      borderRadius: 20,
-                      background: on ? t.inkSoft : t.card,
-                      color: on ? t.ink : t.muted,
-                      border: `1px solid ${on ? t.inkBorder : t.line2}`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 7,
-                    }}
-                  >
-                    {tabItem.label}
-                    <span style={{ fontFamily: mono, fontSize: 11, opacity: 0.7 }}>{tabItem.count}</span>
-                  </button>
-                )
-              })}
+          <div className="req-toolbar">
+            <div className="req-tabs">
+              {tabs.map(tabItem => (
+                <button
+                  key={tabItem.key}
+                  className={`req-tab${tab === tabItem.key ? ' is-active' : ''}`}
+                  onClick={() => setTab(tabItem.key)}
+                >
+                  {tabItem.label}
+                  <span className="req-tab-count">{tabItem.count}</span>
+                </button>
+              ))}
             </div>
 
             <input
+              className="req-search"
               value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder="搜索标题 · 作者 · 文件…"
-              style={{
-                marginLeft: 'auto',
-                background: t.card,
-                border: `1px solid ${t.line2}`,
-                borderRadius: 8,
-                color: t.ink,
-                fontFamily: 'inherit',
-                fontSize: 13,
-                padding: '9px 13px',
-                outline: 'none',
-                width: 240,
-              }}
             />
           </div>
 
-          {loading && (
-            <p style={{ fontFamily: mono, fontSize: 13, color: t.label }}>加载中…</p>
-          )}
+          {loading && <p className="req-loading">加载中…</p>}
 
           {/* MR list */}
           {!loading && (
-            <div
-              style={{
-                border: `1px solid ${t.line2}`,
-                borderRadius: 13,
-                background: t.card,
-                overflow: 'hidden',
-              }}
-            >
+            <div className="req-list">
               {visible.map(r => {
-                const sm = statusMeta[statusOf(r)]
+                const status = statusOf(r)
+                const sm = statusMeta[status]
                 const score = r.vote_score ?? 0
 
                 return (
-                  <div
-                    key={r.id}
-                    onClick={() => openRequest(r.id)}
-                    style={{
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 14,
-                      padding: '16px 20px',
-                      borderBottom: `1px solid ${t.line}`,
-                    }}
-                  >
-                    <span
-                      style={{
-                        flexShrink: 0,
-                        width: 26,
-                        height: 26,
-                        borderRadius: '50%',
-                        background: sm.bg,
-                        color: sm.color,
-                        border: `1px solid ${sm.border}`,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontFamily: mono,
-                        fontSize: 13,
-                        fontWeight: 700,
-                      }}
-                    >
-                      {sm.icon}
-                    </span>
+                  <div key={r.id} className="req-row" onClick={() => openRequest(r.id)}>
+                    <span className={`req-status-icon req-st-${status}`}>{sm.icon}</span>
 
-                    <div style={{ minWidth: 0, flex: 1 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 9, flexWrap: 'wrap' }}>
-                        <span style={{ fontFamily: cnf, fontWeight: 700, fontSize: 15.5, color: t.ink }}>
-                          {r.title}
-                        </span>
-                        <span
-                          style={{
-                            fontFamily: cnf,
-                            fontSize: 10.5,
-                            padding: '2px 9px',
-                            borderRadius: 20,
-                            background: sm.bg,
-                            color: sm.color,
-                            border: `1px solid ${sm.border}`,
-                          }}
-                        >
-                          {sm.label}
-                        </span>
+                    <div className="req-row-body">
+                      <div className="req-title-row">
+                        <span className="req-title">{r.title}</span>
+                        <span className={`req-status-badge req-st-${status}`}>{sm.label}</span>
                       </div>
 
-                      <div
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: 8,
-                          flexWrap: 'wrap',
-                          marginTop: 5,
-                        }}
-                      >
-                        {r.source_file && (
-                          <span
-                            style={{
-                              fontFamily: mono,
-                              fontSize: 11.5,
-                              padding: '1px 7px',
-                              borderRadius: 5,
-                              background: t.inkSoft,
-                              color: t.ink,
-                              border: `1px solid ${t.line2}`,
-                            }}
-                          >
-                            {r.source_file}
-                          </span>
-                        )}
-                        <span style={{ fontFamily: cnf, fontSize: 11.5, color: t.muted }}>
+                      <div className="req-meta">
+                        {r.source_file && <span className="req-srcfile">{r.source_file}</span>}
+                        <span className="req-meta-text">
                           {r.username} 提交 · {new Date(r.created_at).toLocaleDateString('zh-CN')}
                         </span>
                       </div>
                     </div>
 
-                    <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', gap: 13 }}>
+                    <div className="req-right">
                       <span
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 12,
-                          color: score > 0 ? t.success : score < 0 ? t.danger : t.label,
-                        }}
+                        className={`req-score${score > 0 ? ' is-pos' : score < 0 ? ' is-neg' : ''}`}
                       >
                         {score > 0 ? '+' : ''}
                         {score}
                       </span>
-                      <span style={{ fontFamily: mono, fontSize: 13, color: t.label }}>▸</span>
+                      <span className="req-chevron">▸</span>
                     </div>
                   </div>
                 )
               })}
 
               {visible.length === 0 && (
-                <div
-                  style={{
-                    textAlign: 'center',
-                    padding: '56px 20px',
-                    fontFamily: mono,
-                    fontSize: 13,
-                    color: t.label,
-                  }}
-                >
+                <div className="req-empty">
                   {requests.length === 0
                     ? 'Fork 主集并修改后，可以在编辑器中提交合并请求'
                     : '没有匹配的合并请求'}
@@ -598,76 +432,25 @@ export default function GameRequests() {
         </div>
 
         {showBulkModal && (
-          <div
-            onClick={() => setShowBulkModal(false)}
-            style={{
-              position: 'fixed',
-              inset: 0,
-              zIndex: 60,
-              background: 'rgba(5,8,15,0.6)',
-              backdropFilter: 'blur(3px)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 24,
-            }}
-          >
-            <div
-              onClick={e => e.stopPropagation()}
-              style={{
-                width: '100%',
-                maxWidth: 470,
-                background: t.card,
-                border: `1px solid ${t.line2}`,
-                borderRadius: 16,
-                overflow: 'hidden',
-              }}
-            >
-              <div style={{ height: 3, background: t.accent }} />
-              <div style={{ padding: '24px 26px' }}>
-                <div style={{ fontFamily: cnf, fontWeight: 700, fontSize: 19, marginBottom: 14 }}>
-                  确认一键合并
-                </div>
-                <p style={{ fontSize: 14, color: t.muted, lineHeight: 1.7, margin: 0 }}>
-                  将合并 <strong style={{ color: t.ink }}>{mergeableCount}</strong> 个开放请求的所有变更，此操作不可撤销。
+          <div className="req-overlay" onClick={() => setShowBulkModal(false)}>
+            <div className="req-modal" onClick={e => e.stopPropagation()}>
+              <div className="req-modal-top" />
+              <div className="req-modal-body">
+                <div className="req-modal-title">确认一键合并</div>
+                <p className="req-modal-text">
+                  将合并 <strong className="req-strong">{mergeableCount}</strong> 个开放请求的所有变更，此操作不可撤销。
                   {mergeableCount < open.length && (
-                    <span style={{ display: 'block', marginTop: 6 }}>
+                    <span className="req-skip-note">
                       （另有 {open.length - mergeableCount} 个请求因缺少快照数据将被跳过）
                     </span>
                   )}
                 </p>
 
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, marginTop: 22 }}>
-                  <button
-                    onClick={() => setShowBulkModal(false)}
-                    style={{
-                      cursor: 'pointer',
-                      fontFamily: cnf,
-                      fontSize: 13.5,
-                      padding: '10px 18px',
-                      borderRadius: 9,
-                      background: t.inkSoft,
-                      border: `1px solid ${t.line2}`,
-                      color: t.muted,
-                    }}
-                  >
+                <div className="req-modal-footer">
+                  <button className="req-cancel-btn" onClick={() => setShowBulkModal(false)}>
                     取消
                   </button>
-                  <button
-                    onClick={mergeAll}
-                    disabled={bulkMerging}
-                    style={{
-                      cursor: bulkMerging ? 'not-allowed' : 'pointer',
-                      fontFamily: cnf,
-                      fontSize: 13.5,
-                      fontWeight: 700,
-                      padding: '10px 18px',
-                      borderRadius: 9,
-                      background: t.accent,
-                      border: 'none',
-                      color: t.buttonText,
-                    }}
-                  >
+                  <button className="req-confirm-btn" onClick={mergeAll} disabled={bulkMerging}>
                     {bulkMerging ? '合并中…' : '确认合并'}
                   </button>
                 </div>

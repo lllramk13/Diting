@@ -1,0 +1,29 @@
+/*
+ * Shared theme tokens for getGameTheme-styled pages.
+ * Wrap a page in `className="game-theme …"` and feed the per-game accent via
+ * inline vars `--g-accent` / `--g-accent-rgb` (see themeVars() in gameTheme.ts).
+ * Everything else here is constant across games, mirroring getGameTheme().
+ */
+.game-theme {
+  --mono: 'Space Mono', monospace;
+  --cnf: 'Noto Sans SC', sans-serif;
+
+  --gt-accent: var(--g-accent, #5e8bff);
+  --gt-accent-rgb: var(--g-accent-rgb, 94, 139, 255);
+  --gt-accent-soft: rgba(var(--gt-accent-rgb), 0.15);
+  --gt-accent-border: rgba(var(--gt-accent-rgb), 0.22);
+
+  --gt-bg: #0a0e18;
+  --gt-text: #eaeef7;
+  --gt-muted: rgba(230, 236, 250, 0.72);
+  --gt-faint: rgba(200, 220, 255, 0.5);
+
+  --gt-card: rgba(255, 255, 255, 0.03);
+  --gt-card-strong: rgba(255, 255, 255, 0.05);
+  --gt-line: rgba(255, 255, 255, 0.08);
+  --gt-line-strong: rgba(255, 255, 255, 0.14);
+
+  --gt-warning: #f0b84a;
+  --gt-danger: #f0888a;
+  --gt-success: #2d8c50;
+}

@@ -1,27 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useParams } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import { getIsAdmin } from '../../lib/admin'
 import { getGameBySlug } from '../../games/registry'
 import TopNav from '../Home/TopNav'
 import GamePageShell from './GamePageShell'
-
-const mono = "'Space Mono', monospace"
-const cnf = "'Noto Sans SC', sans-serif"
-
-const C = {
-  bg: '#07111e',
-  panel: 'rgba(255,255,255,0.03)',
-  panelStrong: 'rgba(255,255,255,0.06)',
-  border: 'rgba(200,220,255,0.12)',
-  text: '#e0eaff',
-  muted: 'rgba(200,220,255,0.6)',
-  faint: 'rgba(200,220,255,0.35)',
-  accent: '#5aa9ff',
-  good: '#46d18a',
-  warn: '#e8c455',
-}
+import './GameFontProof.css'
 
 type Manifest = {
   image: string
@@ -33,7 +18,6 @@ type Manifest = {
 
 type Entries = Record<number, string>
 
-const STORAGE_PREFIX = 'fontproof:'
 const GRID_ROWS = 16
 
 export default function GameFontProof() {
@@ -43,6 +27,7 @@ export default function GameFontProof() {
   const base = `/games/${slug}`
 
   const [isAdmin, setIsAdmin] = useState(false)
+  const [uid, setUid] = useState<string | null>(null)
 
   const [manifest, setManifest] = useState<Manifest | null>(null)
   const [imgUrl, setImgUrl] = useState('')
@@ -66,9 +51,12 @@ export default function GameFontProof() {
     let alive = true
     ;(async () => {
       const { data } = await supabase.auth.getUser()
-      const uid = data.user?.id ?? null
-      const admin = uid ? await getIsAdmin(uid) : false
-      if (alive) setIsAdmin(admin)
+      const id = data.user?.id ?? null
+      const admin = id ? await getIsAdmin(id) : false
+      if (alive) {
+        setUid(id)
+        setIsAdmin(admin)
+      }
     })()
     return () => {
       alive = false
@@ -119,32 +107,35 @@ export default function GameFontProof() {
     }
   }, [base])
 
-  // ---- restore: admin uses local progress, everyone falls back to published chars ----
+  // ---- load: published baseline (manifest.chars) overlaid with live edits (font_char) ----
   useEffect(() => {
     if (!manifest) return
-    const seed: Entries = {}
-    if (manifest.chars && manifest.chars.length) {
-      manifest.chars.forEach((ch, i) => {
-        if (ch !== undefined && ch !== null && ch !== '') seed[i] = ch
-      })
-    }
-    const saved = isAdmin ? localStorage.getItem(STORAGE_PREFIX + slug) : null
-    if (saved) {
-      try {
-        setEntries(JSON.parse(saved) as Entries)
-        return
-      } catch {
-        /* ignore corrupt cache */
+    let alive = true
+    ;(async () => {
+      const seed: Entries = {}
+      if (manifest.chars && manifest.chars.length) {
+        manifest.chars.forEach((ch, i) => {
+          if (ch !== undefined && ch !== null && ch !== '') seed[i] = ch
+        })
       }
+      const { data, error } = await supabase
+        .from('font_char')
+        .select('idx, ch')
+        .eq('game_slug', slug)
+      if (!alive) return
+      if (error) {
+        console.error('[fontproof] load font_char failed', error)
+      } else if (data) {
+        for (const row of data as { idx: number; ch: string }[]) {
+          seed[row.idx] = row.ch
+        }
+      }
+      setEntries(seed)
+    })()
+    return () => {
+      alive = false
     }
-    setEntries(seed)
-  }, [manifest, slug, isAdmin])
-
-  // ---- persist (admin only) ----
-  useEffect(() => {
-    if (!manifest || !isAdmin) return
-    localStorage.setItem(STORAGE_PREFIX + slug, JSON.stringify(entries))
-  }, [entries, manifest, slug, isAdmin])
+  }, [manifest, slug])
 
   const tileW = manifest?.tileW ?? 16
   const tileH = manifest?.tileH ?? 16
@@ -166,8 +157,25 @@ export default function GameFontProof() {
   const commit = useCallback(
     (value: string) => {
       setEntries((prev) => ({ ...prev, [current]: value }))
+      if (isAdmin) {
+        supabase
+          .from('font_char')
+          .upsert(
+            {
+              game_slug: slug,
+              idx: current,
+              ch: value,
+              updated_by: uid,
+              updated_at: new Date().toISOString(),
+            },
+            { onConflict: 'game_slug,idx' },
+          )
+          .then(({ error }) => {
+            if (error) console.error('[fontproof] save failed', error)
+          })
+      }
     },
-    [current],
+    [current, isAdmin, slug, uid],
   )
 
   const goto = useCallback(
@@ -224,36 +232,46 @@ export default function GameFontProof() {
 
   const importJson = (file: File) => {
     const reader = new FileReader()
-    reader.onload = () => {
+    reader.onload = async () => {
+      let m: Manifest
       try {
-        const m = JSON.parse(String(reader.result)) as Manifest
-        const next: Entries = {}
-        ;(m.chars ?? []).forEach((ch, i) => {
-          if (ch !== undefined && ch !== null) next[i] = ch
-        })
-        setEntries(next)
+        m = JSON.parse(String(reader.result)) as Manifest
       } catch {
         alert('导入失败：不是合法的 font.json')
+        return
+      }
+      const next: Entries = {}
+      const rows: { game_slug: string; idx: number; ch: string; updated_by: string | null; updated_at: string }[] = []
+      const now = new Date().toISOString()
+      ;(m.chars ?? []).forEach((ch, i) => {
+        if (ch !== undefined && ch !== null) {
+          next[i] = ch
+          rows.push({ game_slug: slug, idx: i, ch, updated_by: uid, updated_at: now })
+        }
+      })
+      setEntries(next)
+      if (isAdmin && rows.length) {
+        const { error } = await supabase
+          .from('font_char')
+          .upsert(rows, { onConflict: 'game_slug,idx' })
+        if (error) alert('导入已加载到页面，但保存到服务器失败：' + error.message)
       }
     }
     reader.readAsText(file)
   }
 
-  // ---- glyph sprite ----
-  const glyph = (idx: number, scale: number) => {
+  // ---- glyph sprite: feed per-cell values to .fp-glyph as CSS vars ----
+  const glyphVars = (idx: number, scale: number): CSSProperties => {
     const col = idx % cols
     const row = Math.floor(idx / cols)
     const w = imgSize ? imgSize.w : 512
     return {
-      width: tileW * scale,
-      height: tileH * scale,
-      backgroundImage: `url(${imgUrl})`,
-      backgroundRepeat: 'no-repeat' as const,
-      backgroundSize: `${w * scale}px auto`,
-      backgroundPosition: `-${col * tileW * scale}px -${row * tileH * scale}px`,
-      imageRendering: 'pixelated' as const,
-      filter: invert ? 'invert(1)' : undefined,
-    }
+      '--fp-gw': `${tileW * scale}px`,
+      '--fp-gh': `${tileH * scale}px`,
+      '--fp-gimg': `url(${imgUrl})`,
+      '--fp-gsize': `${w * scale}px auto`,
+      '--fp-gpos': `-${col * tileW * scale}px -${row * tileH * scale}px`,
+    } as CSSProperties
   }
 
   // grid pagination
@@ -263,33 +281,20 @@ export default function GameFontProof() {
   const pageEnd = Math.min(total, pageStart + perPage)
 
   const body = (
-    <div style={{ maxWidth: 1100, margin: '0 auto', padding: '24px 20px 80px' }}>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
-        <h2 style={{ fontFamily: mono, margin: 0 }}>字库校对 · {slug}</h2>
-        <span style={{ color: C.faint, fontFamily: mono, fontSize: 13 }}>
+    <div className="fp-body">
+      <div className="fp-head">
+        <h2>字库校对 · {slug}</h2>
+        <span className="fp-sub">
           {isAdmin ? '逐格转录字模，建立字表' : '只读浏览（仅管理员可编辑）'}
         </span>
       </div>
 
-      {loadError && (
-        <div style={{ color: C.warn, fontFamily: mono, marginTop: 16 }}>⚠ {loadError}</div>
-      )}
+      {loadError && <div className="fp-error">⚠ {loadError}</div>}
 
       {missing && (
-        <div
-          style={{
-            marginTop: 40,
-            padding: '40px 24px',
-            textAlign: 'center',
-            border: `1px dashed ${C.border}`,
-            borderRadius: 8,
-            color: C.faint,
-            fontFamily: mono,
-            fontSize: 14,
-          }}
-        >
+        <div className="fp-missing">
           该游戏暂未提供字库
-          <div style={{ fontSize: 12, marginTop: 8 }}>
+          <div className="fp-missing-sub">
             放入 <code>{base}/font.json</code> 与字模图后，此页会自动显示。
           </div>
         </div>
@@ -298,46 +303,23 @@ export default function GameFontProof() {
       {manifest && imgSize && (
         <>
           {/* meta + progress */}
-          <div
-            style={{
-              marginTop: 16,
-              display: 'flex',
-              gap: 18,
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              fontFamily: mono,
-              fontSize: 13,
-              color: C.muted,
-            }}
-          >
+          <div className="fp-meta">
             <span>
               图 {imgSize.w}×{imgSize.h} · tile {tileW}×{tileH} · {cols} 列 × {rows} 行
             </span>
-            <span style={{ color: C.good }}>已填 {visitedCount}</span>
-            <span style={{ color: C.faint }}>空白 {blankCount}</span>
+            <span className="fp-c-good">已填 {visitedCount}</span>
+            <span className="fp-c-faint">空白 {blankCount}</span>
             <span>/ 共 {total}</span>
-            <div
-              style={{
-                flex: 1,
-                minWidth: 160,
-                height: 6,
-                background: 'rgba(255,255,255,0.06)',
-                borderRadius: 3,
-                overflow: 'hidden',
-              }}
-            >
+            <div className="fp-progress">
               <div
-                style={{
-                  width: `${total ? (visitedCount / total) * 100 : 0}%`,
-                  height: '100%',
-                  background: C.good,
-                }}
+                className="fp-progress-bar"
+                style={{ '--fp-pct': `${total ? (visitedCount / total) * 100 : 0}%` } as CSSProperties}
               />
             </div>
           </div>
 
           {/* toolbar */}
-          <div style={{ marginTop: 16, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <div className="fp-toolbar">
             <Btn active={view === 'focus'} onClick={() => setView('focus')}>
               {isAdmin ? '专注录入' : '逐字查看'}
             </Btn>
@@ -347,8 +329,9 @@ export default function GameFontProof() {
             <Btn active={invert} onClick={() => setInvert((v) => !v)}>
               反色
             </Btn>
-            <div style={{ flex: 1 }} />
+            <div className="fp-spacer" />
             <input
+              className="fp-input"
               value={jumpVal}
               onChange={(e) => setJumpVal(e.target.value)}
               onKeyDown={(e) => {
@@ -361,16 +344,15 @@ export default function GameFontProof() {
                 }
               }}
               placeholder="跳到下标…"
-              style={inputStyle(120)}
             />
             <Btn onClick={exportJson}>导出 font.json</Btn>
             {isAdmin && (
-              <label style={{ ...btnStyle(false), cursor: 'pointer' }}>
+              <label className="fp-btn">
                 导入
                 <input
                   type="file"
                   accept="application/json"
-                  style={{ display: 'none' }}
+                  hidden
                   onChange={(e) => {
                     const f = e.target.files?.[0]
                     if (f) importJson(f)
@@ -383,56 +365,27 @@ export default function GameFontProof() {
 
           {/* FOCUS VIEW */}
           {view === 'focus' && (
-            <div
-              style={{
-                marginTop: 24,
-                display: 'flex',
-                gap: 32,
-                alignItems: 'flex-start',
-                flexWrap: 'wrap',
-              }}
-            >
-              <div
-                style={{
-                  background: '#000',
-                  border: `1px solid ${C.border}`,
-                  borderRadius: 8,
-                  padding: 16,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  gap: 12,
-                }}
-              >
-                <div style={glyph(current, 6)} />
+            <div className="fp-focus">
+              <div className="fp-glyph-box">
+                <div className="fp-glyph" style={glyphVars(current, 6)} />
                 {entries[current] !== undefined && (
-                  <div
-                    style={{
-                      fontFamily: cnf,
-                      fontSize: 40,
-                      lineHeight: 1,
-                      color: entries[current] === '' ? C.faint : C.good,
-                    }}
-                  >
+                  <div className={`fp-recog${entries[current] === '' ? ' is-blank' : ''}`}>
                     {entries[current] === '' ? '空白' : entries[current]}
                   </div>
                 )}
-                <div style={{ fontFamily: mono, fontSize: 12, color: C.faint }}>
+                <div className="fp-meta-id">
                   #{current} · 行{Math.floor(current / cols)} 列{current % cols} · 0x
                   {current.toString(16).toUpperCase()}
                 </div>
               </div>
 
-              <div style={{ flex: 1, minWidth: 260 }}>
+              <div className="fp-col">
                 {isAdmin ? (
                   <>
-                    <label
-                      style={{ display: 'block', color: C.muted, fontFamily: mono, fontSize: 13 }}
-                    >
-                      这个字模是什么字？
-                    </label>
+                    <label className="fp-label">这个字模是什么字？</label>
                     <input
                       ref={inputRef}
+                      className="fp-input fp-input--char"
                       autoFocus
                       value={draft}
                       onChange={(e) => setDraft(e.target.value)}
@@ -440,15 +393,8 @@ export default function GameFontProof() {
                       onCompositionEnd={() => (composingRef.current = false)}
                       onKeyDown={onKeyDown}
                       placeholder="输入后按 Enter 进入下一个"
-                      style={{
-                        ...inputStyle(220),
-                        fontSize: 28,
-                        fontFamily: cnf,
-                        marginTop: 8,
-                        width: 220,
-                      }}
                     />
-                    <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    <div className="fp-actions">
                       <Btn onClick={() => goto(current - 1)}>← 上一个</Btn>
                       <Btn onClick={commitAndNext}>保存并下一个 (Enter)</Btn>
                       <Btn
@@ -462,16 +408,16 @@ export default function GameFontProof() {
                       </Btn>
                       <Btn onClick={nextUnfilled}>跳到下一个未填 →</Btn>
                     </div>
-                    <p style={{ color: C.faint, fontFamily: mono, fontSize: 12, marginTop: 16 }}>
-                      提示：中文输入法选词的回车不会误触，确认成字后再按一次 Enter 才前进。进度自动存在本地浏览器，可随时关页面续传。
+                    <p className="fp-hint">
+                      提示：中文输入法选词的回车不会误触，确认成字后再按一次 Enter 才前进。进度自动保存到服务器，多人可协作，换设备也能续传。
                     </p>
                   </>
                 ) : (
                   <>
-                    <div style={{ color: C.muted, fontFamily: mono, fontSize: 13 }}>
+                    <div className="fp-status">
                       {entries[current] !== undefined ? '已识别（见左侧）' : '该字模尚未识别'}
                     </div>
-                    <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    <div className="fp-actions">
                       <Btn onClick={() => goto(current - 1)}>← 上一个</Btn>
                       <Btn onClick={() => goto(current + 1)}>下一个 →</Btn>
                     </div>
@@ -483,63 +429,31 @@ export default function GameFontProof() {
 
           {/* GRID VIEW */}
           {view === 'grid' && (
-            <div style={{ marginTop: 20 }}>
-              <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 12 }}>
+            <div className="fp-grid-wrap">
+              <div className="fp-grid-head">
                 <Btn onClick={() => setPage((p) => Math.max(0, p - 1))}>←</Btn>
-                <span style={{ fontFamily: mono, color: C.muted, fontSize: 13 }}>
+                <span className="fp-status">
                   第 {page + 1} / {pageCount} 页 · 下标 {pageStart}–{pageEnd - 1}
                 </span>
                 <Btn onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}>→</Btn>
               </div>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: `repeat(${cols}, 1fr)`,
-                  gap: 2,
-                  background: C.border,
-                  border: `1px solid ${C.border}`,
-                }}
-              >
+              <div className="fp-grid" style={{ '--fp-cols': cols } as CSSProperties}>
                 {Array.from({ length: pageEnd - pageStart }, (_, k) => {
                   const idx = pageStart + k
                   const val = entries[idx]
                   return (
                     <button
                       key={idx}
+                      className={`fp-cell${idx === current ? ' is-current' : ''}`}
                       onClick={() => {
                         setView('focus')
                         goto(idx)
                       }}
                       title={`#${idx}`}
-                      style={{
-                        position: 'relative',
-                        padding: 0,
-                        border: 'none',
-                        background: idx === current ? 'rgba(90,169,255,0.25)' : '#000',
-                        cursor: 'pointer',
-                        aspectRatio: '1',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}
                     >
-                      <div style={glyph(idx, 1)} />
+                      <div className="fp-glyph" style={glyphVars(idx, 1)} />
                       {val !== undefined && (
-                        <span
-                          style={{
-                            position: 'absolute',
-                            bottom: 0,
-                            right: 1,
-                            fontSize: 14,
-                            fontWeight: 700,
-                            fontFamily: cnf,
-                            color: val === '' ? C.faint : C.good,
-                            background: 'rgba(0,0,0,0.7)',
-                            lineHeight: 1,
-                            padding: '1px 3px',
-                            borderRadius: 2,
-                          }}
-                        >
+                        <span className={`fp-badge${val === '' ? ' is-blank' : ''}`}>
                           {val === '' ? '空' : val}
                         </span>
                       )}
@@ -554,47 +468,22 @@ export default function GameFontProof() {
     </div>
   )
 
+  const pageClass = `fp-page${invert ? ' is-invert' : ''}`
+
   if (game) {
     return (
-      <div style={{ background: C.bg, minHeight: '100vh', color: C.text }}>
+      <div className={pageClass}>
         <GamePageShell game={game}>{body}</GamePageShell>
       </div>
     )
   }
 
   return (
-    <div style={{ background: C.bg, minHeight: '100vh', color: C.text }}>
+    <div className={pageClass}>
       <TopNav />
       {body}
     </div>
   )
-}
-
-function btnStyle(active: boolean): React.CSSProperties {
-  return {
-    fontFamily: mono,
-    fontSize: 13,
-    padding: '6px 12px',
-    borderRadius: 6,
-    border: `1px solid ${active ? C.accent : C.border}`,
-    background: active ? 'rgba(90,169,255,0.18)' : C.panel,
-    color: active ? C.accent : C.text,
-    cursor: 'pointer',
-  }
-}
-
-function inputStyle(width: number): React.CSSProperties {
-  return {
-    fontFamily: mono,
-    fontSize: 14,
-    padding: '6px 10px',
-    borderRadius: 6,
-    border: `1px solid ${C.border}`,
-    background: C.panelStrong,
-    color: C.text,
-    width,
-    outline: 'none',
-  }
 }
 
 function Btn({
@@ -607,7 +496,7 @@ function Btn({
   active?: boolean
 }) {
   return (
-    <button onClick={onClick} style={btnStyle(active)}>
+    <button className={`fp-btn${active ? ' is-active' : ''}`} onClick={onClick}>
       {children}
     </button>
   )

@@ -1,11 +1,10 @@
 import { useMemo, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { games } from '../../games/registry'
 import type { GameConfig } from '../../games/types'
 import TopNav from '../Home/TopNav'
-
-const mono = "'Space Mono', monospace"
-const cn = "'Noto Sans SC', sans-serif"
+import './GameIndex.css'
 
 const statusLabels: Record<string, string> = {
   planning: '计划中',
@@ -53,72 +52,70 @@ export default function GameIndex() {
   }, [filter])
 
   return (
-    <div style={{ minHeight: '100vh', background: '#0A0E18', color: '#EAEEF7', fontFamily: "'Space Grotesk', 'Noto Sans SC', sans-serif" }}>
+    <div className="game-index">
       <TopNav />
-      <section style={{ maxWidth: 1180, margin: '0 auto', padding: '70px 40px 90px' }}>
-        <div style={{ fontFamily: mono, fontSize: 13, color: 'rgba(200,220,255,0.45)', letterSpacing: 2 }}>// /game</div>
-        <h1 style={{ fontFamily: cn, fontWeight: 900, fontSize: 54, margin: '14px 0 8px', letterSpacing: 2 }}>游戏汉化项目</h1>
-        <p style={{ fontSize: 17, color: 'rgba(220,228,245,0.6)', maxWidth: 560, margin: '0 0 32px' }}>按平台分组的所有汉化项目。点击进入对应游戏的公告与下载页。</p>
+      <section className="gi-section">
+        <div className="gi-eyebrow">// /game</div>
+        <h1 className="gi-h1">游戏汉化项目</h1>
+        <p className="gi-intro">按平台分组的所有汉化项目。点击进入对应游戏的公告与下载页。</p>
 
-        <div style={{ display: 'flex', gap: 10, marginBottom: 30, flexWrap: 'wrap' }}>
-          {FILTERS.map((f, i) => {
-            const active = i === filter
-            return (
-              <button
-                key={f.label}
-                onClick={() => setFilter(i)}
-                style={{
-                  fontSize: 13, padding: '8px 16px', borderRadius: 20, cursor: 'pointer', fontFamily: 'inherit',
-                  background: active ? 'rgba(232,178,58,0.15)' : 'rgba(255,255,255,0.04)',
-                  color: active ? '#E8B23A' : 'rgba(200,220,255,0.6)',
-                  border: `1px solid ${active ? 'rgba(232,178,58,0.3)' : 'rgba(255,255,255,0.08)'}`,
-                }}
-              >
-                {f.label}
-              </button>
-            )
-          })}
+        <div className="gi-filters">
+          {FILTERS.map((f, i) => (
+            <button
+              key={f.label}
+              className={`gi-filter${i === filter ? ' is-active' : ''}`}
+              onClick={() => setFilter(i)}
+            >
+              {f.label}
+            </button>
+          ))}
         </div>
 
         {Object.entries(byPlatform).map(([platform, list]) => (
-          <div key={platform} style={{ marginBottom: 40 }}>
-            <div style={{ fontFamily: mono, fontSize: 13, color: 'rgba(200,220,255,0.4)', letterSpacing: 2, marginBottom: 16 }}>
+          <div key={platform} className="gi-group">
+            <div className="gi-group-label">
               {platform.toUpperCase()} · {(platformNames[platform] ?? platform).toUpperCase()}
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+            <div className="gi-cards">
               {list.map(g => {
                 const accent = g.accent ?? '#5E8BFF'
                 const accentSoft = g.accentSoft ?? accent
-                const rgb = hexToRgb(accent)
+                const cardVars = {
+                  '--gi-accent': accent,
+                  '--gi-accent-soft': accentSoft,
+                  '--gi-rgb': hexToRgb(accent),
+                } as CSSProperties
                 return (
                   <div
                     key={g.slug}
+                    className="gi-card"
+                    style={cardVars}
                     onClick={() => navigate(g.routes.announce)}
-                    style={{
-                      position: 'relative', overflow: 'hidden', cursor: 'pointer', padding: 28, borderRadius: 16,
-                      background: `linear-gradient(135deg,rgba(${rgb},0.14),rgba(${rgb},0.03))`,
-                      border: `1px solid rgba(${rgb},0.28)`,
-                    }}
                   >
-                    {g.ghostChar && (
-                      <div style={{ position: 'absolute', right: -10, top: -34, fontFamily: cn, fontWeight: 900, fontSize: 170, color: `rgba(${rgb},0.10)`, lineHeight: 1, pointerEvents: 'none' }}>{g.ghostChar}</div>
-                    )}
-                    <div style={{ position: 'relative' }}>
-                      <div style={{ fontFamily: mono, fontSize: 12, color: accent, letterSpacing: 2 }}>{g.platform.toUpperCase()} · {enShort(g)}</div>
-                      <div style={{ fontFamily: cn, fontWeight: 700, fontSize: 25, margin: '8px 0 4px' }}>{g.titleZh ?? g.title}</div>
-                      <div style={{ fontSize: 14, color: 'rgba(200,220,255,0.55)' }}>{g.title}</div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 24 }}>
-                        <div style={{ flex: 1, height: 6, borderRadius: 3, background: 'rgba(255,255,255,0.08)' }}>
-                          <div style={{ width: `${g.progress}%`, height: '100%', borderRadius: 3, background: accent }} />
-                        </div>
-                        <span style={{ fontFamily: mono, fontSize: 13, color: accent }}>{g.progress}%</span>
+                    {g.ghostChar && <div className="gi-ghost">{g.ghostChar}</div>}
+                    <div className="gi-card-body">
+                      <div className="gi-platform">
+                        {g.platform.toUpperCase()} · {enShort(g)}
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 18 }}>
-                        <div style={{ display: 'flex', gap: 8 }}>
-                          <span style={{ fontSize: 12, padding: '4px 10px', borderRadius: 20, background: `rgba(${rgb},0.15)`, color: accentSoft }}>{statusLabels[g.status] ?? g.status}</span>
-                          <span style={{ fontSize: 12, padding: '4px 10px', borderRadius: 20, background: 'rgba(255,255,255,0.06)', color: 'rgba(200,220,255,0.6)', fontFamily: mono }}>{g.announcement.version}</span>
+                      <div className="gi-title">{g.titleZh ?? g.title}</div>
+                      <div className="gi-subtitle">{g.title}</div>
+                      <div className="gi-progress-row">
+                        <div className="gi-progress">
+                          <div
+                            className="gi-progress-bar"
+                            style={{ '--gi-pct': `${g.progress}%` } as CSSProperties}
+                          />
                         </div>
-                        <span style={{ fontFamily: mono, fontSize: 13, color: accent }}>进入 →</span>
+                        <span className="gi-percent">{g.progress}%</span>
+                      </div>
+                      <div className="gi-meta-row">
+                        <div className="gi-tags">
+                          <span className="gi-tag--status">
+                            {statusLabels[g.status] ?? g.status}
+                          </span>
+                          <span className="gi-tag--ver">{g.announcement.version}</span>
+                        </div>
+                        <span className="gi-enter">进入 →</span>
                       </div>
                     </div>
                   </div>
@@ -129,7 +126,7 @@ export default function GameIndex() {
         ))}
 
         {Object.keys(byPlatform).length === 0 && (
-          <p style={{ color: 'rgba(200,220,255,0.5)' }}>没有符合条件的项目。</p>
+          <p className="gi-empty">没有符合条件的项目。</p>
         )}
       </section>
     </div>
