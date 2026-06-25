@@ -45,7 +45,7 @@ export default function HomeSections() {
               </div>
               <div style={{ marginTop: 14, display: 'flex', gap: 8 }}>
                 <span style={{ fontSize: 12, padding: '4px 10px', borderRadius: 20, background: 'rgba(232,69,90,0.15)', color: '#FF8A98' }}>初翻完成 · 校对中</span>
-                <span style={{ fontSize: 12, padding: '4px 10px', borderRadius: 20, background: 'rgba(255,255,255,0.06)', color: 'rgba(200,220,255,0.6)', fontFamily: mono }}>v0.2.0</span>
+                <span style={{ fontSize: 12, padding: '4px 10px', borderRadius: 20, background: 'rgba(255,255,255,0.06)', color: 'rgba(200,220,255,0.6)', fontFamily: mono }}>v0.2.1</span>
               </div>
             </div>
           </div>

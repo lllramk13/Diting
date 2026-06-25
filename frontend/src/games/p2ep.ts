@@ -41,7 +41,7 @@ export const p2ep: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.2.0',
+    version: 'v0.2.1',
     size: '',
     updated: '2026-06-25',
     videoUrl: '',
