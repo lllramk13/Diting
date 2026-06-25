@@ -84,9 +84,23 @@ export default function GameRequestDetail() {
       }
 
       if (fromEntries.length > 0 && toSet?.source_file) {
-        const groupFile = toSet.source_file.replaceAll(':', '_')
-        const res = await fetch(`${activeGame.dataPath}/groups/${groupFile}.json`)
-        const sourceStrings: SourceRow[] = await res.json()
+        // dup sets live in dups/<category>.json; normal sets in groups/<source_file>.json
+        const sf = toSet.source_file
+        const url = sf.startsWith('dup:')
+          ? `${activeGame.dataPath}/dups/${sf.slice('dup:'.length).replaceAll(':', '_')}.json`
+          : `${activeGame.dataPath}/groups/${sf.replaceAll(':', '_')}.json`
+
+        const res = await fetch(url)
+        const text = await res.text()
+        let sourceStrings: SourceRow[] = []
+        if (res.ok && text.trim().startsWith('[')) {
+          try {
+            sourceStrings = JSON.parse(text)
+          } catch {
+            sourceStrings = []
+          }
+        }
+
         const srcMap: Record<string, string> = {}
         const jpMap: Record<string, string> = {}
         sourceStrings.forEach(s => { srcMap[s.id] = s.zh; jpMap[s.id] = s.jp })
