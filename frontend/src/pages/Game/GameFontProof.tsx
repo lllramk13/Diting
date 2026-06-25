@@ -405,6 +405,18 @@ export default function GameFontProof() {
                 }}
               >
                 <div style={glyph(current, 6)} />
+                {entries[current] !== undefined && (
+                  <div
+                    style={{
+                      fontFamily: cnf,
+                      fontSize: 40,
+                      lineHeight: 1,
+                      color: entries[current] === '' ? C.faint : C.good,
+                    }}
+                  >
+                    {entries[current] === '' ? '空白' : entries[current]}
+                  </div>
+                )}
                 <div style={{ fontFamily: mono, fontSize: 12, color: C.faint }}>
                   #{current} · 行{Math.floor(current / cols)} 列{current % cols} · 0x
                   {current.toString(16).toUpperCase()}
@@ -456,16 +468,8 @@ export default function GameFontProof() {
                   </>
                 ) : (
                   <>
-                    <div style={{ color: C.muted, fontFamily: mono, fontSize: 13 }}>当前字</div>
-                    <div
-                      style={{
-                        fontFamily: cnf,
-                        fontSize: 40,
-                        marginTop: 8,
-                        color: entries[current] ? C.text : C.faint,
-                      }}
-                    >
-                      {entries[current] || '—'}
+                    <div style={{ color: C.muted, fontFamily: mono, fontSize: 13 }}>
+                      {entries[current] !== undefined ? '已识别（见左侧）' : '该字模尚未识别'}
                     </div>
                     <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                       <Btn onClick={() => goto(current - 1)}>← 上一个</Btn>
@@ -526,12 +530,13 @@ export default function GameFontProof() {
                             position: 'absolute',
                             bottom: 0,
                             right: 1,
-                            fontSize: 9,
+                            fontSize: 14,
+                            fontWeight: 700,
                             fontFamily: cnf,
                             color: val === '' ? C.faint : C.good,
-                            background: 'rgba(0,0,0,0.6)',
+                            background: 'rgba(0,0,0,0.7)',
                             lineHeight: 1,
-                            padding: '1px 2px',
+                            padding: '1px 3px',
                             borderRadius: 2,
                           }}
                         >
