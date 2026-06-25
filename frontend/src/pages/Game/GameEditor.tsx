@@ -1166,6 +1166,30 @@ export default function GameEditor() {
     insertToken(codes)
   }
 
+  function copySourceToEdit() {
+    if (!activeRowId || readonly) return
+
+    const row = sourceStrings.find(item => item.id === activeRowId)
+    if (!row) return
+
+    const source = row.jp ?? ''
+
+    updateEntryById(activeRowId, source)
+
+    setTimeout(() => {
+      const el = textareaRefs.current[activeRowId]
+      if (!el) return
+
+      el.focus()
+
+      try {
+        el.setSelectionRange(source.length, source.length)
+      } catch {
+        // ignore selection errors
+      }
+    }, 0)
+  }
+
   const rowStates = useMemo(() => {
     const map: Record<
       string,
@@ -1915,6 +1939,22 @@ export default function GameEditor() {
                 }}
               >
                 ⎘ 复制原文控制符
+              </button>
+
+              <button
+                onClick={copySourceToEdit}
+                style={{
+                  cursor: 'pointer',
+                  fontFamily: cnf,
+                  fontSize: 12.5,
+                  padding: '8px 13px',
+                  borderRadius: 8,
+                  background: t.accentSoft,
+                  border: `1px solid ${t.accentBorder}`,
+                  color: t.accent,
+                }}
+              >
+                ⎘ 复制原文到译文
               </button>
 
               {glossaryRows.length > 0 && (
