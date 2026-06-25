@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import type { GameConfig } from '../../games/types'
 
 export type GameTheme = {
@@ -65,6 +66,18 @@ export function hexToRgb(hex: string): string {
   }
 
   return `${(n >> 16) & 255},${(n >> 8) & 255},${n & 255}`
+}
+
+/**
+ * Inline CSS variables for the `.game-theme` wrapper (see gameTheme.css).
+ * Only the per-game accent varies; everything else is constant in CSS.
+ */
+export function themeVars(game: GameConfig): CSSProperties {
+  const accent = game.accent ?? '#5E8BFF'
+  return {
+    '--g-accent': accent,
+    '--g-accent-rgb': hexToRgb(accent),
+  } as CSSProperties
 }
 
 export function getGameTheme(game: GameConfig): GameTheme {
