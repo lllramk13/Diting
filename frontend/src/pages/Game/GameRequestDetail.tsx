@@ -46,6 +46,7 @@ export default function GameRequestDetail() {
     if (!currentGame || !requestId) { setLoading(false); return }
 
     async function load(activeGame: GameConfig) {
+     try {
       const { data: userData } = await supabase.auth.getUser()
       const uid = userData.user?.id ?? null
       setUser(uid ? { id: uid } : null)
@@ -138,7 +139,11 @@ export default function GameRequestDetail() {
         username: (Array.isArray(c.profiles) ? c.profiles[0]?.username : (c.profiles as { username: string } | null)?.username) ?? '未知用户',
       })))
 
-      setLoading(false)
+     } catch (e) {
+       console.error('[GameRequestDetail] load failed', e)
+     } finally {
+       setLoading(false)
+     }
     }
     load(currentGame)
   }, [gameSlug, requestId, navigate])
