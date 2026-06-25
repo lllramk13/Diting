@@ -25,6 +25,7 @@ type SourceRow = {
   meta?: string
   context?: string
   srcs?: string[]
+  dup?: string | null
   maxLen?: number
   [key: string]: unknown
 }
@@ -258,6 +259,12 @@ type EntryRowProps = {
   textareaRef: (el: HTMLTextAreaElement | null) => void
   onFocus: () => void
   onChange: (value: string) => void
+  /** when true this row is a duplicate sentence: edit happens in the dup set, here it is read-only */
+  mirror?: boolean
+  /** the shared translation pulled from the dup set (for mirror rows) */
+  mirrorValue?: string
+  /** jump to edit this sentence in its dup set */
+  onGotoDup?: () => void
 }
 
 function EntryRow({
@@ -270,6 +277,9 @@ function EntryRow({
   textareaRef,
   onFocus,
   onChange,
+  mirror,
+  mirrorValue,
+  onGotoDup,
 }: EntryRowProps) {
   const { chips, dirty, hasError } = validation
 
@@ -507,66 +517,126 @@ function EntryRow({
           </div>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-          <div
-            style={{
-              fontFamily: mono,
-              fontSize: 9.5,
-              color: t.accent,
-              letterSpacing: 2,
-            }}
-          >
-            我的译文
-          </div>
+        {mirror ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 8,
+              }}
+            >
+              <span
+                style={{ fontFamily: mono, fontSize: 9.5, color: t.muted, letterSpacing: 2 }}
+              >
+                译文 · 来自重复集（只读）
+              </span>
 
-          <textarea
-            ref={textareaRef}
-            value={value}
-            disabled={readonly}
-            onFocus={onFocus}
-            onChange={e => onChange(e.target.value)}
-            rows={lineCount}
-            placeholder="在此输入中文翻译…"
-            style={{
-              width: '100%',
-              resize: 'vertical',
-              background: t.inkSoft,
-              border: `1px solid ${active ? t.accent : t.line2}`,
-              borderRadius: 10,
-              color: t.ink,
-              fontFamily: cnf,
-              fontSize: 15,
-              lineHeight: 1.8,
-              padding: '10px 12px',
-              outline: 'none',
-              transition: 'border-color 0.2s ease',
-              opacity: readonly ? 0.72 : 1,
-            }}
-          />
-
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-            {chips.map((chip, index) => {
-              const s = chipStyle(chip.kind)
-
-              return (
-                <span
-                  key={`${chip.text}-${index}`}
+              {onGotoDup && (
+                <button
+                  onClick={onGotoDup}
                   style={{
+                    cursor: 'pointer',
                     fontFamily: cnf,
                     fontSize: 11.5,
-                    padding: '3px 9px',
-                    borderRadius: 20,
-                    background: s.bg,
-                    color: s.color,
-                    border: `1px solid ${s.border}`,
+                    padding: '4px 10px',
+                    borderRadius: 8,
+                    background: t.accentSoft,
+                    border: `1px solid ${t.accentBorder}`,
+                    color: t.accent,
+                    whiteSpace: 'nowrap',
                   }}
                 >
-                  {chip.text}
-                </span>
-              )
-            })}
+                  去重复集修改 →
+                </button>
+              )}
+            </div>
+
+            <div
+              style={{
+                whiteSpace: 'pre-wrap',
+                fontSize: 15,
+                lineHeight: 1.8,
+                color: t.ink,
+                fontFamily: cnf,
+                background: t.inkSoft,
+                border: `1px dashed ${t.line2}`,
+                borderRadius: 10,
+                padding: '10px 12px',
+              }}
+            >
+              {mirrorValue?.trim()
+                ? renderTextWithCodePills(mirrorValue, t)
+                : '（重复集暂无译文）'}
+            </div>
+
+            <div style={{ fontFamily: mono, fontSize: 10.5, color: t.muted }}>
+              这句重复出现，统一在重复集翻译，此处只读。
+            </div>
           </div>
-        </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+            <div
+              style={{
+                fontFamily: mono,
+                fontSize: 9.5,
+                color: t.accent,
+                letterSpacing: 2,
+              }}
+            >
+              我的译文
+            </div>
+
+            <textarea
+              ref={textareaRef}
+              value={value}
+              disabled={readonly}
+              onFocus={onFocus}
+              onChange={e => onChange(e.target.value)}
+              rows={lineCount}
+              placeholder="在此输入中文翻译…"
+              style={{
+                width: '100%',
+                resize: 'vertical',
+                background: t.inkSoft,
+                border: `1px solid ${active ? t.accent : t.line2}`,
+                borderRadius: 10,
+                color: t.ink,
+                fontFamily: cnf,
+                fontSize: 15,
+                lineHeight: 1.8,
+                padding: '10px 12px',
+                outline: 'none',
+                transition: 'border-color 0.2s ease',
+                opacity: readonly ? 0.72 : 1,
+              }}
+            />
+
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+              {chips.map((chip, index) => {
+                const s = chipStyle(chip.kind)
+
+                return (
+                  <span
+                    key={`${chip.text}-${index}`}
+                    style={{
+                      fontFamily: cnf,
+                      fontSize: 11.5,
+                      padding: '3px 9px',
+                      borderRadius: 20,
+                      background: s.bg,
+                      color: s.color,
+                      border: `1px solid ${s.border}`,
+                    }}
+                  >
+                    {chip.text}
+                  </span>
+                )
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </article>
   )
@@ -1020,6 +1090,13 @@ export default function GameEditor() {
   const [isPublic, setIsPublic] = useState(false)
   const [readonly, setReadonly] = useState(true)
   const [isScript, setIsScript] = useState(false)
+  const [isDupSet, setIsDupSet] = useState(false)
+  // duplicate-sentence mirror data (for normal sets): dup_id -> shared translation from the dup set
+  const [dupTx, setDupTx] = useState<Record<string, string>>({})
+  // category -> dup set DB id, used to jump "去重复集修改"
+  const [dupSetByCat, setDupSetByCat] = useState<Record<string, string>>({})
+  // dup_id -> the dup's primary category (may differ from the row's own category)
+  const [dupCatById, setDupCatById] = useState<Record<string, string>>({})
 
   const [sourceStrings, setSourceStrings] = useState<SourceRow[]>([])
   const [entries, setEntries] = useState<EntryMap>({})
@@ -1071,11 +1148,14 @@ export default function GameEditor() {
 
       const loadedSet = rawSetData as TranslationSetRow
 
+      const dupSet = (loadedSet.source_file ?? '').startsWith('dup:')
+
       setSetData(loadedSet)
       setTitle(loadedSet.title)
       setIsPublic(loadedSet.is_public)
       setReadonly(loadedSet.user_id !== uid)
       setIsScript((loadedSet.source_file ?? '').startsWith('script'))
+      setIsDupSet(dupSet)
 
       if (loadedSet.forked_from) {
         setForkedFromId(loadedSet.forked_from)
@@ -1112,7 +1192,24 @@ export default function GameEditor() {
 
       let strings: SourceRow[] = []
 
-      if (loadedSet.source_file) {
+      if (dupSet) {
+        // dup set: rows live in dups/<category>.json (deduped sentences, editable normally)
+        const category = (loadedSet.source_file ?? '').slice('dup:'.length)
+        const url = `${activeGame.dataPath}/dups/${category.replaceAll(':', '_')}.json`
+
+        const res = await fetch(url)
+        const text = await res.text()
+
+        if (!res.ok || text.trim().startsWith('<')) {
+          alert(`读取重复集失败：${url}`)
+          setSourceStrings([])
+          setEntries({})
+          setLoadingStrings(false)
+          return
+        }
+
+        strings = JSON.parse(text)
+      } else if (loadedSet.source_file) {
         const groupFile = loadedSet.source_file.replaceAll(':', '_')
         const url = `${activeGame.dataPath}/groups/${groupFile}.json`
 
@@ -1163,6 +1260,67 @@ export default function GameEditor() {
       })
 
       setEntries(map)
+
+      // for normal sets: load the shared translations of duplicate sentences from the dup sets,
+      // plus a category -> dup-set-id map so mirror rows can link "去重复集修改".
+      if (!dupSet) {
+        const dupIds = [...new Set(strings.map(s => s.dup).filter((d): d is string => !!d))]
+
+        // dup_id -> { category, zh }: routes a mirror row to the dup set that actually owns it
+        try {
+          const dmRes = await fetch(`${activeGame.dataPath}/dup_map.json`)
+          const dmText = await dmRes.text()
+          if (dmRes.ok && dmText.trim().startsWith('{')) {
+            const dmap = JSON.parse(dmText) as Record<string, { category: string; zh: string }>
+            const catById: Record<string, string> = {}
+            for (const id of dupIds) {
+              if (dmap[id]) catById[id] = dmap[id].category
+            }
+            setDupCatById(catById)
+          } else {
+            setDupCatById({})
+          }
+        } catch {
+          setDupCatById({})
+        }
+
+        const { data: dupSets } = await supabase
+          .from('translation_sets')
+          .select('id, source_file')
+          .eq('game_slug', activeGame.slug)
+          .eq('is_official', true)
+          .like('source_file', 'dup:%')
+
+        const catToId: Record<string, string> = {}
+        const dupSetIds: string[] = []
+        ;(dupSets ?? []).forEach((s: { id: string; source_file: string | null }) => {
+          if (!s.source_file) return
+          catToId[s.source_file.slice('dup:'.length)] = s.id
+          dupSetIds.push(s.id)
+        })
+        setDupSetByCat(catToId)
+
+        if (dupIds.length > 0 && dupSetIds.length > 0) {
+          const { data: dupEntries } = await supabase
+            .from('translation_entries')
+            .select('string_id, content')
+            .in('set_id', dupSetIds)
+            .in('string_id', dupIds)
+
+          const tx: Record<string, string> = {}
+          ;(dupEntries ?? []).forEach((e: { string_id: string; content: string }) => {
+            tx[e.string_id] = e.content
+          })
+          setDupTx(tx)
+        } else {
+          setDupTx({})
+        }
+      } else {
+        setDupTx({})
+        setDupSetByCat({})
+        setDupCatById({})
+      }
+
       setLoadingStrings(false)
     }
 
@@ -1901,6 +2059,14 @@ export default function GameEditor() {
                 const value = rowState?.current ?? getInitialContent(row, entries)
                 const validation = rowState?.validation ?? computeValidation(row, value, glossaryRows)
 
+                const mirror = !isDupSet && !!row.dup
+                // route to the dup's OWN category (may differ from the row's category),
+                // falling back to the row's category prefix
+                const cat =
+                  (row.dup && dupCatById[row.dup]) ||
+                  game.categories.find(c => row.id.startsWith(c))
+                const dupSetId = cat ? dupSetByCat[cat] : undefined
+
                 return (
                   <EntryRow
                     key={row.id}
@@ -1915,6 +2081,13 @@ export default function GameEditor() {
                     }}
                     onFocus={() => setActiveRowId(row.id)}
                     onChange={next => updateEntry(row, next)}
+                    mirror={mirror}
+                    mirrorValue={mirror && row.dup ? dupTx[row.dup] ?? row.zh ?? '' : undefined}
+                    onGotoDup={
+                      mirror && dupSetId
+                        ? () => navigate(`${game.basePath}/edit/${dupSetId}`)
+                        : undefined
+                    }
                   />
                 )
               })}

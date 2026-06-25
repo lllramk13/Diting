@@ -1,1 +1,1 @@
-[{"id": "field:11395", "jp": "<c5/><c2f/>ひらひら飛ぶ<WAIT>\\n", "zh": "<c5/><c2f/>轻飘飘地飞着<WAIT>\\n", "srcs": ["field:516_170:dec:0xc", "strtbl:516_170:raw:0x8#0"]}, {"id": "field:11396", "jp": "<c5/><c2f/>止まってる<WAIT>\\n", "zh": "<c5/><c2f/>静止不动<WAIT>\\n", "srcs": ["field:516_170:dec:0x26", "strtbl:516_170:raw:0x8#1"]}]
+[{"id": "field:516_170:dec:0xc", "jp": "<c5/><c2f/>ひらひら飛ぶ<WAIT>\\n", "zh": "<c5/><c2f/>轻飘飘地飞着<WAIT>\\n", "dup": "dup:19f34082e03f"}, {"id": "field:516_170:dec:0x26", "jp": "<c5/><c2f/>止まってる<WAIT>\\n", "zh": "<c5/><c2f/>静止不动<WAIT>\\n", "dup": "dup:eca3e8785c3e"}]

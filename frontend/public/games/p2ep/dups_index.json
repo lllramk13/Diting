@@ -1,0 +1,22 @@
+[
+{
+"category": "SLUS",
+"set_key": "dup:SLUS",
+"count": 1019
+},
+{
+"category": "field",
+"set_key": "dup:field",
+"count": 9464
+},
+{
+"category": "script",
+"set_key": "dup:script",
+"count": 1510
+},
+{
+"category": "strtbl",
+"set_key": "dup:strtbl",
+"count": 93
+}
+]

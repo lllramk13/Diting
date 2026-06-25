@@ -1,1 +1,1 @@
-[{"id": "script:13593", "jp": "<c2e/><c31/>こちら側からは開かない。<c2e/>\\n<WAIT><PAGE>", "zh": "<c2e/><c31/>这边打不开。<c2e/>\\n<WAIT><PAGE>", "meta": "<c31/>こちら側からは開かない。", "srcs": ["script:735_6:0xac"]}]
+[{"id": "script:735_6:0xac", "jp": "<c2e/><c31/>こちら側からは開かない。<c2e/>\\n<WAIT><PAGE>", "zh": "<c2e/><c31/>这边打不开。<c2e/>\\n<WAIT><PAGE>", "speaker_jp": "<c31/>こちら側からは開かない。", "dup": null}]

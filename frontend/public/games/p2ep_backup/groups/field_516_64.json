@@ -1,0 +1,1 @@
+[{"id": "field:11274", "jp": "<c5/><c2f/>腕時計を見る<前><WAIT>\\n", "zh": "<c5/><c2f/>看手表<前><WAIT>\\n", "srcs": ["field:516_64:dec:0x54", "strtbl:516_64:raw:0x8#0"]}, {"id": "field:11275", "jp": "<c5/><c2f/>携帯電話をかける<後><WAIT>\\n", "zh": "<c5/><c2f/>拨打手机<後><WAIT>\\n", "srcs": ["field:516_64:dec:0x1d6", "field:516_72:dec:0x1c0", "strtbl:516_64:raw:0x8#11", "strtbl:516_72:raw:0x8#11"]}]
