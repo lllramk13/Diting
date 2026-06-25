@@ -26,6 +26,7 @@ export default function GameMainSets() {
   const game = getGameBySlug(gameSlug ?? '')
 
   const [sets, setSets] = useState<MainSet[]>([])
+  const [dupSets, setDupSets] = useState<MainSet[]>([])
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState('')
   const [loading, setLoading] = useState(true)
@@ -60,7 +61,8 @@ export default function GameMainSets() {
 
       const officialSets = await fetchAllOfficialSets(currentGame)
 
-      setSets(officialSets)
+      setSets(officialSets.filter(s => !(s.source_file ?? '').startsWith('dup:')))
+      setDupSets(officialSets.filter(s => (s.source_file ?? '').startsWith('dup:')))
       setLoading(false)
 
       const saved = sessionStorage.getItem('mainsets-scroll')
@@ -146,40 +148,66 @@ export default function GameMainSets() {
 
     setInitializing(true)
 
-    const [indexRes, existingSet] = await Promise.all([
+    const [indexRes, dupsRes, existingSet] = await Promise.all([
       fetch(game.groupIndexPath),
+      fetch(`${game.dataPath}/dups_index.json`),
       fetchAllOfficialSourceFiles(game),
     ])
 
-    if (!indexRes.ok) {
+    const indexText = await indexRes.text()
+    if (!indexRes.ok || !indexText.trim().startsWith('[')) {
       alert(`读取 ${game.groupIndexPath} 失败`)
       setInitializing(false)
       return
     }
 
-    const allGroups: { group: string; count: number }[] = await indexRes.json()
+    const allGroups: { group: string; count: number }[] = JSON.parse(indexText)
     const missing = allGroups.filter(g => !existingSet.has(g.group))
 
-    if (missing.length === 0) {
+    // dup sets (one per category); dups_index.json may be absent on older deploys,
+    // in which case the dev server returns the SPA index.html fallback (200 + HTML) — guard it.
+    let dupCats: { category: string; set_key: string; count: number }[] = []
+    try {
+      const dupsText = await dupsRes.text()
+      if (dupsRes.ok && dupsText.trim().startsWith('[')) {
+        dupCats = JSON.parse(dupsText)
+      }
+    } catch {
+      dupCats = []
+    }
+    const missingDups = dupCats.filter(d => !existingSet.has(d.set_key))
+
+    if (missing.length === 0 && missingDups.length === 0) {
       alert('已全部创建，无需补全。')
       setInitializing(false)
       return
     }
 
-    if (!confirm(`发现 ${missing.length} 个缺少的主集，继续创建？`)) {
+    if (!confirm(`发现 ${missing.length} 个缺少的主集、${missingDups.length} 个重复集，继续创建？`)) {
       setInitializing(false)
       return
     }
 
-    const rows = missing.map(g => ({
-      user_id: user.id,
-      title: g.group,
-      source_file: g.group,
-      is_public: true,
-      is_official: true,
-      is_completed: false,
-      game_slug: game.slug,
-    }))
+    const rows = [
+      ...missing.map(g => ({
+        user_id: user.id,
+        title: g.group,
+        source_file: g.group,
+        is_public: true,
+        is_official: true,
+        is_completed: false,
+        game_slug: game.slug,
+      })),
+      ...missingDups.map(d => ({
+        user_id: user.id,
+        title: `重复 · ${d.category}`,
+        source_file: d.set_key,
+        is_public: true,
+        is_official: true,
+        is_completed: false,
+        game_slug: game.slug,
+      })),
+    ]
 
     for (let i = 0; i < rows.length; i += 200) {
       setInitProgress(`${Math.min(i + 200, rows.length)} / ${rows.length}`)
@@ -200,7 +228,9 @@ export default function GameMainSets() {
 
     setInitProgress('')
     setInitializing(false)
-    setSets(await fetchAllOfficialSets(game))
+    const refreshed = await fetchAllOfficialSets(game)
+    setSets(refreshed.filter(s => !(s.source_file ?? '').startsWith('dup:')))
+    setDupSets(refreshed.filter(s => (s.source_file ?? '').startsWith('dup:')))
   }
 
   async function fork(setId: string, sourceFile: string, title: string) {
@@ -522,6 +552,59 @@ export default function GameMainSets() {
             <p style={{ fontFamily: mono, fontSize: 13, color: t.label }}>
               加载中…
             </p>
+          )}
+
+          {dupSets.length > 0 && !filter && !search && (
+            <section style={{ marginBottom: 26 }}>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  marginBottom: 11,
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: mono,
+                    fontSize: 13,
+                    fontWeight: 700,
+                    letterSpacing: 1,
+                    color: t.ink,
+                  }}
+                >
+                  重复集 · 共享译文
+                </span>
+                <span style={{ fontFamily: mono, fontSize: 11, color: t.muted }}>
+                  重复出现的句子在这里统一翻译，普通集里只读镜像
+                </span>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {dupSets.map(s => (
+                  <button
+                    key={s.id}
+                    onClick={() => {
+                      sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
+                      navigate(`${game.basePath}/edit/${s.id}`)
+                    }}
+                    style={{
+                      cursor: 'pointer',
+                      fontFamily: cnf,
+                      fontSize: 13,
+                      padding: '10px 16px',
+                      borderRadius: 10,
+                      background: t.accentSoft,
+                      border: `1px solid ${t.accentBorder}`,
+                      color: t.accent,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {s.title || s.source_file}
+                  </button>
+                ))}
+              </div>
+            </section>
           )}
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 26 }}>

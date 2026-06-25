@@ -1,1 +1,1 @@
-[{"id": "script:13738", "jp": "<c2e/>張り紙<c2e/>\\n<c31/>本日、定休日。\\n<WAIT><PAGE>", "zh": "<c2e/>告示<c2e/>\\n<c31/>今日公休。\\n<WAIT><PAGE>", "meta": "張り紙", "srcs": ["script:735_88:0xac"]}]
+[{"id": "script:735_88:0xac", "jp": "<c2e/>張り紙<c2e/>\\n<c31/>本日、定休日。\\n<WAIT><PAGE>", "zh": "<c2e/>告示<c2e/>\\n<c31/>今日公休。\\n<WAIT><PAGE>", "speaker_jp": "張り紙", "dup": null}]

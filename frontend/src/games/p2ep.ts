@@ -37,6 +37,7 @@ export const p2ep: GameConfig = {
         'field',
         'strtbl',
         'SLUS',
+        'free',
     ],
 
     announcement: {

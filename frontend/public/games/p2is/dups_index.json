@@ -1,0 +1,37 @@
+[
+{
+"category": "config",
+"set_key": "dup:config",
+"count": 1
+},
+{
+"category": "contactui",
+"set_key": "dup:contactui",
+"count": 1
+},
+{
+"category": "field",
+"set_key": "dup:field",
+"count": 1781
+},
+{
+"category": "nametable",
+"set_key": "dup:nametable",
+"count": 61
+},
+{
+"category": "script",
+"set_key": "dup:script",
+"count": 1346
+},
+{
+"category": "strtbl",
+"set_key": "dup:strtbl",
+"count": 469
+},
+{
+"category": "其他",
+"set_key": "dup:其他",
+"count": 1
+}
+]

@@ -1,1 +1,1 @@
-[{"id": "script:13979", "jp": "<c2e/>フィレモン<c2e/>\\n<c31/>健闘を祈る。\\n<WAIT><PAGE>", "zh": "<c2e/>费列蒙<c2e/>\\n<c31/>祝你奋战顺利。\\n<WAIT><PAGE>", "meta": "フィレモン", "srcs": ["script:735_211:0x130"]}]
+[{"id": "script:735_211:0x130", "jp": "<c2e/>フィレモン<c2e/>\\n<c31/>健闘を祈る。\\n<WAIT><PAGE>", "zh": "<c2e/>费列蒙<c2e/>\\n<c31/>祝你奋战顺利。\\n<WAIT><PAGE>", "speaker_jp": "フィレモン", "dup": null}]

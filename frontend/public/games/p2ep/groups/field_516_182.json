@@ -1,1 +1,1 @@
-[{"id": "field:11406", "jp": "<c5/><c2f/>斜め前<WAIT>\\n", "zh": "<c5/><c2f/>斜前方<WAIT>\\n", "srcs": ["field:516_182:dec:0x14", "strtbl:516_182:raw:0x8#0"]}, {"id": "field:11407", "jp": "<c5/><c2f/>斜め後<WAIT>\\n", "zh": "<c5/><c2f/>斜后方<WAIT>\\n", "srcs": ["field:516_182:dec:0x38", "strtbl:516_182:raw:0x8#2"]}]
+[{"id": "field:516_182:dec:0x14", "jp": "<c5/><c2f/>斜め前<WAIT>\\n", "zh": "<c5/><c2f/>斜前方<WAIT>\\n", "dup": "dup:b780d3ffba6e"}, {"id": "field:516_182:dec:0x38", "jp": "<c5/><c2f/>斜め後<WAIT>\\n", "zh": "<c5/><c2f/>斜后方<WAIT>\\n", "dup": "dup:6acdc72657cf"}]
