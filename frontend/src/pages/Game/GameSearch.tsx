@@ -149,31 +149,42 @@ function GameSearch() {
       return
     }
 
+    async function fetchJson(url: string): Promise<unknown | null> {
+      const res = await fetch(url)
+      const text = await res.text()
+      if (!res.ok || text.trim().startsWith('<')) return null
+      try {
+        return JSON.parse(text)
+      } catch {
+        return null
+      }
+    }
+
     async function load(activeGame: ActiveGame) {
       setLoading(true)
 
-      const url = `${activeGame.dataPath}/merged_jp_zh.json`
-      const res = await fetch(url)
-      const text = await res.text()
+      // the search index may be split into parts (Cloudflare Pages caps files at 25 MiB);
+      // merged_index.json lists them. Fall back to a single merged_jp_zh.json.
+      const manifest = await fetchJson(`${activeGame.dataPath}/merged_index.json`)
+      const parts = Array.isArray(manifest)
+        ? (manifest as string[])
+        : ['merged_jp_zh.json']
 
-      if (!res.ok || text.trim().startsWith('<')) {
-        alert(`读取搜索数据失败：${url}\n返回的不是 JSON，可能文件不存在或路径错误。`)
-        setRows([])
-        setLoading(false)
-        return
+      const all: SearchRow[] = []
+      for (const part of parts) {
+        const data = await fetchJson(`${activeGame.dataPath}/${part}`)
+        if (Array.isArray(data)) {
+          all.push(...(data as SearchRow[]))
+        } else if (data && Array.isArray((data as { entries?: unknown }).entries)) {
+          all.push(...((data as { entries: SearchRow[] }).entries))
+        }
       }
 
-      const data = JSON.parse(text)
-
-      if (Array.isArray(data)) {
-        setRows(data as SearchRow[])
-      } else if (Array.isArray(data.entries)) {
-        setRows(data.entries as SearchRow[])
-      } else {
-        console.warn('[GameSearch] unknown merged json shape', data)
-        setRows([])
+      if (all.length === 0) {
+        alert(`读取搜索数据失败：${activeGame.dataPath}/merged_jp_zh.json`)
       }
 
+      setRows(all)
       setLoading(false)
     }
 

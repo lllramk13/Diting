@@ -30,12 +30,30 @@ def cat_of(s, cats):
 def dup_id(jp):
     return 'dup:' + hashlib.sha1(jp.encode('utf-8')).hexdigest()[:12]
 
+def write_merged(out_dir, flat, max_bytes=20_000_000):
+    """Write the search index, split into <max_bytes parts (Cloudflare Pages caps files at 25 MiB).
+    Part 0 stays named merged_jp_zh.json; a merged_index.json lists all parts."""
+    parts, buf, size, idx = [], [], 2, 0
+    def flush():
+        nonlocal buf, size, idx
+        name = 'merged_jp_zh.json' if idx == 0 else f'merged_{idx}.json'
+        json.dump(buf, open(f'{out_dir}/{name}', 'w'), ensure_ascii=False)
+        parts.append(name); buf = []; size = 2; idx += 1
+    for r in flat:
+        rs = len(json.dumps(r, ensure_ascii=False).encode('utf-8')) + 1
+        if buf and size + rs > max_bytes:
+            flush()
+        buf.append(r); size += rs
+    flush()
+    json.dump(parts, open(f'{out_dir}/merged_index.json', 'w'), ensure_ascii=False)
+    return parts
+
 def build_positions(game, cats):
     items = json.load(open(f'{ROOT}/{game}/merged_jp_zh.json'))
     # p2ep source must be the ORIGINAL deduped merged (with srcs); if the live file has already
     # been replaced by the per-position output, read the original from the backup instead.
     if game == 'p2ep' and not any(it.get('srcs') for it in items[:50]):
-        backup = f'{ROOT}/p2ep_backup/merged_jp_zh.json'
+        backup = os.path.join(HERE, '_backup', 'p2ep_backup', 'merged_jp_zh.json')
         if os.path.exists(backup):
             items = json.load(open(backup))
             print('  [note] p2ep: live merged already transformed, reading original from p2ep_backup')
@@ -109,7 +127,7 @@ def run(game, cats):
     flat = []
     for grp, rows in by_group.items():
         flat.extend(rows)
-    json.dump(flat, open(f'{OUT}/{game}/merged_jp_zh.json','w'), ensure_ascii=False)
+    write_merged(f'{OUT}/{game}', flat)
 
     json.dump([{'group': g, 'count': len(r)} for g,r in sorted(by_group.items())],
               open(f'{OUT}/{game}/index.json','w'), ensure_ascii=False, indent=0)
