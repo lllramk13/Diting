@@ -10,7 +10,7 @@ export const p1: GameConfig = {
     titleZh: '女神异闻录 · Persona',
     accent: '#4FA8E0',
     accentSoft: '#8FCBF0',
-    ghostChar: '影',
+    ghostChar: '',
 
     status: 'planning',
     progress: 0,
