@@ -11,6 +11,7 @@ from the file baseline — no DB write needed.
 Run AFTER gen_split.py + migrate_p2is.py:  python3 tools/apply_seed_p2is.py
 """
 import os, json, glob
+from gen_split import write_merged
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ST = os.path.join(HERE, '_staging', 'p2is')
@@ -40,6 +41,6 @@ for f in sorted(glob.glob(f'{ST}/groups/*.json')):
     flat.extend(rows)
 print('normal mirror rows updated:', g_changed)
 
-json.dump(flat, open(f'{ST}/merged_jp_zh.json', 'w'), ensure_ascii=False)
-print('rebuilt merged_jp_zh.json rows:', len(flat))
+parts = write_merged(ST, flat)
+print('rebuilt search index rows:', len(flat), '-> parts:', parts)
 print('done.')
