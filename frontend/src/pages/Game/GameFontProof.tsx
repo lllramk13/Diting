@@ -20,7 +20,68 @@ type Entries = Record<number, string>
 
 type SaveStatus = 'idle' | 'saving' | 'saved' | 'error'
 
+type FontCharRow = {
+  idx: number
+  ch: string
+}
+
+type FontCharUpsertRow = {
+  game_slug: string
+  idx: number
+  ch: string
+  updated_by: string | null
+  updated_at: string
+}
+
 const GRID_ROWS = 16
+const SUPABASE_PAGE_SIZE = 1000
+const UPSERT_BATCH_SIZE = 500
+
+async function loadAllFontChars(slug: string): Promise<FontCharRow[]> {
+  let from = 0
+  const all: FontCharRow[] = []
+
+  while (true) {
+    const { data, error } = await supabase
+      .from('font_char')
+      .select('idx, ch')
+      .eq('game_slug', slug)
+      .order('idx', { ascending: true })
+      .range(from, from + SUPABASE_PAGE_SIZE - 1)
+
+    if (error) {
+      throw error
+    }
+
+    if (!data || data.length === 0) {
+      break
+    }
+
+    all.push(...(data as FontCharRow[]))
+
+    if (data.length < SUPABASE_PAGE_SIZE) {
+      break
+    }
+
+    from += SUPABASE_PAGE_SIZE
+  }
+
+  return all
+}
+
+async function upsertFontCharRows(rows: FontCharUpsertRow[]) {
+  for (let i = 0; i < rows.length; i += UPSERT_BATCH_SIZE) {
+    const batch = rows.slice(i, i + UPSERT_BATCH_SIZE)
+
+    const { error } = await supabase
+      .from('font_char')
+      .upsert(batch, { onConflict: 'game_slug,idx' })
+
+    if (error) {
+      throw error
+    }
+  }
+}
 
 export default function GameFontProof() {
   const { gameSlug } = useParams<{ gameSlug: string }>()
@@ -145,27 +206,33 @@ export default function GameFontProof() {
 
       if (manifest.chars && manifest.chars.length) {
         manifest.chars.forEach((ch, i) => {
-          if (ch !== undefined && ch !== null && ch !== '') seed[i] = ch
+          if (ch !== undefined && ch !== null && ch !== '') {
+            seed[i] = ch
+          }
         })
       }
 
-      const { data, error } = await supabase
-        .from('font_char')
-        .select('idx, ch')
-        .eq('game_slug', slug)
+      try {
+        const rows = await loadAllFontChars(slug)
 
-      if (!alive) return
+        if (!alive) return
 
-      if (error) {
-        console.error('[fontproof] load font_char failed', error)
-        setSaveStatus('error')
-      } else if (data) {
-        for (const row of data as { idx: number; ch: string }[]) {
+        for (const row of rows) {
           seed[row.idx] = row.ch
         }
-      }
 
-      setEntries(seed)
+        console.log('[fontproof] loaded font_char rows:', rows.length)
+
+        setEntries(seed)
+        setSaveStatus('idle')
+      } catch (e) {
+        if (!alive) return
+
+        console.error('[fontproof] load font_char failed', e)
+        setEntries(seed)
+        setSaveStatus('error')
+        alert('读取服务器字库失败：' + String(e instanceof Error ? e.message : e))
+      }
     })()
 
     return () => {
@@ -338,13 +405,7 @@ export default function GameFontProof() {
       }
 
       const next: Entries = {}
-      const rowsToUpsert: {
-        game_slug: string
-        idx: number
-        ch: string
-        updated_by: string | null
-        updated_at: string
-      }[] = []
+      const rowsToUpsert: FontCharUpsertRow[] = []
 
       const now = new Date().toISOString()
 
@@ -368,20 +429,17 @@ export default function GameFontProof() {
         setSaving(true)
         setSaveStatus('saving')
 
-        const { error } = await supabase
-          .from('font_char')
-          .upsert(rowsToUpsert, { onConflict: 'game_slug,idx' })
-
-        setSaving(false)
-
-        if (error) {
-          console.error('[fontproof] import save failed', error)
+        try {
+          await upsertFontCharRows(rowsToUpsert)
+          setSaveStatus('saved')
+          console.log('[fontproof] imported font_char rows:', rowsToUpsert.length)
+        } catch (e) {
+          console.error('[fontproof] import save failed', e)
           setSaveStatus('error')
-          alert('导入已加载到页面，但保存到服务器失败：' + error.message)
-          return
+          alert('导入已加载到页面，但保存到服务器失败：' + String(e instanceof Error ? e.message : e))
+        } finally {
+          setSaving(false)
         }
-
-        setSaveStatus('saved')
       }
     }
 
