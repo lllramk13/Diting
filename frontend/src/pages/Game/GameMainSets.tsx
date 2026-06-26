@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import { getIsAdmin } from '../../lib/admin'
 import { getGameBySlug } from '../../games/registry'
 import GamePageShell from './GamePageShell'
-import { getGameTheme } from './gameTheme'
-
-const mono = "'Space Mono', monospace"
-const cnf = "'Noto Sans SC', sans-serif"
-const DONE = '#2D8C50'
-const DANGER = '#F0888A'
+import { themeVars } from './gameTheme'
+import './gameTheme.css'
+import './GameMainSets.css'
 
 type MainSet = {
   id: string
@@ -243,7 +241,7 @@ export default function GameMainSets() {
 
     const { data: entries } = await supabase
       .from('translation_entries')
-      .select('*')
+      .select('string_id, content, sort_order')
       .eq('set_id', setId)
 
     const { data: newSet, error } = await supabase
@@ -284,23 +282,15 @@ export default function GameMainSets() {
 
   if (!game) {
     return (
-      <main
-        style={{
-          minHeight: '100vh',
-          background: '#0A0E18',
-          color: '#EAEEF7',
-          padding: 40,
-        }}
-      >
+      <main className="ms-notfound">
         <h1>Game not found</h1>
-        <Link to="/game" style={{ color: '#E8B23A' }}>
+        <Link to="/game" className="ms-notfound-link">
           返回游戏列表
         </Link>
       </main>
     )
   }
 
-  const t = getGameTheme(game)
   const cats = game.categories
 
   const catOf = (file: string) => cats.find(c => file.startsWith(c)) ?? '其他'
@@ -342,203 +332,73 @@ export default function GameMainSets() {
 
   const shownSets = groups.reduce((n, g) => n + g.rows.length, 0)
 
-  const chip = (active: boolean): React.CSSProperties => ({
-    cursor: 'pointer',
-    fontFamily: mono,
-    fontSize: 11.5,
-    padding: '7px 13px',
-    borderRadius: 20,
-    background: active ? t.accentSoft : t.card,
-    color: active ? t.accent : t.muted,
-    border: `1px solid ${active ? t.accentBorder : t.line2}`,
-  })
-
-  const stat = (value: string | number, label: string, color: string) => (
+  const stat = (value: string | number, label: string, variant: '' | 'is-done' | 'is-muted' = '') => (
     <div>
-      <div
-        style={{
-          fontFamily: mono,
-          fontSize: 22,
-          fontWeight: 700,
-          color,
-        }}
-      >
-        {value}
-      </div>
-
-      <div
-        style={{
-          fontFamily: mono,
-          fontSize: 9.5,
-          letterSpacing: 1.5,
-          color: t.label,
-        }}
-      >
-        {label}
-      </div>
+      <div className={`ms-stat-val${variant ? ' ' + variant : ''}`}>{value}</div>
+      <div className="ms-stat-label">{label}</div>
     </div>
   )
 
   return (
     <GamePageShell game={game}>
-      <main
-        style={{
-          minHeight: '100vh',
-          background: t.page,
-          color: t.ink,
-          fontFamily: "'Space Grotesk', 'Noto Sans SC', sans-serif",
-        }}
-      >
-        <div style={{ height: 3, background: t.accent }} />
+      <main className="game-theme ms-main" style={themeVars(game)}>
+        <div className="ms-topline" />
 
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '26px 32px 90px' }}>
-          <section
-            style={{
-              border: `1px solid ${t.line2}`,
-              borderRadius: 14,
-              background: t.card,
-              padding: '24px 26px',
-              marginBottom: 22,
-              display: 'grid',
-              gridTemplateColumns: 'auto 1fr',
-              gap: 34,
-              alignItems: 'center',
-            }}
-          >
+        <div className="ms-wrap">
+          <section className="ms-stats">
             <div>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
-                <span
-                  style={{
-                    fontFamily: mono,
-                    fontSize: 52,
-                    fontWeight: 700,
-                    lineHeight: 1,
-                    color: t.ink,
-                  }}
-                >
-                  {pct}
-                </span>
-
-                <span style={{ fontFamily: mono, fontSize: 20, color: t.muted }}>
-                  %
-                </span>
+              <div className="ms-pct-row">
+                <span className="ms-pct">{pct}</span>
+                <span className="ms-pct-sign">%</span>
               </div>
 
-              <div
-                style={{
-                  fontFamily: mono,
-                  fontSize: 10,
-                  letterSpacing: 2,
-                  color: t.label,
-                  marginTop: 8,
-                }}
-              >
-                主集完成度 · {completedCount} / {totalCount}
-              </div>
+              <div className="ms-pct-label">主集完成度 · {completedCount} / {totalCount}</div>
             </div>
 
             <div>
-              <div
-                style={{
-                  height: 8,
-                  borderRadius: 5,
-                  background: t.inkSoft,
-                  border: `1px solid ${t.line}`,
-                  overflow: 'hidden',
-                  marginBottom: 18,
-                }}
-              >
-                <div
-                  style={{
-                    width: `${pct}%`,
-                    height: '100%',
-                    background: DONE,
-                    transition: 'width 0.5s ease',
-                  }}
-                />
+              <div className="ms-bar">
+                <div className="ms-bar-fill" style={{ '--ms-pct': `${pct}%` } as CSSProperties} />
               </div>
 
-              <div style={{ display: 'flex', gap: 30, flexWrap: 'wrap' }}>
-                {stat(completedCount, '已完成主集', DONE)}
-                {stat(totalCount - completedCount, '进行中', t.muted)}
-                {stat(totalCount, '主集总数', t.ink)}
-                {stat(presentCats.length, '文件分类', t.ink)}
+              <div className="ms-stat-row">
+                {stat(completedCount, '已完成主集', 'is-done')}
+                {stat(totalCount - completedCount, '进行中', 'is-muted')}
+                {stat(totalCount, '主集总数')}
+                {stat(presentCats.length, '文件分类')}
               </div>
             </div>
           </section>
 
-          <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap', marginBottom: 14 }}>
-            <button onClick={() => setFilter('')} style={chip(filter === '')}>
+          <div className="ms-chips">
+            <button className={`ms-chip${filter === '' ? ' is-active' : ''}`} onClick={() => setFilter('')}>
               全部
-              <span style={{ opacity: 0.55, marginLeft: 6 }}>{totalCount}</span>
+              <span className="ms-chip-count">{totalCount}</span>
             </button>
 
             {presentCats.map(c => (
-              <button key={c} onClick={() => setFilter(c)} style={chip(filter === c)}>
+              <button
+                key={c}
+                className={`ms-chip${filter === c ? ' is-active' : ''}`}
+                onClick={() => setFilter(c)}
+              >
                 {c}
-                <span style={{ opacity: 0.55, marginLeft: 6 }}>{catCounts[c]}</span>
+                <span className="ms-chip-count">{catCounts[c]}</span>
               </button>
             ))}
           </div>
 
-          <section
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 11,
-              flexWrap: 'wrap',
-              padding: '11px 13px',
-              border: `1px solid ${t.line2}`,
-              borderRadius: 11,
-              background: t.card,
-              marginBottom: 22,
-            }}
-          >
+          <section className="ms-searchbar">
             <input
+              className="ms-search"
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="搜索文件组，例如 script · field · strtbl…"
-              style={{
-                flex: 1,
-                minWidth: 200,
-                background: t.inkSoft,
-                border: `1px solid ${t.line2}`,
-                borderRadius: 8,
-                color: t.ink,
-                fontFamily: 'inherit',
-                fontSize: 14,
-                padding: '9px 12px',
-                outline: 'none',
-              }}
             />
 
-            <span
-              style={{
-                fontFamily: mono,
-                fontSize: 11,
-                color: t.label,
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {shownSets} 个主集
-            </span>
+            <span className="ms-count">{shownSets} 个主集</span>
 
             {user && !loading && (
-              <button
-                onClick={initOfficialSets}
-                disabled={initializing}
-                style={{
-                  cursor: initializing ? 'not-allowed' : 'pointer',
-                  fontFamily: cnf,
-                  fontSize: 12.5,
-                  padding: '9px 14px',
-                  borderRadius: 8,
-                  background: t.accentSoft,
-                  border: `1px solid ${t.accentBorder}`,
-                  color: t.accent,
-                  fontWeight: 600,
-                }}
-              >
+              <button className="ms-init-btn" onClick={initOfficialSets} disabled={initializing}>
                 {initializing
                   ? `创建中… ${initProgress}`
                   : totalCount === 0
@@ -548,85 +408,34 @@ export default function GameMainSets() {
             )}
           </section>
 
-          {loading && (
-            <p style={{ fontFamily: mono, fontSize: 13, color: t.label }}>
-              加载中…
-            </p>
-          )}
+          {loading && <p className="ms-loading">加载中…</p>}
 
           {dupSets.length > 0 && !filter && !search && (
-            <section style={{ marginBottom: 26 }}>
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  marginBottom: 11,
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: mono,
-                    fontSize: 13,
-                    fontWeight: 700,
-                    letterSpacing: 1,
-                    color: t.ink,
-                  }}
-                >
-                  重复集 · 共享译文
-                </span>
-                <span style={{ fontFamily: mono, fontSize: 11, color: t.muted }}>
-                  重复出现的句子在这里统一翻译，普通集里只读镜像
-                </span>
+            <section className="ms-dup-section">
+              <div className="ms-dup-head">
+                <span className="ms-dup-title">重复集 · 共享译文</span>
+                <span className="ms-dup-hint">重复出现的句子在这里统一翻译，普通集里只读镜像</span>
               </div>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div className="ms-dup-list">
                 {dupSets.map(s => (
-                  <div
-                    key={s.id}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 1,
-                      borderRadius: 10,
-                      overflow: 'hidden',
-                      border: `1px solid ${t.accentBorder}`,
-                    }}
-                  >
+                  <div key={s.id} className="ms-dup-item">
                     <button
+                      className="ms-dup-open"
                       onClick={() => {
                         sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
                         navigate(`${game.basePath}/edit/${s.id}`)
-                      }}
-                      style={{
-                        cursor: 'pointer',
-                        fontFamily: cnf,
-                        fontSize: 13,
-                        padding: '10px 14px',
-                        background: t.accentSoft,
-                        border: 'none',
-                        color: t.accent,
-                        fontWeight: 600,
                       }}
                     >
                       {s.title || s.source_file}
                     </button>
 
                     <button
+                      className="ms-dup-fork"
+                      title="Fork 这个重复集来修改，改完提交合并请求"
                       onClick={() => {
                         sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
                         fork(s.id, s.source_file, s.title)
-                      }}
-                      title="Fork 这个重复集来修改，改完提交合并请求"
-                      style={{
-                        cursor: 'pointer',
-                        fontFamily: cnf,
-                        fontSize: 12.5,
-                        padding: '10px 12px',
-                        background: t.accent,
-                        border: 'none',
-                        color: '#0A0E18',
-                        fontWeight: 700,
                       }}
                     >
                       Fork
@@ -637,167 +446,59 @@ export default function GameMainSets() {
             </section>
           )}
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 26 }}>
+          <div className="ms-groups">
             {groups.map(grp => {
               const barW = grp.totalN ? Math.round((grp.doneN / grp.totalN) * 100) : 0
 
               return (
                 <section key={grp.cat}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 12,
-                      marginBottom: 11,
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: mono,
-                        fontSize: 13,
-                        fontWeight: 700,
-                        letterSpacing: 1,
-                        color: t.ink,
-                      }}
-                    >
-                      {grp.cat}
-                    </span>
+                  <div className="ms-group-head">
+                    <span className="ms-group-cat">{grp.cat}</span>
 
-                    <span
-                      style={{
-                        fontFamily: mono,
-                        fontSize: 11,
-                        color: grp.doneN === grp.totalN ? DONE : t.muted,
-                      }}
-                    >
+                    <span className={`ms-group-count${grp.doneN === grp.totalN ? ' is-done' : ''}`}>
                       {grp.doneN} / {grp.totalN} 完成
                     </span>
 
-                    <div
-                      style={{
-                        flex: 1,
-                        height: 4,
-                        borderRadius: 3,
-                        background: t.inkSoft,
-                        border: `1px solid ${t.line}`,
-                        overflow: 'hidden',
-                        maxWidth: 200,
-                      }}
-                    >
+                    <div className="ms-group-bar">
                       <div
-                        style={{
-                          width: `${barW}%`,
-                          height: '100%',
-                          background: DONE,
-                        }}
+                        className="ms-group-bar-fill"
+                        style={{ '--ms-pct': `${barW}%` } as CSSProperties}
                       />
                     </div>
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <div className="ms-rows">
                     {grp.rows.map(s => {
                       const done = !!s.is_completed
 
                       return (
-                        <div
-                          key={s.id}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 13,
-                            padding: '13px 16px',
-                            border: `1px solid ${t.line2}`,
-                            borderLeft: `3px solid ${done ? DONE : t.line2}`,
-                            borderRadius: 11,
-                            background: t.card,
-                          }}
-                        >
-                          <span
-                            style={{
-                              flexShrink: 0,
-                              width: 24,
-                              height: 24,
-                              borderRadius: 6,
-                              background: t.accentSoft,
-                              color: t.accent,
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              fontFamily: cnf,
-                              fontWeight: 700,
-                              fontSize: 12,
-                            }}
-                          >
-                            主
-                          </span>
+                        <div key={s.id} className={`ms-row${done ? ' is-done' : ''}`}>
+                          <span className="ms-row-icon">主</span>
 
-                          <div style={{ minWidth: 0, flex: 1 }}>
-                            <div
-                              style={{
-                                fontFamily: mono,
-                                fontSize: 14,
-                                color: t.ink,
-                                overflow: 'hidden',
-                                textOverflow: 'ellipsis',
-                                whiteSpace: 'nowrap',
-                              }}
-                            >
-                              {s.source_file}
-                            </div>
+                          <div className="ms-row-body">
+                            <div className="ms-row-file">{s.source_file}</div>
                           </div>
 
-                          <span
-                            style={{
-                              flexShrink: 0,
-                              fontFamily: cnf,
-                              fontSize: 11.5,
-                              padding: '3px 10px',
-                              borderRadius: 20,
-                              background: done ? 'rgba(45,140,80,0.10)' : t.inkSoft,
-                              color: done ? DONE : t.muted,
-                              border: `1px solid ${
-                                done ? 'rgba(45,140,80,0.28)' : t.line2
-                              }`,
-                            }}
-                          >
+                          <span className={`ms-row-status${done ? ' is-done' : ''}`}>
                             {done ? '✓ 已完成' : '进行中'}
                           </span>
 
-                          <div style={{ flexShrink: 0, display: 'flex', gap: 7 }}>
+                          <div className="ms-row-actions">
                             <button
+                              className="ms-view-btn"
                               onClick={() => {
                                 sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
                                 navigate(`${game.basePath}/edit/${s.id}`)
-                              }}
-                              style={{
-                                cursor: 'pointer',
-                                fontFamily: cnf,
-                                fontSize: 12.5,
-                                padding: '8px 14px',
-                                borderRadius: 8,
-                                background: t.inkSoft,
-                                border: `1px solid ${t.line2}`,
-                                color: t.ink,
                               }}
                             >
                               查看
                             </button>
 
                             <button
+                              className="ms-fork-btn"
                               onClick={() => {
                                 sessionStorage.setItem('mainsets-scroll', String(window.scrollY))
                                 fork(s.id, s.source_file, s.title)
-                              }}
-                              style={{
-                                cursor: 'pointer',
-                                fontFamily: cnf,
-                                fontSize: 12.5,
-                                padding: '8px 14px',
-                                borderRadius: 8,
-                                background: t.accent,
-                                border: 'none',
-                                color: '#0A0E18',
-                                fontWeight: 700,
                               }}
                             >
                               Fork
@@ -805,21 +506,8 @@ export default function GameMainSets() {
 
                             {isAdmin && (
                               <button
+                                className={`ms-toggle-btn ${done ? 'is-done' : 'is-todo'}`}
                                 onClick={() => toggleCompleted(s.id, done)}
-                                style={{
-                                  cursor: 'pointer',
-                                  fontFamily: cnf,
-                                  fontSize: 12,
-                                  padding: '8px 12px',
-                                  borderRadius: 8,
-                                  background: 'none',
-                                  border: `1px solid ${
-                                    done
-                                      ? 'rgba(248,81,73,0.3)'
-                                      : 'rgba(45,140,80,0.3)'
-                                  }`,
-                                  color: done ? DANGER : DONE,
-                                }}
                               >
                                 {done ? '取消完成' : '标记完成'}
                               </button>
@@ -835,17 +523,7 @@ export default function GameMainSets() {
           </div>
 
           {!loading && groups.length === 0 && (
-            <div
-              style={{
-                textAlign: 'center',
-                padding: '60px 20px',
-                fontFamily: mono,
-                fontSize: 13,
-                color: t.label,
-              }}
-            >
-              没有匹配的主集
-            </div>
+            <div className="ms-empty">没有匹配的主集</div>
           )}
         </div>
       </main>

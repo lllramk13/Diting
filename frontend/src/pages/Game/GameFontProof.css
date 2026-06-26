@@ -258,3 +258,14 @@
 .fp-badge.is-blank {
   color: var(--fp-faint);
 }
+
+.fp-btn.is-disabled,
+.fp-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.fp-c-error {
+  color: #ff7b7b;
+}

@@ -4,12 +4,9 @@ import { supabase } from '../../lib/supabase'
 import { getIsAdmin } from '../../lib/admin'
 import { getGameBySlug } from '../../games/registry'
 import GamePageShell from './GamePageShell'
-import { getGameTheme } from './gameTheme'
-
-const mono = "'Space Mono', monospace"
-const cnf = "'Noto Sans SC', sans-serif"
-
-const GRID = '1.5fr 1.5fr 0.8fr 28px'
+import { themeVars } from './gameTheme'
+import './gameTheme.css'
+import './GameGlossary.css'
 
 type GlossaryRow = {
   id: string
@@ -116,14 +113,12 @@ export default function GameGlossary() {
   if (!game) {
     return (
       <GamePageShell game={getGameBySlug('p2is')!}>
-        <main style={{ minHeight: '100vh', background: '#0A0E18', color: '#EAEEF7', padding: 40 }}>
+        <main className="gl-notfound">
           <p>找不到这个游戏项目。</p>
         </main>
       </GamePageShell>
     )
   }
-
-  const t = getGameTheme(game)
 
   function resetForm() {
     setEditing(null)
@@ -244,172 +239,77 @@ export default function GameGlossary() {
     ...cats.map(c => ({ key: c, label: c, count: catCounts[c] })),
   ]
 
-  const stat = (value: string | number, label: string, color: string) => (
-    <div style={{ flex: 1, padding: '14px 18px' }}>
-      <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 700, color }}>{value}</div>
-      <div style={{ fontFamily: mono, fontSize: 9.5, letterSpacing: 1.5, color: t.label, marginTop: 2 }}>
-        {label}
-      </div>
+  const stat = (value: string | number, label: string, variant: '' | 'is-accent' = '') => (
+    <div className="gl-stat">
+      <div className={`gl-stat-val${variant ? ' ' + variant : ''}`}>{value}</div>
+      <div className="gl-stat-label">{label}</div>
     </div>
   )
 
   return (
     <GamePageShell game={game}>
-      <main
-        style={{
-          minHeight: '100vh',
-          background: t.page,
-          color: t.ink,
-          fontFamily: "'Space Grotesk', 'Noto Sans SC', sans-serif",
-        }}
-      >
-        <div style={{ height: 3, background: t.accent }} />
+      <main className="game-theme gl-main" style={themeVars(game)}>
+        <div className="gl-topline" />
 
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '28px 32px 90px' }}>
+        <div className="gl-wrap">
           {/* intro */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              justifyContent: 'space-between',
-              gap: 20,
-              flexWrap: 'wrap',
-              marginBottom: 22,
-            }}
-          >
-            <div style={{ maxWidth: 580 }}>
-              <h1 style={{ fontFamily: cnf, fontWeight: 900, fontSize: 30, margin: 0, letterSpacing: 1 }}>
-                {game.shortTitle} 术语表
-              </h1>
-              <p style={{ fontSize: 14.5, color: t.muted, margin: '10px 0 0', lineHeight: 1.6 }}>
+          <div className="gl-intro">
+            <div className="gl-intro-text">
+              <h1 className="gl-h1">{game.shortTitle} 术语表</h1>
+              <p className="gl-intro-p">
                 全集统一的人名、恶魔、道具、技能、地名与系统用语。所有翻译集都应对齐这里的确认译法。
               </p>
             </div>
 
             {isAdmin && (
-              <button
-                onClick={openCreateModal}
-                style={{
-                  cursor: 'pointer',
-                  fontFamily: cnf,
-                  fontSize: 14,
-                  fontWeight: 700,
-                  padding: '11px 20px',
-                  borderRadius: 9,
-                  background: t.accent,
-                  border: 'none',
-                  color: t.buttonText,
-                }}
-              >
+              <button className="gl-add-btn" onClick={openCreateModal}>
                 + 新增术语
               </button>
             )}
           </div>
 
           {/* stat strip */}
-          <div
-            style={{
-              display: 'flex',
-              gap: 0,
-              border: `1px solid ${t.line2}`,
-              borderRadius: 12,
-              background: t.card,
-              overflow: 'hidden',
-              marginBottom: 18,
-            }}
-          >
-            {stat(rows.length, '收录术语', t.ink)}
-            <div style={{ width: 1, background: t.line }} />
-            {stat(cats.length, '分类', t.accent)}
-            <div style={{ width: 1, background: t.line }} />
-            {stat(filteredRows.length, '当前显示', t.ink)}
+          <div className="gl-stats">
+            {stat(rows.length, '收录术语')}
+            <div className="gl-stat-div" />
+            {stat(cats.length, '分类', 'is-accent')}
+            <div className="gl-stat-div" />
+            {stat(filteredRows.length, '当前显示')}
           </div>
 
           {/* category chips + search */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 11,
-              flexWrap: 'wrap',
-              marginBottom: 14,
-            }}
-          >
-            <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
-              {catChips.map(c => {
-                const on = cat === c.key
-                return (
-                  <button
-                    key={c.key || '__all'}
-                    onClick={() => setCat(c.key)}
-                    style={{
-                      cursor: 'pointer',
-                      whiteSpace: 'nowrap',
-                      fontFamily: cnf,
-                      fontSize: 12.5,
-                      padding: '7px 13px',
-                      borderRadius: 20,
-                      background: on ? t.inkSoft : t.card,
-                      color: on ? t.ink : t.muted,
-                      border: `1px solid ${on ? t.inkBorder : t.line2}`,
-                    }}
-                  >
-                    {c.label}
-                    <span style={{ fontFamily: mono, fontSize: 10.5, opacity: 0.65, marginLeft: 6 }}>
-                      {c.count}
-                    </span>
-                  </button>
-                )
-              })}
+          <div className="gl-toolbar">
+            <div className="gl-chips">
+              {catChips.map(c => (
+                <button
+                  key={c.key || '__all'}
+                  className={`gl-chip${cat === c.key ? ' is-active' : ''}`}
+                  onClick={() => setCat(c.key)}
+                >
+                  {c.label}
+                  <span className="gl-chip-count">{c.count}</span>
+                </button>
+              ))}
             </div>
 
             <input
+              className="gl-search"
               value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder="搜索原文 · 译文 · 备注…"
-              style={{
-                marginLeft: 'auto',
-                background: t.card,
-                border: `1px solid ${t.line2}`,
-                borderRadius: 8,
-                color: t.ink,
-                fontFamily: 'inherit',
-                fontSize: 13,
-                padding: '9px 13px',
-                outline: 'none',
-                width: 230,
-              }}
             />
           </div>
 
-          {loading && (
-            <p style={{ fontFamily: mono, fontSize: 13, color: t.label }}>加载中…</p>
-          )}
+          {loading && <p className="gl-loading">加载中…</p>}
 
           {/* table */}
           {!loading && (
-            <div
-              style={{
-                border: `1px solid ${t.line2}`,
-                borderRadius: 13,
-                background: t.card,
-                overflow: 'hidden',
-              }}
-            >
+            <div className="gl-table">
               {/* header row */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: GRID,
-                  gap: 14,
-                  padding: '12px 20px',
-                  borderBottom: `1px solid ${t.line2}`,
-                  background: t.inkSoft,
-                }}
-              >
-                <span style={{ fontFamily: mono, fontSize: 9.5, letterSpacing: 1.5, color: t.label }}>原文 · JP</span>
-                <span style={{ fontFamily: mono, fontSize: 9.5, letterSpacing: 1.5, color: t.accent }}>确认译法 · ZH</span>
-                <span style={{ fontFamily: mono, fontSize: 9.5, letterSpacing: 1.5, color: t.label }}>分类</span>
+              <div className="gl-thead">
+                <span className="gl-th">原文 · JP</span>
+                <span className="gl-th gl-th--zh">确认译法 · ZH</span>
+                <span className="gl-th">分类</span>
                 <span />
               </div>
 
@@ -418,103 +318,33 @@ export default function GameGlossary() {
                 const catLabel = row.category?.trim() || '未分类'
 
                 return (
-                  <div key={row.id} style={{ borderBottom: `1px solid ${t.line}` }}>
-                    <div
-                      onClick={() => setExpanded(open ? null : row.id)}
-                      style={{
-                        cursor: 'pointer',
-                        display: 'grid',
-                        gridTemplateColumns: GRID,
-                        gap: 14,
-                        alignItems: 'center',
-                        padding: '13px 20px',
-                        borderLeft: `3px solid ${t.accent}`,
-                      }}
-                    >
-                      <span style={{ fontFamily: cnf, fontSize: 15, fontWeight: 500, color: t.ink }}>
-                        {row.jp}
-                      </span>
-                      <span style={{ fontFamily: cnf, fontSize: 15, fontWeight: 700, color: t.ink }}>
-                        {row.zh}
-                      </span>
+                  <div key={row.id} className="gl-row">
+                    <div className="gl-row-main" onClick={() => setExpanded(open ? null : row.id)}>
+                      <span className="gl-jp">{row.jp}</span>
+                      <span className="gl-zh">{row.zh}</span>
                       <span>
-                        <span
-                          style={{
-                            fontFamily: cnf,
-                            fontSize: 11,
-                            padding: '2px 9px',
-                            borderRadius: 6,
-                            background: t.accentSoft,
-                            color: t.accent,
-                            border: `1px solid ${t.accentBorder}`,
-                          }}
-                        >
-                          {catLabel}
-                        </span>
+                        <span className="gl-cat">{catLabel}</span>
                       </span>
-                      <span
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 12,
-                          color: t.label,
-                          textAlign: 'right',
-                          transform: open ? 'rotate(90deg)' : 'rotate(0deg)',
-                          transition: 'transform 0.2s ease',
-                        }}
-                      >
-                        ▸
-                      </span>
+                      <span className={`gl-chevron${open ? ' is-open' : ''}`}>▸</span>
                     </div>
 
                     {open && (
-                      <div
-                        style={{
-                          borderTop: `1px solid ${t.line}`,
-                          background: t.inkSoft,
-                          padding: '16px 20px 18px 23px',
-                        }}
-                      >
-                        <div style={{ fontFamily: mono, fontSize: 9, letterSpacing: 1.5, color: t.label, marginBottom: 6 }}>
-                          备注
-                        </div>
-                        <div style={{ fontSize: 13.5, lineHeight: 1.7, color: row.note ? t.ink : t.label }}>
+                      <div className="gl-detail">
+                        <div className="gl-detail-label">备注</div>
+                        <div className={`gl-note${row.note ? '' : ' is-empty'}`}>
                           {row.note?.trim() || '（暂无备注）'}
                         </div>
 
-                        <div style={{ fontFamily: mono, fontSize: 11, color: t.label, marginTop: 12 }}>
+                        <div className="gl-date">
                           收录于 · {new Date(row.created_at).toLocaleDateString('zh-CN')}
                         </div>
 
                         {isAdmin && (
-                          <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
-                            <button
-                              onClick={() => openEditModal(row)}
-                              style={{
-                                cursor: 'pointer',
-                                fontFamily: cnf,
-                                fontSize: 12,
-                                padding: '7px 13px',
-                                borderRadius: 8,
-                                background: t.card,
-                                border: `1px solid ${t.line2}`,
-                                color: t.ink,
-                              }}
-                            >
+                          <div className="gl-detail-actions">
+                            <button className="gl-edit-btn" onClick={() => openEditModal(row)}>
                               编辑
                             </button>
-                            <button
-                              onClick={() => deleteTerm(row)}
-                              style={{
-                                cursor: 'pointer',
-                                fontFamily: cnf,
-                                fontSize: 12,
-                                padding: '7px 13px',
-                                borderRadius: 8,
-                                background: 'none',
-                                border: '1px solid rgba(240,136,138,0.35)',
-                                color: t.danger,
-                              }}
-                            >
+                            <button className="gl-del-btn" onClick={() => deleteTerm(row)}>
                               删除
                             </button>
                           </div>
@@ -526,15 +356,7 @@ export default function GameGlossary() {
               })}
 
               {filteredRows.length === 0 && (
-                <div
-                  style={{
-                    textAlign: 'center',
-                    padding: '56px 20px',
-                    fontFamily: mono,
-                    fontSize: 13,
-                    color: t.label,
-                  }}
-                >
+                <div className="gl-empty">
                   {rows.length === 0 ? '术语表还是空的' : '没有匹配的术语'}
                 </div>
               )}
@@ -544,119 +366,70 @@ export default function GameGlossary() {
 
         {showModal && (
           <div
+            className="gl-overlay"
             onClick={() => {
               setShowModal(false)
               resetForm()
             }}
-            style={{
-              position: 'fixed',
-              inset: 0,
-              zIndex: 60,
-              background: 'rgba(5,8,15,0.6)',
-              backdropFilter: 'blur(3px)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 24,
-            }}
           >
-            <div
-              onClick={e => e.stopPropagation()}
-              style={{
-                width: '100%',
-                maxWidth: 480,
-                background: t.card,
-                border: `1px solid ${t.line2}`,
-                borderRadius: 16,
-                overflow: 'hidden',
-              }}
-            >
-              <div style={{ height: 3, background: t.accent }} />
-              <div style={{ padding: '24px 26px' }}>
-                <div style={{ fontFamily: cnf, fontWeight: 700, fontSize: 19, marginBottom: 18 }}>
-                  {editing ? '编辑术语' : '提交术语'}
-                </div>
+            <div className="gl-modal" onClick={e => e.stopPropagation()}>
+              <div className="gl-modal-top" />
+              <div className="gl-modal-body">
+                <div className="gl-modal-title">{editing ? '编辑术语' : '提交术语'}</div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 16 }}>
+                <div className="gl-form-grid">
                   <div>
-                    <div style={{ fontFamily: mono, fontSize: 10, letterSpacing: 1.5, color: t.label, marginBottom: 6 }}>
-                      原文 · JP
-                    </div>
+                    <div className="gl-field-label">原文 · JP</div>
                     <input
+                      className="gl-field"
                       value={jp}
                       onChange={e => setJp(e.target.value)}
                       placeholder="ペルソナ"
-                      style={fieldStyle(t)}
                     />
                   </div>
                   <div>
-                    <div style={{ fontFamily: mono, fontSize: 10, letterSpacing: 1.5, color: t.label, marginBottom: 6 }}>
-                      译法 · ZH
-                    </div>
+                    <div className="gl-field-label">译法 · ZH</div>
                     <input
+                      className="gl-field"
                       value={zh}
                       onChange={e => setZh(e.target.value)}
                       placeholder="人格面具"
-                      style={fieldStyle(t)}
                     />
                   </div>
                 </div>
 
-                <div style={{ fontFamily: mono, fontSize: 10, letterSpacing: 1.5, color: t.label, marginBottom: 6 }}>
-                  分类
-                </div>
+                <div className="gl-field-label">分类</div>
                 <input
+                  className="gl-field gl-field-mb"
                   value={category}
                   onChange={e => setCategory(e.target.value)}
                   placeholder="例如：人名 / 地名 / 技能 / 系统"
-                  style={{ ...fieldStyle(t), marginBottom: 16 }}
                 />
 
-                <div style={{ fontFamily: mono, fontSize: 10, letterSpacing: 1.5, color: t.label, marginBottom: 6 }}>
-                  备注（可选）
-                </div>
+                <div className="gl-field-label">备注（可选）</div>
                 <textarea
+                  className="gl-field gl-textarea"
                   value={note}
                   onChange={e => setNote(e.target.value)}
                   rows={2}
                   placeholder="译名依据、注意事项……"
-                  style={{ ...fieldStyle(t), resize: 'vertical', lineHeight: 1.6, marginBottom: 20 }}
                 />
 
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10 }}>
+                <div className="gl-modal-footer">
                   <button
+                    className="gl-cancel-btn"
                     onClick={() => {
                       setShowModal(false)
                       resetForm()
                     }}
                     disabled={saving}
-                    style={{
-                      cursor: 'pointer',
-                      fontFamily: cnf,
-                      fontSize: 13.5,
-                      padding: '10px 18px',
-                      borderRadius: 9,
-                      background: t.inkSoft,
-                      border: `1px solid ${t.line2}`,
-                      color: t.muted,
-                    }}
                   >
                     取消
                   </button>
                   <button
+                    className="gl-save-btn"
                     onClick={saveTerm}
                     disabled={saving || !jp.trim() || !zh.trim()}
-                    style={{
-                      cursor: saving || !jp.trim() || !zh.trim() ? 'not-allowed' : 'pointer',
-                      fontFamily: cnf,
-                      fontSize: 13.5,
-                      fontWeight: 700,
-                      padding: '10px 18px',
-                      borderRadius: 9,
-                      background: jp.trim() && zh.trim() ? t.accent : t.line2,
-                      border: 'none',
-                      color: t.buttonText,
-                    }}
                   >
                     {saving ? '保存中…' : '保存'}
                   </button>
@@ -668,18 +441,4 @@ export default function GameGlossary() {
       </main>
     </GamePageShell>
   )
-}
-
-function fieldStyle(t: ReturnType<typeof getGameTheme>): React.CSSProperties {
-  return {
-    width: '100%',
-    background: t.inkSoft,
-    border: `1px solid ${t.line2}`,
-    borderRadius: 9,
-    color: t.ink,
-    fontFamily: 'inherit',
-    fontSize: 14,
-    padding: '10px 12px',
-    outline: 'none',
-  }
 }
