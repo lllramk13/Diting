@@ -18,7 +18,70 @@ type Manifest = {
 
 type Entries = Record<number, string>
 
+type SaveStatus = 'idle' | 'saving' | 'saved' | 'error'
+
+type FontCharRow = {
+  idx: number
+  ch: string
+}
+
+type FontCharUpsertRow = {
+  game_slug: string
+  idx: number
+  ch: string
+  updated_by: string | null
+  updated_at: string
+}
+
 const GRID_ROWS = 16
+const SUPABASE_PAGE_SIZE = 1000
+const UPSERT_BATCH_SIZE = 500
+
+async function loadAllFontChars(slug: string): Promise<FontCharRow[]> {
+  let from = 0
+  const all: FontCharRow[] = []
+
+  while (true) {
+    const { data, error } = await supabase
+      .from('font_char')
+      .select('idx, ch')
+      .eq('game_slug', slug)
+      .order('idx', { ascending: true })
+      .range(from, from + SUPABASE_PAGE_SIZE - 1)
+
+    if (error) {
+      throw error
+    }
+
+    if (!data || data.length === 0) {
+      break
+    }
+
+    all.push(...(data as FontCharRow[]))
+
+    if (data.length < SUPABASE_PAGE_SIZE) {
+      break
+    }
+
+    from += SUPABASE_PAGE_SIZE
+  }
+
+  return all
+}
+
+async function upsertFontCharRows(rows: FontCharUpsertRow[]) {
+  for (let i = 0; i < rows.length; i += UPSERT_BATCH_SIZE) {
+    const batch = rows.slice(i, i + UPSERT_BATCH_SIZE)
+
+    const { error } = await supabase
+      .from('font_char')
+      .upsert(batch, { onConflict: 'game_slug,idx' })
+
+    if (error) {
+      throw error
+    }
+  }
+}
 
 export default function GameFontProof() {
   const { gameSlug } = useParams<{ gameSlug: string }>()
@@ -43,21 +106,27 @@ export default function GameFontProof() {
   const [invert, setInvert] = useState(false)
   const [jumpVal, setJumpVal] = useState('')
 
+  const [saving, setSaving] = useState(false)
+  const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle')
+
   const composingRef = useRef(false)
   const inputRef = useRef<HTMLInputElement | null>(null)
 
   // ---- admin check (does not block viewing) ----
   useEffect(() => {
     let alive = true
+
     ;(async () => {
       const { data } = await supabase.auth.getUser()
       const id = data.user?.id ?? null
       const admin = id ? await getIsAdmin(id) : false
+
       if (alive) {
         setUid(id)
         setIsAdmin(admin)
       }
     })()
+
     return () => {
       alive = false
     }
@@ -66,19 +135,30 @@ export default function GameFontProof() {
   // ---- load manifest + image ----
   useEffect(() => {
     let alive = true
+
     setManifest(null)
     setImgSize(null)
     setLoadError(null)
     setMissing(false)
+    setEntries({})
+    setCurrent(0)
+    setDraft('')
+    setPage(0)
+    setSaveStatus('idle')
+
     ;(async () => {
       try {
         const res = await fetch(`${base}/font.json`)
+
         if (res.status === 404) {
           if (alive) setMissing(true)
           return
         }
+
         if (!res.ok) throw new Error(`font.json ${res.status}`)
+
         let m: Manifest
+
         try {
           m = (await res.json()) as Manifest
         } catch {
@@ -86,22 +166,30 @@ export default function GameFontProof() {
           if (alive) setMissing(true)
           return
         }
+
         if (!alive) return
+
         setManifest(m)
+
         const url = `${base}/${m.image || 'font_grid.png'}`
         setImgUrl(url)
+
         const img = new Image()
+
         img.onload = () => {
           if (alive) setImgSize({ w: img.naturalWidth, h: img.naturalHeight })
         }
+
         img.onerror = () => {
           if (alive) setLoadError(`图片加载失败：${url}`)
         }
+
         img.src = url
       } catch (e) {
         if (alive) setLoadError(String(e instanceof Error ? e.message : e))
       }
     })()
+
     return () => {
       alive = false
     }
@@ -110,28 +198,43 @@ export default function GameFontProof() {
   // ---- load: published baseline (manifest.chars) overlaid with live edits (font_char) ----
   useEffect(() => {
     if (!manifest) return
+
     let alive = true
+
     ;(async () => {
       const seed: Entries = {}
+
       if (manifest.chars && manifest.chars.length) {
         manifest.chars.forEach((ch, i) => {
-          if (ch !== undefined && ch !== null && ch !== '') seed[i] = ch
+          if (ch !== undefined && ch !== null && ch !== '') {
+            seed[i] = ch
+          }
         })
       }
-      const { data, error } = await supabase
-        .from('font_char')
-        .select('idx, ch')
-        .eq('game_slug', slug)
-      if (!alive) return
-      if (error) {
-        console.error('[fontproof] load font_char failed', error)
-      } else if (data) {
-        for (const row of data as { idx: number; ch: string }[]) {
+
+      try {
+        const rows = await loadAllFontChars(slug)
+
+        if (!alive) return
+
+        for (const row of rows) {
           seed[row.idx] = row.ch
         }
+
+        console.log('[fontproof] loaded font_char rows:', rows.length)
+
+        setEntries(seed)
+        setSaveStatus('idle')
+      } catch (e) {
+        if (!alive) return
+
+        console.error('[fontproof] load font_char failed', e)
+        setEntries(seed)
+        setSaveStatus('error')
+        alert('读取服务器字库失败：' + String(e instanceof Error ? e.message : e))
       }
-      setEntries(seed)
     })()
+
     return () => {
       alive = false
     }
@@ -143,56 +246,104 @@ export default function GameFontProof() {
   const rows = imgSize ? Math.floor(imgSize.h / tileH) : 0
   const total = cols * rows
 
-  // keep draft in sync with the current cell
+  // keep draft in sync with current cell AND loaded server entries
   useEffect(() => {
+    if (composingRef.current) return
     setDraft(entries[current] ?? '')
-  }, [current]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [current, entries])
 
   const visitedCount = useMemo(() => Object.keys(entries).length, [entries])
+
   const blankCount = useMemo(
     () => Object.values(entries).filter((v) => v === '').length,
     [entries],
   )
 
   const commit = useCallback(
-    (value: string) => {
-      setEntries((prev) => ({ ...prev, [current]: value }))
-      if (isAdmin) {
-        supabase
-          .from('font_char')
-          .upsert(
-            {
-              game_slug: slug,
-              idx: current,
-              ch: value,
-              updated_by: uid,
-              updated_at: new Date().toISOString(),
-            },
-            { onConflict: 'game_slug,idx' },
-          )
-          .then(({ error }) => {
-            if (error) console.error('[fontproof] save failed', error)
-          })
+    async (value: string) => {
+      // 非管理员只改本地，不写服务器
+      if (!isAdmin) {
+        setEntries((prev) => ({ ...prev, [current]: value }))
+        return true
       }
+
+      if (saving) return false
+
+      const previousValue = entries[current]
+
+      setEntries((prev) => ({ ...prev, [current]: value }))
+      setSaving(true)
+      setSaveStatus('saving')
+
+      const { error } = await supabase
+        .from('font_char')
+        .upsert(
+          {
+            game_slug: slug,
+            idx: current,
+            ch: value,
+            updated_by: uid,
+            updated_at: new Date().toISOString(),
+          },
+          { onConflict: 'game_slug,idx' },
+        )
+
+      setSaving(false)
+
+      if (error) {
+        console.error('[fontproof] save failed', error)
+        setSaveStatus('error')
+
+        // 回滚本地显示，避免用户以为已经保存
+        setEntries((prev) => {
+          const next = { ...prev }
+
+          if (previousValue === undefined) {
+            delete next[current]
+          } else {
+            next[current] = previousValue
+          }
+
+          return next
+        })
+
+        alert('保存失败：' + error.message)
+        return false
+      }
+
+      setSaveStatus('saved')
+      return true
     },
-    [current, isAdmin, slug, uid],
+    [current, entries, isAdmin, saving, slug, uid],
   )
 
   const goto = useCallback(
     (idx: number) => {
       if (total <= 0) return
+
       const clamped = Math.max(0, Math.min(total - 1, idx))
       setCurrent(clamped)
       setPage(Math.floor(clamped / Math.max(1, cols * GRID_ROWS)))
+      setSaveStatus('idle')
     },
     [total, cols],
   )
 
-  const commitAndNext = useCallback(() => {
-    commit(draft)
+  const commitAndNext = useCallback(async () => {
+    const ok = await commit(draft)
+    if (!ok) return
+
     goto(current + 1)
     requestAnimationFrame(() => inputRef.current?.focus())
   }, [commit, draft, goto, current])
+
+  const markBlankAndNext = useCallback(async () => {
+    const ok = await commit('')
+    if (!ok) return
+
+    goto(current + 1)
+    requestAnimationFrame(() => inputRef.current?.focus())
+  }, [commit, goto, current])
 
   const nextUnfilled = useCallback(() => {
     for (let i = current + 1; i < total; i++) {
@@ -207,14 +358,21 @@ export default function GameFontProof() {
     if (e.key === 'Enter') {
       if (composingRef.current || e.nativeEvent.isComposing) return
       e.preventDefault()
-      commitAndNext()
+
+      if (!saving) {
+        void commitAndNext()
+      }
     }
   }
 
   // ---- export / import ----
   const exportJson = () => {
     const chars: string[] = []
-    for (let i = 0; i < total; i++) chars.push(entries[i] ?? '')
+
+    for (let i = 0; i < total; i++) {
+      chars.push(entries[i] ?? '')
+    }
+
     const out: Manifest = {
       image: manifest?.image || 'font_grid.png',
       tileW,
@@ -222,41 +380,69 @@ export default function GameFontProof() {
       cols,
       chars,
     }
+
     const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' })
     const a = document.createElement('a')
+
     a.href = URL.createObjectURL(blob)
     a.download = `font.${slug}.json`
     a.click()
+
     URL.revokeObjectURL(a.href)
   }
 
   const importJson = (file: File) => {
     const reader = new FileReader()
+
     reader.onload = async () => {
       let m: Manifest
+
       try {
         m = JSON.parse(String(reader.result)) as Manifest
       } catch {
         alert('导入失败：不是合法的 font.json')
         return
       }
+
       const next: Entries = {}
-      const rows: { game_slug: string; idx: number; ch: string; updated_by: string | null; updated_at: string }[] = []
+      const rowsToUpsert: FontCharUpsertRow[] = []
+
       const now = new Date().toISOString()
+
       ;(m.chars ?? []).forEach((ch, i) => {
         if (ch !== undefined && ch !== null) {
           next[i] = ch
-          rows.push({ game_slug: slug, idx: i, ch, updated_by: uid, updated_at: now })
+          rowsToUpsert.push({
+            game_slug: slug,
+            idx: i,
+            ch,
+            updated_by: uid,
+            updated_at: now,
+          })
         }
       })
+
       setEntries(next)
-      if (isAdmin && rows.length) {
-        const { error } = await supabase
-          .from('font_char')
-          .upsert(rows, { onConflict: 'game_slug,idx' })
-        if (error) alert('导入已加载到页面，但保存到服务器失败：' + error.message)
+      setDraft(next[current] ?? '')
+
+      if (isAdmin && rowsToUpsert.length) {
+        setSaving(true)
+        setSaveStatus('saving')
+
+        try {
+          await upsertFontCharRows(rowsToUpsert)
+          setSaveStatus('saved')
+          console.log('[fontproof] imported font_char rows:', rowsToUpsert.length)
+        } catch (e) {
+          console.error('[fontproof] import save failed', e)
+          setSaveStatus('error')
+          alert('导入已加载到页面，但保存到服务器失败：' + String(e instanceof Error ? e.message : e))
+        } finally {
+          setSaving(false)
+        }
       }
     }
+
     reader.readAsText(file)
   }
 
@@ -265,6 +451,7 @@ export default function GameFontProof() {
     const col = idx % cols
     const row = Math.floor(idx / cols)
     const w = imgSize ? imgSize.w : 512
+
     return {
       '--fp-gw': `${tileW * scale}px`,
       '--fp-gh': `${tileH * scale}px`,
@@ -279,6 +466,15 @@ export default function GameFontProof() {
   const pageCount = total > 0 ? Math.ceil(total / perPage) : 0
   const pageStart = page * perPage
   const pageEnd = Math.min(total, pageStart + perPage)
+
+  const statusText =
+    saveStatus === 'saving'
+      ? '保存中…'
+      : saveStatus === 'saved'
+        ? '已保存'
+        : saveStatus === 'error'
+          ? '保存失败'
+          : ''
 
   const body = (
     <div className="fp-body">
@@ -307,13 +503,33 @@ export default function GameFontProof() {
             <span>
               图 {imgSize.w}×{imgSize.h} · tile {tileW}×{tileH} · {cols} 列 × {rows} 行
             </span>
+
             <span className="fp-c-good">已填 {visitedCount}</span>
             <span className="fp-c-faint">空白 {blankCount}</span>
             <span>/ 共 {total}</span>
+
+            {statusText && (
+              <span
+                className={
+                  saveStatus === 'error'
+                    ? 'fp-c-error'
+                    : saveStatus === 'saved'
+                      ? 'fp-c-good'
+                      : 'fp-c-faint'
+                }
+              >
+                {statusText}
+              </span>
+            )}
+
             <div className="fp-progress">
               <div
                 className="fp-progress-bar"
-                style={{ '--fp-pct': `${total ? (visitedCount / total) * 100 : 0}%` } as CSSProperties}
+                style={
+                  {
+                    '--fp-pct': `${total ? (visitedCount / total) * 100 : 0}%`,
+                  } as CSSProperties
+                }
               />
             </div>
           </div>
@@ -323,13 +539,17 @@ export default function GameFontProof() {
             <Btn active={view === 'focus'} onClick={() => setView('focus')}>
               {isAdmin ? '专注录入' : '逐字查看'}
             </Btn>
+
             <Btn active={view === 'grid'} onClick={() => setView('grid')}>
               网格总览
             </Btn>
+
             <Btn active={invert} onClick={() => setInvert((v) => !v)}>
               反色
             </Btn>
+
             <div className="fp-spacer" />
+
             <input
               className="fp-input"
               value={jumpVal}
@@ -337,6 +557,7 @@ export default function GameFontProof() {
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                   const n = parseInt(jumpVal, 10)
+
                   if (!Number.isNaN(n)) {
                     setView('focus')
                     goto(n)
@@ -345,17 +566,22 @@ export default function GameFontProof() {
               }}
               placeholder="跳到下标…"
             />
+
             <Btn onClick={exportJson}>导出 font.json</Btn>
+
             {isAdmin && (
-              <label className="fp-btn">
+              <label className={`fp-btn${saving ? ' is-disabled' : ''}`}>
                 导入
                 <input
                   type="file"
                   accept="application/json"
                   hidden
+                  disabled={saving}
                   onChange={(e) => {
                     const f = e.target.files?.[0]
+
                     if (f) importJson(f)
+
                     e.target.value = ''
                   }}
                 />
@@ -368,11 +594,13 @@ export default function GameFontProof() {
             <div className="fp-focus">
               <div className="fp-glyph-box">
                 <div className="fp-glyph" style={glyphVars(current, 6)} />
+
                 {entries[current] !== undefined && (
                   <div className={`fp-recog${entries[current] === '' ? ' is-blank' : ''}`}>
                     {entries[current] === '' ? '空白' : entries[current]}
                   </div>
                 )}
+
                 <div className="fp-meta-id">
                   #{current} · 行{Math.floor(current / cols)} 列{current % cols} · 0x
                   {current.toString(16).toUpperCase()}
@@ -383,33 +611,48 @@ export default function GameFontProof() {
                 {isAdmin ? (
                   <>
                     <label className="fp-label">这个字模是什么字？</label>
+
                     <input
                       ref={inputRef}
                       className="fp-input fp-input--char"
                       autoFocus
                       value={draft}
-                      onChange={(e) => setDraft(e.target.value)}
-                      onCompositionStart={() => (composingRef.current = true)}
-                      onCompositionEnd={() => (composingRef.current = false)}
+                      disabled={saving}
+                      onChange={(e) => {
+                        setDraft(e.target.value)
+                        setSaveStatus('idle')
+                      }}
+                      onCompositionStart={() => {
+                        composingRef.current = true
+                      }}
+                      onCompositionEnd={() => {
+                        composingRef.current = false
+                      }}
                       onKeyDown={onKeyDown}
                       placeholder="输入后按 Enter 进入下一个"
                     />
+
                     <div className="fp-actions">
-                      <Btn onClick={() => goto(current - 1)}>← 上一个</Btn>
-                      <Btn onClick={commitAndNext}>保存并下一个 (Enter)</Btn>
-                      <Btn
-                        onClick={() => {
-                          commit('')
-                          goto(current + 1)
-                          requestAnimationFrame(() => inputRef.current?.focus())
-                        }}
-                      >
+                      <Btn onClick={() => goto(current - 1)} disabled={saving}>
+                        ← 上一个
+                      </Btn>
+
+                      <Btn onClick={commitAndNext} disabled={saving}>
+                        {saving ? '保存中…' : '保存并下一个 (Enter)'}
+                      </Btn>
+
+                      <Btn onClick={markBlankAndNext} disabled={saving}>
                         标记空白并下一个
                       </Btn>
-                      <Btn onClick={nextUnfilled}>跳到下一个未填 →</Btn>
+
+                      <Btn onClick={nextUnfilled} disabled={saving}>
+                        跳到下一个未填 →
+                      </Btn>
                     </div>
+
                     <p className="fp-hint">
-                      提示：中文输入法选词的回车不会误触，确认成字后再按一次 Enter 才前进。进度自动保存到服务器，多人可协作，换设备也能续传。
+                      提示：中文输入法选词的回车不会误触，确认成字后再按一次 Enter 才前进。
+                      保存完成后才会跳到下一个，避免刷新后丢字。
                     </p>
                   </>
                 ) : (
@@ -417,6 +660,7 @@ export default function GameFontProof() {
                     <div className="fp-status">
                       {entries[current] !== undefined ? '已识别（见左侧）' : '该字模尚未识别'}
                     </div>
+
                     <div className="fp-actions">
                       <Btn onClick={() => goto(current - 1)}>← 上一个</Btn>
                       <Btn onClick={() => goto(current + 1)}>下一个 →</Btn>
@@ -432,15 +676,19 @@ export default function GameFontProof() {
             <div className="fp-grid-wrap">
               <div className="fp-grid-head">
                 <Btn onClick={() => setPage((p) => Math.max(0, p - 1))}>←</Btn>
+
                 <span className="fp-status">
                   第 {page + 1} / {pageCount} 页 · 下标 {pageStart}–{pageEnd - 1}
                 </span>
+
                 <Btn onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}>→</Btn>
               </div>
+
               <div className="fp-grid" style={{ '--fp-cols': cols } as CSSProperties}>
                 {Array.from({ length: pageEnd - pageStart }, (_, k) => {
                   const idx = pageStart + k
                   const val = entries[idx]
+
                   return (
                     <button
                       key={idx}
@@ -452,6 +700,7 @@ export default function GameFontProof() {
                       title={`#${idx}`}
                     >
                       <div className="fp-glyph" style={glyphVars(idx, 1)} />
+
                       {val !== undefined && (
                         <span className={`fp-badge${val === '' ? ' is-blank' : ''}`}>
                           {val === '' ? '空' : val}
@@ -490,13 +739,21 @@ function Btn({
   children,
   onClick,
   active = false,
+  disabled = false,
 }: {
   children: ReactNode
-  onClick: () => void
+  onClick: () => void | Promise<void>
   active?: boolean
+  disabled?: boolean
 }) {
   return (
-    <button className={`fp-btn${active ? ' is-active' : ''}`} onClick={onClick}>
+    <button
+      className={`fp-btn${active ? ' is-active' : ''}${disabled ? ' is-disabled' : ''}`}
+      onClick={() => {
+        if (!disabled) void onClick()
+      }}
+      disabled={disabled}
+    >
       {children}
     </button>
   )

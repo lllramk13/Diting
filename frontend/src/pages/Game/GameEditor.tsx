@@ -1,17 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import { getGameBySlug } from '../../games/registry'
 import GamePageShell from './GamePageShell'
-import { getGameTheme, type GameTheme } from './gameTheme'
+import { themeVars } from './gameTheme'
+import './gameTheme.css'
+import './GameEditor.css'
 
 const PAGE_SIZE = 100
-
-const mono = "'Space Mono', monospace"
-const cnf = "'Noto Sans SC', sans-serif"
-const DONE = '#2D8C50'
-const WARN = '#F0B84A'
-const ERR = '#F0888A'
 
 type ActiveGame = NonNullable<ReturnType<typeof getGameBySlug>>
 
@@ -97,7 +94,7 @@ function visibleLength(s: string) {
 }
 
 function hasKana(s: string) {
-  return /[\u3040-\u30ff]/.test(s)
+  return /[぀-ヿ]/.test(s)
 }
 
 function unique<T>(items: T[]) {
@@ -178,31 +175,7 @@ function computeValidation(row: SourceRow, value: string, glossaryRows: Glossary
   return { chips, dirty, hasError, hasWarn }
 }
 
-function chipStyle(kind: ValidationChip['kind']) {
-  if (kind === 'err') {
-    return {
-      color: ERR,
-      bg: 'rgba(248,136,138,0.10)',
-      border: 'rgba(248,136,138,0.30)',
-    }
-  }
-
-  if (kind === 'warn') {
-    return {
-      color: WARN,
-      bg: 'rgba(240,184,74,0.10)',
-      border: 'rgba(240,184,74,0.30)',
-    }
-  }
-
-  return {
-    color: DONE,
-    bg: 'rgba(45,140,80,0.12)',
-    border: 'rgba(45,140,80,0.30)',
-  }
-}
-
-function renderTextWithCodePills(text: string, t: GameTheme) {
+function renderTextWithCodePills(text: string) {
   const source = formatControlNewlines(text)
   const parts: { text: string; code: boolean }[] = []
   const re = /(<[^>]+>)/g
@@ -227,22 +200,7 @@ function renderTextWithCodePills(text: string, t: GameTheme) {
     if (!part.code) return part.text
 
     return (
-      <span
-        key={`${part.text}-${index}`}
-        style={{
-          display: 'inline-block',
-          verticalAlign: 'baseline',
-          lineHeight: 1.3,
-          color: t.accent,
-          background: t.accentSoft,
-          border: `1px solid ${t.accentBorder}`,
-          padding: '0 4px',
-          margin: '0 1px',
-          borderRadius: 5,
-          fontFamily: mono,
-          fontSize: '0.78em',
-        }}
-      >
+      <span key={`${part.text}-${index}`} className="ed-pill">
         {part.text}
       </span>
     )
@@ -254,7 +212,6 @@ type EntryRowProps = {
   value: string
   readonly: boolean
   validation: ReturnType<typeof computeValidation>
-  theme: GameTheme
   active: boolean
   textareaRef: (el: HTMLTextAreaElement | null) => void
   onFocus: () => void
@@ -272,7 +229,6 @@ function EntryRow({
   value,
   readonly,
   validation,
-  theme: t,
   active,
   textareaRef,
   onFocus,
@@ -297,9 +253,13 @@ function EntryRow({
   const over = maxLen !== null && len > maxLen
   const near = maxLen !== null && len > maxLen * 0.85
 
-  const countColor = over ? ERR : near ? WARN : t.label
-  const rail = hasError ? ERR : dirty ? t.accent : t.line2
-  const rowBorder = hasError ? 'rgba(248,136,138,0.35)' : active ? t.accentBorder : t.line2
+  const countClass = over ? ' is-over' : near ? ' is-near' : ''
+  const rail = hasError ? 'var(--gt-danger)' : dirty ? 'var(--gt-accent)' : 'var(--gt-line)'
+  const rowBorder = hasError
+    ? 'rgba(248,136,138,0.35)'
+    : active
+      ? 'var(--gt-accent-border)'
+      : 'var(--gt-line)'
 
   const lineCount = Math.max(
     3,
@@ -309,105 +269,28 @@ function EntryRow({
 
   return (
     <article
-      style={{
-        border: `1px solid ${rowBorder}`,
-        borderLeft: `3px solid ${rail}`,
-        borderRadius: 12,
-        background: t.card,
-        padding: '15px 17px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 11,
-        transition: 'border-color 0.25s ease, box-shadow 0.25s ease',
-        boxShadow: active ? '0 4px 18px rgba(0,0,0,0.20)' : 'none',
-      }}
+      className={`ed-row${active ? ' is-active' : ''}`}
+      style={{ '--ed-rail': rail, '--ed-border': rowBorder } as CSSProperties}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 9, flexWrap: 'wrap' }}>
-        <span
-          style={{
-            fontFamily: mono,
-            fontSize: 11,
-            letterSpacing: 0.5,
-            color: t.muted,
-          }}
-        >
-          {row.id}
-        </span>
+      <div className="ed-row-head">
+        <span className="ed-id">{row.id}</span>
 
-        {speaker && (
-          <span
-            style={{
-              fontFamily: cnf,
-              fontSize: 12,
-              padding: '2px 9px',
-              borderRadius: 20,
-              background: t.accentSoft,
-              color: t.accent,
-            }}
-          >
-            🗣 {speaker}
-          </span>
-        )}
+        {speaker && <span className="ed-speaker">🗣 {speaker}</span>}
 
         {occurrences > 1 && (
-          <details style={{ position: 'relative' }}>
+          <details className="ed-occ">
             <summary
-              style={{
-                listStyle: 'none',
-                cursor: 'pointer',
-                fontFamily: mono,
-                fontSize: 11,
-                padding: '2px 9px',
-                borderRadius: 20,
-                border: `1px solid ${t.line2}`,
-                color: t.muted,
-                userSelect: 'none',
-              }}
+              className="ed-occ-summary"
               title="这句原文在游戏里出现的所有位置；翻译一次会应用到全部位置"
             >
               出现 {occurrences} 处 ▾
             </summary>
 
-            <div
-              style={{
-                position: 'absolute',
-                zIndex: 5,
-                top: '100%',
-                left: 0,
-                marginTop: 6,
-                maxHeight: 200,
-                overflow: 'auto',
-                minWidth: 220,
-                padding: '8px 10px',
-                borderRadius: 9,
-                background: t.card,
-                border: `1px solid ${t.line2}`,
-                boxShadow: '0 6px 20px rgba(0,0,0,0.28)',
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: mono,
-                  fontSize: 9.5,
-                  letterSpacing: 1,
-                  color: t.label,
-                  marginBottom: 6,
-                }}
-              >
-                应用到以下 {occurrences} 个位置
-              </div>
+            <div className="ed-occ-pop">
+              <div className="ed-occ-label">应用到以下 {occurrences} 个位置</div>
 
               {srcs.map(src => (
-                <div
-                  key={src}
-                  style={{
-                    fontFamily: mono,
-                    fontSize: 11.5,
-                    color: t.muted,
-                    lineHeight: 1.7,
-                    whiteSpace: 'nowrap',
-                  }}
-                >
+                <div key={src} className="ed-occ-item">
                   {src}
                 </div>
               ))}
@@ -415,225 +298,69 @@ function EntryRow({
           </details>
         )}
 
-        {dirty && (
-          <span
-            style={{
-              fontFamily: mono,
-              fontSize: 10,
-              letterSpacing: 1,
-              padding: '2px 8px',
-              borderRadius: 20,
-              border: `1px solid ${t.line2}`,
-              color: t.muted,
-            }}
-          >
-            MODIFIED
-          </span>
-        )}
+        {dirty && <span className="ed-modified">MODIFIED</span>}
 
-        <span
-          style={{
-            marginLeft: 'auto',
-            fontFamily: mono,
-            fontSize: 11,
-            color: countColor,
-          }}
-        >
+        <span className={`ed-count${countClass}`}>
           {maxLen ? `${len} / ${maxLen}` : `${len} 字`}
         </span>
       </div>
 
-      {row.context && (
-        <div
-          style={{
-            fontSize: 12,
-            color: t.label,
-            fontStyle: 'italic',
-          }}
-        >
-          {String(row.context)}
-        </div>
-      )}
+      {row.context && <div className="ed-context">{String(row.context)}</div>}
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: 16,
-          alignItems: 'start',
-        }}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <div className="ed-cols">
+        <div className="ed-src-col">
           <div>
-            <div
-              style={{
-                fontFamily: mono,
-                fontSize: 9.5,
-                color: t.label,
-                letterSpacing: 2,
-                marginBottom: 6,
-              }}
-            >
-              原文 · JP
-            </div>
-
-            <div
-              style={{
-                whiteSpace: 'pre-wrap',
-                fontSize: 15,
-                lineHeight: 1.8,
-                color: t.ink,
-                fontFamily: cnf,
-              }}
-            >
-              {renderTextWithCodePills(row.jp ?? '', t)}
-            </div>
+            <div className="ed-field-label">原文 · JP</div>
+            <div className="ed-src-text">{renderTextWithCodePills(row.jp ?? '')}</div>
           </div>
 
           <div>
-            <div
-              style={{
-                fontFamily: mono,
-                fontSize: 9.5,
-                color: t.label,
-                letterSpacing: 2,
-                marginBottom: 6,
-              }}
-            >
-              当前译文 · 参考
-            </div>
-
-            <div
-              style={{
-                whiteSpace: 'pre-wrap',
-                fontSize: 14,
-                lineHeight: 1.7,
-                color: t.muted,
-                fontFamily: cnf,
-              }}
-            >
-              {row.zh?.trim() ? renderTextWithCodePills(row.zh, t) : '（暂无）'}
+            <div className="ed-field-label">当前译文 · 参考</div>
+            <div className="ed-ref-text">
+              {row.zh?.trim() ? renderTextWithCodePills(row.zh) : '（暂无）'}
             </div>
           </div>
         </div>
 
         {mirror ? (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: 8,
-              }}
-            >
-              <span
-                style={{ fontFamily: mono, fontSize: 9.5, color: t.muted, letterSpacing: 2 }}
-              >
-                译文 · 来自重复集（只读）
-              </span>
+          <div className="ed-mirror-col">
+            <div className="ed-mirror-head">
+              <span className="ed-mirror-label">译文 · 来自重复集（只读）</span>
 
               {onGotoDup && (
-                <button
-                  onClick={onGotoDup}
-                  style={{
-                    cursor: 'pointer',
-                    fontFamily: cnf,
-                    fontSize: 11.5,
-                    padding: '4px 10px',
-                    borderRadius: 8,
-                    background: t.accentSoft,
-                    border: `1px solid ${t.accentBorder}`,
-                    color: t.accent,
-                    whiteSpace: 'nowrap',
-                  }}
-                >
+                <button className="ed-goto-dup" onClick={onGotoDup}>
                   去重复集修改 →
                 </button>
               )}
             </div>
 
-            <div
-              style={{
-                whiteSpace: 'pre-wrap',
-                fontSize: 15,
-                lineHeight: 1.8,
-                color: t.ink,
-                fontFamily: cnf,
-                background: t.inkSoft,
-                border: `1px dashed ${t.line2}`,
-                borderRadius: 10,
-                padding: '10px 12px',
-              }}
-            >
-              {mirrorValue?.trim()
-                ? renderTextWithCodePills(mirrorValue, t)
-                : '（重复集暂无译文）'}
+            <div className="ed-mirror-text">
+              {mirrorValue?.trim() ? renderTextWithCodePills(mirrorValue) : '（重复集暂无译文）'}
             </div>
 
-            <div style={{ fontFamily: mono, fontSize: 10.5, color: t.muted }}>
-              这句重复出现，统一在重复集翻译，此处只读。
-            </div>
+            <div className="ed-mirror-note">这句重复出现，统一在重复集翻译，此处只读。</div>
           </div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-            <div
-              style={{
-                fontFamily: mono,
-                fontSize: 9.5,
-                color: t.accent,
-                letterSpacing: 2,
-              }}
-            >
-              我的译文
-            </div>
+          <div className="ed-edit-col">
+            <div className="ed-edit-label">我的译文</div>
 
             <textarea
               ref={textareaRef}
+              className="ed-textarea"
               value={value}
               disabled={readonly}
               onFocus={onFocus}
               onChange={e => onChange(e.target.value)}
               rows={lineCount}
               placeholder="在此输入中文翻译…"
-              style={{
-                width: '100%',
-                resize: 'vertical',
-                background: t.inkSoft,
-                border: `1px solid ${active ? t.accent : t.line2}`,
-                borderRadius: 10,
-                color: t.ink,
-                fontFamily: cnf,
-                fontSize: 15,
-                lineHeight: 1.8,
-                padding: '10px 12px',
-                outline: 'none',
-                transition: 'border-color 0.2s ease',
-                opacity: readonly ? 0.72 : 1,
-              }}
             />
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-              {chips.map((chip, index) => {
-                const s = chipStyle(chip.kind)
-
-                return (
-                  <span
-                    key={`${chip.text}-${index}`}
-                    style={{
-                      fontFamily: cnf,
-                      fontSize: 11.5,
-                      padding: '3px 9px',
-                      borderRadius: 20,
-                      background: s.bg,
-                      color: s.color,
-                      border: `1px solid ${s.border}`,
-                    }}
-                  >
-                    {chip.text}
-                  </span>
-                )
-              })}
+            <div className="ed-chips">
+              {chips.map((chip, index) => (
+                <span key={`${chip.text}-${index}`} className={`ed-chip ed-chip--${chip.kind}`}>
+                  {chip.text}
+                </span>
+              ))}
             </div>
           </div>
         )}
@@ -642,98 +369,44 @@ function EntryRow({
   )
 }
 
-type EditorTipsProps = {
-  theme: GameTheme
-}
-
-function EditorTips({ theme: t }: EditorTipsProps) {
+function EditorTips() {
   return (
-    <div
-      style={{
-        padding: 17,
-        border: `1px solid ${t.line2}`,
-        borderRadius: 12,
-        background: t.card,
-      }}
-    >
-      <div
-        style={{
-          fontFamily: mono,
-          fontSize: 10,
-          letterSpacing: 2,
-          color: t.label,
-          marginBottom: 11,
-        }}
-      >
-        编辑提示 · TIPS
-      </div>
+    <div className="ed-panel">
+      <div className="ed-panel-label ed-panel-label--tips">编辑提示 · TIPS</div>
 
-      <ul
-        style={{
-          margin: 0,
-          paddingLeft: 17,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 7,
-        }}
-      >
-        <li style={{ fontSize: 12.5, color: t.muted, lineHeight: 1.55 }}>
-          控制符 <span style={{ fontFamily: mono, color: t.accent }}>{'<c6/>'}</span>{' '}
-          <span style={{ fontFamily: mono, color: t.accent }}>{'<WAIT>'}</span> 原样保留。
+      <ul className="ed-tips-list">
+        <li className="ed-tip">
+          控制符 <span className="ed-tip-code">{'<c6/>'}</span>{' '}
+          <span className="ed-tip-code">{'<WAIT>'}</span> 原样保留。
         </li>
 
-        <li style={{ fontSize: 12.5, color: t.muted, lineHeight: 1.55 }}>
-          点进输入框后，下方工具栏可以插入换行、控制符和术语。
-        </li>
+        <li className="ed-tip">点进输入框后，下方工具栏可以插入换行、控制符和术语。</li>
 
-        <li style={{ fontSize: 12.5, color: t.muted, lineHeight: 1.55 }}>
-          改完保存，再提交合并请求等待审核。
-        </li>
+        <li className="ed-tip">改完保存，再提交合并请求等待审核。</li>
       </ul>
     </div>
   )
 }
 
-type LegendPanelProps = {
-  theme: GameTheme
-}
-
-function LegendPanel({ theme: t }: LegendPanelProps) {
+function LegendPanel() {
   return (
-    <div
-      style={{
-        padding: 17,
-        border: `1px solid ${t.line2}`,
-        borderRadius: 12,
-        background: t.card,
-      }}
-    >
-      <div
-        style={{
-          fontFamily: mono,
-          fontSize: 10,
-          letterSpacing: 2,
-          color: t.label,
-          marginBottom: 13,
-        }}
-      >
-        校验图例 · LEGEND
-      </div>
+    <div className="ed-panel">
+      <div className="ed-panel-label">校验图例 · LEGEND</div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 9, fontSize: 13 }}>
-        <div style={{ display: 'flex', gap: 9, alignItems: 'center' }}>
-          <span style={{ width: 9, height: 9, borderRadius: '50%', background: ERR, flexShrink: 0 }} />
-          <span style={{ color: t.muted }}>控制符缺失 · 假名残留 · 超字数</span>
+      <div className="ed-legend-rows">
+        <div className="ed-legend-row">
+          <span className="ed-legend-dot is-err" />
+          <span className="ed-legend-text">控制符缺失 · 假名残留 · 超字数</span>
         </div>
 
-        <div style={{ display: 'flex', gap: 9, alignItems: 'center' }}>
-          <span style={{ width: 9, height: 9, borderRadius: '50%', background: WARN, flexShrink: 0 }} />
-          <span style={{ color: t.muted }}>换行不一致 · 术语不一致</span>
+        <div className="ed-legend-row">
+          <span className="ed-legend-dot is-warn" />
+          <span className="ed-legend-text">换行不一致 · 术语不一致</span>
         </div>
 
-        <div style={{ display: 'flex', gap: 9, alignItems: 'center' }}>
-          <span style={{ width: 9, height: 9, borderRadius: '50%', background: DONE, flexShrink: 0 }} />
-          <span style={{ color: t.muted }}>校验通过</span>
+        <div className="ed-legend-row">
+          <span className="ed-legend-dot is-ok" />
+          <span className="ed-legend-text">校验通过</span>
         </div>
       </div>
     </div>
@@ -742,12 +415,11 @@ function LegendPanel({ theme: t }: LegendPanelProps) {
 
 type GlossaryPanelProps = {
   gameSlug: string
-  theme: GameTheme
   onRowsLoaded: (rows: GlossaryRow[]) => void
   onInsert: (text: string) => void
 }
 
-function GlossaryPanel({ gameSlug, theme: t, onRowsLoaded, onInsert }: GlossaryPanelProps) {
+function GlossaryPanel({ gameSlug, onRowsLoaded, onInsert }: GlossaryPanelProps) {
   const [rows, setRows] = useState<GlossaryRow[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -780,76 +452,28 @@ function GlossaryPanel({ gameSlug, theme: t, onRowsLoaded, onInsert }: GlossaryP
   }, [gameSlug, onRowsLoaded])
 
   return (
-    <div
-      style={{
-        padding: 17,
-        border: `1px solid ${t.line2}`,
-        borderRadius: 12,
-        background: t.card,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: 13,
-        }}
-      >
-        <div
-          style={{
-            fontFamily: mono,
-            fontSize: 10,
-            letterSpacing: 2,
-            color: t.label,
-          }}
-        >
-          术语表 · GLOSSARY
-        </div>
+    <div className="ed-panel">
+      <div className="ed-glossary-head">
+        <div className="ed-glossary-title">术语表 · GLOSSARY</div>
 
-        <span style={{ fontFamily: mono, fontSize: 9.5, color: t.label }}>
-          点击插入
-        </span>
+        <span className="ed-glossary-hint">点击插入</span>
       </div>
 
-      {loading && (
-        <p style={{ margin: 0, fontSize: 12.5, color: t.muted }}>
-          加载中…
-        </p>
-      )}
+      {loading && <p className="ed-glossary-msg">加载中…</p>}
 
-      {!loading && rows.length === 0 && (
-        <p style={{ margin: 0, fontSize: 12.5, color: t.muted }}>
-          暂无术语。
-        </p>
-      )}
+      {!loading && rows.length === 0 && <p className="ed-glossary-msg">暂无术语。</p>}
 
       {!loading && rows.length > 0 && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div className="ed-glossary-list">
           {rows.map(row => (
-            <div
-              key={row.id}
-              onClick={() => onInsert(row.zh)}
-              style={{
-                cursor: 'pointer',
-                padding: '9px 11px',
-                borderRadius: 9,
-                background: t.inkSoft,
-                border: `1px solid ${t.line}`,
-                transition: 'all 0.2s ease',
-              }}
-            >
-              <div style={{ fontFamily: cnf, fontSize: 13.5 }}>
-                <span style={{ color: t.muted }}>{row.jp}</span>
-                <span style={{ color: t.label }}> → </span>
-                <span style={{ color: t.accent, fontWeight: 500 }}>{row.zh}</span>
+            <div key={row.id} className="ed-glossary-item" onClick={() => onInsert(row.zh)}>
+              <div className="ed-glossary-term">
+                <span className="ed-g-from">{row.jp}</span>
+                <span className="ed-g-sep"> → </span>
+                <span className="ed-g-to">{row.zh}</span>
               </div>
 
-              {row.note && (
-                <div style={{ fontSize: 11, color: t.label, marginTop: 3 }}>
-                  {row.note}
-                </div>
-              )}
+              {row.note && <div className="ed-glossary-note">{row.note}</div>}
             </div>
           ))}
         </div>
@@ -859,7 +483,6 @@ function GlossaryPanel({ gameSlug, theme: t, onRowsLoaded, onInsert }: GlossaryP
 }
 
 type PRModalProps = {
-  theme: GameTheme
   gameSlug: string
   fromSetId: string
   toSetId: string
@@ -871,7 +494,6 @@ type PRModalProps = {
 }
 
 function PRModal({
-  theme: t,
   gameSlug,
   fromSetId,
   toSetId,
@@ -928,145 +550,38 @@ function PRModal({
   }
 
   return (
-    <div
-      onClick={onClose}
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 80,
-        background: 'rgba(0,0,0,0.58)',
-        backdropFilter: 'blur(3px)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 24,
-      }}
-    >
-      <div
-        onClick={e => e.stopPropagation()}
-        style={{
-          width: '100%',
-          maxWidth: 480,
-          background: t.page,
-          border: `1px solid ${t.line2}`,
-          borderRadius: 16,
-          boxShadow: '0 24px 60px rgba(0,0,0,0.35)',
-          overflow: 'hidden',
-        }}
-      >
-        <div style={{ height: 3, background: t.accent }} />
+    <div className="ed-modal-overlay" onClick={onClose}>
+      <div className="ed-modal" onClick={e => e.stopPropagation()}>
+        <div className="ed-modal-top" />
 
-        <div style={{ padding: '24px 26px' }}>
-          <div
-            style={{
-              fontFamily: cnf,
-              fontWeight: 700,
-              fontSize: 19,
-              marginBottom: 18,
-              color: t.ink,
-            }}
-          >
-            提交合并请求
-          </div>
+        <div className="ed-modal-body">
+          <div className="ed-modal-title">提交合并请求</div>
 
-          <label
-            style={{
-              display: 'block',
-              fontFamily: mono,
-              fontSize: 10,
-              letterSpacing: 1.5,
-              color: t.label,
-              marginBottom: 6,
-            }}
-          >
-            标题
-          </label>
+          <label className="ed-modal-label">标题</label>
 
           <input
+            className="ed-modal-input"
             value={prTitle}
             onChange={e => setPrTitle(e.target.value)}
             placeholder="给这次合并请求起个标题"
-            style={{
-              width: '100%',
-              background: t.inkSoft,
-              border: `1px solid ${t.line2}`,
-              borderRadius: 9,
-              color: t.ink,
-              fontFamily: 'inherit',
-              fontSize: 14,
-              padding: '10px 12px',
-              outline: 'none',
-              marginBottom: 16,
-            }}
           />
 
-          <label
-            style={{
-              display: 'block',
-              fontFamily: mono,
-              fontSize: 10,
-              letterSpacing: 1.5,
-              color: t.label,
-              marginBottom: 6,
-            }}
-          >
-            说明
-          </label>
+          <label className="ed-modal-label">说明</label>
 
           <textarea
+            className="ed-modal-textarea"
             rows={5}
             value={description}
             onChange={e => setDescription(e.target.value)}
             placeholder="可以简单说明这次修改了什么，比如错字修正、润色、控制符修复等。"
-            style={{
-              width: '100%',
-              resize: 'vertical',
-              background: t.inkSoft,
-              border: `1px solid ${t.line2}`,
-              borderRadius: 9,
-              color: t.ink,
-              fontFamily: 'inherit',
-              fontSize: 14,
-              lineHeight: 1.6,
-              padding: '10px 12px',
-              outline: 'none',
-              marginBottom: 18,
-            }}
           />
 
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10 }}>
-            <button
-              onClick={onClose}
-              disabled={submitting}
-              style={{
-                cursor: 'pointer',
-                fontFamily: cnf,
-                fontSize: 13.5,
-                padding: '10px 18px',
-                borderRadius: 9,
-                background: t.inkSoft,
-                border: `1px solid ${t.line2}`,
-                color: t.muted,
-              }}
-            >
+          <div className="ed-modal-footer">
+            <button className="ed-modal-cancel" onClick={onClose} disabled={submitting}>
               取消
             </button>
 
-            <button
-              onClick={submit}
-              disabled={submitting}
-              style={{
-                cursor: submitting ? 'not-allowed' : 'pointer',
-                fontFamily: cnf,
-                fontSize: 13.5,
-                fontWeight: 600,
-                padding: '10px 18px',
-                borderRadius: 9,
-                background: t.accent,
-                border: 'none',
-                color: '#0A0E18',
-              }}
-            >
+            <button className="ed-modal-submit" onClick={submit} disabled={submitting}>
               {submitting ? '提交中…' : '提交'}
             </button>
           </div>
@@ -1246,7 +761,7 @@ export default function GameEditor() {
 
       const { data: entryData } = await supabase
         .from('translation_entries')
-        .select('*')
+        .select('string_id, content, sort_order')
         .eq('set_id', setId)
         .order('sort_order')
 
@@ -1662,30 +1177,20 @@ export default function GameEditor() {
 
   if (!game) {
     return (
-      <main style={{ minHeight: '100vh', background: '#0A0E18', color: '#EAEEF7', padding: 40 }}>
+      <main className="ed-notfound">
         <h1>Game not found</h1>
-        <Link to="/game" style={{ color: '#E8B23A' }}>
+        <Link to="/game" className="ed-notfound-link">
           返回游戏列表
         </Link>
       </main>
     )
   }
 
-  const t = getGameTheme(game)
-
   if (loadingStrings) {
     return (
       <GamePageShell game={game}>
-        <main
-          style={{
-            minHeight: '100vh',
-            background: t.page,
-            color: t.ink,
-            fontFamily: "'Space Grotesk', 'Noto Sans SC', -apple-system, sans-serif",
-            padding: 40,
-          }}
-        >
-          <p style={{ color: t.muted, fontFamily: mono }}>加载中…</p>
+        <main className="game-theme ed-state" style={themeVars(game)}>
+          <p className="ed-state-text">加载中…</p>
         </main>
       </GamePageShell>
     )
@@ -1694,16 +1199,8 @@ export default function GameEditor() {
   if (!setData) {
     return (
       <GamePageShell game={game}>
-        <main
-          style={{
-            minHeight: '100vh',
-            background: t.page,
-            color: t.ink,
-            fontFamily: "'Space Grotesk', 'Noto Sans SC', -apple-system, sans-serif",
-            padding: 40,
-          }}
-        >
-          <p style={{ color: t.muted, fontFamily: mono }}>找不到这个翻译集。</p>
+        <main className="game-theme ed-state" style={themeVars(game)}>
+          <p className="ed-state-text">找不到这个翻译集。</p>
         </main>
       </GamePageShell>
     )
@@ -1721,51 +1218,14 @@ export default function GameEditor() {
 
   return (
     <GamePageShell game={game}>
-      <main
-        style={{
-          minHeight: '100vh',
-          background: t.page,
-          color: t.ink,
-          fontFamily: "'Space Grotesk', 'Noto Sans SC', -apple-system, sans-serif",
-          lineHeight: 1.5,
-        }}
-      >
-        <div style={{ height: 3, background: t.accent }} />
+      <main className="game-theme ed-main" style={themeVars(game)}>
+        <div className="ed-topline" />
 
-        <div
-          style={{
-            maxWidth: 1320,
-            margin: '0 auto',
-            padding: '26px 32px 130px',
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1fr) 296px',
-            gap: 26,
-            alignItems: 'start',
-          }}
-        >
-          <div style={{ minWidth: 0 }}>
-            <section
-              style={{
-                border: `1px solid ${t.line2}`,
-                borderRadius: 12,
-                background: t.card,
-                padding: '20px 22px',
-                marginBottom: 18,
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: mono,
-                  fontSize: 10.5,
-                  letterSpacing: 2,
-                  color: t.label,
-                  marginBottom: 10,
-                }}
-              >
-                <Link
-                  to={game.routes.main}
-                  style={{ color: t.label, textDecoration: 'none' }}
-                >
+        <div className="ed-layout">
+          <div className="ed-left">
+            <section className="ed-head">
+              <div className="ed-crumb">
+                <Link to={game.routes.main} className="ed-crumb-link">
                   ← 返回主集
                 </Link>
 
@@ -1776,127 +1236,34 @@ export default function GameEditor() {
                 )}
               </div>
 
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'flex-start',
-                  justifyContent: 'space-between',
-                  gap: 20,
-                  flexWrap: 'wrap',
-                }}
-              >
-                <div style={{ minWidth: 240, flex: 1 }}>
+              <div className="ed-head-row">
+                <div className="ed-title-block">
                   {readonly ? (
-                    <h1
-                      style={{
-                        fontFamily: cnf,
-                        fontWeight: 700,
-                        fontSize: 25,
-                        margin: 0,
-                        color: t.ink,
-                      }}
-                    >
-                      {title}
-                    </h1>
+                    <h1 className="ed-title">{title}</h1>
                   ) : (
                     <input
+                      className="ed-title-input"
                       value={title}
                       onChange={e => setTitle(e.target.value)}
-                      style={{
-                        background: 'none',
-                        border: 'none',
-                        borderBottom: `1px solid ${t.line2}`,
-                        color: t.ink,
-                        fontFamily: cnf,
-                        fontWeight: 700,
-                        fontSize: 25,
-                        padding: '2px 0',
-                        outline: 'none',
-                        width: '100%',
-                      }}
                     />
                   )}
 
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 9,
-                      flexWrap: 'wrap',
-                      marginTop: 9,
-                    }}
-                  >
+                  <div className="ed-meta">
                     {setData.source_file ? (
-                      <span
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 10.5,
-                          letterSpacing: 1,
-                          padding: '3px 9px',
-                          borderRadius: 20,
-                          border: `1px solid ${t.line2}`,
-                          color: t.muted,
-                        }}
-                      >
-                        {setData.source_file}
-                      </span>
+                      <span className="ed-tag">{setData.source_file}</span>
                     ) : (
-                      <span
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 10.5,
-                          letterSpacing: 1,
-                          padding: '3px 9px',
-                          borderRadius: 20,
-                          border: `1px solid ${t.line2}`,
-                          color: t.muted,
-                        }}
-                      >
-                        全量合并数据
-                      </span>
+                      <span className="ed-tag">全量合并数据</span>
                     )}
 
-                    {isScript && (
-                      <span
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 10.5,
-                          letterSpacing: 1,
-                          padding: '3px 9px',
-                          borderRadius: 20,
-                          background: t.accentSoft,
-                          color: t.accent,
-                        }}
-                      >
-                        SCRIPT
-                      </span>
-                    )}
+                    {isScript && <span className="ed-tag-script">SCRIPT</span>}
 
                     {readonly && (
-                      <span
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: 9,
-                          fontSize: 12.5,
-                          color: t.muted,
-                        }}
-                      >
+                      <span className="ed-readonly">
                         只读模式
                         <button
+                          className="ed-fork-btn"
                           onClick={forkThisSet}
                           title="Fork 一份可编辑的副本，改完提交合并请求"
-                          style={{
-                            cursor: 'pointer',
-                            fontFamily: cnf,
-                            fontSize: 12.5,
-                            fontWeight: 700,
-                            padding: '6px 12px',
-                            borderRadius: 8,
-                            background: t.accent,
-                            border: 'none',
-                            color: '#0A0E18',
-                          }}
                         >
                           Fork 编辑
                         </button>
@@ -1904,16 +1271,7 @@ export default function GameEditor() {
                     )}
 
                     {!readonly && (
-                      <label
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: 7,
-                          fontSize: 12.5,
-                          color: t.muted,
-                          cursor: 'pointer',
-                        }}
-                      >
+                      <label className="ed-public-label">
                         <input
                           type="checkbox"
                           checked={isPublic}
@@ -1925,113 +1283,43 @@ export default function GameEditor() {
                   </div>
 
                   {forkedFrom && (
-                    <p style={{ margin: '9px 0 0', fontSize: 12.5, color: t.muted }}>
+                    <p className="ed-forkfrom">
                       Fork 自：{forkedFrom.title} · {forkedFrom.username}
                     </p>
                   )}
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap' }}>
-                  <div style={{ display: 'flex', gap: 18 }}>
-                    <div style={{ textAlign: 'center' }}>
-                      <div
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 22,
-                          fontWeight: 700,
-                          color: t.ink,
-                        }}
-                      >
-                        {changedCount}
-                      </div>
-                      <div
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 9.5,
-                          letterSpacing: 1.5,
-                          color: t.label,
-                        }}
-                      >
-                        CHANGED
-                      </div>
+                <div className="ed-head-right">
+                  <div className="ed-stats">
+                    <div className="ed-stat">
+                      <div className="ed-stat-val">{changedCount}</div>
+                      <div className="ed-stat-label">CHANGED</div>
                     </div>
 
-                    <div style={{ textAlign: 'center' }}>
-                      <div
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 22,
-                          fontWeight: 700,
-                          color: warnCount > 0 ? ERR : t.muted,
-                        }}
-                      >
+                    <div className="ed-stat">
+                      <div className={`ed-stat-val ${warnCount > 0 ? 'is-err' : 'is-muted'}`}>
                         {warnCount}
                       </div>
-                      <div
-                        style={{
-                          fontFamily: mono,
-                          fontSize: 9.5,
-                          letterSpacing: 1.5,
-                          color: t.label,
-                        }}
-                      >
-                        WARNINGS
-                      </div>
+                      <div className="ed-stat-label">WARNINGS</div>
                     </div>
                   </div>
 
                   {!readonly && (
-                    <div style={{ display: 'flex', gap: 9 }}>
-                      <button
-                        onClick={saveAll}
-                        disabled={saving}
-                        style={{
-                          background: t.inkSoft,
-                          border: `1px solid ${t.line2}`,
-                          color: t.ink,
-                          cursor: saving ? 'not-allowed' : 'pointer',
-                          padding: '10px 16px',
-                          fontFamily: 'inherit',
-                          fontSize: 13,
-                          borderRadius: 9,
-                        }}
-                      >
+                    <div className="ed-actions">
+                      <button className="ed-save-btn" onClick={saveAll} disabled={saving}>
                         {saving ? '保存中…' : '保存'}
                       </button>
 
                       <button
+                        className="ed-pr-btn"
                         onClick={() => setShowPRModal(true)}
                         disabled={!canSubmitPR}
-                        style={{
-                          background: canSubmitPR ? t.accent : t.line2,
-                          border: 'none',
-                          color: '#0A0E18',
-                          fontWeight: 700,
-                          cursor: canSubmitPR ? 'pointer' : 'not-allowed',
-                          padding: '10px 16px',
-                          fontFamily: 'inherit',
-                          fontSize: 13,
-                          borderRadius: 9,
-                        }}
                       >
                         提交合并请求
                       </button>
 
                       {!setData.is_official && (
-                        <button
-                          onClick={deleteSet}
-                          disabled={deleting}
-                          style={{
-                            background: 'none',
-                            border: `1px solid ${ERR}`,
-                            color: ERR,
-                            cursor: deleting ? 'not-allowed' : 'pointer',
-                            padding: '10px 16px',
-                            fontFamily: 'inherit',
-                            fontSize: 13,
-                            borderRadius: 9,
-                          }}
-                        >
+                        <button className="ed-del-btn" onClick={deleteSet} disabled={deleting}>
                           {deleting ? '删除中…' : '删除此集'}
                         </button>
                       )}
@@ -2041,93 +1329,43 @@ export default function GameEditor() {
               </div>
             </section>
 
-            <section
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 11,
-                flexWrap: 'wrap',
-                padding: '11px 13px',
-                border: `1px solid ${t.line2}`,
-                borderRadius: 11,
-                background: t.card,
-                marginBottom: 16,
-              }}
-            >
+            <section className="ed-filterbar">
               <input
+                className="ed-search"
                 value={query}
                 onChange={e => {
                   setQuery(e.target.value)
                   setPage(1)
                 }}
                 placeholder="搜索 ID · 原文 · 译文 · 角色名…"
-                style={{
-                  flex: 1,
-                  minWidth: 200,
-                  background: t.inkSoft,
-                  border: `1px solid ${t.line2}`,
-                  borderRadius: 8,
-                  color: t.ink,
-                  fontFamily: 'inherit',
-                  fontSize: 14,
-                  padding: '9px 12px',
-                  outline: 'none',
-                }}
               />
 
               <button
+                className={`ed-filter-btn${onlyChanged ? ' is-active' : ''}`}
                 onClick={() => {
                   setOnlyChanged(prev => !prev)
                   setPage(1)
-                }}
-                style={{
-                  cursor: 'pointer',
-                  fontFamily: mono,
-                  fontSize: 11,
-                  letterSpacing: 0.5,
-                  padding: '9px 13px',
-                  borderRadius: 8,
-                  background: onlyChanged ? t.accentSoft : t.card,
-                  color: onlyChanged ? t.accent : t.muted,
-                  border: `1px solid ${onlyChanged ? t.accentBorder : t.line2}`,
                 }}
               >
                 仅看改动
               </button>
 
               <button
+                className={`ed-filter-btn${onlyWarn ? ' is-warn' : ''}`}
                 onClick={() => {
                   setOnlyWarn(prev => !prev)
                   setPage(1)
-                }}
-                style={{
-                  cursor: 'pointer',
-                  fontFamily: mono,
-                  fontSize: 11,
-                  letterSpacing: 0.5,
-                  padding: '9px 13px',
-                  borderRadius: 8,
-                  background: onlyWarn ? 'rgba(248,136,138,0.10)' : t.card,
-                  color: onlyWarn ? ERR : t.muted,
-                  border: `1px solid ${onlyWarn ? 'rgba(248,136,138,0.30)' : t.line2}`,
                 }}
               >
                 仅看告警
               </button>
 
-              <span
-                style={{
-                  fontFamily: mono,
-                  fontSize: 11,
-                  color: t.label,
-                  whiteSpace: 'nowrap',
-                }}
-              >
+              <span className="ed-filter-count">
                 {filteredRows.length} / {sourceStrings.length}
               </span>
             </section>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <div className="ed-rows">
               {pageRows.map(row => {
                 const rowState = rowStates[row.id]
                 const value = rowState?.current ?? getInitialContent(row, entries)
@@ -2148,7 +1386,6 @@ export default function GameEditor() {
                     value={value}
                     readonly={readonly}
                     validation={validation}
-                    theme={t}
                     active={activeRowId === row.id}
                     textareaRef={el => {
                       textareaRefs.current[row.id] = el
@@ -2167,87 +1404,38 @@ export default function GameEditor() {
               })}
             </div>
 
-            {pageRows.length === 0 && (
-              <div
-                style={{
-                  textAlign: 'center',
-                  padding: '60px 20px',
-                  fontFamily: mono,
-                  fontSize: 13,
-                  color: t.label,
-                }}
-              >
-                没有匹配条目
-              </div>
-            )}
+            {pageRows.length === 0 && <div className="ed-empty">没有匹配条目</div>}
 
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 16,
-                marginTop: 24,
-              }}
-            >
+            <div className="ed-pager">
               <button
+                className="ed-pager-btn"
                 disabled={page <= 1}
                 onClick={() => setPage(prev => Math.max(1, prev - 1))}
-                style={{
-                  background: t.card,
-                  border: `1px solid ${t.line2}`,
-                  color: page <= 1 ? t.label : t.ink,
-                  cursor: page <= 1 ? 'not-allowed' : 'pointer',
-                  padding: '9px 16px',
-                  borderRadius: 8,
-                  fontFamily: mono,
-                  fontSize: 11,
-                  letterSpacing: 1,
-                }}
               >
                 PREV
               </button>
 
-              <span style={{ fontFamily: mono, fontSize: 12, color: t.muted }}>
+              <span className="ed-pager-info">
                 {String(Math.min(page, totalPages)).padStart(2, '0')} / {String(totalPages).padStart(2, '0')}
               </span>
 
               <button
+                className="ed-pager-btn"
                 disabled={page >= totalPages}
                 onClick={() => setPage(prev => Math.min(totalPages, prev + 1))}
-                style={{
-                  background: t.card,
-                  border: `1px solid ${t.line2}`,
-                  color: page >= totalPages ? t.label : t.ink,
-                  cursor: page >= totalPages ? 'not-allowed' : 'pointer',
-                  padding: '9px 16px',
-                  borderRadius: 8,
-                  fontFamily: mono,
-                  fontSize: 11,
-                  letterSpacing: 1,
-                }}
               >
                 NEXT
               </button>
             </div>
           </div>
 
-          <aside
-            style={{
-              position: 'sticky',
-              top: 24,
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 16,
-            }}
-          >
-            <LegendPanel theme={t} />
+          <aside className="ed-aside">
+            <LegendPanel />
 
-            <EditorTips theme={t} />
+            <EditorTips />
 
             <GlossaryPanel
               gameSlug={game.slug}
-              theme={t}
               onRowsLoaded={setGlossaryRows}
               onInsert={insertToken}
             />
@@ -2255,124 +1443,42 @@ export default function GameEditor() {
         </div>
 
         {activeRowId && !readonly && (
-          <div
-            style={{
-              position: 'fixed',
-              bottom: 0,
-              left: 0,
-              right: 0,
-              zIndex: 50,
-              background: t.page,
-              borderTop: `1px solid ${t.accentBorder}`,
-              boxShadow: '0 -8px 30px rgba(0,0,0,0.26)',
-              padding: '12px 22px',
-            }}
-          >
-            <div
-              style={{
-                maxWidth: 1320,
-                margin: '0 auto',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 10,
-                flexWrap: 'wrap',
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: mono,
-                  fontSize: 10,
-                  letterSpacing: 1.5,
-                  color: t.label,
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                插入 → {activeRowId}
-              </span>
+          <div className="ed-toolbar">
+            <div className="ed-toolbar-inner">
+              <span className="ed-toolbar-label">插入 → {activeRowId}</span>
 
-              <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
+              <div className="ed-token-group">
                 {toolbarTokens.map(item => (
                   <button
                     key={item.label}
+                    className="ed-token-btn"
                     onClick={() => insertToken(item.token)}
-                    style={{
-                      cursor: 'pointer',
-                      fontFamily: mono,
-                      fontSize: 12.5,
-                      padding: '8px 13px',
-                      borderRadius: 8,
-                      background: t.inkSoft,
-                      border: `1px solid ${t.line2}`,
-                      color: t.ink,
-                    }}
                   >
                     {item.label}
                   </button>
                 ))}
               </div>
 
-              <button
-                onClick={copyCodesFromSource}
-                style={{
-                  cursor: 'pointer',
-                  fontFamily: cnf,
-                  fontSize: 12.5,
-                  padding: '8px 13px',
-                  borderRadius: 8,
-                  background: t.accentSoft,
-                  border: `1px solid ${t.accentBorder}`,
-                  color: t.accent,
-                }}
-              >
+              <button className="ed-copy-btn" onClick={copyCodesFromSource}>
                 ⎘ 复制原文控制符
               </button>
 
-              <button
-                onClick={copySourceToEdit}
-                style={{
-                  cursor: 'pointer',
-                  fontFamily: cnf,
-                  fontSize: 12.5,
-                  padding: '8px 13px',
-                  borderRadius: 8,
-                  background: t.accentSoft,
-                  border: `1px solid ${t.accentBorder}`,
-                  color: t.accent,
-                }}
-              >
+              <button className="ed-copy-btn" onClick={copySourceToEdit}>
                 ⎘ 复制原文到译文
               </button>
 
               {glossaryRows.length > 0 && (
                 <>
-                  <div style={{ width: 1, height: 22, background: t.line2 }} />
+                  <div className="ed-toolbar-div" />
 
-                  <span
-                    style={{
-                      fontFamily: mono,
-                      fontSize: 10,
-                      letterSpacing: 1.5,
-                      color: t.label,
-                    }}
-                  >
-                    术语
-                  </span>
+                  <span className="ed-toolbar-label">术语</span>
 
-                  <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
+                  <div className="ed-token-group">
                     {glossaryRows.slice(0, 8).map(row => (
                       <button
                         key={row.id}
+                        className="ed-gloss-btn"
                         onClick={() => insertToken(row.zh)}
-                        style={{
-                          cursor: 'pointer',
-                          fontFamily: cnf,
-                          fontSize: 12.5,
-                          padding: '8px 12px',
-                          borderRadius: 8,
-                          background: t.inkSoft,
-                          border: `1px solid ${t.line2}`,
-                          color: t.ink,
-                        }}
                       >
                         {row.zh}
                       </button>
@@ -2381,20 +1487,7 @@ export default function GameEditor() {
                 </>
               )}
 
-              <button
-                onClick={() => setActiveRowId(null)}
-                style={{
-                  marginLeft: 'auto',
-                  cursor: 'pointer',
-                  fontFamily: mono,
-                  fontSize: 11,
-                  padding: '8px 12px',
-                  borderRadius: 8,
-                  background: 'none',
-                  border: 'none',
-                  color: t.label,
-                }}
-              >
+              <button className="ed-collapse-btn" onClick={() => setActiveRowId(null)}>
                 收起 ✕
               </button>
             </div>
@@ -2403,7 +1496,6 @@ export default function GameEditor() {
 
         {showPRModal && forkedFromId && setId && (
           <PRModal
-            theme={t}
             gameSlug={game.slug}
             fromSetId={setId}
             toSetId={forkedFromId}

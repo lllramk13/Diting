@@ -1,13 +1,379 @@
-/* frontend/src/pages/Game/GameMainSets.css */
-
-.game-mainsets-page {
+.ms-notfound {
   min-height: 100vh;
-  padding: 32px 24px 72px;
-  color: #e8ecff;
-  background: #080a12;
+  background: #0a0e18;
+  color: #eaeef7;
+  padding: 40px;
+}
+.ms-notfound-link {
+  color: #e8b23a;
 }
 
-.game-mainsets-page .browse-wrap {
+.ms-main {
+  min-height: 100vh;
+  background: var(--gt-bg);
+  color: var(--gt-text);
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+}
+.ms-topline {
+  height: 3px;
+  background: var(--gt-accent);
+}
+.ms-wrap {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 26px 32px 90px;
+}
+
+.ms-stats {
+  border: 1px solid var(--gt-line);
+  border-radius: 14px;
+  background: var(--gt-card);
+  padding: 24px 26px;
+  margin-bottom: 22px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 34px;
+  align-items: center;
+}
+.ms-pct-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.ms-pct {
+  font-family: var(--mono);
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gt-text);
+}
+.ms-pct-sign {
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--gt-muted);
+}
+.ms-pct-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gt-faint);
+  margin-top: 8px;
+}
+.ms-bar {
+  height: 8px;
+  border-radius: 5px;
+  background: var(--gt-card-strong);
+  border: 1px solid var(--gt-line);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.ms-bar-fill {
+  width: var(--ms-pct, 0%);
+  height: 100%;
+  background: var(--gt-success);
+  transition: width 0.5s ease;
+}
+.ms-stat-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.ms-stat-val {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gt-text);
+}
+.ms-stat-val.is-done {
+  color: var(--gt-success);
+}
+.ms-stat-val.is-muted {
+  color: var(--gt-muted);
+}
+.ms-stat-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 1.5px;
+  color: var(--gt-faint);
+}
+
+.ms-chips {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.ms-chip {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: var(--gt-card);
+  color: var(--gt-muted);
+  border: 1px solid var(--gt-line);
+}
+.ms-chip.is-active {
+  background: var(--gt-accent-soft);
+  color: var(--gt-accent);
+  border-color: var(--gt-accent-border);
+}
+.ms-chip-count {
+  opacity: 0.55;
+  margin-left: 6px;
+}
+
+.ms-searchbar {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-wrap: wrap;
+  padding: 11px 13px;
+  border: 1px solid var(--gt-line);
+  border-radius: 11px;
+  background: var(--gt-card);
+  margin-bottom: 22px;
+}
+.ms-search {
+  flex: 1;
+  min-width: 200px;
+  background: var(--gt-card-strong);
+  border: 1px solid var(--gt-line);
+  border-radius: 8px;
+  color: var(--gt-text);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 9px 12px;
+  outline: none;
+}
+.ms-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gt-faint);
+  white-space: nowrap;
+}
+.ms-init-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 12.5px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: var(--gt-accent-soft);
+  border: 1px solid var(--gt-accent-border);
+  color: var(--gt-accent);
+  font-weight: 600;
+}
+.ms-init-btn:disabled {
+  cursor: not-allowed;
+}
+
+.ms-loading {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--gt-faint);
+}
+
+.ms-dup-section {
+  margin-bottom: 26px;
+}
+.ms-dup-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+.ms-dup-title {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--gt-text);
+}
+.ms-dup-hint {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gt-muted);
+}
+.ms-dup-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ms-dup-item {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--gt-accent-border);
+}
+.ms-dup-open {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 13px;
+  padding: 10px 14px;
+  background: var(--gt-accent-soft);
+  border: none;
+  color: var(--gt-accent);
+  font-weight: 600;
+}
+.ms-dup-fork {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 12.5px;
+  padding: 10px 12px;
+  background: var(--gt-accent);
+  border: none;
+  color: var(--gt-bg);
+  font-weight: 700;
+}
+
+.ms-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.ms-group-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 11px;
+}
+.ms-group-cat {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--gt-text);
+}
+.ms-group-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gt-muted);
+}
+.ms-group-count.is-done {
+  color: var(--gt-success);
+}
+.ms-group-bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 3px;
+  background: var(--gt-card-strong);
+  border: 1px solid var(--gt-line);
+  overflow: hidden;
+  max-width: 200px;
+}
+.ms-group-bar-fill {
+  width: var(--ms-pct, 0%);
+  height: 100%;
+  background: var(--gt-success);
+}
+.ms-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ms-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 16px;
+  border: 1px solid var(--gt-line);
+  border-left: 3px solid var(--gt-line);
+  border-radius: 11px;
+  background: var(--gt-card);
+}
+.ms-row.is-done {
+  border-left-color: var(--gt-success);
+}
+.ms-row-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--gt-accent-soft);
+  color: var(--gt-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--cnf);
+  font-weight: 700;
+  font-size: 12px;
+}
+.ms-row-body {
+  min-width: 0;
+  flex: 1;
+}
+.ms-row-file {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--gt-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ms-row-status {
+  flex-shrink: 0;
+  font-family: var(--cnf);
+  font-size: 11.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--gt-card-strong);
+  color: var(--gt-muted);
+  border: 1px solid var(--gt-line);
+}
+.ms-row-status.is-done {
+  background: rgba(45, 140, 80, 0.1);
+  color: var(--gt-success);
+  border-color: rgba(45, 140, 80, 0.28);
+}
+.ms-row-actions {
+  flex-shrink: 0;
+  display: flex;
+  gap: 7px;
+}
+.ms-view-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 12.5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--gt-card-strong);
+  border: 1px solid var(--gt-line);
+  color: var(--gt-text);
+}
+.ms-fork-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 12.5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--gt-accent);
+  border: none;
+  color: var(--gt-bg);
+  font-weight: 700;
+}
+.ms-toggle-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: none;
+}
+.ms-toggle-btn.is-done {
+  border: 1px solid rgba(248, 81, 73, 0.3);
+  color: var(--gt-danger);
+}
+.ms-toggle-btn.is-todo {
+  border: 1px solid rgba(45, 140, 80, 0.3);
+  color: var(--gt-success);
+}
+
+.ms-empty {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--gt-faint);
 }
