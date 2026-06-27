@@ -26,6 +26,7 @@ export const p2is: GameConfig = {
 
     routes: {
         announce: '/game/psx/p2is/announce',
+        play: '/game/psx/p2is/play',
         main: '/game/psx/p2is/main',
         search: '/game/psx/p2is/search',
         issues: '/game/psx/p2is/issues',
