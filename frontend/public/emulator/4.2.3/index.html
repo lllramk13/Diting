@@ -302,13 +302,18 @@
                 window.EJS_gameUrl = url;
                 window.EJS_core = "psx";
                 window.EJS_pathtodata = "data/";
+                // 给打过补丁的 emulator.min.js 加版本号，强制绕过浏览器/CDN 旧缓存。
+                // 以后再改 emulator.min.js 时，把这里和下面 loader.js 的版本号一起 +1。
+                window.EJS_paths = {
+                    "emulator.min.js": "data/emulator.min.js?v=biosfix1"
+                };
                 window.EJS_startOnLoaded = true;
                 window.EJS_DEBUG_XX = enableDebug;
                 window.EJS_disableDatabases = true;
                 window.EJS_threads = enableThreads;
                 window.EJS_language = "zh-CN";
 
-                script.src = "data/loader.js";
+                script.src = "data/loader.js?v=biosfix1";
                 document.body.appendChild(script);
             }
             

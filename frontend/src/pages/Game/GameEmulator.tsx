@@ -65,7 +65,7 @@ export default function GameEmulator() {
 
               <div className="emu-screen">
                 <iframe
-                  src="/emulator/4.2.3/index.html"
+                  src="/emulator/4.2.3/index.html?v=biosfix1"
                   title={`${game.shortTitle} 在线游玩`}
                   allow="fullscreen; gamepad"
                   allowFullScreen
