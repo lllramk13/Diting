@@ -108,7 +108,7 @@ export default function GameAnnounce() {
   const navigate = useNavigate()
   const game = getGameBySlug(gameSlug ?? '')
 
-  const [, setSecretInput] = useState<SecretButtonKey[]>([])
+  {/*const [, setSecretInput] = useState<SecretButtonKey[]>([])*/}
   const [secretOpen, setSecretOpen] = useState(false)
 
   if (!game) {
@@ -132,6 +132,7 @@ export default function GameAnnounce() {
     .map(k => secretButtons.find(b => b.keyName === k)?.label ?? '?')
     .join(' ')
 
+    {/*
   function pressSecret(key: SecretButtonKey) {
     setSecretInput(prev => {
       const next = [...prev, key].slice(-secret.code.length)
@@ -143,7 +144,7 @@ export default function GameAnnounce() {
 
       return next
     })
-  }
+  }*/}
 
   return (
     <GamePageShell game={game}>
