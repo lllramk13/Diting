@@ -1,0 +1,583 @@
+.emu-main {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 4%, rgba(var(--gt-accent-rgb), 0.13), transparent 30rem),
+    linear-gradient(180deg, #0a0e18 0%, #070a12 100%);
+  color: var(--gt-text);
+  font-family: 'Space Grotesk', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.emu-ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 70%);
+}
+
+.emu-container {
+  position: relative;
+  z-index: 1;
+  width: min(1440px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 42px 0 34px;
+}
+
+.emu-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.emu-hero-copy {
+  max-width: 760px;
+}
+
+.emu-eyebrow,
+.emu-card-kicker {
+  color: var(--gt-accent);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.emu-hero h1 {
+  margin: 9px 0 10px;
+  font-family: var(--cnf);
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.08;
+  letter-spacing: 0.03em;
+}
+
+.emu-hero-copy p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--gt-muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.emu-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-bottom: 3px;
+}
+
+.emu-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 11px;
+  border: 1px solid var(--gt-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--gt-faint);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
+.emu-chip--accent {
+  border-color: var(--gt-accent-border);
+  background: var(--gt-accent-soft);
+  color: var(--gt-accent);
+}
+
+.emu-chip i {
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.emu-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  align-items: start;
+  gap: 18px;
+}
+
+.emu-console,
+.emu-map-card,
+.emu-session-card,
+.emu-guide {
+  border: 1px solid var(--gt-line);
+  background: rgba(14, 19, 31, 0.82);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(16px);
+}
+
+.emu-console {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.emu-console-bar {
+  height: 48px;
+  display: grid;
+  grid-template-columns: 84px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--gt-line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.emu-window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.emu-window-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.emu-window-dots span:first-child {
+  background: var(--gt-accent);
+  box-shadow: 0 0 12px rgba(var(--gt-accent-rgb), 0.45);
+}
+
+.emu-console-title {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 9px;
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+
+.emu-console-title span {
+  color: var(--gt-text);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.emu-console-title b {
+  overflow: hidden;
+  color: var(--gt-faint);
+  font-size: 9px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+}
+
+.emu-console-state {
+  color: var(--gt-faint);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.emu-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.emu-screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.32);
+}
+
+.emu-screen iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.emu-console-foot {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 16px;
+  border-top: 1px solid var(--gt-line);
+  color: rgba(200, 220, 255, 0.38);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.07em;
+}
+
+.emu-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.emu-map-card,
+.emu-session-card {
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.emu-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.emu-card-head--compact {
+  margin-bottom: 8px;
+}
+
+.emu-card-head h2 {
+  margin: 5px 0 0;
+  font-family: var(--cnf);
+  font-size: 19px;
+  letter-spacing: 0.03em;
+}
+
+.emu-status-pill {
+  padding: 5px 8px;
+  border: 1px solid var(--gt-accent-border);
+  border-radius: 999px;
+  background: var(--gt-accent-soft);
+  color: var(--gt-accent);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.emu-map-preview {
+  position: relative;
+  aspect-ratio: 1 / 0.82;
+  overflow: hidden;
+  border: 1px solid var(--gt-accent-border);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 58% 48%, rgba(var(--gt-accent-rgb), 0.12), transparent 34%),
+    #080c14;
+}
+
+.emu-map-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(var(--gt-accent-rgb), 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--gt-accent-rgb), 0.12) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.emu-map-route {
+  position: absolute;
+  border: 1px solid rgba(var(--gt-accent-rgb), 0.45);
+  background: rgba(var(--gt-accent-rgb), 0.055);
+}
+
+.emu-map-route--one {
+  left: 16%;
+  top: 20%;
+  width: 42%;
+  height: 31%;
+  border-right: 0;
+  border-radius: 7px 0 0 7px;
+}
+
+.emu-map-route--two {
+  right: 13%;
+  bottom: 17%;
+  width: 45%;
+  height: 34%;
+  border-left: 0;
+  border-radius: 0 7px 7px 0;
+}
+
+.emu-map-player {
+  position: absolute;
+  left: 56%;
+  top: 47%;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(var(--gt-accent-rgb), 0.32);
+  border-radius: 50%;
+  animation: emu-pulse 2.4s ease-out infinite;
+}
+
+.emu-map-player span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gt-accent);
+  box-shadow: 0 0 14px var(--gt-accent);
+}
+
+.emu-map-coord {
+  position: absolute;
+  right: 9px;
+  bottom: 7px;
+  color: rgba(var(--gt-accent-rgb), 0.55);
+  font-family: var(--mono);
+  font-size: 8px;
+}
+
+@keyframes emu-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--gt-accent-rgb), 0.28);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 14px rgba(var(--gt-accent-rgb), 0);
+  }
+}
+
+.emu-map-copy {
+  margin: 14px 1px 0;
+  color: var(--gt-muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.emu-specs {
+  margin: 0;
+}
+
+.emu-specs div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--gt-line);
+}
+
+.emu-specs div:last-child {
+  border-bottom: 0;
+  padding-bottom: 1px;
+}
+
+.emu-specs dt,
+.emu-specs dd {
+  margin: 0;
+  font-size: 11px;
+}
+
+.emu-specs dt {
+  color: var(--gt-faint);
+}
+
+.emu-specs dd {
+  color: var(--gt-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  text-align: right;
+}
+
+.emu-specs .emu-local-value {
+  color: var(--gt-accent);
+}
+
+.emu-guide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.emu-guide-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 13px;
+  padding: 18px 20px;
+  border-right: 1px solid var(--gt-line);
+}
+
+.emu-guide-item:last-child {
+  border-right: 0;
+}
+
+.emu-guide-num {
+  padding-top: 1px;
+  color: var(--gt-accent);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.emu-guide h3 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.emu-guide p {
+  margin: 0;
+  color: var(--gt-faint);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.emu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 2px 0;
+  color: rgba(200, 220, 255, 0.4);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.emu-footer p {
+  margin: 0;
+}
+
+.emu-credit {
+  text-align: right;
+}
+
+.emu-credit a {
+  color: rgba(var(--gt-accent-rgb), 0.72);
+  text-decoration: none;
+}
+
+.emu-credit a:hover {
+  color: var(--gt-accent);
+}
+
+.emu-notfound {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #0a0e18;
+  color: #eaeef7;
+}
+
+.emu-notfound-card {
+  width: min(460px, 100%);
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.emu-notfound-card h1 {
+  margin: 10px 0;
+}
+
+.emu-notfound-card p {
+  color: rgba(230, 236, 250, 0.7);
+}
+
+.emu-notfound-card a {
+  color: #5e8bff;
+}
+
+@media (max-width: 1120px) {
+  .emu-workspace {
+    grid-template-columns: minmax(0, 1fr) 290px;
+  }
+}
+
+@media (max-width: 920px) {
+  .emu-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .emu-hero-meta {
+    justify-content: flex-start;
+  }
+
+  .emu-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .emu-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .emu-container {
+    width: min(100% - 28px, 1440px);
+    padding-top: 28px;
+  }
+
+  .emu-hero h1 {
+    font-size: 34px;
+  }
+
+  .emu-console-bar {
+    grid-template-columns: auto 1fr;
+  }
+
+  .emu-console-title {
+    justify-content: flex-end;
+  }
+
+  .emu-console-state,
+  .emu-console-title b {
+    display: none;
+  }
+
+  .emu-console-foot {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .emu-console-foot span {
+    white-space: nowrap;
+  }
+
+  .emu-sidebar,
+  .emu-guide {
+    grid-template-columns: 1fr;
+  }
+
+  .emu-guide-item {
+    border-right: 0;
+    border-bottom: 1px solid var(--gt-line);
+  }
+
+  .emu-guide-item:last-child {
+    border-bottom: 0;
+  }
+
+  .emu-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .emu-credit {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emu-map-player {
+    animation: none;
+  }
+}

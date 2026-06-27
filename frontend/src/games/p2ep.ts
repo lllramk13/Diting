@@ -25,6 +25,7 @@ export const p2ep: GameConfig = {
 
     routes: {
         announce: '/game/psx/p2ep/announce',
+        play: '/game/psx/p2ep/play',
         main: '/game/psx/p2ep/main',
         search: '/game/psx/p2ep/search',
         issues: '/game/psx/p2ep/issues',
