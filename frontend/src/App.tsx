@@ -16,6 +16,7 @@ import GameFontProof from './pages/Game/GameFontProof'
 import Sponsor from './pages/Sponsor'
 import GameEmulator from './pages/Game/GameEmulator'
 import RequireAuth from './RequireAuth'
+import './responsive.css'
 
 function App() {
   return (
