@@ -8,9 +8,9 @@ Transform each game's merged_jp_zh.json into the split structure:
   - index.json / dups_index.json / dup_map.json : indexes + dup routing.
 
 Outputs to tools/_staging/<game>/ . Does NOT touch the live public/ files — deploy is a separate copy step.
-Run:  python3 tools/gen_split.py
+Run:  python3 tools/gen_split.py [p1|p2is|p2ep ...]
 """
-import json, os, glob, hashlib, collections
+import argparse, json, os, glob, hashlib, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -18,6 +18,7 @@ ROOT = os.path.join(REPO, 'frontend', 'public', 'games')
 OUT = os.path.join(HERE, '_staging')
 
 GAMES = {
+    'p1': ['talk', 'efile', 'dfile', 'slps'],
     'p2is': ['script','field','strtbl','config','contactui','mainmenu','map_names','names','nametable'],
     'p2ep': ['script','field','strtbl','SLUS','free'],
 }
@@ -49,7 +50,9 @@ def write_merged(out_dir, flat, max_bytes=20_000_000):
     return parts
 
 def build_positions(game, cats):
-    items = json.load(open(f'{ROOT}/{game}/merged_jp_zh.json'))
+    source_name = 'all_text.json' if game == 'p1' else 'merged_jp_zh.json'
+    source_data = json.load(open(f'{ROOT}/{game}/{source_name}'))
+    items = source_data.get('entries', []) if game == 'p1' else source_data
     # p2ep source must be the ORIGINAL deduped merged (with srcs); if the live file has already
     # been replaced by the per-position output, read the original from the backup instead.
     if game == 'p2ep' and not any(it.get('srcs') for it in items[:50]):
@@ -58,7 +61,21 @@ def build_positions(game, cats):
             items = json.load(open(backup))
             print('  [note] p2ep: live merged already transformed, reading original from p2ep_backup')
     positions = []
-    if game == 'p2ep':
+    if game == 'p1':
+        # all_text.json is an extraction manifest. The editor data is grouped by
+        # source file, while duplicate ownership is grouped by extractor format.
+        # Slashes and dots are removed because the frontend expects a flat file.
+        for it in items:
+            category = it.get('format', '') or '其他'
+            safe_source = it.get('source', 'unknown').replace('/', '_').replace('.', '_')
+            positions.append({
+                'pos_id': it['id'], 'group': f'{category}:{safe_source}',
+                'category': category if category in cats else '其他',
+                'jp': it.get('jp', ''), 'zh': it.get('zh', ''),
+                'speaker_jp': it.get('speaker_jp', '') or '',
+                'speaker_zh': it.get('speaker_zh', '') or '',
+            })
+    elif game == 'p2ep':
         def grp(s): return ':'.join(s.split(':')[:2])
         for it in items:
             for s in it.get('srcs', []):
@@ -81,6 +98,17 @@ def build_positions(game, cats):
 
 def run(game, cats):
     positions = build_positions(game, cats)
+    if not positions:
+        raise ValueError(f'{game}: no source entries found')
+
+    missing_ids = sum(not p['pos_id'] for p in positions)
+    empty_jp = sum(not p['jp'] for p in positions)
+    id_count = collections.Counter(p['pos_id'] for p in positions)
+    duplicate_ids = sum(n - 1 for n in id_count.values() if n > 1)
+    if missing_ids:
+        raise ValueError(f'{game}: {missing_ids} entries have no id')
+    print(f'  {game}: audit entries={len(positions)} duplicate_ids={duplicate_ids} empty_jp={empty_jp}')
+
     # a few addresses are shared by redundant legacy/manual entries (same jp) -> keep first per pos_id
     seen_pos = set(); deduped = []
     for p in positions:
@@ -141,6 +169,11 @@ def run(game, cats):
           f'dup_sentences={len(dups)} editable={editable}')
 
 if __name__ == '__main__':
-    for game, cats in GAMES.items():
+    parser = argparse.ArgumentParser(description='Build editor/search JSON from extracted game text')
+    parser.add_argument('games', nargs='*', choices=GAMES, help='games to build (default: all)')
+    args = parser.parse_args()
+    selected = args.games or list(GAMES)
+    for game in selected:
+        cats = GAMES[game]
         run(game, cats)
     print(f'done -> {OUT}')

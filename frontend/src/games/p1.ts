@@ -35,9 +35,10 @@ export const p1: GameConfig = {
     },
 
     categories: [
-        'script',
-        'field',
-        'strtbl',
+        'talk',
+        'efile',
+        'dfile',
+        'slps',
     ],
 
     announcement: {

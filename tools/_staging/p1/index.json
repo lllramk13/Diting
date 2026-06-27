@@ -1,0 +1,230 @@
+[
+{
+"group": "dfile:D00_D00_BIN",
+"count": 6
+},
+{
+"group": "dfile:D00_D01_BIN",
+"count": 1
+},
+{
+"group": "dfile:D00_D02_BIN",
+"count": 4
+},
+{
+"group": "dfile:D00_D03_BIN",
+"count": 1
+},
+{
+"group": "dfile:D00_D05_BIN",
+"count": 1
+},
+{
+"group": "dfile:D00_D07_BIN",
+"count": 2
+},
+{
+"group": "dfile:D01_D08_BIN",
+"count": 1
+},
+{
+"group": "dfile:D01_D0A_BIN",
+"count": 4
+},
+{
+"group": "dfile:D01_D0C_BIN",
+"count": 1
+},
+{
+"group": "dfile:D01_D0E_BIN",
+"count": 7
+},
+{
+"group": "dfile:D02_D11_BIN",
+"count": 1
+},
+{
+"group": "dfile:D02_D13_BIN",
+"count": 1
+},
+{
+"group": "dfile:D02_D14_BIN",
+"count": 3
+},
+{
+"group": "dfile:D02_D16_BIN",
+"count": 1
+},
+{
+"group": "dfile:D03_D18_BIN",
+"count": 3
+},
+{
+"group": "dfile:D03_D19_BIN",
+"count": 1
+},
+{
+"group": "dfile:D03_D1A_BIN",
+"count": 2
+},
+{
+"group": "dfile:D03_D1B_BIN",
+"count": 1
+},
+{
+"group": "dfile:D03_D1C_BIN",
+"count": 2
+},
+{
+"group": "dfile:D03_D1D_BIN",
+"count": 2
+},
+{
+"group": "dfile:D03_D1E_BIN",
+"count": 1
+},
+{
+"group": "dfile:D04_D21_BIN",
+"count": 1
+},
+{
+"group": "dfile:D04_D24_BIN",
+"count": 6
+},
+{
+"group": "efile:ADV_E0_BIN",
+"count": 263
+},
+{
+"group": "efile:ADV_E1_BIN",
+"count": 299
+},
+{
+"group": "efile:ADV_E2_BIN",
+"count": 445
+},
+{
+"group": "efile:ADV_E3_BIN",
+"count": 163
+},
+{
+"group": "slps:SLPS_005_00",
+"count": 832
+},
+{
+"group": "talk:TALK_ALIEN_BIN",
+"count": 232
+},
+{
+"group": "talk:TALK_BASKET_BIN",
+"count": 1032
+},
+{
+"group": "talk:TALK_DOPPEL_BIN",
+"count": 232
+},
+{
+"group": "talk:TALK_ETC_BIN",
+"count": 199
+},
+{
+"group": "talk:TALK_GAKI_BIN",
+"count": 232
+},
+{
+"group": "talk:TALK_HIHO_BIN",
+"count": 1048
+},
+{
+"group": "talk:TALK_KEMONO_BIN",
+"count": 1001
+},
+{
+"group": "talk:TALK_KOKURI_BIN",
+"count": 238
+},
+{
+"group": "talk:TALK_KOROU_BIN",
+"count": 1064
+},
+{
+"group": "talk:TALK_KOSIKI_BIN",
+"count": 1050
+},
+{
+"group": "talk:TALK_KOUMAN_BIN",
+"count": 1102
+},
+{
+"group": "talk:TALK_KUTISAKE_BIN",
+"count": 250
+},
+{
+"group": "talk:TALK_KYOUKI_BIN",
+"count": 1032
+},
+{
+"group": "talk:TALK_MAYOERU_BIN",
+"count": 232
+},
+{
+"group": "talk:TALK_POLUTAR_BIN",
+"count": 351
+},
+{
+"group": "talk:TALK_QSIRUBA_BIN",
+"count": 232
+},
+{
+"group": "talk:TALK_SINSI_BIN",
+"count": 1043
+},
+{
+"group": "talk:TALK_SLIME_BIN",
+"count": 232
+},
+{
+"group": "talk:TALK_SYOUJO_BIN",
+"count": 984
+},
+{
+"group": "talk:TALK_TENSI_BIN",
+"count": 1022
+},
+{
+"group": "talk:TALK_TINPRA_BIN",
+"count": 292
+},
+{
+"group": "talk:TALK_TOILET_BIN",
+"count": 984
+},
+{
+"group": "talk:TALK_WORM_BIN",
+"count": 1001
+},
+{
+"group": "talk:TALK_WTENSI_BIN",
+"count": 1022
+},
+{
+"group": "talk:TALK_YAKUZA_BIN",
+"count": 292
+},
+{
+"group": "talk:TALK_YOUEN_BIN",
+"count": 1063
+},
+{
+"group": "talk:TALK_ZMBITYAN_BIN",
+"count": 232
+},
+{
+"group": "talk:TALK_ZOMBIKO_BIN",
+"count": 179
+},
+{
+"group": "talk:TALK_ZOMB_MAN_BIN",
+"count": 182
+}
+]
