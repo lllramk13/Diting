@@ -35,7 +35,7 @@ export default function GameEmulator() {
               </div>
               <h1>{game.titleZh ?? game.title}</h1>
               <p>
-                在浏览器中载入你本地的游戏镜像。文件只在当前设备中读取，不会上传到服务器。
+                在浏览器中载入你本地的游戏镜像。文件只在当前设备中读取，不会上传到服务器。请使用合法来源的游戏副本与补丁。
               </p>
             </div>
 
