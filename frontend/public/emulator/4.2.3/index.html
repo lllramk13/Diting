@@ -49,6 +49,11 @@
                 color: #ddd
             }
 
+            #box.locked {
+                opacity: 0.45;
+                border-style: dashed;
+            }
+
             #input {
                 cursor: pointer;
                 position: absolute;
@@ -94,6 +99,38 @@
             #top {
                 margin: 5px;
             }
+
+            .bios-picker {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 14px;
+                border: 1px solid #555;
+                border-radius: 0.5em;
+                background: #222;
+                font-family: monospace;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .bios-picker:hover {
+                border-color: #38f;
+            }
+
+            #biosInput {
+                display: none;
+            }
+
+            #biosStatus {
+                max-width: 220px;
+                overflow: hidden;
+                color: #888;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            #biosStatus.ready { color: #65d58a; }
+            #biosStatus.error { color: #ff7777; }
         </style>
     </head>
 
@@ -102,15 +139,24 @@
             <h1>EmulatorJS</h1>
             <img src="docs/Logo-light.png" alt="Logo" class="logo">
             <br>
+            <label class="bios-picker" for="biosInput">
+                <strong>1. 选择本地 PS1 BIOS</strong>
+                <span id="biosStatus">尚未选择</span>
+                <input id="biosInput" type="file" accept=".bin,.rom">
+            </label>
         </div>
-        <div id="box">
-            <input type = file id = input>
-            Drag ROM file or click here
+        <div id="box" class="locked">
+            <input type="file" id="input" disabled>
+            2. 拖入游戏镜像或点击选择
         </div>
 
         <script>
             let enableDebug = false;
             let enableThreads = false;
+            const input = document.getElementById("input");
+            const biosInput = document.getElementById("biosInput");
+            const biosStatus = document.getElementById("biosStatus");
+            const box = document.getElementById("box");
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             if (parseInt(urlParams.get('debug')) === 1 || urlParams.get('debug') === "true") {
@@ -138,6 +184,13 @@
             }
 
             async function run(upload, file) {
+                const bios = biosInput.files[0];
+                if (!bios) {
+                    alert("请先选择本地 PS1 BIOS");
+                    input.value = "";
+                    return;
+                }
+
                 const url = upload ? input.files[0] : `roms/${file}`;
                 const parts = upload ? input.files[0].name.split(".") : file.split(".");
 
@@ -238,14 +291,14 @@
                 div.id = "display"
 
                 const top = document.getElementById("top");
-                top.remove();
-                box.remove()
+                top.style.display = "none";
+                box.style.display = "none";
                 div.appendChild(sub)
                 document.body.appendChild(div)
 
                 window.EJS_player = "#game";
                 window.EJS_gameName = parts.shift();
-                window.EJS_biosUrl = "";
+                window.EJS_biosUrl = bios;
                 window.EJS_gameUrl = url;
                 window.EJS_core = "psx";
                 window.EJS_pathtodata = "data/";
@@ -259,6 +312,32 @@
                 document.body.appendChild(script);
             }
             
+            biosInput.onchange = () => {
+                const bios = biosInput.files[0];
+
+                if (!bios) {
+                    biosStatus.textContent = "尚未选择";
+                    biosStatus.className = "";
+                    input.disabled = true;
+                    box.classList.add("locked");
+                    return;
+                }
+
+                if (bios.size !== 524288) {
+                    biosStatus.textContent = "应为 512 KiB BIOS";
+                    biosStatus.className = "error";
+                    biosInput.value = "";
+                    input.disabled = true;
+                    box.classList.add("locked");
+                    return;
+                }
+
+                biosStatus.textContent = bios.name;
+                biosStatus.className = "ready";
+                input.disabled = false;
+                box.classList.remove("locked");
+            };
+
             input.onchange = async () => {
                 run(true);
             }

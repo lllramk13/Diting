@@ -725,7 +725,7 @@ class EmulatorJS {
             this.textElem.innerText = progressMessage;
             if (!this.debug) {
                 const res = await this.downloadFile(assetUrl, null, true, { method: "HEAD" });
-                const result = await this.storage.rom.get(assetUrl.split("/").pop());
+                const result = await this.storage.rom.get((typeof assetUrl === "string") ? assetUrl.split("/").pop() : "game");
                 if (result && result["content-length"] === res.headers["content-length"] && result.type === type) {
                     await gotData(result.data);
                     return resolve(assetUrl);
