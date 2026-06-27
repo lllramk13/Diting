@@ -30,7 +30,6 @@ export default function GameNav({ game }: GameNavProps) {
 
   const publicLinks = [
     { label: "公告", path: game.routes.announce },
-    { label: "模拟器", path: `${game.basePath}/play` },
     { label: "问题", path: game.routes.issues },
   ]
 

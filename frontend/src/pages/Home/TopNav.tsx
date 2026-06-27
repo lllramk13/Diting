@@ -20,6 +20,7 @@ function TopNav() {
   const navigate = useNavigate()
   const location = useLocation()
   const isHome = location.pathname === '/'
+  const isEmulator = location.pathname === '/emulator'
 
   const [user, setUser] = useState<SessionUser | null>(null)
 
@@ -86,6 +87,12 @@ function TopNav() {
         </button>
         <button className="nav-link" onClick={() => navigate('/game')}>
           游戏汉化
+        </button>
+        <button
+          className={`nav-link${isEmulator ? ' active' : ''}`}
+          onClick={() => navigate('/emulator')}
+        >
+          模拟器
         </button>
         <button className="nav-link" onClick={() => navigate('/sponsor')}>
           赞助

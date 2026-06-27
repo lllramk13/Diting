@@ -60,7 +60,6 @@ export type GameConfig = {
 
     routes: {
         announce: string
-        play: string
         main: string
         search: string
         issues: string

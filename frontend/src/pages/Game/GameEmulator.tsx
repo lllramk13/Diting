@@ -1,39 +1,27 @@
-import { Link, useParams } from 'react-router-dom'
-import { getGameBySlug } from '../../games/registry'
-import GamePageShell from './GamePageShell'
-import { themeVars } from './gameTheme'
+import type { CSSProperties } from 'react'
+import TopNav from '../Home/TopNav'
 import './gameTheme.css'
 import './GameEmulator.css'
 
+const emulatorTheme = {
+  '--g-accent': '#5E8BFF',
+  '--g-accent-rgb': '94, 139, 255',
+} as CSSProperties
+
 export default function GameEmulator() {
-  const { gameSlug } = useParams<{ gameSlug: string }>()
-  const game = getGameBySlug(gameSlug ?? '')
-
-  if (!game) {
-    return (
-      <main className="emu-notfound">
-        <div className="emu-notfound-card">
-          <span className="emu-eyebrow">PLAYER / 404</span>
-          <h1>未找到游戏</h1>
-          <p>这个在线游玩入口不存在，或者游戏尚未加入模拟器。</p>
-          <Link to="/game">返回游戏列表</Link>
-        </div>
-      </main>
-    )
-  }
-
   return (
-    <GamePageShell game={game}>
-      <main className="game-theme emu-main" style={themeVars(game)}>
+    <>
+      <TopNav />
+      <main className="game-theme emu-main" style={emulatorTheme}>
         <div className="emu-ambient" aria-hidden="true" />
 
         <div className="emu-container">
           <header className="emu-hero">
             <div className="emu-hero-copy">
               <div className="emu-eyebrow">
-                {game.platform.toUpperCase()} / WEB PLAYER
+                PLAYSTATION / WEB PLAYER
               </div>
-              <h1>{game.titleZh ?? game.title}</h1>
+              <h1>在线模拟器</h1>
               <p>
                 在浏览器中载入你本地的游戏镜像。文件只在当前设备中读取，不会上传到服务器。请使用合法来源的游戏副本与补丁。
               </p>
@@ -43,13 +31,13 @@ export default function GameEmulator() {
               <span className="emu-chip emu-chip--accent">
                 <i /> PLAYER READY
               </span>
-              <span className="emu-chip">{game.shortTitle}</span>
+              <span className="emu-chip">PSX</span>
               <span className="emu-chip">SCPH-5500</span>
             </div>
           </header>
 
           <div className="emu-workspace">
-            <section className="emu-console" aria-label={`${game.shortTitle} 模拟器`}>
+            <section className="emu-console" aria-label="PlayStation 模拟器">
               <div className="emu-console-bar">
                 <div className="emu-window-dots" aria-hidden="true">
                   <span />
@@ -57,7 +45,7 @@ export default function GameEmulator() {
                   <span />
                 </div>
                 <div className="emu-console-title">
-                  <span>{game.shortTitle}</span>
+                  <span>PSX</span>
                   <b>EmulatorJS 4.2.3</b>
                 </div>
                 <span className="emu-console-state">LOCAL SESSION</span>
@@ -66,7 +54,7 @@ export default function GameEmulator() {
               <div className="emu-screen">
                 <iframe
                   src="/emulator/4.2.3/index.html?v=biosfix1"
-                  title={`${game.shortTitle} 在线游玩`}
+                  title="PlayStation 在线模拟器"
                   allow="fullscreen; gamepad"
                   allowFullScreen
                 />
@@ -183,6 +171,6 @@ export default function GameEmulator() {
           </footer>
         </div>
       </main>
-    </GamePageShell>
+    </>
   )
 }

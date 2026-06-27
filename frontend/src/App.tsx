@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Auth from './pages/Auth'
 import GameIndex from  './pages/Game/GameIndex'
@@ -33,7 +33,8 @@ function App() {
       <Route path="/game/:platform/:gameSlug/issues/:issueId" element={<GameIssueDetail />} />
       <Route path="/game/:platform/:gameSlug/glossary" element={<RequireAuth><GameGlossary /></RequireAuth>} />
       <Route path="/game/:platform/:gameSlug/font" element={<RequireAuth><GameFontProof /></RequireAuth>} />
-      <Route path="/game/:platform/:gameSlug/play" element={<GameEmulator />} />
+      <Route path="/emulator" element={<GameEmulator />} />
+      <Route path="/game/:platform/:gameSlug/play" element={<Navigate to="/emulator" replace />} />
       <Route path="/game/:platform/:gameSlug" element={<RequireAuth><GameBrowse /></RequireAuth>} />
 
       <Route path="/sponsor" element={<Sponsor />} />

@@ -25,7 +25,6 @@ export const p1: GameConfig = {
 
     routes: {
         announce: '/game/psx/p1/announce',
-        play: '/game/psx/p1/play',
         main: '/game/psx/p1/main',
         search: '/game/psx/p1/search',
         issues: '/game/psx/p1/issues',
