@@ -27,7 +27,7 @@ export default function HomeSections() {
                 <div className="hs-progress">
                   <div className="hs-progress-bar" style={{ '--hs-pct': '62%' } as CSSProperties} />
                 </div>
-                <span className="hs-percent">61%</span>
+                <span className="hs-percent">87.5%</span>
               </div>
               <div className="hs-tags">
                 <span className="hs-tag hs-tag--status">进行中</span>

@@ -14,7 +14,7 @@ export const p2is: GameConfig = {
     ghostChar: '罪',
 
     status: 'in_progress',
-    progress: 61,
+    progress: 87.5,
 
     coverImage: "/games/p2is/cover.jpg",
 
