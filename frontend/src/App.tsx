@@ -15,6 +15,7 @@ import GameBrowse from './pages/Game/GameBrowse'
 import GameFontProof from './pages/Game/GameFontProof'
 import Sponsor from './pages/Sponsor'
 import GameEmulator from './pages/Game/GameEmulator'
+import RequireAuth from './RequireAuth'
 
 function App() {
   return (
@@ -23,17 +24,17 @@ function App() {
       
       <Route path="/game" element={<GameIndex />} />
       <Route path="/game/:platform/:gameSlug/announce" element={<GameAnnounce />} />
-      <Route path="/game/:platform/:gameSlug/main" element={<GameMainSets />} />
-      <Route path="/game/:platform/:gameSlug/edit/:setId" element={<GameEditor />} />
-      <Route path="/game/:platform/:gameSlug/requests" element={<GameRequests />} />
-      <Route path="/game/:platform/:gameSlug/requests/:requestId" element={<GameRequestDetail />}/>
-      <Route path="/game/:platform/:gameSlug/search" element={<GameSearch />} />
+      <Route path="/game/:platform/:gameSlug/main" element={<RequireAuth><GameMainSets /></RequireAuth>} />
+      <Route path="/game/:platform/:gameSlug/edit/:setId" element={<RequireAuth><GameEditor /></RequireAuth>} />
+      <Route path="/game/:platform/:gameSlug/requests" element={<RequireAuth><GameRequests /></RequireAuth>} />
+      <Route path="/game/:platform/:gameSlug/requests/:requestId" element={<RequireAuth><GameRequestDetail /></RequireAuth>}/>
+      <Route path="/game/:platform/:gameSlug/search" element={<RequireAuth><GameSearch /></RequireAuth>} />
       <Route path="/game/:platform/:gameSlug/issues" element={<GameIssues />} />
       <Route path="/game/:platform/:gameSlug/issues/:issueId" element={<GameIssueDetail />} />
-      <Route path="/game/:platform/:gameSlug/glossary" element={<GameGlossary />} />
-      <Route path="/game/:platform/:gameSlug/font" element={<GameFontProof />} />
+      <Route path="/game/:platform/:gameSlug/glossary" element={<RequireAuth><GameGlossary /></RequireAuth>} />
+      <Route path="/game/:platform/:gameSlug/font" element={<RequireAuth><GameFontProof /></RequireAuth>} />
       <Route path="/game/:platform/:gameSlug/play" element={<GameEmulator />} />
-      <Route path="/game/:platform/:gameSlug" element={<GameBrowse />} />
+      <Route path="/game/:platform/:gameSlug" element={<RequireAuth><GameBrowse /></RequireAuth>} />
 
       <Route path="/sponsor" element={<Sponsor />} />
 
