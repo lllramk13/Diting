@@ -9,6 +9,7 @@ type GameNavProps = {
 export default function GameNav({ game }: GameNavProps) {
   const links = [
     { label: "公告", path: game.routes.announce },
+    { label: "线上游玩", path: `${game.basePath}/play`},
     { label: "主集", path: game.routes.main },
     { label: "社区", path: game.basePath },
     { label: "搜索", path: game.routes.search },
