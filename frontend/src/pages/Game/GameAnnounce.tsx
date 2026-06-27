@@ -308,6 +308,7 @@ export default function GameAnnounce() {
           </div>
 
           {/* GTA style secret pad */}
+          {/*
           <div className="an-pad">
             <button className="an-pad-btn an-pad-up an-pad--accent" onClick={() => pressSecret('up')}>
               ↑
@@ -343,7 +344,7 @@ export default function GameAnnounce() {
             </button>
 
             <div className="an-pad-spacer" />
-          </div>
+          </div>*/}
 
           {secretOpen && (
             <SecretModal
