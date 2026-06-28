@@ -23,6 +23,7 @@ type RequestRow = {
   snapshot?: Record<string, string> | null
   base_snapshot?: Record<string, string> | null
   game_slug: string
+  format_version?: number | null
 }
 
 type ProfileRow = {
@@ -194,7 +195,7 @@ export default function GameRequests() {
     )
 
   const open = requests.filter(r => statusOf(r) === 'open')
-  const mergeableCount = open.filter(r => r.snapshot).length
+  const mergeableCount = open.filter(r => r.snapshot && r.format_version === 2).length
 
   function openRequest(id: string) {
     if (!game) return
@@ -205,6 +206,7 @@ export default function GameRequests() {
     if (!game) return
 
     const result = open
+      .filter(r => r.format_version === 2)
       .map(r => {
         const snap = r.snapshot ?? {}
         const base = r.base_snapshot ?? {}
@@ -213,7 +215,7 @@ export default function GameRequests() {
         for (const [sid, newContent] of Object.entries(snap)) {
           const orig = base[sid] ?? ''
 
-          if (newContent.trim() && newContent.trim() !== orig.trim()) {
+          if (newContent !== orig) {
             changes[sid] = {
               original: orig,
               new: newContent,
@@ -246,79 +248,31 @@ export default function GameRequests() {
 
   async function mergeAll() {
     if (!game) return
-
     setBulkMerging(true)
-
     const mergedIds: string[] = []
     const skipped: string[] = []
 
-    for (const r of open) {
-      if (r.game_slug !== game.slug) {
-        skipped.push(`${r.title}（游戏不匹配）`)
+    for (const request of open) {
+      if (request.game_slug !== game.slug || request.format_version !== 2) {
+        skipped.push(`${request.title}（旧版请求或游戏不匹配）`)
         continue
       }
-
-      if (!r.snapshot) {
-        skipped.push(r.title)
-        continue
-      }
-
-      const snap = r.snapshot
-      const base = r.base_snapshot ?? {}
-
-      const rows = Object.entries(snap)
-        .filter(([sid, content]) => content.trim() && content.trim() !== (base[sid] ?? '').trim())
-        .map(([sid, content]) => ({
-          set_id: r.to_set_id,
-          string_id: sid,
-          content,
-          sort_order: 0,
-          updated_at: new Date().toISOString(),
-        }))
-
-      if (rows.length > 0) {
-        const { error } = await supabase
-          .from('translation_entries')
-          .upsert(rows, { onConflict: 'set_id,string_id' })
-
-        if (error) {
-          alert(`合并「${r.title}」失败：${error.message}`)
-          setBulkMerging(false)
-          return
-        }
-      }
-
-      mergedIds.push(r.id)
-    }
-
-    if (mergedIds.length > 0) {
-      const { error } = await supabase
-        .from('merge_requests')
-        .update({ status: 'merged' })
-        .eq('game_slug', game.slug)
-        .in('id', mergedIds)
-
+      const { error } = await supabase.rpc('merge_translation_request', {
+        p_request_id: request.id,
+      })
       if (error) {
-        alert('更新合并请求状态失败：' + error.message)
-        setBulkMerging(false)
-        return
+        skipped.push(`${request.title}（${error.message}）`)
+        continue
       }
-
-      setRequests(prev =>
-        prev.map(r =>
-          mergedIds.includes(r.id)
-            ? { ...r, status: 'merged' }
-            : r,
-        ),
-      )
+      mergedIds.push(request.id)
     }
 
+    setRequests(prev => prev.map(request =>
+      mergedIds.includes(request.id) ? { ...request, status: 'merged' } : request,
+    ))
     setBulkMerging(false)
     setShowBulkModal(false)
-
-    if (skipped.length > 0) {
-      alert(`已合并 ${mergedIds.length} 个。\n以下请求被跳过：\n${skipped.join('\n')}`)
-    }
+    alert(`已合并 ${mergedIds.length} 个。${skipped.length ? `\n跳过：\n${skipped.join('\n')}` : ''}`)
   }
 
   const tabs: { key: TabKey; label: string; count: number }[] = [

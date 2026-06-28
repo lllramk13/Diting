@@ -239,10 +239,6 @@ export default function GameMainSets() {
       return
     }
 
-    const { data: entries } = await supabase
-      .from('translation_entries')
-      .select('string_id, content, sort_order')
-      .eq('set_id', setId)
 
     const { data: newSet, error } = await supabase
       .from('translation_sets')
@@ -255,6 +251,7 @@ export default function GameMainSets() {
         is_official: false,
         is_completed: false,
         game_slug: game.slug,
+        storage_version: 2,
       })
       .select()
       .single()
@@ -264,16 +261,6 @@ export default function GameMainSets() {
       return
     }
 
-    if (newSet && entries && entries.length > 0) {
-      await supabase.from('translation_entries').insert(
-        entries.map((e: { string_id: string; content: string; sort_order: number }) => ({
-          set_id: newSet.id,
-          string_id: e.string_id,
-          content: e.content,
-          sort_order: e.sort_order,
-        })),
-      )
-    }
 
     if (newSet) {
       navigate(`${game.basePath}/edit/${newSet.id}`)

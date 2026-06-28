@@ -30,6 +30,7 @@ type SourceRow = {
 type EntryValue = {
   content: string
   sort_order: number
+  base_content: string | null
 }
 
 type EntryMap = Record<string, EntryValue>
@@ -45,6 +46,7 @@ type TranslationSetRow = {
   forked_from: string | null
   source_file: string | null
   game_slug: string
+  storage_version?: number | null
 }
 
 type ForkedFromInfo = {
@@ -73,12 +75,38 @@ function normalize(s: string) {
   return s.toLowerCase().trim()
 }
 
-function getBaseContent(row: SourceRow) {
-  return row.zh ?? ''
+function getInitialContent(row: SourceRow, entries: EntryMap, inheritedEntries: EntryMap) {
+  return entries[row.id]?.content ?? inheritedEntries[row.id]?.content ?? ''
 }
 
-function getInitialContent(row: SourceRow, entries: EntryMap) {
-  return entries[row.id]?.content ?? getBaseContent(row)
+async function loadEffectiveEntries(
+  targetSetId: string,
+  gameSlug: string,
+  visited = new Set<string>(),
+): Promise<EntryMap> {
+  if (visited.has(targetSetId)) throw new Error('翻译集 Fork 链存在循环。')
+  visited.add(targetSetId)
+  const { data: setRow, error: setError } = await supabase
+    .from('translation_sets').select('forked_from')
+    .eq('id', targetSetId).eq('game_slug', gameSlug).single()
+  if (setError || !setRow) throw new Error(setError?.message ?? '找不到父翻译集。')
+  const inherited = setRow.forked_from
+    ? await loadEffectiveEntries(setRow.forked_from, gameSlug, visited)
+    : {}
+  const { data, error } = await supabase
+    .from('translation_entries')
+    .select('string_id, content, sort_order, base_content')
+    .eq('set_id', targetSetId)
+  if (error) throw new Error(error.message)
+  const own: EntryMap = {}
+  ;(data ?? []).forEach((entry: { string_id: string; content: string; sort_order: number; base_content: string | null }) => {
+    own[entry.string_id] = {
+      content: entry.content,
+      sort_order: entry.sort_order,
+      base_content: entry.base_content,
+    }
+  })
+  return { ...inherited, ...own }
 }
 
 function codesOf(s: string): string[] {
@@ -101,13 +129,12 @@ function unique<T>(items: T[]) {
   return [...new Set(items)]
 }
 
-function computeValidation(row: SourceRow, value: string, glossaryRows: GlossaryRow[]) {
+function computeValidation(row: SourceRow, value: string, glossaryRows: GlossaryRow[], base = '') {
   const chips: ValidationChip[] = []
 
   const jp = formatControlNewlines(row.jp ?? '')
-  const zh = formatControlNewlines(row.zh ?? '')
   const current = formatControlNewlines(value ?? '')
-  const dirty = current.trim() !== zh.trim()
+  const dirty = current !== formatControlNewlines(base)
 
   const err = (text: string) => chips.push({ text, kind: 'err' as const })
   const warn = (text: string) => chips.push({ text, kind: 'warn' as const })
@@ -315,7 +342,7 @@ function EntryRow({
           </div>
 
           <div>
-            <div className="ed-field-label">当前译文 · 参考</div>
+            <div className="ed-field-label">AI 初稿 · 仅供参考</div>
             <div className="ed-ref-text">
               {row.zh?.trim() ? renderTextWithCodePills(row.zh) : '（暂无）'}
             </div>
@@ -513,6 +540,11 @@ function PRModal({
       return
     }
 
+    if (Object.keys(snapshot).length === 0) {
+      alert('没有可提交的实际变更。')
+      return
+    }
+
     setSubmitting(true)
 
     const { data: userData } = await supabase.auth.getUser()
@@ -533,6 +565,7 @@ function PRModal({
         to_set_id: toSetId,
         snapshot,
         base_snapshot: baseSnapshot,
+        format_version: 2,
         user_id: user.id,
         status: 'open',
         game_slug: gameSlug,
@@ -615,6 +648,8 @@ export default function GameEditor() {
 
   const [sourceStrings, setSourceStrings] = useState<SourceRow[]>([])
   const [entries, setEntries] = useState<EntryMap>({})
+  const [inheritedEntries, setInheritedEntries] = useState<EntryMap>({})
+  const [persistedEntryIds, setPersistedEntryIds] = useState<string[]>([])
   const [loadingStrings, setLoadingStrings] = useState(true)
   const [saving, setSaving] = useState(false)
   const [deleting, setDeleting] = useState(false)
@@ -759,22 +794,39 @@ export default function GameEditor() {
 
       setSourceStrings(strings)
 
-      const { data: entryData } = await supabase
+      let inherited: EntryMap = {}
+      try {
+        inherited = loadedSet.forked_from
+          ? await loadEffectiveEntries(loadedSet.forked_from, activeGame.slug)
+          : {}
+      } catch (error) {
+        alert('读取父集译文失败：' + (error instanceof Error ? error.message : String(error)))
+        setLoadingStrings(false)
+        return
+      }
+      setInheritedEntries(inherited)
+
+      const { data: entryData, error: entryError } = await supabase
         .from('translation_entries')
-        .select('string_id, content, sort_order')
+        .select('string_id, content, sort_order, base_content')
         .eq('set_id', setId)
         .order('sort_order')
+      if (entryError) {
+        alert('读取人工译文失败：' + entryError.message)
+        setLoadingStrings(false)
+        return
+      }
 
       const map: EntryMap = {}
-
-      ;(entryData ?? []).forEach((e: { string_id: string; content: string; sort_order: number }) => {
+      ;(entryData ?? []).forEach((e: { string_id: string; content: string; sort_order: number; base_content: string | null }) => {
         map[e.string_id] = {
           content: e.content,
           sort_order: e.sort_order,
+          base_content: e.base_content,
         }
       })
-
       setEntries(map)
+      setPersistedEntryIds(Object.keys(map))
 
       // for normal sets: load the shared translations of duplicate sentences from the dup sets,
       // plus a category -> dup-set-id map so mirror rows can link "去重复集修改".
@@ -842,24 +894,25 @@ export default function GameEditor() {
     load(currentGame)
   }, [gameSlug, setId, navigate])
 
-  function updateEntry(row: SourceRow, value: string) {
-    setEntries(prev => ({
-      ...prev,
-      [row.id]: {
-        content: value,
-        sort_order: sourceStrings.findIndex(item => item.id === row.id),
-      },
-    }))
+  function updateEntryById(rowId: string, value: string) {
+    const inherited = inheritedEntries[rowId]?.content ?? ''
+    setEntries(prev => {
+      const next = { ...prev }
+      if (value === inherited) {
+        delete next[rowId]
+      } else {
+        next[rowId] = {
+          content: value,
+          sort_order: sourceStrings.findIndex(item => item.id === rowId),
+          base_content: prev[rowId]?.base_content ?? inherited,
+        }
+      }
+      return next
+    })
   }
 
-  function updateEntryById(rowId: string, value: string) {
-    setEntries(prev => ({
-      ...prev,
-      [rowId]: {
-        content: value,
-        sort_order: sourceStrings.findIndex(item => item.id === rowId),
-      },
-    }))
+  function updateEntry(row: SourceRow, value: string) {
+    updateEntryById(row.id, value)
   }
 
   function insertToken(token: string) {
@@ -868,7 +921,7 @@ export default function GameEditor() {
     const row = sourceStrings.find(item => item.id === activeRowId)
     if (!row) return
 
-    const current = entries[activeRowId]?.content ?? getBaseContent(row)
+    const current = getInitialContent(row, entries, inheritedEntries)
     const textarea = textareaRefs.current[activeRowId]
 
     let next = ''
@@ -953,18 +1006,18 @@ export default function GameEditor() {
     > = {}
 
     for (const row of sourceStrings) {
-      const current = getInitialContent(row, entries)
-      const base = getBaseContent(row)
+      const current = getInitialContent(row, entries, inheritedEntries)
+      const base = inheritedEntries[row.id]?.content ?? ''
 
       map[row.id] = {
         current,
         base,
-        validation: computeValidation(row, current, glossaryRows),
+        validation: computeValidation(row, current, glossaryRows, base),
       }
     }
 
     return map
-  }, [sourceStrings, entries, glossaryRows])
+  }, [sourceStrings, entries, inheritedEntries, glossaryRows])
 
   const filteredRows = useMemo(() => {
     const q = normalize(query)
@@ -1020,26 +1073,16 @@ export default function GameEditor() {
     }, 0)
   }, [sourceStrings, rowStates])
 
-  const snapshot = useMemo(() => {
-    const result: Record<string, string> = {}
+  const snapshot = useMemo(() => Object.fromEntries(
+    Object.entries(entries).map(([stringId, entry]) => [stringId, entry.content]),
+  ), [entries])
 
-    for (const row of sourceStrings) {
-      const content = entries[row.id]?.content ?? getBaseContent(row)
-      result[row.id] = content
-    }
-
-    return result
-  }, [sourceStrings, entries])
-
-  const baseSnapshot = useMemo(() => {
-    const result: Record<string, string> = {}
-
-    for (const row of sourceStrings) {
-      result[row.id] = getBaseContent(row)
-    }
-
-    return result
-  }, [sourceStrings])
+  const baseSnapshot = useMemo(() => Object.fromEntries(
+    Object.entries(entries).map(([stringId, entry]) => [
+      stringId,
+      entry.base_content ?? inheritedEntries[stringId]?.content ?? '',
+    ]),
+  ), [entries, inheritedEntries])
 
   async function saveAll() {
     if (!setId || readonly) return
@@ -1051,6 +1094,7 @@ export default function GameEditor() {
       string_id: stringId,
       content: value.content,
       sort_order: value.sort_order,
+      base_content: value.base_content,
       updated_at: new Date().toISOString(),
     }))
 
@@ -1065,6 +1109,21 @@ export default function GameEditor() {
         return
       }
     }
+
+    const removedIds = persistedEntryIds.filter(id => !entries[id])
+    if (removedIds.length > 0) {
+      const { error } = await supabase
+        .from('translation_entries')
+        .delete()
+        .eq('set_id', setId)
+        .in('string_id', removedIds)
+      if (error) {
+        alert('清除已还原译文失败：' + error.message)
+        setSaving(false)
+        return
+      }
+    }
+    setPersistedEntryIds(Object.keys(entries))
 
     const { error: setError } = await supabase
       .from('translation_sets')
@@ -1136,10 +1195,6 @@ export default function GameEditor() {
       return
     }
 
-    const { data: srcEntries } = await supabase
-      .from('translation_entries')
-      .select('string_id, content, sort_order')
-      .eq('set_id', setData.id)
 
     const { data: newSet, error } = await supabase
       .from('translation_sets')
@@ -1152,6 +1207,7 @@ export default function GameEditor() {
         is_official: false,
         is_completed: false,
         game_slug: game.slug,
+        storage_version: 2,
       })
       .select()
       .single()
@@ -1159,17 +1215,6 @@ export default function GameEditor() {
     if (error || !newSet) {
       alert('Fork 失败：' + (error?.message ?? '未知错误'))
       return
-    }
-
-    if (srcEntries && srcEntries.length > 0) {
-      await supabase.from('translation_entries').insert(
-        srcEntries.map((e: { string_id: string; content: string; sort_order: number }) => ({
-          set_id: newSet.id,
-          string_id: e.string_id,
-          content: e.content,
-          sort_order: e.sort_order,
-        })),
-      )
     }
 
     navigate(`${game.basePath}/edit/${newSet.id}`)
@@ -1206,7 +1251,7 @@ export default function GameEditor() {
     )
   }
 
-  const canSubmitPR = !readonly && !!forkedFromId && changedCount > 0
+  const canSubmitPR = !readonly && !!forkedFromId && setData.storage_version === 2 && changedCount > 0
 
   const toolbarTokens = [
     { label: '↵ 换行', token: '\n' },
@@ -1246,6 +1291,12 @@ export default function GameEditor() {
                       value={title}
                       onChange={e => setTitle(e.target.value)}
                     />
+                  )}
+
+                  {forkedFromId && setData.storage_version !== 2 && (
+                    <p className="ed-forkfrom">
+                      这是旧版全量 Fork，仅供查看。请从最新主集重新 Fork 后提交修改。
+                    </p>
                   )}
 
                   <div className="ed-meta">
@@ -1368,8 +1419,8 @@ export default function GameEditor() {
             <div className="ed-rows">
               {pageRows.map(row => {
                 const rowState = rowStates[row.id]
-                const value = rowState?.current ?? getInitialContent(row, entries)
-                const validation = rowState?.validation ?? computeValidation(row, value, glossaryRows)
+                const value = rowState?.current ?? getInitialContent(row, entries, inheritedEntries)
+                const validation = rowState?.validation ?? computeValidation(row, value, glossaryRows, inheritedEntries[row.id]?.content ?? '')
 
                 const mirror = !isDupSet && !!row.dup
                 // route to the dup's OWN category (may differ from the row's category),
@@ -1393,7 +1444,7 @@ export default function GameEditor() {
                     onFocus={() => setActiveRowId(row.id)}
                     onChange={next => updateEntry(row, next)}
                     mirror={mirror}
-                    mirrorValue={mirror && row.dup ? dupTx[row.dup] ?? row.zh ?? '' : undefined}
+                    mirrorValue={mirror && row.dup ? dupTx[row.dup] ?? '' : undefined}
                     onGotoDup={
                       mirror && dupSetId
                         ? () => navigate(`${game.basePath}/edit/${dupSetId}`)

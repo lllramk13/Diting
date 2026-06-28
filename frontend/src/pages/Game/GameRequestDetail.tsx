@@ -23,7 +23,7 @@ export default function GameRequestDetail() {
   const [request, setRequest] = useState<{
     id: string; title: string; description: string; status: string;
     from_set_id: string; to_set_id: string; user_id: string; created_at: string;
-    game_slug: string;
+    game_slug: string; format_version?: number | null;
     snapshot?: Record<string, string> | null; base_snapshot?: Record<string, string> | null
   } | null>(null)
   const [author, setAuthor] = useState('')
@@ -106,15 +106,20 @@ export default function GameRequestDetail() {
         const jpMap: Record<string, string> = {}
         sourceStrings.forEach(s => { srcMap[s.id] = s.zh; jpMap[s.id] = s.jp })
 
+        const isDeltaRequest = req.format_version === 2
         const changed = fromEntries
           .filter((e: { string_id: string; content: string }) =>
-            e.content.trim() && e.content.trim() !== (toMap[e.string_id] ?? '').trim()
+            isDeltaRequest
+              ? e.content !== (toMap[e.string_id] ?? '')
+              : e.content.trim() !== '' && e.content.trim() !== (toMap[e.string_id] ?? '').trim()
           )
           .map((e: { string_id: string; content: string }) => ({
             string_id: e.string_id,
             content: e.content,
             jp: jpMap[e.string_id] ?? '',
-            original_zh: toMap[e.string_id] || srcMap[e.string_id] || '',
+            original_zh: isDeltaRequest
+              ? toMap[e.string_id] ?? ''
+              : toMap[e.string_id] || srcMap[e.string_id] || '',
           }))
         setDiff(changed)
       }
@@ -161,20 +166,16 @@ export default function GameRequestDetail() {
   }
 
   async function merge() {
-    if (!request || !isOwner) return
+    if (!request || !isOwner || request.format_version !== 2) return
     setMerging(true)
-    const rows = diff.map(d => ({
-      set_id: request.to_set_id,
-      string_id: d.string_id,
-      content: d.content,
-      sort_order: 0,
-      updated_at: new Date().toISOString(),
-    }))
-    if (rows.length > 0) {
-      const { error } = await supabase.from('translation_entries').upsert(rows, { onConflict: 'set_id,string_id' })
-      if (error) { alert('合并失败：' + error.message); setMerging(false); return }
+    const { error } = await supabase.rpc('merge_translation_request', {
+      p_request_id: request.id,
+    })
+    if (error) {
+      alert('合并失败：' + error.message)
+      setMerging(false)
+      return
     }
-    await supabase.from('merge_requests').update({ status: 'merged' }).eq('id', request.id)
     setRequest(r => r ? { ...r, status: 'merged' } : r)
     setMerging(false)
     setShowPRModal(false)
@@ -285,7 +286,13 @@ export default function GameRequestDetail() {
             </div>
           </section>
 
-          {isOwner && isOpen && (
+          {isOpen && request.format_version !== 2 && (
+            <section className="browse-section">
+              <p className="muted">这是旧版全量快照请求，仅供历史查看。请基于最新主集重新 Fork 后提交。</p>
+            </section>
+          )}
+
+          {isOwner && isOpen && request.format_version === 2 && (
             <div className="request-actions">
               <button className="btn-primary" onClick={() => setShowPRModal(true)} disabled={merging}>合并</button>
               <button className="btn-ghost" onClick={reject}>拒绝</button>
@@ -334,7 +341,7 @@ export default function GameRequestDetail() {
           </section>
         </div>
 
-        {showPRModal && (
+        {showPRModal && request.format_version === 2 && (
           <div className="modal-overlay" onClick={() => setShowPRModal(false)}>
             <div className="modal-box" onClick={e => e.stopPropagation()}>
               <h3 className="modal-title">确认合并</h3>

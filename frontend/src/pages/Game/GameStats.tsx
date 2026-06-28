@@ -20,6 +20,7 @@ type MergeRequestRow = {
   created_at: string | null
   snapshot: Record<string, string> | null
   base_snapshot: Record<string, string> | null
+  format_version?: number | null
 }
 
 type ProfileRow = {
@@ -39,7 +40,9 @@ function changedIds(request: MergeRequestRow) {
   const base = request.base_snapshot ?? {}
 
   return Object.entries(snapshot)
-    .filter(([stringId, content]) => content.trim() && content.trim() !== (base[stringId] ?? '').trim())
+    .filter(([stringId, content]) => request.format_version === 2
+      ? content !== (base[stringId] ?? '')
+      : content.trim() !== '' && content.trim() !== (base[stringId] ?? '').trim())
     .map(([stringId]) => stringId)
 }
 
@@ -85,7 +88,7 @@ export default function GameStats() {
 
       const { data: requestsData, error: requestsError } = await supabase
         .from('merge_requests')
-        .select('id,user_id,to_set_id,status,created_at,snapshot,base_snapshot')
+        .select('id,user_id,to_set_id,status,created_at,snapshot,base_snapshot,format_version')
         .eq('game_slug', activeGame.slug)
 
       if (requestsError) {
