@@ -1,0 +1,39 @@
+import type { ReactNode } from 'react'
+
+export type StatsMetricItem = {
+  key: string
+  label: string
+  value: ReactNode
+  sublabel?: ReactNode
+  accent?: string
+}
+
+export type ContributionCategory = {
+  key: string
+  label: string
+  color?: string
+}
+
+export type ContributionRow = {
+  userId: string
+  username: string
+  total: number
+  merged: number
+  open: number
+  prCount: number
+  adjusted: number
+  categories: Record<string, number>
+  lastContribution?: string
+}
+
+export type ExternalSignalItem = {
+  key: string
+  title: string
+  source: string
+  value: ReactNode
+  note?: ReactNode
+  accent?: string
+  href?: string
+  samples?: number[]
+}
+

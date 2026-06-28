@@ -1,0 +1,134 @@
+import type { CSSProperties } from 'react'
+import type { ContributionCategory, ContributionRow } from './types'
+
+type ContributionMatrixProps = {
+  categories: ContributionCategory[]
+  rows: ContributionRow[]
+  title?: string
+  emptyLabel?: string
+}
+
+const numberFormat = new Intl.NumberFormat('zh-CN')
+
+export default function ContributionMatrix({
+  categories,
+  rows,
+  title = '贡献矩阵',
+  emptyLabel = '暂无贡献数据',
+}: ContributionMatrixProps) {
+  const grandTotal = rows.reduce((sum, row) => sum + row.total, 0)
+  const totalPrs = rows.reduce((sum, row) => sum + row.prCount, 0)
+  const categoryTotals = Object.fromEntries(
+    categories.map(category => [
+      category.key,
+      rows.reduce((sum, row) => sum + (row.categories[category.key] ?? 0), 0),
+    ]),
+  )
+
+  return (
+    <section className="gst-panel gst-matrix-panel">
+      <header className="gst-panel-head">
+        <div>
+          <span className="gst-panel-index">01</span>
+          <h2>{title}</h2>
+        </div>
+        <p>行 = 贡献者 · 列 = 文本分类 · 色块宽度 = 分类贡献量</p>
+      </header>
+
+      {rows.length === 0 ? (
+        <div className="gst-empty">{emptyLabel}</div>
+      ) : (
+        <div className="gst-matrix-scroll">
+          <div
+            className="gst-matrix"
+            style={{ '--gst-category-count': categories.length } as CSSProperties}
+          >
+            <div className="gst-matrix-head">
+              <span>贡献者</span>
+              {categories.map(category => (
+                <span key={category.key}>{category.label}</span>
+              ))}
+              <span>总贡献</span>
+              <span>贡献占比</span>
+              <span>PR</span>
+            </div>
+
+            <div className="gst-matrix-body">
+              {rows.map((row, index) => {
+                const share = grandTotal > 0 ? (row.total / grandTotal) * 100 : 0
+
+                return (
+                  <div className="gst-matrix-row" key={row.userId}>
+                    <div className="gst-matrix-user">
+                      <i>{String(index + 1).padStart(2, '0')}</i>
+                      <span>
+                        <b>{row.username}</b>
+                        <small>
+                          {numberFormat.format(row.merged)} 已合并 · {numberFormat.format(row.open)} 待审核
+                          {row.adjusted > 0 ? ` · ${numberFormat.format(row.adjusted)} 线下补记` : ''}
+                        </small>
+                      </span>
+                    </div>
+
+                    {categories.map(category => {
+                      const value = row.categories[category.key] ?? 0
+                      const categoryMax = Math.max(
+                        1,
+                        ...rows.map(item => item.categories[category.key] ?? 0),
+                      )
+                      const width = value > 0 ? Math.max(7, (value / categoryMax) * 100) : 0
+
+                      return (
+                        <div className="gst-matrix-cell" key={category.key}>
+                          {value > 0 ? (
+                            <>
+                              <i
+                                style={{
+                                  '--gst-cell-width': `${width}%`,
+                                  '--gst-cell-color': category.color,
+                                  '--gst-cell-delay': `${index * 45}ms`,
+                                } as CSSProperties}
+                              />
+                              <b>{numberFormat.format(value)}</b>
+                            </>
+                          ) : (
+                            <span>—</span>
+                          )}
+                        </div>
+                      )
+                    })}
+
+                    <div className="gst-matrix-total">{numberFormat.format(row.total)}</div>
+                    <div className="gst-matrix-share">
+                      <span>
+                        <i style={{ width: `${share}%` }} />
+                      </span>
+                      <b>{share.toFixed(1)}%</b>
+                    </div>
+                    <div className="gst-matrix-pr">{numberFormat.format(row.prCount)}</div>
+                  </div>
+                )
+              })}
+
+              <div className="gst-matrix-row gst-matrix-summary">
+                <div className="gst-matrix-user">
+                  <i>Σ</i>
+                  <span><b>总计</b><small>{rows.length} 位贡献者</small></span>
+                </div>
+                {categories.map(category => (
+                  <div className="gst-matrix-total" key={category.key}>
+                    {numberFormat.format(categoryTotals[category.key] ?? 0)}
+                  </div>
+                ))}
+                <div className="gst-matrix-total">{numberFormat.format(grandTotal)}</div>
+                <div className="gst-matrix-share"><b>100.0%</b></div>
+                <div className="gst-matrix-pr">{numberFormat.format(totalPrs)}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  )
+}
+

@@ -87,5 +87,33 @@ export const p2is: GameConfig = {
     sponsorNote:
         '如果你喜欢这个项目，可以选择赞助支持。赞助完全自愿，公开版本仍会正常发布。',
     },
+
+    stats: {
+        contributionAdjustments: [
+            {
+             key: 'offline-document-01',
+             username: 'lm11123lm',
+             count: 1639,
+             category: 'nametable'
+            },
+        ],
+    }
+
 }
 
+
+    {/*
+    stats: {
+        externalSignals: [
+            {
+            key: 'bilibili',
+            title: 'B站播放量',
+            source: 'BILIBILI · 2 VIDEOS',
+            value: '70.0万',
+            note: '4.58万点赞 · 1.41万投币',
+            accent: '#fb7299',
+            href: 'https://www.bilibili.com/',
+            samples: [20, 35, 42, 58, 64, 72, 86, 93],
+            },
+        ],
+    },*/}

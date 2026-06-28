@@ -33,6 +33,26 @@ export type GameAnnouncement = {
   sponsorNote: string
 }
 
+export type GameStatsSignal = {
+  key: string
+  title: string
+  source: string
+  value: string
+  note?: string
+  accent?: string
+  href?: string
+  samples?: number[]
+}
+
+export type GameStatsContributionAdjustment = {
+  key: string
+  username: string
+  userId?: string
+  count: number
+  category?: string
+  note?: string
+}
+
 export type GameConfig = {
     slug: string
     title: string
@@ -69,6 +89,11 @@ export type GameConfig = {
     }
 
     categories: string[]
+
+    stats?: {
+      externalSignals?: GameStatsSignal[]
+      contributionAdjustments?: GameStatsContributionAdjustment[]
+    }
 
     announcement: GameAnnouncement
 }

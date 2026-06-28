@@ -13,6 +13,7 @@ import GameIssueDetail from './pages/Game/GameIssueDetail'
 import GameGlossary from './pages/Game/GameGlossary'
 import GameBrowse from './pages/Game/GameBrowse'
 import GameFontProof from './pages/Game/GameFontProof'
+import GameStats from './pages/Game/GameStats'
 import Sponsor from './pages/Sponsor'
 import GameEmulator from './pages/Game/GameEmulator'
 import RequireAuth from './RequireAuth'
@@ -34,6 +35,7 @@ function App() {
       <Route path="/game/:platform/:gameSlug/issues/:issueId" element={<GameIssueDetail />} />
       <Route path="/game/:platform/:gameSlug/glossary" element={<RequireAuth><GameGlossary /></RequireAuth>} />
       <Route path="/game/:platform/:gameSlug/font" element={<RequireAuth><GameFontProof /></RequireAuth>} />
+      <Route path="/game/:platform/:gameSlug/stats" element={<GameStats />} />
       <Route path="/emulator" element={<GameEmulator />} />
       <Route path="/game/:platform/:gameSlug/play" element={<Navigate to="/emulator" replace />} />
       <Route path="/game/:platform/:gameSlug" element={<RequireAuth><GameBrowse /></RequireAuth>} />
