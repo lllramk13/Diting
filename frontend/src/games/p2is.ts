@@ -96,6 +96,24 @@ export const p2is: GameConfig = {
              count: 1639,
              category: 'nametable'
             },
+            {
+             key: 'offline-document-01',
+             username: 'Cattus.',
+             count: 1682,
+             category: 'script'
+            },
+            {
+             key: 'offline-document-01',
+             username: 'Cattus.',
+             count: 674,
+             category: 'field'
+            },
+            {
+             key: 'offline-document-01',
+             username: 'Cattus.',
+             count: 363,
+             category: 'strtbl'
+            },
         ],
     }
 
