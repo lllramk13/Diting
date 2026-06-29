@@ -20,6 +20,9 @@ type GlossaryRow = {
 
 type ActiveGame = NonNullable<ReturnType<typeof getGameBySlug>>
 
+const DB_PAGE_SIZE = 1000
+const UI_PAGE_SIZE = 100
+
 export default function GameGlossary() {
   const { gameSlug } = useParams<{ gameSlug: string }>()
   const game = getGameBySlug(gameSlug ?? '')
@@ -29,6 +32,7 @@ export default function GameGlossary() {
   const [query, setQuery] = useState('')
   const [cat, setCat] = useState('')
   const [expanded, setExpanded] = useState<string | null>(null)
+  const [page, setPage] = useState(1)
   const [isAdmin, setIsAdmin] = useState(false)
 
   const [showModal, setShowModal] = useState(false)
@@ -43,6 +47,7 @@ export default function GameGlossary() {
 
   useEffect(() => {
     const currentGame = getGameBySlug(gameSlug ?? '')
+    let cancelled = false
 
     if (!currentGame) {
       setLoading(false)
@@ -55,31 +60,57 @@ export default function GameGlossary() {
       const { data: userData } = await supabase.auth.getUser()
       const uid = userData.user?.id ?? null
 
+      if (cancelled) return
+
       if (uid) {
         setIsAdmin(await getIsAdmin(uid))
       } else {
         setIsAdmin(false)
       }
 
-      const { data, error } = await supabase
-        .from('glossary')
-        .select('*')
-        .eq('game_slug', activeGame.slug)
-        .order('category', { ascending: true })
-        .order('jp', { ascending: true })
+      if (cancelled) return
 
-      if (error) {
-        alert('读取术语表失败：' + error.message)
-        setRows([])
-        setLoading(false)
-        return
+      const allRows: GlossaryRow[] = []
+      let from = 0
+
+      while (true) {
+        const to = from + DB_PAGE_SIZE - 1
+
+        const { data, error } = await supabase
+          .from('glossary')
+          .select('*')
+          .eq('game_slug', activeGame.slug)
+          .order('category', { ascending: true })
+          .order('jp', { ascending: true })
+          .range(from, to)
+
+        if (cancelled) return
+
+        if (error) {
+          alert('读取术语表失败：' + error.message)
+          setRows([])
+          setLoading(false)
+          return
+        }
+
+        const batch = (data ?? []) as GlossaryRow[]
+        allRows.push(...batch)
+
+        if (batch.length < DB_PAGE_SIZE) break
+        from += DB_PAGE_SIZE
       }
 
-      setRows((data ?? []) as GlossaryRow[])
+      setRows(allRows)
+      setPage(1)
+      setExpanded(null)
       setLoading(false)
     }
 
     load(currentGame)
+
+    return () => {
+      cancelled = true
+    }
   }, [gameSlug])
 
   const catCounts = useMemo(() => {
@@ -109,6 +140,25 @@ export default function GameGlossary() {
       )
     })
   }, [rows, query, cat])
+
+  const totalPages = Math.max(1, Math.ceil(filteredRows.length / UI_PAGE_SIZE))
+
+  const pagedRows = useMemo(() => {
+    const start = (page - 1) * UI_PAGE_SIZE
+    return filteredRows.slice(start, start + UI_PAGE_SIZE)
+  }, [filteredRows, page])
+
+  useEffect(() => {
+    setPage(1)
+    setExpanded(null)
+  }, [query, cat])
+
+  useEffect(() => {
+    if (page > totalPages) {
+      setPage(totalPages)
+      setExpanded(null)
+    }
+  }, [page, totalPages])
 
   if (!game) {
     return (
@@ -274,7 +324,9 @@ export default function GameGlossary() {
             <div className="gl-stat-div" />
             {stat(cats.length, '分类', 'is-accent')}
             <div className="gl-stat-div" />
-            {stat(filteredRows.length, '当前显示')}
+            {stat(filteredRows.length, '匹配术语')}
+            <div className="gl-stat-div" />
+            {stat(`${page}/${totalPages}`, '页码')}
           </div>
 
           {/* category chips + search */}
@@ -304,63 +356,117 @@ export default function GameGlossary() {
 
           {/* table */}
           {!loading && (
-            <div className="gl-table">
-              {/* header row */}
-              <div className="gl-thead">
-                <span className="gl-th">原文 · JP</span>
-                <span className="gl-th gl-th--zh">确认译法 · ZH</span>
-                <span className="gl-th">分类</span>
-                <span />
+            <>
+              <div className="gl-table">
+                {/* header row */}
+                <div className="gl-thead">
+                  <span className="gl-th">原文 · JP</span>
+                  <span className="gl-th gl-th--zh">确认译法 · ZH</span>
+                  <span className="gl-th">分类</span>
+                  <span />
+                </div>
+
+                {pagedRows.map(row => {
+                  const open = expanded === row.id
+                  const catLabel = row.category?.trim() || '未分类'
+
+                  return (
+                    <div key={row.id} className="gl-row">
+                      <div className="gl-row-main" onClick={() => setExpanded(open ? null : row.id)}>
+                        <span className="gl-jp">{row.jp}</span>
+                        <span className="gl-zh">{row.zh}</span>
+                        <span>
+                          <span className="gl-cat">{catLabel}</span>
+                        </span>
+                        <span className={`gl-chevron${open ? ' is-open' : ''}`}>▸</span>
+                      </div>
+
+                      {open && (
+                        <div className="gl-detail">
+                          <div className="gl-detail-label">备注</div>
+                          <div className={`gl-note${row.note ? '' : ' is-empty'}`}>
+                            {row.note?.trim() || '（暂无备注）'}
+                          </div>
+
+                          <div className="gl-date">
+                            收录于 · {new Date(row.created_at).toLocaleDateString('zh-CN')}
+                          </div>
+
+                          {isAdmin && (
+                            <div className="gl-detail-actions">
+                              <button className="gl-edit-btn" onClick={() => openEditModal(row)}>
+                                编辑
+                              </button>
+                              <button className="gl-del-btn" onClick={() => deleteTerm(row)}>
+                                删除
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+
+                {filteredRows.length === 0 && (
+                  <div className="gl-empty">
+                    {rows.length === 0 ? '术语表还是空的' : '没有匹配的术语'}
+                  </div>
+                )}
               </div>
 
-              {filteredRows.map(row => {
-                const open = expanded === row.id
-                const catLabel = row.category?.trim() || '未分类'
+              {filteredRows.length > UI_PAGE_SIZE && (
+                <div className="gl-pagination">
+                  <button
+                    className="gl-page-btn"
+                    onClick={() => {
+                      setPage(1)
+                      setExpanded(null)
+                    }}
+                    disabled={page === 1}
+                  >
+                    首页
+                  </button>
 
-                return (
-                  <div key={row.id} className="gl-row">
-                    <div className="gl-row-main" onClick={() => setExpanded(open ? null : row.id)}>
-                      <span className="gl-jp">{row.jp}</span>
-                      <span className="gl-zh">{row.zh}</span>
-                      <span>
-                        <span className="gl-cat">{catLabel}</span>
-                      </span>
-                      <span className={`gl-chevron${open ? ' is-open' : ''}`}>▸</span>
-                    </div>
+                  <button
+                    className="gl-page-btn"
+                    onClick={() => {
+                      setPage(prev => Math.max(1, prev - 1))
+                      setExpanded(null)
+                    }}
+                    disabled={page === 1}
+                  >
+                    上一页
+                  </button>
 
-                    {open && (
-                      <div className="gl-detail">
-                        <div className="gl-detail-label">备注</div>
-                        <div className={`gl-note${row.note ? '' : ' is-empty'}`}>
-                          {row.note?.trim() || '（暂无备注）'}
-                        </div>
-
-                        <div className="gl-date">
-                          收录于 · {new Date(row.created_at).toLocaleDateString('zh-CN')}
-                        </div>
-
-                        {isAdmin && (
-                          <div className="gl-detail-actions">
-                            <button className="gl-edit-btn" onClick={() => openEditModal(row)}>
-                              编辑
-                            </button>
-                            <button className="gl-del-btn" onClick={() => deleteTerm(row)}>
-                              删除
-                            </button>
-                          </div>
-                        )}
-                      </div>
-                    )}
+                  <div className="gl-page-info">
+                    第 <strong>{page}</strong> / {totalPages} 页 · 本页 {pagedRows.length} 条
                   </div>
-                )
-              })}
 
-              {filteredRows.length === 0 && (
-                <div className="gl-empty">
-                  {rows.length === 0 ? '术语表还是空的' : '没有匹配的术语'}
+                  <button
+                    className="gl-page-btn"
+                    onClick={() => {
+                      setPage(prev => Math.min(totalPages, prev + 1))
+                      setExpanded(null)
+                    }}
+                    disabled={page === totalPages}
+                  >
+                    下一页
+                  </button>
+
+                  <button
+                    className="gl-page-btn"
+                    onClick={() => {
+                      setPage(totalPages)
+                      setExpanded(null)
+                    }}
+                    disabled={page === totalPages}
+                  >
+                    末页
+                  </button>
                 </div>
               )}
-            </div>
+            </>
           )}
         </div>
 

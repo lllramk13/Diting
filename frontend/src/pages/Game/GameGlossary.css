@@ -364,3 +364,36 @@
   background: var(--gt-line);
   cursor: not-allowed;
 }
+
+
+.gl-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.gl-page-btn {
+  cursor: pointer;
+  font-family: var(--cnf);
+  font-size: 12.5px;
+  padding: 7px 13px;
+  border-radius: 8px;
+  background: var(--gt-card);
+  border: 1px solid var(--gt-line);
+  color: var(--gt-text);
+}
+
+.gl-page-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.gl-page-info {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--gt-muted);
+  padding: 0 8px;
+}
