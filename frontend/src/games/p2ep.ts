@@ -41,7 +41,7 @@ export const p2ep: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.2.1',
+    version: 'v0.3.0',
     size: '',
     updated: '2026-06-25',
     videoUrl: '',
@@ -73,6 +73,7 @@ export const p2ep: GameConfig = {
         '少量界面排版尚未适配长中文。',
     ],
     changelog: [
+        { version: 'v0.3.0', text: '修复输入法' },
         { version: 'v0.2.0', text: '修复搭话黑屏，地图乱码' },
         { version: 'v0.1.0', text: '初版完成' },
     ],

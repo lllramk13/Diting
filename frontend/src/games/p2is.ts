@@ -46,7 +46,7 @@ export const p2is: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.6.0',
+    version: 'v0.9.1',
     size: '',
     updated: '2026-06-24',
     videoUrl: '',
@@ -78,6 +78,7 @@ export const p2is: GameConfig = {
         '战斗中较长的技能名可能出现换行异常。',
     ],
     changelog: [
+        {  version: 'v0.9.1', text: '修复换行异常，漏翻，以及大量翻译重译' },
         { version: 'v0.6.0', text: '翻译校对' },
     ],
     copyrightNotice:

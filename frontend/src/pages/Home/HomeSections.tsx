@@ -31,7 +31,7 @@ export default function HomeSections() {
               </div>
               <div className="hs-tags">
                 <span className="hs-tag hs-tag--status">进行中</span>
-                <span className="hs-tag hs-tag--ver">v0.6.0</span>
+                <span className="hs-tag hs-tag--ver">v0.9.1</span>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function HomeSections() {
               </div>
               <div className="hs-tags">
                 <span className="hs-tag hs-tag--status">初翻完成 · 校对中</span>
-                <span className="hs-tag hs-tag--ver">v0.2.1</span>
+                <span className="hs-tag hs-tag--ver">v0.3.0</span>
               </div>
             </div>
           </div>
