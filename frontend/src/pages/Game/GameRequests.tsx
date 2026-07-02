@@ -246,20 +246,25 @@ export default function GameRequests() {
     URL.revokeObjectURL(url)
   }
 
-  async function mergeAll() {
+  async function mergeAll(force = false) {
     if (!game) return
     setBulkMerging(true)
     const mergedIds: string[] = []
     const skipped: string[] = []
 
-    for (const request of open) {
+    const requestsToMerge = force
+      ? [...open].sort((a, b) => Date.parse(a.created_at) - Date.parse(b.created_at))
+      : open
+
+    for (const request of requestsToMerge) {
       if (request.game_slug !== game.slug || request.format_version !== 2) {
         skipped.push(`${request.title}（旧版请求或游戏不匹配）`)
         continue
       }
-      const { error } = await supabase.rpc('merge_translation_request', {
-        p_request_id: request.id,
-      })
+      const { error } = await supabase.rpc(
+        force ? 'force_merge_translation_request' : 'merge_translation_request',
+        { p_request_id: request.id },
+      )
       if (error) {
         skipped.push(`${request.title}（${error.message}）`)
         continue
@@ -272,7 +277,7 @@ export default function GameRequests() {
     ))
     setBulkMerging(false)
     setShowBulkModal(false)
-    alert(`已合并 ${mergedIds.length} 个。${skipped.length ? `\n跳过：\n${skipped.join('\n')}` : ''}`)
+    alert(`${force ? '已强制合并' : '已合并'} ${mergedIds.length} 个。${skipped.length ? `\n跳过：\n${skipped.join('\n')}` : ''}`)
   }
 
   const tabs: { key: TabKey; label: string; count: number }[] = [
@@ -398,14 +403,20 @@ export default function GameRequests() {
                       （另有 {open.length - mergeableCount} 个请求因缺少快照数据将被跳过）
                     </span>
                   )}
+                  <span className="req-force-note">
+                    强制合并会忽略内容冲突，按提交时间从旧到新覆盖，最终保留最新请求的内容。
+                  </span>
                 </p>
 
                 <div className="req-modal-footer">
                   <button className="req-cancel-btn" onClick={() => setShowBulkModal(false)}>
                     取消
                   </button>
-                  <button className="req-confirm-btn" onClick={mergeAll} disabled={bulkMerging}>
+                  <button className="req-confirm-btn" onClick={() => mergeAll(false)} disabled={bulkMerging}>
                     {bulkMerging ? '合并中…' : '确认合并'}
+                  </button>
+                  <button className="req-force-btn" onClick={() => mergeAll(true)} disabled={bulkMerging}>
+                    {bulkMerging ? '合并中…' : '强制全部合并'}
                   </button>
                 </div>
               </div>
