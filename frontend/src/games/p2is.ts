@@ -48,7 +48,7 @@ export const p2is: GameConfig = {
     announcement: {
     version: 'v0.9.1',
     size: '',
-    updated: '2026-06-24',
+    updated: '2026-07-02',
     videoUrl: '',
     downloadLinks: [
         {
