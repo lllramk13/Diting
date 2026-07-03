@@ -50,7 +50,7 @@ export default function HomeSections() {
               </div>
               <div className="hs-tags">
                 <span className="hs-tag hs-tag--status">初翻完成 · 校对中</span>
-                <span className="hs-tag hs-tag--ver">v0.3.1</span>
+                <span className="hs-tag hs-tag--ver">v0.3.2</span>
               </div>
             </div>
           </div>
