@@ -9,10 +9,9 @@ type SessionUser = {
   username: string
 }
 
-function deriveUsername(user: { email?: string | null; user_metadata?: Record<string, unknown> }): string {
+function deriveUsername(user: { user_metadata?: Record<string, unknown> }): string {
   const metaName = user.user_metadata?.username
   if (typeof metaName === 'string' && metaName.trim()) return metaName.trim()
-  if (user.email) return user.email.split('@')[0]
   return '用户'
 }
 
