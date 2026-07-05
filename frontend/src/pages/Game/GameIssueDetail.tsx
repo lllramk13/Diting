@@ -91,7 +91,7 @@ export default function GameIssueDetail() {
       setIssue(typedIssue)
 
       const { data: profile } = await supabase
-        .from('profiles')
+        .from('public_profiles')
         .select('id, username')
         .eq('id', typedIssue.user_id)
         .single()
@@ -131,7 +131,7 @@ export default function GameIssueDetail() {
 
       if (userIds.length > 0) {
         const { data: profiles } = await supabase
-          .from('profiles')
+          .from('public_profiles')
           .select('id, username')
           .in('id', userIds)
 

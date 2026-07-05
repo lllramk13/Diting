@@ -719,7 +719,7 @@ export default function GameEditor() {
 
         if (parent) {
           const { data: profile } = await supabase
-            .from('profiles')
+            .from('public_profiles')
             .select('username')
             .eq('id', parent.user_id)
             .single()

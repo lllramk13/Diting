@@ -28,7 +28,7 @@ function TopNav() {
 
     async function loadUsername(id: string, fallback: string): Promise<string> {
       const { data } = await supabase
-        .from('profiles')
+        .from('public_profiles')
         .select('username')
         .eq('id', id)
         .single()

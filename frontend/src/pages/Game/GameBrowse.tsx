@@ -115,7 +115,7 @@ export default function GameBrowse() {
 
       if (userIds.length > 0) {
         const { data: profiles } = await supabase
-          .from('profiles')
+          .from('public_profiles')
           .select('id, username')
           .in('id', userIds)
 

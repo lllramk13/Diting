@@ -105,7 +105,7 @@ export default function GameStats() {
 
       const [profilesResult, setsResult] = await Promise.all([
         userIds.length
-          ? supabase.from('profiles').select('id,username').in('id', userIds)
+          ? supabase.from('public_profiles').select('id,username').in('id', userIds)
           : Promise.resolve({ data: [] as ProfileRow[], error: null }),
         setIds.length
           ? supabase.from('translation_sets').select('id,source_file').in('id', setIds)

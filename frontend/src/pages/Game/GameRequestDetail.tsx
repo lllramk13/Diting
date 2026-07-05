@@ -61,7 +61,7 @@ export default function GameRequestDetail() {
       setRequest(req)
 
       const [{ data: fromProfile }, { data: toSet }] = await Promise.all([
-        supabase.from('profiles').select('username').eq('id', req.user_id).single(),
+        supabase.from('public_profiles').select('username').eq('id', req.user_id).single(),
         supabase.from('translation_sets').select('source_file, user_id').eq('id', req.to_set_id).single(),
       ])
       setAuthor(fromProfile?.username ?? '未知用户')
