@@ -63,7 +63,7 @@ export default function GameGlossary() {
       if (cancelled) return
 
       if (uid) {
-        setIsAdmin(await getIsAdmin(uid))
+        setIsAdmin(await getIsAdmin())
       } else {
         setIsAdmin(false)
       }

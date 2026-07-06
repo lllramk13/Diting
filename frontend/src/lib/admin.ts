@@ -1,6 +1,10 @@
 import { supabase } from './supabase'
 
-export async function getIsAdmin(uid: string): Promise<boolean> {
-  const { data } = await supabase.from('profiles').select('is_admin').eq('id', uid).single()
-  return (data as { is_admin?: boolean } | null)?.is_admin ?? false
+export async function getIsAdmin(): Promise<boolean> {
+  const { data, error } = await supabase.rpc('get_is_admin')
+  if (error) {
+    console.error('[getIsAdmin]', error)
+    return false
+  }
+  return data === true
 }

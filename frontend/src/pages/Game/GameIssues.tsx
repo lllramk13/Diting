@@ -67,7 +67,7 @@ export default function GameIssues() {
       setUser(uid ? { id: uid } : null)
 
       if (uid) {
-        setIsAdmin(await getIsAdmin(uid))
+        setIsAdmin(await getIsAdmin())
       } else {
         setIsAdmin(false)
       }

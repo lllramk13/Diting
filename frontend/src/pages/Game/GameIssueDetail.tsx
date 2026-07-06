@@ -69,7 +69,7 @@ export default function GameIssueDetail() {
       setCurrentUserId(uid)
 
       if (uid) {
-        setIsAdmin(await getIsAdmin(uid))
+        setIsAdmin(await getIsAdmin())
       } else {
         setIsAdmin(false)
       }

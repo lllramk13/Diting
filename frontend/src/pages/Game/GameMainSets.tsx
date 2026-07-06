@@ -52,7 +52,7 @@ export default function GameMainSets() {
       setUser(uid ? { id: uid } : null)
 
       if (uid) {
-        setIsAdmin(await getIsAdmin(uid))
+        setIsAdmin(await getIsAdmin())
       } else {
         setIsAdmin(false)
       }

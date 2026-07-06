@@ -76,7 +76,7 @@ export default function GameRequests() {
       const uid = userData.user?.id ?? null
 
       if (uid) {
-        setIsAdmin(await getIsAdmin(uid))
+        setIsAdmin(await getIsAdmin())
       } else {
         setIsAdmin(false)
       }
