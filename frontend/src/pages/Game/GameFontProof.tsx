@@ -119,7 +119,7 @@ export default function GameFontProof() {
     ;(async () => {
       const { data } = await supabase.auth.getUser()
       const id = data.user?.id ?? null
-      const admin = id ? await getIsAdmin(id) : false
+      const admin = id ? await getIsAdmin() : false
 
       if (alive) {
         setUid(id)

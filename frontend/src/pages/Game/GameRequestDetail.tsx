@@ -67,7 +67,7 @@ export default function GameRequestDetail() {
       setAuthor(fromProfile?.username ?? '未知用户')
       setSourceFile(toSet?.source_file ?? '')
       if (uid) {
-        setIsOwner(await getIsAdmin(uid))
+        setIsOwner(await getIsAdmin())
         setIsAuthor(uid === req.user_id)
       }
 
