@@ -2,8 +2,9 @@ import type { GameConfig } from "./types";
 import { p2is } from "./p2is";
 import { p2ep } from "./p2ep";
 import { p1 } from "./p1";
+import { sf2 } from "./sf2"
 
-export const games: GameConfig[] = [p2is, p2ep, p1]
+export const games: GameConfig[] = [p2is, p2ep, p1, sf2]
 
 export function getGameBySlug(slug: string): GameConfig | undefined {
     return games.find((game) => game.slug === slug)

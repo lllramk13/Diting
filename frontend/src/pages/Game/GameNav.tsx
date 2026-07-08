@@ -43,7 +43,11 @@ export default function GameNav({ game }: GameNavProps) {
     { label: "字库校对", path: game.routes.font ?? `${game.basePath}/font` },
   ]
 
-  const links = isAuthenticated
+  const links = game.slug === 'sf2'
+  ? publicLinks.filter(link =>
+      [game.routes.announce, game.routes.issues].includes(link.path)
+    )
+  : isAuthenticated
     ? [...publicLinks, ...protectedLinks]
     : publicLinks
 

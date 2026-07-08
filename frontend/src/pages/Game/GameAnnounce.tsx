@@ -285,12 +285,20 @@ export default function GameAnnounce() {
               </div>
 
               <div className="an-side-actions">
-                <button className="an-side-btn" onClick={() => navigate(game.routes.main)}>
-                  <span>参与翻译</span>
-                  <span className="an-side-btn-hint">主集 / Fork →</span>
-                </button>
+                {game.slug !== 'sf2' && (
+                  <button
+                    className="an-side-btn"
+                    onClick={() => navigate(game.routes.main)}
+                  >
+                    <span>参与翻译</span>
+                    <span className="an-side-btn-hint">主集 / Fork →</span>
+                  </button>
+                )}
 
-                <button className="an-side-btn" onClick={() => navigate(game.routes.issues)}>
+                <button
+                  className="an-side-btn"
+                  onClick={() => navigate(game.routes.issues)}
+                >
                   <span>提交问题 / 反馈</span>
                   <span className="an-side-btn-hint">可匿名 →</span>
                 </button>
