@@ -42,7 +42,7 @@ export const sf2: GameConfig = {
     downloadLinks: [ 
       {
         label: '百度网盘',
-        url: 'https://pan.baidu.com/s/1--GO-zpbvtxCBd7LuFxpZg?pwd=yaxa',
+        url: 'https://pan.baidu.com/s/1CPEa7_cfQSeqrEkcgscxNw?pwd=utig',
         note: "",
       }
     ],
