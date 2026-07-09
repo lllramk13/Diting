@@ -1,0 +1,4589 @@
+[
+  {
+    "src": "field_text",
+    "id": "field:77:0x455c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>フウマコタロウ<c1d:1/>\\n<c20/>儂は、風魔の頭領小太郎…<c5:30/>\\n<c20/>我ガ一族ガ伝えし忍の技、しかと見届けよ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/>风魔小太郎<c1d:1/>\\n<c20/>我是风魔的头领小太郎…<c5:30/>\\n<c20/>我族传承的忍术，好好见识吧…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16692",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんな、へタなおどりで\\n ぼくガよろこぶとおもったら\\n おおまちガいだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 用那么笨拙的舞蹈\\n 如果你以为我会高兴\\n 大错特错!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x166f4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん、ほんとにおんなのこなの?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐，你真的是女孩子吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16732",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n それって、ほんとにつよいの?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那个，真的强吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16766",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなのみせられても、つまんないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 给我看那种东西，好无聊啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x167a2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なにガカンフーなのさ!\\n そんなのぜんぜんインチキだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 什么功夫啊！那完全是骗人的！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x167f2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうやって、ぼくをオドしてるんだね!\\n サイテーだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你那样是在吓唬我吧！真差劲！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16840",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひょっとして、ぼくのコト…\\n なぐる?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 难道说，你要…打我？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1687e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お、おねえちゃん、\\n ぼくのコト、なぐったりしないよね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐、姐姐，你不会打我的吧…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x168ce",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うわーん!\\n このおねえちゃん、こわいよー!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哇啊！这个姐姐，好可怕啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16912",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n それって、れんあいのはなし??\\n おねえちゃん、おとななんだね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那个，是恋爱的话题吗？姐姐，你是大人了呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1696a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そ、そういうはなし…\\n ぼくには、まだ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那、那种话题…对我来说，还…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x169aa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n じつは、ぼくもすきなこガいるんだ。\\n でもね、みんなには、ないしょだよ。\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 其实，我也有喜欢的人。但是呢，对大家要保密哦。\n 呵呵呵…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16a18",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなこと、ぼくだってわかってるよ!\\n ぼくを、こどもだからって、\\n ばかにしないでよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那种事，我也懂的！别因为我是小孩，就小看我啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16a88",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぼくは、どうでもいいよ、そんなこと。\\n もっと、おもしろいはなししてよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我无所谓啦，那种事。说点更有趣的话题吧！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16ae8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん、へんなこえだして\\n どっか、ぐあいでもわるいの?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐，你发出奇怪的声音，是不是哪里不舒服？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16b3e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぼ、ぼく、よくわかんないけど\\n それって「ゆうわく」ってやつかな?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我、我虽然不太懂，但那是不是叫「诱惑」啊？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16b98",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん、よくみたら\\n なかなか、「びじん」だね。\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐，仔细一看，你还挺「美人」呢。\n 呵呵呵…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16bf4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うふふふ…\\n もう、ぼくドキドキだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呵呵呵…我已经心跳加速了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16c32",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん、きもちわるいよ!\\n どっかいって!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐，好恶心啊！走开！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x16c7a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん、なんか、いいきになってない?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐，你是不是有点得意忘形了？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x18e44",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n よくわかんないけど、せガたかくて、\\n 2人ともかっこいいよ。\\n ぼくも、おおきくなりたいなぁ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 虽然不太懂，但个子高高的，两个人都好帅啊。\n 我也想快点长大呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x18eba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n どうかなぁ?\\n うーん、まようなぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 怎么样啊？\n 嗯，舞耶吗…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x18ef6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぼくの「いけん」、きいてくれるんだね。\\n うれしいなぁ!\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我的「意见」，你愿意听啊。\n 好开心啊！\n 呵呵呵…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x18f54",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n それって、ぼくのコト、「しんらい」して\\n くれてるんだね!\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那是对我「信赖」啊！\n 呵呵呵…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x18fb4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなコト、ぼくには、きょうみないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那种事，我一点兴趣都没有！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x18ff2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぼくだよ、ぼくガ、いちばんイケてるんだよ!\\n いいきにならないでよ、おにいちゃん!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 是我啊，我最帅了！\n 别太得意了，哥哥！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1905c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃんみたいに\\n じぶんガ、いちばんだってタイプ\\n きらいだ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 像哥哥那样\n 自以为是最棒的类型\n 最讨厌了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x190b8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃんたち、なかなかやるね!\\n こんなにんげん、はじめてだよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐们，挺能干的嘛！\n 这样的人，我还是第一次见。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19114",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なにするんだよお!\\n こうみえても、おねえちゃんたちより\\n ぼくのほうガ「としうえ」なんだぞ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 干什么啊！\n 别看我这样，我比姐姐们\n 年纪还大呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1918a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n いたいよ、おねえちゃんたち!\\n いいかげんにしないと、おこるよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 好痛啊，姐姐们！\n 再这样我可要生气了。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x191e2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うわーん!\\n おねえちゃんたちガ、いじめるよお。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哇——！\n 姐姐们在欺负我啊。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1922a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃんたちって、おとこどうしだよね?\\n へんなの??\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哥哥们，都是男的啊？\n 好奇怪啊？？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1927c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃんたちって、なかよしなんだね。\\n みてればわかるよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哥哥们，关系真好啊。\n 一看就知道了。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x192d2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あー!\\n ぼくのコト、むししてる!\\n プーンだっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊——！\n 在无视我！\n 哼！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1931c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なんで、あいてにしてくれないのさ!\\n もう、いいよっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 为什么不理我啊！\n 算了，不管了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1936a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃんたち、なんか、きもちわるい!\\n ぼくに、ちかよらないでっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哥哥们，感觉好恶心！\n 别靠近我！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x193c8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n こわいよ、おにいちゃんたち!\\n へんたいなんじゃないの?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 好可怕啊，哥哥们！\n 不会是变态吧？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19418",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇねぇ、おねえちゃん!\\n ぼくにも、インタビューしてよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂喂，姐姐！\n 也采访我一下嘛！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1946a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そのマイク、いつももちあるいてるの?\\n へんなの??\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那个麦克风，总是带着走吗？\n 好奇怪啊？？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x194b6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うふふふ…\\n おにいちゃん、そんなのも、こたえらんないの?\\n あたまわるいなぁ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呵呵呵…\n 哥哥，连那种问题都答不上来？\n 脑子真笨啊。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1951e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんな、おにいちゃんより\\n ぼくのインタビューのほうガ、さきでしょ。\\n しつれいしちゃうな、まったく。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 真是的，比起哥哥\n 应该先采访我才对吧。\n 太失礼了，真是的。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1959c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なんで、ぼくをむしするの!\\n おこっちゃうぞ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 为什么无视我!\n 我要生气了!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x195e2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひょっとして、それってネタ?\\n 木ンキってコトは、ないよね!?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 难道说，那是开玩笑?\n 不会是木星吧!?\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19638",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃんたち、ひょっとして\\n 「コメディアン」なの?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐们，难道是\n 「喜剧演员」吗?\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19688",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うふふふ…\\n おねえちゃん、ナイスツッコミ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呵呵呵呵…\n 姐姐，吐槽得好!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x196cc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うふふふ…\\n おねえちゃんたち、おもしろいよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呵呵呵呵…\n 姐姐们，真有趣!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19712",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そのネタ、つまんないよ!\\n 木ンキで、わらわそうとしてるの?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那个笑话，好无聊!\n 是想用木星来逗我笑吗?\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19766",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぼくも、やさしいおねえちゃんガ\\n ほしいなぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我也想要个温柔的姐姐\n 啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x197ac",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n きょうだいは、なかよしガいちばんだよね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 兄弟姐妹，和睦相处最好了!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x197ec",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n きょうだいなかよしガ、いちばんだって\\n おばあちゃんもいってたよ!\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 奶奶也说过，兄弟姐妹和睦相处\n 最好了!\n 呵呵呵呵…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19854",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃんたち、ぼくをムシしてるな!\\n ユルせないぞお!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐们，在无视我啊!\n 不可原谅哦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x198a6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n こんなトコでなんのつもりなの!\\n バカにしてるよ、まったく!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 在这种地方干什么!\n 真是小看我啊，真是的!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x198fa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n これガ、あのおにいちゃんなの!\\n なんか、びっくりだなぁ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 这就是那个哥哥啊!\n 有点惊讶呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1994c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃんの、まけぇ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐，你输了!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1997c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃん、キレイだね!\\n ぼくも、おおきくなったら…\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哥哥，好漂亮啊!\n 等我长大了也要…\n 呵呵呵呵…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x199da",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うふふふ…\\n キレイなひとにあえて、なんかウレシイな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呵呵呵呵…\n 能遇到漂亮的人，好开心啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19a28",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなの、きもちわるいだけだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那种事，只会让人恶心!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19a60",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そういうコト、おとこはしちゃダメだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那种事，男人不能做哦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19a9e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇねぇ、おねえちゃん\\n ぼくもとってよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂喂，姐姐\n 也给我拍一张吧!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x19ae0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぼくも、カメラマンになりたいなぁ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我也想成为摄影师啊。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b164",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほんと!\\n じゃあ、やくそくね!\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 真的!\n 那么，约好了哦!\n 呵呵呵呵…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b1aa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " それって、ほんとにつよいの?\\n<c8:2/>強いよ!\\nキミほどじゃないかも\\n<c9/><c2/>",
+    "zh": " 那真的强吗?\\n<c8:2/>强啊!\\n可能没你那么强\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b1f4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 木ント!\\n なんか、あこガれちゃうなぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 木特!\\n 有点羡慕啊…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b234",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n で、でも、ちょっとだけ、きょうみあるな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 但、但是，有点兴趣呢!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b274",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " おねえちゃん、ぼくのコト、どうおもってるの?\\n<c8:4/>かわいいよ\\n結構タイプね\\n食べちゃいたい♥\\n気持ち悪い\\n<c9/><c2/>",
+    "zh": " 姐姐，你觉得我怎么样?\\n<c8:4/>可爱哦\\n挺合我口味呢\\n想把你吃掉♥\\n恶心\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b2e6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん!\\n いいきにならないでよ!\\n だれガ、おねえちゃんとなんか!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 姐姐!\\n 别自作多情啊!\\n 谁要和姐姐怎么样啊!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b348",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うふふふ…\\n おもしろいジヨウダンだね。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呵呵呵…\\n 真是有趣的玩笑呢。\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b388",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n えっ!\\n お、おねえちゃん、いまなんていったの…\\n ぼ、ぼく、おいしくないから…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 诶!\\n 姐、姐姐，你说了什么…\\n 我、我不好吃的…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b3f0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n も、もし、そうだとしたら、ぼくウレシイな!\\n ねぇ、どうなの、おねえちゃん!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 如、如果是那样的话，我会很高兴的!\\n 呐，怎么样，姐姐!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b454",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " ねぇねぇ、どうなの? びょうきなの?\\n<c8:3/>ボクは恋の病なのさ木ォォウ!\\n大丈夫さ心配しないでおくれ\\nほっとけってんだバーロォ!\\n<c9/><c2/>",
+    "zh": " 呐呐，怎么了? 生病了吗?\\n<c8:3/>我是得了相思病啊木噢!\\n没事啦别担心\\n别管我啊笨蛋!\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b4dc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n こいすると、びょうきになるの?\\n にんげんって、ふしぎだね。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 恋爱会生病吗?\\n 人类真奇怪呢。\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b530",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 木ント…\\n なんか、しんぱいだなぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 木特…\\n 有点担心啊…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b56c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガマンすると、よくないって!\\n あぁっ! 木ントわかってないなぁ!\\n おにいちゃんみてるとイライラするよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 忍耐对身体不好!\\n 啊! 木特你不懂啊!\\n 看着哥哥我就烦躁!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b5ee",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " なんで、そんなにせっかちなのさ?\\n<c8:2/>「美男薄命」っていうからさ、木ォォウ!\\n江戸っ子は気ガみじけぇんでいっ!\\n<c9/><c2/>",
+    "zh": " 为什么那么性急啊?\\n<c8:2/>因为'美男薄命'啊，木噢!\\n江户子气短啊!\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b666",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n にんげんって、おにいちゃんみたいなのガ\\n もてるんだ…\\n いガいだなぁ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 人类啊，像哥哥这样的\\n 受欢迎…\\n 真讨厌啊!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b770",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n きガあうってコトは、おにいちゃんも\\n アクマだったりして…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 合得来的话，哥哥\\n 也是恶魔什么的…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b7c2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " どうなの? おにいちゃん、アクマなの?\\n<c8:3/>残念だけどボクは人間さ!\\nそうさ、ボクは悪魔なのさ!\\n一緒にすんじゃねぇ、バーロォ!\\n<c9/><c2/>",
+    "zh": " 怎么样? 哥哥是恶魔吗?\\n<c8:3/>遗憾但我是人类啊!\\n是啊，我是恶魔啊!\\n别跟我扯上关系，笨蛋!\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b84c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうなんだ…\\n でも、きっと、アクマにちかいにんげんだね。\\n きっと、そうだよ、うん!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 这样啊…\\n 但肯定，是接近恶魔的人类吧。\\n 肯定是的，嗯!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b8ba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n じゃ、じゃあ、アクマみたいなにんげんってコト…\\n それガ、いちばんアブないって\\n おばあちゃんガ、いってた…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 那、那么，像恶魔一样的人类…\\n 那是最危险的\\n 奶奶说过的…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b93e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うふふふ…\\n やっぱり、そうだよね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呵呵呵…\\n 果然，是这样呢!\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b97a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇねぇ、ちょっときいてもいいかなぁ。\\n おねえちゃんだったら、わかるとおもうんだ。\\n あのね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呐呐，能稍微听我说说吗。\\n 如果是姐姐的话，我觉得会明白的。\\n 那个啊…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1b9f2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " 「いきる」ってどういうコトなの?\\n<c8:3/>それは人それぞれ違う答を持っているさ\\n死んでない、ただそれだけさ\\nわからないね\\n<c9/><c2/>",
+    "zh": " \"活着\"到底是啥意思啊?\n<c8:3/>每个人都有各自的答案\n没死，就这样而已\n我也不知道\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1ba70",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n じゃあ、おねえちゃんは、おねえちゃんの\\n こたえをもってるんだね!\\n すごいや!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那就是说，姐姐也有\n 自己的答案嘛！\n 好厉害！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bad8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そ、そうなの…\\n ただ、それだけなの…\\n そ、そんなぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 是、是这样吗…\n 就只是这样吗…\n 这、这也太…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bb28",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃんにもわからないんだね。\\n でも、かえってアンシンしちゃったよ。\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 原来姐姐也不知道呢。\n 可是不知为何，\n 反而让我安心了。嘿嘿…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bb98",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なにそれ!\\n きたいしてたのにさ!\\n ソンしたきぶんだよ、木ント!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 什么嘛！\n 我本来期待很高的！\n 感觉被坑了，真的！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bc4c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひょっとして、おねえちゃんも\\n じつはアクマだったりして…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 说不定，姐姐\n 其实是个恶魔……\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bc9e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " どうなの? おねえちゃん、アクマなの?\\n<c8:3/>残念だけどアタシは人間だよ!\\nよく判ったね\\nアンタと一緒にしないで欲しいね!\\n<c9/><c2/>",
+    "zh": " 怎样？姐姐，你是恶魔吗？\n<c8:3/>抱歉，我是人！\n看来你看穿了\n别把我和你混为一谈！\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bd20",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お、おねえちゃん、おこっちゃったの…\\n ご、ごめん…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐、姐姐生气了…\n 对、对不起…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bd6c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇねぇ、でもさ、どうして、ぼくのコト\\n うつしたのかな?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 诶诶，那个，为什么\n 要给我拍照呀？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bdbe",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " ねぇ、どうして、うつしたのさ?\\n<c8:3/>かわいいからさ\\n珍しいからさ\\n売りさばくのさ\\n<c9/><c2/>",
+    "zh": " 诶，为什么要拍照啊？\n<c8:3/>因为你可爱啊\n因为你稀奇嘛\n拿去卖的\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1be18",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そ、そんな…\\n や、やめてよ、はずかしいから…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那、那个…\n 好、好羞哦，别这样啦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1be5e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n いくら、ぼくガカワイイからって\\n かってなコトしないでほしいな、まったく…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 就算我再可爱，\n 也不能随便来啊，真是的…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bec0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " ねぇねぇ、どうなの? ぐあいわるいの?\\n<c8:2/>だ、大丈夫だよ…\\nい、いや、あの…\\n<c9/><c2/>",
+    "zh": " 诶诶，你还好吗？不舒服？\n<c8:2/>没、没事的…\n那、那个啊…\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bf18",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あぁっ!\\n もう、なにガいいたいのさ!\\n おにいちゃんみてるとイライラするよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊！\n 你到底想说什么啦！\n 看你就烦死了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bf7e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇねぇ、ちょっときいてもいいかなぁ。\\n おにいちゃんだったらわかるとおもうんだ。\\n あのね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊！\n 你到底想说什么啦！\n 看你就烦死了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1bff4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " 「おほしさま」って、いくつあるのかな?\\n<c8:3/>数えきれない程たくさんだよ\\n人の夢の数だけあるんだよ\\n死んだ人の数だけあるんだよ\\n<c9/><c2/>",
+    "zh": " \"星星\"有几颗呀？\n<c8:3/>多得数不清\n和人的梦一样多\n和死去的人一样多\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1c07a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n じゃあさ、そのなかに「うちゅうじん」ガいても\\n ふしぎじゃないよね。\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那就是说，我的梦也有\n 一颗专属的星星咯。\n 好想去那里看看…嘿嘿嘿…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1c0e4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あぁっ! 木ントは、しらないんでしょ!\\n しったかぶりしようとしてるな!\\n サイアクだよね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那就是说，里面就算有\"外星人\"\n 也不奇怪了对吧？\n 嘿嘿嘿…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1c158",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n じゃあさ、ぼくのユメのおほしさまもあるんだね。\\n いってみたいなぁ…\\n うふふふ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊！你其实根本不知道吧！\n 你在那里装懂！\n 真是最差劲了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3ce3e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n よく考えたら、なんでオマエらみたいなのと\\n 契約してんだ?\\n オレは、もう付き合ってらんねぇよ\\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\\n わりいけど、この契約は、<c1d:9/>破棄<c1d:1/>させてもらうぜ!\\n っちゅうか、オレを怒らせたオマエらガ悪い。\\n 今度会った時は、殺すからな!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 仔细一想，我为什么要\n 和你们这种货色立契约？\n 我忍受不了了\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\n 不好意思，这个契约，我\n<c1d:9/>解除<c1d:1/>了！\n 再说了，是你们惹怒我在先。\n 下次见面，我要杀了你们！！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3cf4e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n わ、悪い…\\n オマエとの<c1d:9/>契約、破棄<c1d:1/>させてくんねぇかな…\\n いや、あのお、その…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对、对不起…\n 能不能取消和你的<c1d:9/>契约<c1d:1/>啊…\n 不，那个，呃…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3cfbc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n オ、オレ、帰る。\\n に、逃げる訳じゃねぇからな。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我、我回去了。\n 才、才不是逃跑呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d004",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ちょ、ちょっと用事、思い出したわ。\\n じゃ、じゃあな!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 突、突然想起有点事。\n 那、那就这样吧!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d054",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ちょ、ちょっと用事、思い出したわ。\\n じゃ、じゃあな!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 突、突然想起有点事。\n 那、那就这样吧!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d0a4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n オマエら、木ントいい加減にしろよお!!\\n オレ、マジでキレたからな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你们这些家伙，给我适可而止!!\n 我真的生气了!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d100",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 死ぬ準備は出来てんだろうな・・・\\n もう後悔しても、おせえからな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 做好死的准备了吧…\n 现在后悔也晚了!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d15a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n もう、オレ、マジキレたよ。\\n 木ント、ブチ殺っす!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我真的发飙了。\n 把家伙干掉!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d1a4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キミら、マジでスッゲー奴らだよ。\\n オレ、ソンケーしちゃうよ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你们，真是了不起的家伙啊。\n 我都尊敬起来了!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d1fc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キミら、マジでスッゲー奴らだよ。\\n オレ、ソンケーしちゃうよ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你们，真是了不起的家伙啊。\n 我都尊敬起来了!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d254",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キミら、マジでスッゲー奴らだよ。\\n オレ、ソンケーしちゃうよ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你们，真是了不起的家伙啊。\n 我都尊敬起来了!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d2ac",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n いやいや、木ント楽しませてもらったよ。\\n なんかお礼してやりたいんだけど\\n そうだな…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 不不，让我很开心呢。\n 想报答一下你\n 那么…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d31a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <c1d:9/><ce:1/><c1d:1/>をあげよう。\\n これは、良い仕事してますよ。\\n 絶対、なくすんじゃねぇぞ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n <c1d:9/><ce:1/><c1d:1/>给你吧。\n 这个，很好用哦。\n 绝对别弄丢了。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d388",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <c1d:9/>¥<ce:2/><c1d:1/>くれてやる。\\n 感謝しろよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n <c1d:9/>¥<ce:2/><c1d:1/>给你。\n 感谢我吧。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d3ca",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうだな…\\n じゃあ、<c1d:9/>怪我でも治してやる<c1d:1/>か!\\n これは、オレからの餞別だぜ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那么…\n 那就、<c1d:9/>帮你治伤<c1d:1/>吧!\n 这是，我给的饯别礼!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d436",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n じゃあな!\\n 次会う時も、生きてろよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 再见!\n 下次见面时，也要活着啊。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d474",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おお、そういやぁ、クレール・ド・リュンヌに\\n 伝説の武器ガあるって話、知ってっか?\\n まぁ、名前ガ名前だけに本当に伝説かもな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦，对了，在月光\n 有传说武器，知道吗?\n 嘛，名字就是名字，所以可能真是传说!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d50a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おお、そういやぁ、ラーメンしらいしに\\n 伝説の武器ガあるって話、知ってっか?\\n あのオバチャン、木ントアヤシイよな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦，对了，你知道白石拉面店里\n 有传说武器的传闻吗？\n 那个大妈，真的很可疑吧！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d596",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうそう、オマエ知ってたか?\\n <c1d:13/>伝説の日本刀<c1d:1/>にゃ\\n <c1d:13/>火の力ガ宿ってる<c1d:1/>っつー噂だぜ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对对，你知道吗?\n <c1d:13/>传说日本刀<c1d:1/>里\n <c1d:13/>寄宿着火之力<c1d:1/>的传闻哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d610",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうそう、オマエ知ってたか?\\n <c1d:13/>伝説の日本刀<c1d:1/>にゃ\\n <c1d:13/>水の力ガ宿ってる<c1d:1/>っつー噂だぜ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对对，你知道吗?\n <c1d:13/>传说日本刀<c1d:1/>里\n <c1d:13/>寄宿着水之力<c1d:1/>的传闻哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d68a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうそう、オマエ知ってたか?\\n <c1d:13/>伝説の日本刀<c1d:1/>にゃ\\n <c1d:13/>風の力ガ宿ってる<c1d:1/>っつー噂だぜ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对对，你知道吗?\n <c1d:13/>传说日本刀<c1d:1/>里\n <c1d:13/>寄宿着风之力<c1d:1/>的传闻哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d704",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうそう、オマエ知ってたか?\\n <c1d:13/>伝説の日本刀<c1d:1/>にゃ\\n <c1d:13/>大地の力ガ宿ってる<c1d:1/>っつー噂だぜ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对对，你知道吗?\n <c1d:13/>传说日本刀<c1d:1/>里\n <c1d:13/>寄宿着大地之力<c1d:1/>的传闻哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x3d780",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうそう、オマエ知ってたか?\\n <c1d:13/>伝説の日本刀<c1d:1/>ってよ\\n 本当は、<c1d:13/>スッゲー強ぇ<c1d:1/>っつー噂だぜ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对对，你知道吗?\n <c1d:13/>传说日本刀<c1d:1/>啊\n 其实，<c1d:13/>超强<c1d:1/>的传闻哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x442e2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n その眼…\\n 気になりますね。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那双眼睛…\n 很在意呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44316",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n これはこれは!\\n どうやら私ガ、お気に入りのようだ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀呀!\n 看来我成了你的最爱呢!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44362",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 貴様の眼、気に入らん!\\n 止めないのなら、えぐらせてもらうぞっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你的眼睛，我不喜欢!\n 如果不停止，我就把它挖出来!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x443ba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 言いたい事ガあるのなら、口で言えっ!\\n それとも、その口は、飾り物かっ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 如果有话要说，就用嘴说出来!\n 还是说，那张嘴只是个装饰品!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x4441c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 何を見ているっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你在看什么!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44444",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n わ、私に、その様な趣味は…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我、我没有那种兴趣…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44476",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n な、何か、お気に障る事でも…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 有、有什么冒犯到您的事吗…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x444aa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おい、女っ!\\n 冗談は、殺されぬ程度にしておけ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂，女人!\n 开玩笑要适可而止，别找死!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x444f2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n その様な、つまらぬ嘘を吐くのなら\\n 舌根っこを引っこ抜くぞ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 如果你说那种无聊的谎言\n 我就把你的舌头连根拔掉!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44546",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n よくもぬけぬけと!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你竟敢厚颜无耻!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44570",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n な、何を聞き出そうというのです…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你、你想打听什么…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x445a8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そ、その様な口車になど…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那、那种花言巧语…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x445d8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 初対面の私を心配とは…\\n 溢れ出した慈愛心に脳味噌ガ浸りきって\\n ふやけてしまっているのでは…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 担心初次见面的我…\n 你的脑子被充盈的慈爱心浸透\n 已经泡软了吧…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x4464e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなに心配ばかりしていると\\n すぐに老けてしまいますよ…\\n もう手後れかも知れませんガね。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 如果总是那么担心\n 很快就会变老的…\n 可能已经太迟了呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x446c2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n くっくっくっくっ…\\n まさか、こんなお嬢さんから心配されてるとは…\\n いやいや、愉快な事…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呵呵呵呵…\n 没想到会被这样的小姐担心…\n 不不，真是愉快的事…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44734",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n くっくっくっくっ…\\n これはこれは…\\n 身に余る光栄ですよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呵呵呵呵…\n 哎呀呀…\n 真是无上的荣幸啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44788",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 悩み事を聞きたいだとお…\\n ならば、その口、二度と開くな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 想听我的烦恼…\n 那么，那张嘴，永远别张开!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x447da",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おい、女っ!\\n 先に自分の心配でもしたらどうだっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂，女人!\n 先担心一下你自己吧!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x44824",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私も親は、好きでしたよ。\\n あれは、実に旨かった…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我也喜欢父母呢。\n 他们，真的很美味…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x4486e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私も親に感謝しなくては…\\n 何しろ、私の血肉となってくれたのですから。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我也得感谢父母…\n 毕竟，他们成了我的血肉。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x550e8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひ、ひぇぇぇぇ!\\n こ、こりゃ大変ぢゃ!\\n 魂をたくさん持ってかれたぞい…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜呜呜!\n 这、这可不得了!\n 被夺走了很多灵魂啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x5514a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひ、ひぇぇぇぇ!\\n や、やめてくれんかのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哇、哇哇哇哇！\\n 请、请放过我吧…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x5518e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひ、ひぇぇぇぇ!\\n おたすけをおお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哇、哇哇哇哇！\\n 救救我吧…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x551ca",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n この<ce:0/>に甘えたいんかのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 想向这个<ce:0/>撒娇吗…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x5520a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n 何か言いたげぢゃのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 好像想说什么呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55244",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n おまえさん、甘えん坊さんぢゃな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 你呀，真是个爱撒娇的家伙！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55288",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ふおっふおっふおっふお!\\n 好きなだけ甘えて良いぞい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呵呵呵呵！\\n 尽情撒娇吧！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x552d6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n こおりゃああっ!!\\n いい若いモンガ何を甘えとるんぢゃ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 这这这！！\\n 好好的年轻人撒什么娇！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55326",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n おまえさん、博学ぢゃのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 你呀，真是博学呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55364",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n 星座にゃ、そんな意味ガあったんぢゃのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 星座啊，原来有那样的意思呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x553b0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n わしの星座なんぞ、よく知っとったのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 我的星座啊，你居然知道呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x553fa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ふおっふおっふおっふお!\\n こんなとこで占い師さんに出会うとは\\n 思わんかったぞい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呵呵呵呵！\\n 在这种地方遇到占卜师\\n 真没想到啊！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55466",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n 花にゃ、そんな意味ガあったんぢゃのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 花啊，原来有那样的意思呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x554b0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひ、ひぇぇぇぇ!\\n 花をくれるなんて、おかまさんぢゃなかろうか…\\n こ、恐いのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哇、哇哇哇哇！\\n 给我花什么的，该不会是同性恋吧…\\n 好、好可怕啊…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x5551a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n 仲良きコトは美しきかな…\\n ぢゃのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 和睦相处是美好的…\\n 呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55564",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n 赤くなっとる赤くなっとる!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 脸红啦脸红啦！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x555a2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n 仲良し姉弟ぢゃのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦哦…\\n 是关系好的姐弟呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x555da",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ふおっふおっふおっふお!\\n いいもんじゃのお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呵呵呵呵！\\n 真是好事呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55620",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ふおっふおっふおっふお!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呵呵呵呵！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x55650",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n こおりゃああっ!!\\n おまえさんたち、わしを無視するんぢゃない!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 这这这！！\\n 你们这些家伙，别无视我！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x625d4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n つづき、聞きたいですう。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 我想听后续呢。\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62604",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <ce:0/>は、おんなの子なんですっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n <ce:0/>是女孩子呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6263a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <ce:0/>は、そういうおとこの子\\n キライなんですっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n <ce:0/>最讨厌那种男孩子了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62682",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃん、なんか、こわいですう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哥哥，有点可怕呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x626be",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お、おにいちゃん、ひょっとして\\n おこってるんですか…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哥、哥哥，难道在生气吗…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6270c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そ、そんなコトいわれても\\n <ce:0/>、わかんないですう!\\n うっ、うっ、うえ〜ん!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 就、就算你这么说，<ce:0/>也不懂呢！\n 呜、呜、哇～！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62772",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <ce:0/>のコト、好きなんですかぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你喜欢<ce:0/>吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x627a8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なんで、なにも言わないのかなぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 为什么，什么都不说呢？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x627e0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなコワイおにいちゃんなんて\\n キライですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那么可怕的哥哥，\n讨厌呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62828",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなコワイ目したって<ce:0/>は\\n どうってコトないんですっ!\\n バカにしないでくださいっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 就算用那么可怕的眼神看<ce:0/>，\n也没用呢！\n 别小看我！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62898",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そ、そんなにニラまれたら\\n <ce:0/>、ないちゃいますう…\\n うっ、うっ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 如、如果被那样瞪着，\n <ce:0/>会哭的…\n 呜、呜…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x628f4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん、そういうおシゴトなんですかぁ?\\n カッコイイですう。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐，是那种工作吗？\n 好帅呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6294e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <ce:0/>のおはなし聞きたいん\\n ですかぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 想听<ce:0/>的故事\n 吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6298c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n は、はずかしいですう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 好、好害羞呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x629ba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n な、なにも、しゃべらないですう…\\n そ、そんなコトしたら、おこられちゃいますう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 什、什么都不会说呢…\n 如、如果那样做，会被骂的…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62a22",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ダ、ダメですう…\\n なにも、しゃべれないんですう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 不、不行呢…\n 什么都不能说呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62a6c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 木ントですかぁ!\\n にんげんって木ントは、やさしいんですねぇ。\\n <ce:0/>、かんちガいしてました。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 是金呢！\n 人类给金，真是温柔呢。\n <ce:0/>误会了。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62ae2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 木ントですかぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 是金呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62b0a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あのお、<ce:0/>…\\n ううん、やっぱりなんでもないですう。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那个，<ce:0/>…\n 嗯，还是没什么事呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x62b58",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キャハハッ!\\n おねえちゃん、<ce:0/>のコト\\n しんぱいしてくれて、ありガとうございますう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呀哈哈！\n 姐姐，担心<ce:0/>，\n 谢谢呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x631e0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お、おねえちゃん、\\n <ce:0/>のコト、\\n なぐったりしないですよね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐、姐姐，\n 不会打<ce:0/>吧…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63238",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うっ、うっ…\\n このおねえちゃん、こわいですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜…\n 这个大姐姐，好可怕啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63280",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キャハハッ!\\n <ce:0/>も、好きなおとこの子ガ\\n いるんですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 嘎哈哈!\n <ce:0/> 也有喜欢的男孩子啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x632d4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キャハハッ!\\n <ce:0/>、そういうおはなし\\n 大好きなんですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 嘎哈哈!\n <ce:0/> 最喜欢这种话题啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63328",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キャハハッ!\\n <ce:0/>の好きな子教えてあげますう!\\n えっとお……やっぱりダメですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 嘎哈哈!\n 我告诉你 <ce:0/> 喜欢的人啦!\n 嗯……还是不行啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63394",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おねえちゃん、おはだキレイですう。\\n <ce:0/>、あこガれちゃいますう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 大姐姐，皮肤好漂亮啦。\n <ce:0/> 好羡慕啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x633ee",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n どっか、ぐあいでもわるいんですかぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哪里不舒服吗?\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6342a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お、おねえちゃん、こわいですう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 大、大姐姐，好可怕啦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63462",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <ce:0/>、おんなの子ですう…\\n ど、どうするつもりなんですかぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n <ce:0/> 是女孩子啦…\n 你、你想干什么啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x634b6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃん、かみの毛あおいですよお!\\n ごびょうきなんですかぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 大哥哥，头发是蓝色的哦!\n 是生病了吗?\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63510",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n !?!?!?!?!?\\n おにいちゃん、へんですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n !?!?!?!?!?\n 大哥哥，好奇怪啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6355a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <ce:0/>、おにいちゃんみたいに\\n おかしな人には、つきあってられないですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n <ce:0/> 不想和像大哥哥这样\n 奇怪的人交往啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x635ba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n へ、へんたいですう!\\n ち、ちかよらないでほしいですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 变、变态啦!\n 希、希望你不要靠近啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6360a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お、おにいちゃん、きもちわるいですう!\\n あまり、ちかよらないでほしいですう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 大、大哥哥，好恶心啦!\n 希望你不要太靠近啦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63670",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お、おにいちゃん…\\n きもちわるいですう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 大、大哥哥…\n 好恶心啦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x636b2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n みかけによらず、ムズかしいコトいうんですね!\\n かんしんしちゃいましたぁ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 外表看不出来，说话好深奥呢!\n 好佩服啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63714",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キャハハッ!\\n <ce:0/>のコトしんぱいして\\n くれてるんですねぇ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 嘎哈哈!\n 你在担心 <ce:0/> 呢!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6376a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんな、おはなしされても\\n おにいちゃんみたいな人じゃ\\n しんじられないですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 就算你这么说，\n 像大哥哥这样的人，\n 我才不信啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x637d2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そのおはなし、つまんないですう!\\n <ce:0/>、そんした気分ですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那个话题，好无聊啦!\n <ce:0/> 是那种心情啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x63828",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n おにいちゃんにきかなくっても\\n それくらいわかってますっ!\\n エラそうにいわないでくださいっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 就算大哥哥不说，\n 那种事我也懂啦!\n 请不要摆架子啦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x64c0c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n <ce:0/>、おんなの子ですう…\\n ど、どうするつもりなんですかぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n <ce:0/> 是女孩子啦…\n 你、你想干什么啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cd2e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n そんな誘惑じゃオトコ心は盗めなくってよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊啦!\n 那种诱惑可偷不走男人的心哦!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cd7a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お姉さんも誘惑しちゃっていいかしら?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 姐姐也可以诱惑你一下吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cdb6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 調子に乗るんじゃないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 别得意忘形！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cde6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 気をつけないと、お姉さんガ先に頂いちゃうわよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 如果不小心，姐姐会先把你吃掉哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ce2c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなに知りたい?\\n だったら試食でもさせて頂こうかしらぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那么想知道？那就让我来试吃一下吧？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ce80",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n オトコの価値は、ベッドの上で決まるのよ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 男人的价值，是在被窝里决定的哦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cec0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n たまには、子供も良いかしら…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 偶尔，小孩子也不错呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cef4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n どっちも、まだまだ子供ですわよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵呵！你们两个都还太嫩了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cf44",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 10年経ったら、また聞きにいらっしゃい!\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 10年后，再来问我吧！哦呵呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cf9c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あらあら!\\n 乱暴な子達ね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀呀！真是粗暴的孩子呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8cfd0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 木ントに激しい娘… 夜もそうなのかしら?\\n 想像しちゃうわね…\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对金钱这么激烈的女孩…晚上也那样吗？想象一下…哦呵呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d03e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n な、なんて暴力的な子達なの…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 多、多么暴力的孩子们啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d072",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 力づくでってこと…\\n 恐い子達…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 意思是靠蛮力…可怕的孩子…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d0aa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あらあら!\\n 二人は、そういう関係だったの!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀呀！你们两个原来是那种关系啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d0ee",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お姉さんの事も見つめて欲しいわぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 希望姐姐也能被注视啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d128",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n 男の子同士で見詰め合っちゃって…\\n お姉さんじゃダメ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊啦！男孩子之间互相凝视…姐姐不行吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d182",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n 可愛いボウヤ達だこと!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵呵！可爱的男孩们啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d1c8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n 二人一緒にたぶらかしていいかしらぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵呵！可以一起诱惑你们两个吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d21c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私を無視してんじゃないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 别无视我！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d24e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n 残念でしたわねぇ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵呵！真遗憾呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d290",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 気色わるいんだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 真恶心！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d2ba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら! 可愛いボウヤだこと…\\n 一人占めは良くないわよ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀！可爱的小男孩呢…\n 独占可不好哦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d30c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇ、ボウヤ…\\n そんな小娘より、お姉さんの方ガいいわよお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂，小男孩…\n 比起那种小丫头，姐姐我更好哦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d360",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇ、ボウヤ…\\n お姉さんより、その娘の方ガいいの?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂，小男孩…\n 比起姐姐，那个女孩更好吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d3ac",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 仲の宜しい母子だこと…\\n あ〜ら、母子じゃありませんの?\\n ごめんあそばせ! お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 关系很好的母子呢…\n 哎呀，不是母子吗？\n 对不起啦！哦呵呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d426",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ボウヤ、そんな娘よりも私にしない?\\n 優しくしてあげるわよ…\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 小男孩，比起那种女孩，不如选我吧？\n 我会温柔对待你的哦…\n 哦呵呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d492",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n たまには、可愛い男の子も良いね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 偶尔，可爱的男孩子也不错呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d4ca",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n これで、オトコを殺すテクニックさえ仕込めば…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 这样，只要再学会杀男人的技巧…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d50e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんなんで勝ったと思うんじゃないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 别以为这样就算赢了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d54a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ま、負けたわ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 嘛，输了…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d570",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ま、まさか、そんな事って…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 怎、怎么可能，这种事…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d5a2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私より奇麗かも知れない…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 可能比我还漂亮…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d5d2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n 可愛いボウヤ達だこと…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀！\n 可爱的小男孩们呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d60c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n 可愛いボウヤ達だこと!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵呵！可爱的男孩们啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d652",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら! 可愛いボウヤ達だこと…\\n 一人占めは良くないわよ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀！可爱的小男孩们呢…\n 独占可不好哦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d6a6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇ、ボウヤ達…\\n そんな小娘より、お姉さんの方ガいいわよお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂，小男孩们…\n 比起那种小丫头，姐姐我更好哦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d6fc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ねぇ、ボウヤ達…\\n お姉さんより、その娘の方ガいい?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喂，小男孩们…\n 比起姐姐，那个女孩更好？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d748",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 一人くらいは私ガ面倒見ても宜しくってよ!\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 至少让我照顾一个也好嘛！\n 哦呵呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d7a0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n まるでハーレムじゃない!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵呵！\n 简直像后宫一样！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d7e8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n 可愛いお嬢ちゃん達だこと…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀！\n 可爱的小姐们呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d826",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n な、なんなの、この子達…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 这、这些孩子是什么啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d856",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n 後ろの子、男の子なんじゃなぁい?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀！\n 后面的孩子，是男孩子吧？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d89a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n 選り取り見取りじゃない!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊啦！\n 这不是任君挑选吗！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d8d6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n これならハーレムガ造れるじゃない!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊啦！\n 这样就能建个后宫了呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d91c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " お姉さんと遊んでみたいの?\\n<c8:2/>はい\\nいいえ\\n<c9/><c2/>",
+    "zh": " 想和姐姐玩玩看吗？\n<c8:2/>是\n否\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d952",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n 冗談よ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵！\n 开玩笑的！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d98a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なぁに、本気になってんだい!\\n 冗談だよ冗談!\\n 調子にのんじゃないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 什么啊，当真了！\n 开玩笑的开玩笑！\n 别得意忘形啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8d9ea",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら、お姉さんに興味ないの?\\n もしかして、男の子にしか興味ないなんてコト\\n だったりして…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊啦，对姐姐没兴趣吗？\n 该不会，只对男孩子有兴趣吧…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8da60",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私に興味ガないなんて貴方ひょっとして…\\n 気持ち悪いわね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对我没兴趣？你该不会…\n 真恶心呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dab2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " 本当は、私の何ガお望みかしらぁ?\\n<c8:4/>力\\n愛\\n体\\n特に何も…\\n<c9/><c2/>",
+    "zh": " 其实，你想要我的什么呢？\n<c8:4/>力量\n爱\n身体\n没什么特别的…\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8daf8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 人に頼るんじゃないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 别依赖别人啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8db26",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " その時まで私の事、覚えていてくれる?\\n<c8:3/>はい\\nいいえ\\n先の事はわからない\\n<c9/><c2/>",
+    "zh": " 到那时，你还会记得我吗？\n<c8:3/>是\n否\n将来的事说不准\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8db7a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 今から楽しみね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 好期待呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dba2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ふんっ!\\n 口から出任せもいいトコだね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哼！\n 信口开河也要有个限度啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dbe2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n そんなに真面目に答えて下さらなくても\\n 宜しくってよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 啊啦！\n 不用那么认真地回答也可以\n 请多关照啦！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dc3c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " ねぇ、どこら辺に興味ガあるの?\\n<c8:4/>力\\n心\\n体\\n興味はない\\n<c9/><c2/>",
+    "zh": " 喂，对哪方面有兴趣？\n<c8:4/>力量\n心灵\n身体\n没兴趣\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dc80",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " さぁ、何でも質問して下さって結構ですわよ。\\n<c8:4/>年齢は?\\n職業は?\\n恋人は?\\n特に無いわ\\n<c9/><c2/>",
+    "zh": " 来吧，尽管问什么都行哦。\n<c8:4/>年龄是？\n职业是？\n恋人是？\n没什么特别的\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dce2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そ、それは、言えないわよ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那、那个，不能说啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dd14",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 見てわかりませんの?\\n 悪魔ですわよ、ア・ク・マ!\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 看不出来吗？\n 是恶魔哦，恶·魔！\n 哦呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8dd76",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 恋人? 愚問ね、グ・モ・ン…\\n なにしろ世界中のオトコは私のモノですもの!\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 恋人？愚蠢的问题呢，愚·问…\n 因为全世界的男人都是我的东西啊！\n 哦呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ddf0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あら、そうですの?\\n それは、寂しいコトですわね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀，是这样吗？\n 那真是寂寞的事呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8e732",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " どう? 私を「肥やし」にしてみない?\\n<c8:3/>お願いするよ!\\nボクはボクしか愛せないのさ、ゴメンよ!\\nてめぇなんざ本当に肥やしになっちまえ!\\n<c9/><c2/>",
+    "zh": " 怎么样？要不要把我当「肥料」试试？\n<c8:3/>拜托了！\n我只爱我自己，抱歉啊！\n你这家伙真的去当肥料吧！\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8e7c4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なぁに、本気にしてんだい?\\n ガキを本気で相手にするワケないだろ!\\n もう少し考えてからしゃべりな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 什么，你当真了？\n 我才不会认真对付小鬼呢！\n 多想想再说话吧！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8e840",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n 貴方、面白い事言うじゃなぁい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵！\n 你说得真有趣啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8e9f6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " そんな事じゃ、恋人も出来ないんじゃなぁい?\\n<c8:3/>悪かったね!\\nそ、そんな事ないさ!\\nアンタに言われる筋合いはないね!\\n<c9/><c2/>",
+    "zh": " 这样可交不到恋人哦？\n<c8:3/>对不起！\n才、才不是呢！\n你没资格说我！\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ea74",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n その口の利き方、気に入らないね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你说话的方式，我不喜欢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8eaac",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " 次は、右から撮ってくださらない?\\n<c8:2/>もうフィルムガ残ってないね!\\nなんで右からなんだい?\\n<c9/><c2/>",
+    "zh": " 下次能从右边拍吗？\n<c8:2/>胶卷已经没了！\n为什么要从右边？\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8eb10",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n 気になさらなくて結構よ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦呵呵呵！\n 不用在意！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8eb58",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n フィルム切らすなんて\\n カメラマンの風上にもおけないね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 胶卷用光了\n 连摄影师的门槛都够不着呢！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8eba8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 知らないの?\\n 右側からだと、より知的な表情になるのよ。\\n 知的な美女…… なんて素晴らしいの!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你不知道吗？\n 从右边拍的话，表情会更显智慧哦。\n 智慧美女…… 多么美妙啊！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ec20",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n つまんないコト聞くんじゃないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 别问无聊的事！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ec58",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " お姉さんと遊んでみたい?\\n<c8:2/>そういう訳じゃ…\\nは、はい…\\n<c9/><c2/>",
+    "zh": " 想和姐姐玩吗？\n<c8:2/>不是那个意思…\n是、是的…\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ec9c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " それって、お姉さんの事、誘ってるのかしらぁ?\\n<c8:2/>そういう訳じゃ…\\nは、はい…\\n<c9/><c2/>",
+    "zh": " 那是在邀请姐姐吗？\n<c8:2/>不是那个意思…\n是、是的…\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ed9e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私ガお手本を見せて差し上げるわ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我来给你示范一下…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8edd6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " さぁ、大人の女を教えてア・ゲ・ル…\\n<c8:3/>教えてもらう\\n断る\\n逆に漢を教えてやる\\n<c9/><c2/>",
+    "zh": " 来吧，让我教你什么是成熟女人…\n<c8:3/>请指教\n拒绝\n反过来教你什么是男人\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ee2e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あら、真面目じゃなぁい!\\n もしかして本気でその娘のコト…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀，好认真啊！\n 莫非你真心对那个女孩…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ee80",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私じゃ不満だってのかい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 对我不满意吗！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8eeb0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 10年後にまた会ったら教えてちょうだい!\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 十年后再见面时告诉我吧！\n 哦呵呵呵！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ef08",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n な、なにをしようってんだい…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你、你想干什么…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8ef3c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " どちらガ先でも宜しいですわよお…\\n<c8:3/>じゃあボクからお願いしようかな!\\nボクは遠慮しとくよ!\\nてめぇなんかに食われてたまるかって!\\n<c9/><c2/>",
+    "zh": " 谁先来都可以哦…\n<c8:3/>那我来先吧！\n我客气一下！\n才不会被你吃掉呢！\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8efc8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 友達に譲るなんて、意外と遠慮深いのね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 让给朋友，意外地谦让呢…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f006",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n きっと欲求不満なのね、可哀相に…\\n あまり禁欲的な生活ばかりしていると\\n 頭ガおかしくなってしまうから\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 一定是欲求不满吧，真可怜…\n 如果总是过禁欲的生活\n 脑子会变得不正常的\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f084",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " もっと欲望に忠実に生きた方ガ良いんじゃない?\\n<c8:3/>それじゃ犬猫と同じじゃないか!\\nそれも良いかもね…\\nアタシの欲望はね…悪魔をいたぶる事さ!\\n<c9/><c2/>",
+    "zh": " 不是应该更忠实于欲望地生活吗？\\n<c8:3/>那和猫狗有什么区别！\\n那样也不错呢…\\n我的欲望是…折磨恶魔！\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f11a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n その通りじゃありませんこと?\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 难道不是这样吗？\\n 哦呵呵呵呵！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f166",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私から見りゃそんなもんさ!\\n なぁに偉ぶってんだい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 在我看来就是那样！\\n 装什么了不起啊！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f1b2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 貴方ガどう変わるか楽しみね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 我很期待你会怎么改变呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f1e6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お〜っほっほっほっ!\\n まさか本気にするとは思わなかったわ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哦呵呵呵呵！\\n 没想到你当真了！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f23a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 上等だね、やってもらおうじゃないか!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 好啊，那就来试试吧！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f276",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら!\\n 男の子同士で見詰め合っちゃって…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哎呀！\\n 两个男孩子互相盯着看…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f2ba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " お姉さんじゃダメなのかしらぁ?\\n<c8:3/>そういう訳じゃ…\\n僕らの関係は特別だから…\\nいいですよ…\\n<c9/><c2/>",
+    "zh": " 姐姐不行吗？\\n<c8:3/>不是那个意思…\\n因为我们的关系很特别…\\n好啊…\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f320",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あ〜ら、どういう訳なのかしらぁ?\\n 気になるわねぇ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哎呀，是什么原因呢？\\n 真让人在意呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f56a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " オトコを殺す極意… 会得してみない?\\n<c8:2/>ぼ、僕…男だから…\\n教えて下さい!\\n<c9/><c2/>",
+    "zh": " 杀男人的秘诀…想学吗？\\n<c8:2/>我、我是男的…\\n请告诉我！\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f5c0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私ガ先生じゃ気に入らないってのかい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 你不满意我当老师吗！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f5fc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n だけど…\\n 一体、誰に使うつもり?\\n 気になるわねぇ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 但是…\\n 你到底打算对谁用？\\n 真让人在意呢…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f64a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほ、本気なのかい?\\n 気持ち悪い子だね…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 你、你是认真的吗？\\n 真是个恶心的孩子…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f7de",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あっ、でも、あまり有名になったりすると\\n お姉さんの事なんか、忘れちゃうんじゃない?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 啊，但是，如果太出名的话\\n 会不会忘记姐姐的事呢？\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f84a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " どうなのかしらぁ?\\n<c8:3/>そんな事はない\\nその通り\\nわからない\\n<c9/><c2/>",
+    "zh": " 会怎么样呢？\\n<c8:3/>没有那种事\\n正是如此\\n不知道\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f890",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " 貴方達の様に可愛い娘なら大歓迎よ、どう?\\n<c8:2/>お願いしま〜す!\\nじょ、冗談だってば!\\n<c9/><c2/>",
+    "zh": " 像你们这样可爱的女孩的话，非常欢迎哦，怎么样？\\n<c8:2/>拜托了！\\n开、开玩笑的啦！\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f9ac",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そうそう! ちょっとお聞きして宜しいかしらぁ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 对了对了！可以稍微问一下吗？\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8f9f2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " 貴方、将来的に結婚とか考えてるの?\\n<c8:3/>いつかはしたい\\nすぐにでもしたい\\nするつもりはない\\n<c9/><c2/>",
+    "zh": " 你将来考虑结婚吗？\\n<c8:3/>总有一天想\\n现在就想\\n不打算\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8fa56",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n そんな事言ってると\\n あっと言う間に婚期を逃しちゃうわよ!\\n お〜っほっほっほっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 说那种话的话\\n 转眼间就会错过婚期哦！\\n 哦呵呵呵呵！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90278",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なら自己紹介しなくちゃならないわね。\\n 私は、<ce:0/>…\\n この名前、忘れたら死刑よ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 那就必须自我介绍了呢。\\n 我是，<ce:0/>…\\n 这个名字，忘了的话就死刑哦…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x902e2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私の名前を知らないなんて…\\n なんて失礼な子なんだい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 居然不知道我的名字…\n 真是个没礼貌的孩子！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90330",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 全く頭に来る子だね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 真让人火大！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x9035c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " 何か言う事ガあんじゃないのかい!\\n<c8:3/>何か老けたんじゃない?\\nごめんなさい\\n特に無い\\n<c9/><c2/>",
+    "zh": " 你没什么要说的吗？\n<c8:3/>你是不是有点老了？\n对不起\n没什么特别的\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x903ba",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n …貴方、こんな言華御存知?\\n ゴメンで済めば閻魔はいらないんだよっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n …你知道这句话吗？\n 如果道歉就能解决，就不需要阎魔了！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90416",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なら、もう殺しても良いのかしらっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 那么，我现在就可以杀了你吧！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90450",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あまりナメたコトしてると…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 如果你再这么小看我…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90482",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " お仕置きするよっ!\\n<c8:3/>是非して欲しい\\n嫌だ\\n逆にしてやる\\n<c9/><c2/>",
+    "zh": " 我要惩罚你哦！\n<c8:3/>请务必这么做\n不要\n反过来惩罚你\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x904c6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n き、気持ち悪い子…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你这个恶心的孩子…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x904f0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n いいんだね…\\n だったら、後悔するんじゃないよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你确定吗…\n 那你可别后悔！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90538",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 拒否するなんて、潔くないね…\\n そういう子は、嫌いなんだよ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 拒绝什么的，真不干脆啊…\n 我讨厌你这种孩子！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x9058c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 貴方のって、どんなお仕置きかしら?\\n ちょっと気になるわね。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你的惩罚，是什么样的呢？\n 我有点好奇呢。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x905e0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 貴方、気に入ったわ!\\n 貴方に<c1d:9/><ce:4/><c1d:1/>のカード、<c1d:9/><ce:5/>枚<c1d:1/>\\n あげるわね!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我喜欢你！\n 给你<c1d:9/><ce:4/><c1d:1/>的卡片、<c1d:9/><ce:5/>枚<c1d:1/>\n 送给你吧！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x9064a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n それから<c1d:9/>フリータロット<c1d:1/>、<c1d:9/><ce:6/>枚<c1d:1/>\\n サービスよ、サービス!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 还有<c1d:9/>自由塔罗牌<c1d:1/>、<c1d:9/><ce:6/>枚<c1d:1/>\n 这是服务哦，服务！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x906aa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n あら、貴方欲張りすぎよ。\\n カードガいっぱいじゃない。\\n それも、ある意味カード地獄よね。\\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\\n 残念だけど、今回は諦めるコトね!\\n それじゃ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哎呀，你太贪心了。\n 你的卡片不是已经很多了吗？\n 那在某种意义上也是卡片地狱呢。\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\n 很遗憾，这次就放弃吧！\n 那么…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90760",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お姉さんのコト、忘れちゃダメよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 不要忘了姐姐我哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90798",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 貴方、気に入ったわよ!\\n 特別に<c1d:9/>契約<c1d:1/>してあげるわ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我很中意你哦！\n 特别地跟你<c1d:9/>契约<c1d:1/>吧！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x907ea",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n と思ったけど、貴方<c1d:9/>まだ経験ガ浅そう<c1d:1/>ね…\\n 残念だけど、今回は諦めてちょうだい…\\n そのかわり…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我本来这么想的，但你<c1d:9/>经验似乎还很浅<c1d:1/>呢…\n 很遗憾，这次就放弃吧…\n 不过作为补偿…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90868",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n もうちょっと強くなったら、契約してあげるから\\n その時また、お姉さんを喜ばせてちょうだい。\\n 待ってるわ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 等你再变强一点，我就跟你签订契约\n 到时候，再让姐姐我开心吧。\n 我等着哦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90918",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n これで、貴方と私は、ただならぬ仲…\\n という訳ね。\\n 逃ガさないわよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 这样，你我就是特别的关系了…\n 就是这样呢。\n 我不会让你逃走的哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x90cea",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お姉さんのコト、忘れちゃダメよ。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 不要忘了姐姐我哦。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacc4c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガァーー!\\n オレサマ チヨット 怒リ気味\\n コレ以上 怒ラセル オマエ 食ウ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 嘎啊啊！\n 本大爷有点生气了\n 再惹我生气就吃了你！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xaccb4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " オマエ ドコ ウマイ?\\n<c8:4/>腕\\n脚\\n脳\\n美味しくない\\n<c9/><c2/>",
+    "zh": " 你哪里好吃？\\n<c8:4/>手臂\\n腿\\n脑\\n不好吃\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xaccf2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n アオーン!\\n オマエ 腕 オススメ!\\n イツカ 食ワセロ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嗷呜！\\n 你的手臂推荐！\\n 总有一天吃掉你！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacd44",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガァーー!\\n オマエ 嘘ツキ 腕 マズソウ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嘎啊！\\n 你撒谎手臂难吃！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacd88",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ヌゥ…\\n 確カニ 脚 肉タクサン ウマソウ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嗯…\\n 确实腿肉多好吃！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacdcc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n グゥ…\\n 確カニ ウマソウ…\\n デモ 臭ソウ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 咕…\\n 确实好吃…\\n 但是臭…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xace12",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ヌゥ…\\n オレサマ ソレ 食ッタコトナイ!\\n 興味シンシン!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嗯…\\n 本大爷没吃过那个！\\n 兴趣满满！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xace66",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガァーー!\\n オレサマ 脚 好キ\\n 脳 イラナイ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嘎啊！\\n 本大爷喜欢腿\\n 脑不要！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xaceb0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ヌゥ…\\n 確カニ オマエ マズソウ…\\n オマエ 正直モノ\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嗯…\\n 确实你难吃…\\n 你老实人\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacf00",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガァーー!\\n オマエ 嘘ツキ!\\n オレサマ オマエ マルカジリ! \\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嘎啊！\\n 你撒谎！\\n 本大爷咬死你！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacf5a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガァーー!\\n オレサマ <ce:0/> オマエ 人間\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嘎啊！\\n 本大爷 <ce:0/> 你人类\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacf9c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " オマエ ドッチ 偉イト 思ウ!\\n<c8:3/><ce:0/>\\n人間\\n同じくらい\\n<c9/><c2/>",
+    "zh": " 你觉得谁更伟大！\\n<c8:3/><ce:0/>\\n人类\\n差不多\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xacfe0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n アオーン!\\n オレサマ 偉イ 当リ前\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嗷呜！\\n 本大爷伟大当然！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xad01c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n アオーン!\\n オレサマ オマエ 同ジ\\n ミンナ 平等 悪クナイ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嗷呜！\\n 本大爷和你一样\\n 大家平等不错！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xad074",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガァーー!\\n オマエ オレサマ 怒ラセル\\n 恐イモノ知ラズ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嘎啊！\\n 你惹怒本大爷\\n 不知恐惧！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xad0c8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " オマエ 恐イモノ ナイカ?\\n<c8:4/>無い\\n母親ガ恐い\\n悪魔ガ恐い\\nまんじゅう恐い\\n<c9/><c2/>",
+    "zh": " 你没有害怕的东西吗？\\n<c8:4/>没有\\n怕妈妈\\n怕恶魔\\n怕包子\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xad11e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n グゥ…\\n ナラ 仕方ナイ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 咕…\\n 那样没办法…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xad150",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ガァーー!\\n ソレナラ オレサマ オマエ 恐ガラセル!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嘎啊！\\n 那样的话本大爷吓唬你！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xad19e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n アオーン!\\n オレサマ 母親 恐イ\\n オレサマ オマエ オナジ オナジ\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 嗷呜！\\n 本大爷怕妈妈\\n 本大爷和你一样一样\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xad1fc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n グゥ…\\n 母親 恐イ 思イ出ス…\\n 嫌ナ 思イ出…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 咕…\\n 怕妈妈的回忆…\\n 讨厌的回忆…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1916",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n うおまえの匂いはぁぁ水死体の匂いでしかないっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜呜呜呜呜…\\n 你的气味啊啊只是水尸体的气味！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1970",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 赤不浄…黒不浄…カニバリズム…\\n うおまえは、全ての穢れの根元でしかないっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 红污秽…黑污秽…食人…\n 你才是所有污秽的根源啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd19e8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 山ガ燃えている…\\n うおまえのせいだっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 山在燃烧…\n 都是你的错啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1a3c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 知ってるぞ…\\n うおまえは、ズルイ奴だっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 我知道的…\n 你是个狡猾的家伙啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1a92",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 南極点の真上に輝く見える事無き星の土に\\n うおまえを埋めてくれるううっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 在南极点正上方闪耀的看不见的星星的土里\n 把你埋掉啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1b06",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n どんな高台からも見下ろす事のできない平野に\\n うおまえの首を吊るしてやるううっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 在从任何高地都无法俯视的平原上\n 吊死你啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1b82",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 決して破れる事なき子宮に\\n うおまえを閉じ込めるうう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 在永不破裂的子宫里\n 把你关起来啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1be4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 言華の溜池の中から生まれる怪物の餌食に\\n してくれるううっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 让你成为从言华池中诞生的怪物的饵食啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1c4c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 決して融ける事無き狂気の氷の中に\\n 漬け込んでくれるううっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 把你泡在永不融化的疯狂之冰里啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1cb4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n だ、だめだ、そ、そこまで来ているっ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 不、不行了、那、那里已经来了!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1d08",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおおお…\\n 無くなるっ!!\\n 全て無くなるぞっ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦哦…\n 消失了!!\n 一切都要消失了啊!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1d5e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 音ガ…あの音ガ聞こえるっ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 声音…那个声音听到了!!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1da8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 赤の他人の赤とは、何の事なんだぁぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 陌生人的'赤'到底是什么啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1dfa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n うおまえの目の中に閉じ込められるうう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 要被关进你的眼睛里啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1e4e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 不断の音の湖に溺れるのは、もう嫌なんだぁぁ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 已经讨厌溺死在不断的声音之湖里了!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1ea8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 大きさを持たない黒い色の様な、あの音の湖…\\n うおれはぁぁぁぁっ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 那个没有大小的黑色般的声音之湖…\n 我啊啊啊啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1f18",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 溜まるう…どんどん溜まってゆく…\\n 黄色い青ガぁぁぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 在积累…不断积累…\n 黄色的蓝啊啊啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1f7c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 歌う子宮の声には、もうウンザリなんだぁぁ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 已经厌倦了歌唱的子宫的声音了…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd1fd4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 取り止めもなく流れつづける色の洪水に\\n 飲み込まれてゆくうう…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 被无休止地流动的颜色的洪水\n 吞没下去啊…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2040",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 事象の地平線ガ俺をおお…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜、呜哦哦哦哦…\n 事件视界把我哦哦…\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2788",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n そのキムチの臭いを発する穢らわしき耳の穴は\\n 小人の住まいにしかすぎぬかぁぁ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 呜哦哦哦哦哦…\n 那个发出泡菜臭味的污秽耳洞\n 不过是小人的住所而已啊!\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2802",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " うおまえっ、明日なのかぁっ!\\n<c8:3/>そうだ\\n違う\\n何を言ってるのか解らない\\n<c9/><c2/>",
+    "zh": " 你，是明天吗！\\n<c8:3/>是的\\n不是\\n不知道你在说什么\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2854",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひゃぁっひゃっひゃっひゃっ!!\\n 道は黄色い…くっくっくっ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哈哈哈哈哈!!\\n 道路是黄色的…呵呵呵…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd28a8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n うおれは、進みたくないいいい!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜、呜呜呜呜…\\n 我，不想前进！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd28f4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なるほどおおお!\\n うおまえは、黄色い青の敵なのかぁぁあ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 原来如此啊！\\n 你，是黄蓝的敌人吗！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2946",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n うおまえなど、黄色い青に永遠の吹き溜まりへと\\n 送られるガ良いっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜呜呜呜…\\n 你这种人，被送到黄蓝的永恒垃圾堆\\n 才好！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd29b4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うおまえはぁぁあ!\\n 堪らず飛び出す汗の国から来たのだなぁぁあ!!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 你啊啊啊！\\n 是从忍不住跳出来的汗之国来的吧！！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2a0e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 騙されるな… 奴は、うおまえの家にも\\n 食らいつくのだからぁぁあ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜、呜呜呜呜…\\n 别被骗了… 那家伙，连你家\\n 也会咬住的啊…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2a7e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 枯れる事無き言華の泉の果てにある…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 在永不枯萎的言华之泉的尽头…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2ab8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " それは、なんだぁぁ!\\n<c8:4/>ありガとう\\n虫\\n黄色い青\\n暗き色の思惑\\n<c9/><c2/>",
+    "zh": " 那是什么啊！\\n<c8:4/>谢谢\\n虫子\\n黄蓝\\n暗色的阴谋\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2b02",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ひゃぁっひゃっひゃっひゃっ!!\\n 腰の骨の砕かれた音の果てにもそれガある…\\n くっくっくっ…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 哈哈哈哈哈!!\\n 在腰骨碎裂的声音的尽头也有那个…\\n 呵呵呵…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2b76",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 味の無いガムのカスはぁぁ\\n 決してゴミ箱に棄ててはいけないのだぁぁ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜呜呜呜…\\n 无味的口香糖渣啊\\n 绝对不能扔进垃圾桶的！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2be6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 食らいつく…五億トンもの虫の大群ガ…\\n 山をも食らい尽くすと言うのに…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜、呜呜呜呜…\\n 咬住…五亿吨的虫群啊…\\n 连山都能吃光…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2c5a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 明け方に見た夢の覚める間の時間に\\n うおまえの六つの脚をもいでやる!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜呜呜呜…\\n 在黎明时做的梦醒来的瞬间\\n 我要扯掉你的六条腿！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2cca",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うおまえ、知っているのか…\\n やめておくのだぁぁあ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 你，你知道吗…\\n 最好停下啊！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2d16",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n う、うおおおおお…\\n 黄色い青、決して緑ではない…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜、呜呜呜呜…\\n 黄蓝，绝不是绿色…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2d60",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 暗き色…\\n 黄色い青を打ち倒す…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 暗色…\\n 打倒黄蓝…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2d98",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ぬおおおおおお…\\n 知るものかぁぁ!\\n うおまえなど、カタツムリの耳アカに過ぎぬ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 呜呜呜呜…\\n 谁知道啊！\\n 你这种人，不过是蜗牛的耳屎！\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2e02",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 内なるヤマアラシの針に心を痛めつつ\\n 赤き山々の影に音無き音の向こう側で\\n むしろ汚らしい男の言華によって開く扉を超え\\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\\n 更に進んで行く…\\n 行く…\\n い、いや、むしろ進まれる…\\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\\n 物心のついたカタツムリの殻の裏側に住み着いた\\n 小人によってしか造られる事の無い\\n 重さ五億トンの基石に刻まれた、その名前…\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\\n 内心被豪猪的刺刺痛的同时\\n 在红山的影子下声音无声的另一边\\n 越过由肮脏男人的言华打开的门\\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\\n 进一步前进…\\n 去…\\n 不、不如说被推进…\\n<c6/><c2/><c1d:11/><ce:0/><c1d:1/>\\n 在懂事的蜗牛壳背面定居的\\n 只有小人才能制造的\\n 重五亿吨的基石上刻着的，那个名字…\\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd2f70",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": " その名前… それは、なんだぁぁ!\\n<c8:3/><c12/><c20/><c13/>\\n<ce:0/>\\n黄色い青\\n<c9/><c2/>",
+    "zh": " 那个名字… 那是什么啊！\\n<c8:3/><c12/><c20/><c13/>\\n<ce:0/>\\n黄蓝\\n<c9/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1a564",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:1/>すでに調べ終わっている。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:1/>已经调查过了。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1a64c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:1/>中には何もなかった。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:1/>里面什么都没有。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1a768",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>を<ce:1/>個見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>发现了<ce:1/>个。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1a8c8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>を<ce:1/>個見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>发现了<ce:1/>个。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1aa2c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>を<ce:1/>個見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>发现了<ce:1/>个。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1acf0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>を<ce:1/>枚見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>发现了<ce:1/>张。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1ae50",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>を<ce:1/>枚見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>发现了<ce:1/>张。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1afa4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>円見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>日元，发现了。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1b0e8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>円見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>日元，发现了。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1ab8c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>アイテムボックス\\n<c20/><c1d:9/><ce:0/><c1d:1/>を<ce:1/>個見つけた。<c6/><c2/>",
+    "zh": "<c1d:11/>道具箱\\n<c20/><c1d:9/><ce:0/><c1d:1/>发现了<ce:1/>个。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1b88c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>効果終了\\n<c20/><c1d:9/><ce:0/><c1d:1/>の効果ガ終了しました。<c6/><c2/>",
+    "zh": "<c1d:11/>效果结束\\n<c20/><c1d:9/><ce:0/><c1d:1/>的效果结束了。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:92:0x1b980",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>効果終了\\n<c20/><c1d:9/><ce:0/><c1d:1/>の効果ガ終了しました。<c6/><c2/>",
+    "zh": "<c1d:11/>效果结束\\n<c20/><c1d:9/><ce:0/><c1d:1/>的效果结束了。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1117_2d:0xa9c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>仮面党員<c1d:1/>\\n<c20/>ジヨーカー様はこの上にいらっしゃるのか?<c5:15/>\\n<c20/>山頂から銃声や砲声ガ聞こえてくる…<c5:20/>\\n<c20/>まだこの上では戦闘ガ続いているんだ。<c6/><c2/><c1d:11/>仮面党員<c1d:1/>\\n<c20/>しかし、山道には奴等ガいて、これ以上は進めん。<c5:15/>\\n<c20/>ケーブルカーも既に占拠されている。<c5:10/>\\n<c20/>どうすればいいんだ!?<c6/><c2/>",
+    "zh": "<c1d:11/>假面党员<c1d:1/>\\n<c20/>Joker大人在这上面吗?<c5:15/>\\n<c20/>山顶传来枪声和炮声…<c5:20/>\\n<c20/>这上面还在激战。<c6/><c2/><c1d:11/>假面党员<c1d:1/>\\n<c20/>可山道上有那些家伙，过不去。<c5:15/>\\n<c20/>缆车也已被占领。<c5:10/>\\n<c20/>该怎么办才好!?<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:77:0x2e2c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>ポルターガイスト<c1d:1/>\\n<c20/>君ガぼく?\\n<c20/>そういえば、似てる気ガするよ。\\n<c20/>よし、いっしょにイタズラしちゃおう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/>骚灵<c1d:1/>\n<c20/>你是我？\n<c20/>这么说，我们还挺像的。\n<c20/>好，一起去恶作剧吧！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:77:0x4660",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>テンジクトクベイ<c1d:1/>\\n<c20/>俺は天竺徳兵衛。\\n<c20/>異国帰りの妖術を、とくと見せてやろう。\\n<c6/><c2/>",
+    "zh": "<c1d:11/>天竺德兵卫<c1d:1/>\n<c20/>我乃天竺德兵卫。\n<c20/>让你见识见识从异国带回来的妖术。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:84:0x979c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:5/>双華<c20/>貴子(ふたば<c20/>たかこ)<c1d:1/>\\n<c6/><c2/>どれにしようかな?第1問\\n<c8:3/><c10:1/>魔法の噂\\n武器の噂\\n道具の噂\\n<c9/><c2/>どれにしようかな?第2問\\n<c8:4/><c10:1/><c10:3/>魔法の噂\\n武器の噂\\n<c10:2/>道具の噂\\nあの噂\\n<c9/><c2/>どれにしようかな?第3問\\n<c8:5/>魔法の噂\\n<c11:1/>武器の噂\\n<c10:2/>道具の噂\\n<c11:3/>あの噂\\n<c10:4/>この噂\\n<c9/><c2/>どれにしようかな?第4問\\n<c8:6/><c10:1/>魔法の噂\\n<c10:2/>武器の噂\\n道具の噂\\nあの噂\\n<c11:3/>この噂\\n<c11:4/>どんな噂\\n<c9/><c2/>12345678901234567890123\\nあいうえおかきくけこさしすせそたちつてとなにぬ\\nねのはひふへほまみむめもやわゆをよらりるれろん\\nABCDEFGHIJKLMNOPQRSTUVW\\n<c6/><c2/>",
+    "zh": "<c1d:5/>双华<c20/>贵子(ふたば<c20/>たかこ)<c1d:1/>\n<c6/><c2/>选哪一个？第1题\n<c8:3/><c10:1/>魔法传闻\n武器传闻\n道具传闻\n<c9/><c2/>选哪一个？第2题\n<c8:4/><c10:1/><c10:3/>魔法传闻\n武器传闻\n<c10:2/>道具传闻\n那个传闻\n<c9/><c2/>选哪一个？第3题\n<c8:5/>魔法传闻\n<c11:1/>武器传闻\n<c10:2/>道具传闻\n<c11:3/>那个传闻\n<c10:4/>这个传闻\n<c9/><c2/>选哪一个？第4题\n<c8:6/><c10:1/>魔法传闻\n<c10:2/>武器传闻\n道具传闻\n那个传闻\n<c11:3/>这个传闻\n<c11:4/>哪个传闻\n<c9/><c2/>12345678901234567890123\nあいうえおかきくけこさしすせそたちつてとなにぬ\nねのはひふへほまみむめもやわゆをよらりるれろん\nABCDEFGHIJKLMNOPQRSTUVW\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:84:0x17048",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:1/><c5:0/><c1e:0/>シナリオビットいつもオフ<c6/>\\n",
+    "zh": "<c1d:1/><c5:0/><c1e:0/>剧情标志恒为关闭<c6/>\n",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x92aa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:9/><c13/>は、工事現場の音マネをした。<c7/><c1d:1/>\\n<c6/><c2/>",
+    "zh": "<c1d:9/><c13/>模仿了建筑工地的声音。<c7/><c1d:1/>\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x1508c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なになに、おにいちゃん!\\n それ、なんのおと?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哥哥哥哥！\n 那是什么声音？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x24d9c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 奇妙な音を出しますね。\\n 貴方、本当に人間なのですか?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你发出了奇妙的声音呢。\n 你，真的是人类吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x33f98",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ふーん、なるほどねぇ…\\n オマエ、結構上手いな!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦，原来如此…\n 你还挺厉害的嘛！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x4387a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 私の気を引こうというお積もりですか?\\n ふっ… いいでしょう。\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你是想引起我的注意吗？\n 哼… 好吧。\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x52f88",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ほほう…\\n もっとやっておくれ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哦哦…\n 还想再来一次！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6213a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n もっと聞いてみたいですう!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 我还想再听！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x6f6f4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n 本当に人間かしら?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你真的是人类吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x7d0d0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n なにそれ!\\n もう一回やって!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 什么啊！\n 再来一次！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x8baac",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n お姉さんと遊んでみたい?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 想和姐姐玩吗？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0x97582",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ナント 器用ナ 人間!\\n シカシ 所詮ハ 人ノ技\\n モット 修行ヲ 積ムガ良イ\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 区区人类 竟如此灵巧！\n 然而 终究是 人之技\n 尚需 好好 修行！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xa477a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n ヌゥ…\\n オマエ ナカナカ 芸達者\\n モットヤレ\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 嗯…\n 你颇有几分才艺\n 继续！\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xb408c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n キミ、キミ!\\n それ、なんのおとだ木〜?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 你、你！\n 那是什么声音啊～？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xc28ac",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n にゅにゅにゅ!\\n どこからきこえてくるにゃ!?\\n キミ、しってるかにゃ?\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 喵喵喵！\n 声音从哪里来的喵！？\n 你、知道吗喵？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd0902",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/><ce:0/><c1d:1/>\\n うお、うおまえは、太陽かぁぁっ!\\n<c6/><c2/>",
+    "zh": "<c1d:11/><ce:0/><c1d:1/>\n 哟，你，难道是太阳吗！？\n<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1075:0xd6766",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>イザナミ<c1d:1/>\\n おいでなさいっ!\\n<c6/>\\n",
+    "zh": "<c1d:11/>伊弉冉<c1d:1/>\n 欢迎光临！\n<c6/>\n",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1112_15d:0x5e7c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>主婦<c1d:1/>\\n<c20/>ちょっとあなた知ってる?\\n<c20/>ここ、七夕川に囲われた中島になってるじゃない?<c6/><c2/><c1d:11/>主婦<c1d:1/>\\n<c20/>春になると桜ガいっぱい咲いて、\\n<c20/>遠くからだと、水に浮かぶ蓮の花みたく見えるから\\n<c20/>蓮華台って名前ガ付いたんですって。<c6/><c2/>",
+    "zh": "<c1d:11/>主妇<c1d:1/>\n<c20/>你知道吗？\n<c20/>这里被七夕川围着，是个河中小岛呢。<c6/><c2/><c1d:11/>主妇<c1d:1/>\n<c20/>春天来了，樱花开得满满的，\n<c20/>从远处看，就像浮在水面上的莲花，\n<c20/>所以才有了\"莲华台\"这个名字。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1113_25d:0x7db0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>リサ<c1d:1/>\\n<c20/>あっ、まだ駄目〜<c13/>。\\n<c20/>探偵事務所に行って、\\n<c20/>秘密のメニューの事とか聞いてみようよ。<c6/><c2/>",
+    "zh": "<c1d:11/>丽莎<c1d:1/>\n<c20/>啊，还不行哦，<c13/>。\n<c20/>去侦探事务所，\n<c20/>问问那个秘密菜单的事吧。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1114_22d:0x7fbc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>若い男<c1d:1/>\\n<c20/>よう、アンタもここ遊びに来たのかよ?<c5:15/>\\n<c20/>そりゃそうだよなぁ、夢崎区ったら、若者の街、\\n<c20/>娯楽の宝庫だもんなぁ。<c6/><c2/><c1d:11/>若い男<c1d:1/>\\n<c20/>最新のアミューズメントセンター、ムー大陸。<c5:15/>\\n<c20/>スタジオ付きのCDシヨップ、ギガ・マッチヨ。<c5:15/>\\n<c20/>流行の先端、アニマムンディ。<c6/><c2/><c1d:11/>若い男<c1d:1/>\\n<c20/>俺らぐらいの歳の奴なら、一日中いたって、\\n<c20/>飽きる事はねぇや。<c5:15/>オマケに、イカした子も\\n<c20/>多いしなぁ。ウシシシシ。<c6/><c2/>",
+    "zh": "<c1d:11/>年轻男人<c1d:1/>\n<c20/>哟，你也来这里玩啊？<c5:15/>\n<c20/>那当然了，梦崎区可是年轻人的街道，\n<c20/>娱乐的宝库哦。<c6/><c2/><c1d:11/>年轻男人<c1d:1/>\n<c20/>最新的游乐中心，姆大陆。<c5:15/>\n<c20/>附带录音棚的CD店，巨型猛男。<c5:15/>\n<c20/>走在潮流前沿的，世界之魂。<c6/><c2/><c1d:11/>年轻男人<c1d:1/>\n<c20/>像我们这个年纪，在这里待一整天\n<c20/>都不会腻的。<c5:15/>而且还有\n<c20/>很多好看的女孩子哦。哈哈哈。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1115_20d:0x5808",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>サラリーマン<c1d:1/>\\n<c20/>え?<c20/>野外音楽堂?\\n<c20/>ああ、それならそこの青華公園の中だよ。\\n<c20/>キミもコンサートを見に行くのかい?<c6/><c2/><c1d:11/>サラリーマン<c1d:1/>\\n<c20/>しかし、MUSESの人気は大したもんだね。\\n<c20/>私も興味はあるんだガチケットは完売らしいし…\\n<c20/>あきらめるしかないのかなぁ。<c6/><c2/>",
+    "zh": "<c1d:11/>上班族<c1d:1/>\n<c20/>嗯？<c20/>露天音乐场？\n<c20/>啊，就在那边的青叶公园里面。\n<c20/>你也要去看演唱会吗？<c6/><c2/><c1d:11/>上班族<c1d:1/>\n<c20/>不过，MUSES的人气真是厉害啊。\n<c20/>我也很感兴趣，但票好像卖完了…\n<c20/>只能放弃了吧。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "field_text",
+    "id": "field:1116_19d:0x4200",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<c1d:11/>渋いおじさん<c1d:1/>\\n<c20/>フッ…今日もいい風ガ吹いてやガるなぁ…<c5:15/>\\n<c20/>男って奴は、心のどこかで旅を続けてるもんだ。\\n<c20/>流れ流され、やっとの思いで岸に辿り着き、<c6/><c2/><c1d:11/>渋いおじさん<c1d:1/>\\n<c20/>そこで根を下ろせば良いものを、また海に向かって\\n<c20/>漕ぎ出しちまう。<c5:15/>海はそんな男達にとって、\\n<c20/>永遠の故郷…<c5:15/>いつか帰って行く場所なのさ。<c6/><c2/><c1d:11/>渋いおじさん<c1d:1/>\\n<c20/>坊主、ここ港南区は、\\n<c20/>そんな男達の住む場所だ。<c5:15/>\\n<c20/>ハードボイルドの似合う街なのさ。<c6/><c2/>",
+    "zh": "<c1d:11/>沉稳大叔<c1d:1/>\n<c20/>哼…今天的风也很舒服啊…<c5:15/>\n<c20/>男人嘛，心里某处总在继续旅途。\n<c20/>随波逐流，好不容易到达岸边，<c6/><c2/><c1d:11/>沉稳大叔<c1d:1/>\n<c20/>本该在那里安家落户，却又朝着\n<c20/>大海出发了。<c5:15/>对这样的男人来说，\n<c20/>大海是永远的故乡…<c5:15/>终将回归之地。<c6/><c2/><c1d:11/>沉稳大叔<c1d:1/>\n<c20/>小子，这港南区，\n<c20/>就是这样的男人们居住的地方。<c5:15/>\n<c20/>是一座适合硬派人物的街道。<c6/><c2/>",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xc38",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "敵に不意をつかれた!",
+    "zh": "遭到敌人偷袭!",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xc4e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>先制攻撃のチャンス!",
+    "zh": "<1103>先发制人的机会!",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xc66",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>の魔法を習得した",
+    "zh": "<1103>的魔法已习得",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xc7a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>2ランクレベルアップ",
+    "zh": "<1103>等级上升2级",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xc92",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>パラメータガ上昇した",
+    "zh": "<1103>能力值上升了",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xcaa",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>変異能力を身につけた",
+    "zh": "<1103>掌握了变异能力",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xcc2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>これでよろしいですか?",
+    "zh": "<1103>这样可以吗?",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xcdc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>潜在的な能力ガ発動!",
+    "zh": "<1103>潜在能力发动!",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xcf4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>達は",
+    "zh": "<1103>们",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xcfc",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>達は全滅した",
+    "zh": "<1103>们全灭了",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xd0c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>舞耶「火ガ・・火ガ怖い!!」",
+    "zh": "<1103>舞耶「火・・好怕火!!」",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xd2c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>はい",
+    "zh": "<1103>是",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xd34",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>いいえ",
+    "zh": "<1103>否",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xd44",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>逃げ出した",
+    "zh": "<1103>逃跑了",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xd52",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>こけた",
+    "zh": "<1103>摔倒了",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xe14",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "行動を選択して下さい",
+    "zh": "请选择行动",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xe2a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>行動を変更するメンバーを選択して下さい",
+    "zh": "<1103>请选择要变更行动的成员",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xe54",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>の行動を選択して下さい",
+    "zh": "<1103>的行动请选择",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xe6e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>対象を選択して下さい",
+    "zh": "<1103>请选择对象",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xe86",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>使用する魔法を選択して下さい",
+    "zh": "<1103>请选择要使用的魔法",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xea6",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>使用するアイテムを選択して下さい",
+    "zh": "<1103>请选择要使用的道具",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xeca",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>変更するペルソナを選択して下さい",
+    "zh": "<1103>请选择要更换的Persona",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xeee",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>アナライズする悪魔を選択して下さい",
+    "zh": "<1103>请选择要分析的恶魔",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xf14",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>3ポイントを振り分けて下さい",
+    "zh": "<1103>请分配3点能力点",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xf34",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>行動順を入れ替えるメンバーを選択して下さい",
+    "zh": "<1103>请选择要调换顺序的成员",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xf62",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>条件設定する合体魔法を選択して下さい",
+    "zh": "<1103>请选择要设条件的合体魔法",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xf8a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>戦闘モードを選択して下さい",
+    "zh": "<1103>请选择战斗模式",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xfa8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>作戦内容を選択して下さい",
+    "zh": "<1103>请选择作战内容",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xfc4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>発動条件を選択して下さい",
+    "zh": "<1103>请选择发动条件",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xfe0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>組み合わせ成立時に自動的に発動します",
+    "zh": "<1103>组合成立时自动发动",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1008",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>組み合わせ成立時に待機します",
+    "zh": "<1103>组合成立时待机",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1028",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>組み合わせガ成立しても発動しません",
+    "zh": "<1103>组合成立也不发动",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x104e",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>各種設定をしてください",
+    "zh": "<1103>请进行各种设定",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1068",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>戦闘を開始します",
+    "zh": "<1103>开始战斗",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x107c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>戦闘行動の変更や<1120>情報の確認等を行います",
+    "zh": "<1103>变更战斗行动、<1120>确认信息等",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x10a8",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>敵悪魔とのコンタクトを試みます",
+    "zh": "<1103>尝试与敌方恶魔交涉",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x10ca",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>敵悪魔の詳細データを確認します",
+    "zh": "<1103>确认敌方恶魔详细数据",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x10ec",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>戦闘に関する環境を設定します",
+    "zh": "<1103>设置战斗相关环境",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x110c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>戦闘から退却します",
+    "zh": "<1103>从战斗中撤退",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1122",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>個人の戦闘行動を設定します",
+    "zh": "<1103>设定个人战斗行动",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1140",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>行動順序を入れ替えます",
+    "zh": "<1103>调换行动顺序",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x115a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>発見した合体魔法の確認と<1120>発動条件を設定します",
+    "zh": "<1103>确认已发现合体魔法<1120>并设定发动条件",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x118c",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>ノーマル/シングルの切替えを行います",
+    "zh": "<1103>切换普通/单人模式",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x11b4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>装備された武器で攻撃します",
+    "zh": "<1103>用装备的武器攻击",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x11d2",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>ペルソナの能力を使用します",
+    "zh": "<1103>使用Persona的能力",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x11f0",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>アイテムを使用します",
+    "zh": "<1103>使用道具",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1208",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>ペルソナの付け替えを行います",
+    "zh": "<1103>更换Persona",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1228",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>のステータスを確認します",
+    "zh": "<1103>的状态确认",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1244",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>攻撃せず防御に専念します",
+    "zh": "<1103>不攻击专心防御",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1260",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>行動設定を終了します",
+    "zh": "<1103>结束行动设定",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1278",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>すべてのメンバーの行動を「攻撃」にします",
+    "zh": "<1103>把全员行动设为「攻击」",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x12a4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>この行動順で決定します",
+    "zh": "<1103>以此行动顺序决定",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x12be",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>素早さ順に戻します",
+    "zh": "<1103>恢复速度顺序",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x12d4",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>キャンセルされない限り戦闘を継続します",
+    "zh": "<1103>不取消则持续战斗",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x12fe",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>敵・味方全員ガ一回ずつ行動後<1120>戦闘を中断します",
+    "zh": "<1103>敌我全员各行动一次后<1120>中断战斗",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1330",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>設定を終了し<1120>「戦闘開始」に戻ります",
+    "zh": "<1103>结束设定<1120>返回「战斗开始」",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1358",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>ステータス:人間+ペルソナ",
+    "zh": "<1103>状态:人+Persona",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x1376",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>ステータス:人間",
+    "zh": "<1103>状态:人类",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0x138a",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>ステータス:ペルソナ",
+    "zh": "<1103>状态:Persona",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xc240",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>答えられる状態ではありません",
+    "zh": "<1103>当前状态无法回答",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "battleui",
+    "id": "battleui:0xc260",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "<1103>話せる状態ではありません",
+    "zh": "<1103>当前状态无法交谈",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "mainmenu",
+    "id": "mainmenu:#9",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "ペルソナ\n",
+    "zh": "人格面具",
+    "current_ids_with_same_jp": [
+      "strtbl:0_0_0:10",
+      "strtbl:1_0_0:10"
+    ]
+  },
+  {
+    "src": "mainmenu",
+    "id": "mainmenu:#14",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "ペルソナ\n",
+    "zh": "人格面具",
+    "current_ids_with_same_jp": [
+      "strtbl:0_0_0:10",
+      "strtbl:1_0_0:10"
+    ]
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:ギガ・マッチョ",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "ギガ・マッチョ",
+    "zh": "巨型猛男",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:蝸牛山入口",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "蝸牛山入口",
+    "zh": "蜗牛山入口",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:シバルバー",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "シバルバー",
+    "zh": "锡巴尔巴",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:聖エルミン学園",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "聖エルミン学園",
+    "zh": "圣艾尔敏学园",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:ベルベットルーム",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "ベルベットルーム",
+    "zh": "天鹅绒房间",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:トリッシュの泉",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "トリッシュの泉",
+    "zh": "特里休之泉",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:時間城",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "時間城",
+    "zh": "时间城",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:本丸公園",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "本丸公園",
+    "zh": "本丸公园",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:プリズン",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "プリズン",
+    "zh": "监狱",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:セブンス",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "セブンス",
+    "zh": "七姐妹",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:アニマムンディ",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "アニマムンディ",
+    "zh": "世界之魂",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "map_names",
+    "id": "map_names:エテーリア",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "エテーリア",
+    "zh": "以太",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:プライズマシンフロア",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "プライズマシンフロア",
+    "zh": "奖品机楼层",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:ビデオゲームフロア",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "ビデオゲームフロア",
+    "zh": "电子游戏楼层",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:管制室&事務室",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "管制室&事務室",
+    "zh": "管制室与办公室",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:倉庫",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "倉庫",
+    "zh": "仓库",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:制御室",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "制御室",
+    "zh": "控制室",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:役員室",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "役員室",
+    "zh": "主管室",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:廃液処理場",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "廃液処理場",
+    "zh": "废液处理场",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:ケーブルカー麓駅",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "ケーブルカー麓駅",
+    "zh": "缆车山麓站",
+    "current_ids_with_same_jp": []
+  },
+  {
+    "src": "room_names",
+    "id": "room_names:ケーブルカー頂上駅",
+    "speaker_jp": "",
+    "speaker_zh": "",
+    "jp": "ケーブルカー頂上駅",
+    "zh": "缆车山顶站",
+    "current_ids_with_same_jp": []
+  }
+]

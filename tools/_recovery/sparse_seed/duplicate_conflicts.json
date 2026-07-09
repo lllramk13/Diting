@@ -1,0 +1,4878 @@
+[
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:0b842379b930",
+    "contents": [
+      "用花杀死\\n",
+      "笑里藏刀\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:0fbf7b3cf66d",
+    "contents": [
+      "最后军团的超能力步兵。\n通过精神改造可以发挥超能力。\n<c6/>\n",
+      "最后军团的超能力步兵。\n通过精神改造可以施展超能力。\n<c6/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:245113b3fe63",
+    "contents": [
+      "抓拍丑态\n",
+      "拍照杀死\\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:2518e0978298",
+    "contents": [
+      "<c5:0/><c1e:0/><c1d:11/>两人的关系<c1d:9/>\n 动手比动口快的、相似的一对<c1d:1/>\n<c6/>\n",
+      "<c5:0/><c1e:0/><c1d:11/>两人的关系<c1d:9/>\n 动手比动口快，性格相似的一对<c1d:1/>\n<c6/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:29c3fbdda6de",
+    "contents": [
+      "论男子汉\n",
+      "谈男子气\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:343ad73b5e03",
+    "contents": [
+      "七福神之一 惠比寿神\n带来海洋恩惠的神\n<c6/>\n",
+      "七福神之一 惠比寿神\n带来海洋物产的神\n<c6/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:3989992770fb",
+    "contents": [
+      "<c5:0/><c1e:0/>月刊Coolest的杂志记者。\n开朗活泼，\n散发着健康魅力的美女。\n<c6/>\n",
+      "<c5:0/><c1e:0/>月刊库雷斯特的杂志记者。\n开朗活泼，\n散发着健康魅力的美女。\n<c6/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:4075a249ea0c",
+    "contents": [
+      "捧杀\n",
+      "赞美至死\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:5497c7186bc3",
+    "contents": [
+      "<c5:0/><c1e:0/>【饰】受到地属性魔法攻击时会变化\\n作为物品使用时具有哈玛玛格纳的效果\\n<c6/>\\n",
+      "<c5:0/><c1e:0/>【饰】受到地属性魔法攻击时会变化\\n作为物品使用时具有玛哈玛玛格纳的效果\\n<c6/>\\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:549f429916d9",
+    "contents": [
+      "谈亲子\n",
+      "谈论亲情\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:8946b443c14d",
+    "contents": [
+      "<c5:0/><c1e:0/><c1d:11/>三人的关系<c1d:9/>\n 三个女人奇妙的团结又怀揣竞争的女性心理？<c1d:1/>\n<c6/>\n",
+      "<c5:0/><c1e:0/><c1d:11/>三人的关系<c1d:9/>\\n 三女奇妙团结又竞争的女心？<c1d:1/>\\n<c6/>\\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:a5ec4e739fc3",
+    "contents": [
+      "占星\\n",
+      "星座占卜\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:b5d9a1e8a384",
+    "contents": [
+      "<c5:0/><c1e:0/><c1d:11/>三人的关系<c1d:9/>\n 三个女人互相信任又相互竞争的微妙女性心理？<c1d:1/>\n<c6/>\n",
+      "<c5:0/><c1e:0/><c1d:11/>三人的关系<c1d:9/>\\n 三女信任又竞争的女心？<c1d:1/>\\n<c6/>\\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0044fb405f65",
+    "contents": [
+      "\n<SURNAME/>嗯。\n<SURNAME/>那，想听八卦了再来吧。\n<SURNAME/>我就一直在这儿吃鱼腩呢。",
+      "\n<SURNAME/>是啊。\n<SURNAME/>那，想听传闻的时候再来吧。\n<SURNAME/>我会一直在这儿吃鱼腩的。",
+      "\n<SURNAME/>是啊。\n<SURNAME/>那，想听传闻的时候再来吧。\n<SURNAME/>我就在这儿，一直吃着鱼腩呢。",
+      "\n<SURNAME/>行。\n<SURNAME/>想听传闻随时来，\n<SURNAME/>老子就在这儿埋头啃鳕鱼边～",
+      "\n<SURNAME/>行吧，\n<SURNAME/>那等你想听传闻的时候再来找我吧。\n<SURNAME/>我就一直坐在这儿吃鱼腩。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:005026632682",
+    "contents": [
+      "\n<SURNAME/>………！！\n",
+      "<SURNAME/>………！！"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:00c1a11bd23a",
+    "contents": [
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>经过两周对调查对象的品行调查，\n<SURNAME/>未发现委托人所担忧的结果。\n",
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>经过两周对调查对象的品行调查，\n<SURNAME/>没有获得委托人担忧的结果。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:01ad6b8f612a",
+    "contents": [
+      "\n<SURNAME/>好的，那么…\n<SURNAME/>共计1200日元…",
+      "\n<SURNAME/>好的，那么…\n<SURNAME/>各位需支付1200日元…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0207377d3ae7",
+    "contents": [
+      "\n<SURNAME/>Persona是你隐藏的一面…\n<SURNAME/>你将为契合它而改变形态。\n<SURNAME/>正因如此，你才能使用武器。",
+      "\n<SURNAME/>Persona是您隐藏的一面…\n<SURNAME/>因此它会变化为与之相应的状态。\n<SURNAME/>您能使用武器，也是这个原因。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:04ec6c3afcda",
+    "contents": [
+      "\n<SURNAME/>听说在梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种齐全但回收价低。",
+      "\n<SURNAME/>听说在梦崎区的托尼的店，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说品种齐全但回收价格低呢。",
+      "\n<SURNAME/>听说梦崎区托尼's店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种全但回收价低。",
+      "\n<SURNAME/>听说梦崎区的托尼店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种多但回收价低哦。",
+      "\n<SURNAME/>听说梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>种类齐全，但回收价特别低就是了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:05cb7d6443e9",
+    "contents": [
+      "\n<SURNAME/>欢迎光临。\n<SURNAME/>今日您需要何种芬芳？",
+      "\n<SURNAME/>欢迎光临。\n<SURNAME/>今日想寻何种香气?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:05fbe998c3e2",
+    "contents": [
+      "\n<SURNAME/>我随时都在这里。\n<SURNAME/>兴致来了就再来吧。\n<SURNAME/>在这里，时间没有意义。",
+      "\n<SURNAME/>我随时都在这里。\n<SURNAME/>等你有空时再来吧。\n<SURNAME/>因为在这里，时间没有意义。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:07acf668b3b1",
+    "contents": [
+      "\n<SURNAME/>我说个料：<c1d:13/>悬赏杂志<c1d:1/>知道吧？\n<SURNAME/>据说能抽到<c1d:13/>真武器和珍品<c1d:1/>呢。\n<SURNAME/><c1d:13/>中奖率超低但都是稀罕货<c1d:1/>哦",
+      "\n<SURNAME/>那到我说了。不是有个叫<c1d:13/>悬赏杂志<c1d:1/>的东西吗?\n<SURNAME/>我听说那个能抽中<c1d:13/>真的武器和稀有珍品<c1d:1/>哦。\n<SURNAME/><c1d:13/>虽然很难抽中，但是都很稀有<c1d:1/>呢。",
+      "\n<SURNAME/>那我的传闻。<c1d:13/>悬赏杂志<c1d:1/>你知道吧？\n<SURNAME/>听说能抽中<c1d:13/>真正的武器和珍品<c1d:1/>哦。\n<SURNAME/>虽然<c1d:13/>很难中奖但都是非常稀有的东西<c1d:1/>的传闻呢。",
+      "\n<SURNAME/>那我的消息。<c1d:13/>悬赏杂志<c1d:1/>有吧？\n<SURNAME/>据说能中<c1d:13/>真正的武器和珍品<c1d:1/>呢。\n<SURNAME/><c1d:13/>虽然很少中奖但东西超稀有<c1d:1/>的传闻哦。",
+      "\n<SURNAME/>那说我的料。<c1d:13/>悬赏杂志<c1d:1/>知道吧？\n<SURNAME/>听说能抽到<c1d:13/>真家伙和珍品<c1d:1/>哦。\n<SURNAME/><c1d:13/>虽然难中但超稀有<c1d:1/>的传闻啦。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0907aa3089a3",
+    "contents": [
+      "\n<SURNAME/>世界之灵那地方\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说种类很齐全，但是回收价很低就是了。",
+      "\n<SURNAME/>那个Anima Mundi\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>商品种类不错但但回收价听说低的说的说",
+      "\n<SURNAME/>那个阿尼玛·蒙迪\n<SURNAME/>居然能买到真防具？\n<SURNAME/>听说品种齐全但回收价低。",
+      "\n<SURNAME/>那个阿尼玛蒙迪\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说品种齐全但回收价很低。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:09b8d90f3052",
+    "contents": [
+      "\n<SURNAME/>MUSES还在隐藏第三位成员呢。\n<SURNAME/>对谜题感兴趣是人之常情。<pause:15/>\n<SURNAME/>真是高明的营销手法呢。",
+      "\n<SURNAME/>MUSES还藏着第三个人呢。\n<SURNAME/>对谜团感兴趣是人之常情。<pause:15/>\n<SURNAME/>真是高明的宣传手法啊。",
+      "\n<SURNAME/>MUSES还藏着第三个人呢～\n<SURNAME/>对谜题感兴趣是人的天性。<pause:15/>\n<SURNAME/>真是高明的推销方式啊～",
+      "\n<SURNAME/>缪斯还在隐瞒第三个人呢。\n<SURNAME/>人对谜题总是充满兴趣。<pause:15/>\n<SURNAME/>这宣传手法真高明啊。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0ba4a64bd4fe",
+    "contents": [
+      "\n<SURNAME/>对于连接稀薄的Persona，\n<SURNAME/>你可能无法驾驭。\n<SURNAME/>是的，其中有些甚至无法降魔。",
+      "\n<SURNAME/>若连接稀薄，\n<SURNAME/>您可能无法驾驭。\n<SURNAME/>是的，有些甚至无法降魔。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0cbc21691302",
+    "contents": [
+      "\n<SURNAME/>呜、老子就是怕老爸啊…<pause:30/>\n<SURNAME/>从小被他那破锣嗓子一吼，\n<SURNAME/>身体就僵住动不了啊〜",
+      "\n<SURNAME/>我、我啊，是真怕我老爸…<pause:30/>\n<SURNAME/>从小时候就这样，被他那破嗓子一吼，\n<SURNAME/>整个人身体就僵住了呀〜",
+      "\n<SURNAME/>老、老子啊，对老爸不行啊…<pause:30/>\n<SURNAME/>从小时候起，被那个沙哑的声音一吼，\n<SURNAME/>身体就僵住啦～"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0d0160329a66",
+    "contents": [
+      "\n<SURNAME/>听说在梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>价格便宜但品质不好。",
+      "\n<SURNAME/>听说在梦崎区的托尼的店，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说价格便宜但质量不好呢。",
+      "\n<SURNAME/>听说梦崎区托尼's店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>价格便宜但质量差。",
+      "\n<SURNAME/>听说梦崎区的托尼店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>价格便宜但质量差哦。",
+      "\n<SURNAME/>听说梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>价格便宜，但质量不行就是了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0d3083c52906",
+    "contents": [
+      "\n<SURNAME/>嘿～<pause:30/>\n<SURNAME/>七姊妹的钟动了会发生大事？\n<SURNAME/>那也太夸张了吧。",
+      "\n<SURNAME/>嘿～<pause:30/>\n<SURNAME/>七姐妹的大钟动了会有大事发生?\n<SURNAME/>那也太夸张了吧。",
+      "\n<SURNAME/>诶～<pause:30/>\n<SURNAME/>七姊妹学园的钟动了会发生大事？\n<SURNAME/>那也太夸张了吧。",
+      "\n<SURNAME/>诶～<pause:30/>\n<SURNAME/>七姊妹的钟动了会发生大事？\n<SURNAME/>那也太夸张了吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0dc98babc404",
+    "contents": [
+      "\n<SURNAME/>又是传闻搞的鬼?<SURNAME/><pause:15/>传闻成真，\n<SURNAME/>那校长真回来了?<pause:15/>\n<SURNAME/>喂喂…真的假的…",
+      "\n<SURNAME/>这也是传闻的错吗？<SURNAME/><pause:15/>传闻成真了，\n<SURNAME/>那个校长回来了吗？<pause:15/>\n<SURNAME/>喂喂…真的假的…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0fd11b8006c1",
+    "contents": [
+      "\n<SURNAME/>你听说了吗？<SURNAME/>青华区的月光之清\n<SURNAME/>在卖真武器呢。\n<SURNAME/>不过品质和价格都普普通通就是了。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>在青华区的Claire de Lune，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说品质和价格都普通呢。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>青华区的克雷尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质和价格都普通哦。",
+      "\n<SURNAME/>听说了吗？<SURNAME/>青华区的克蕾尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质和价格都普通。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:109c04f6cb33",
+    "contents": [
+      "\n<SURNAME/>真没出息。<pause:30/>\n<SURNAME/>作为假面党的首领、竟接受敌人的怜悯?\n",
+      "\n<SURNAME/>真没出息。<pause:30/>\n<SURNAME/>作为假面党的首领，竟接受敌人的怜悯吗?\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:10fcd6ac4483",
+    "contents": [
+      "\n<SURNAME/>谢谢喵♥",
+      "\n<SURNAME/>谢谢喵～♥"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:138a5d3c20d5",
+    "contents": [
+      "\n<SURNAME/>引发第二次世界大战的罪魁祸首，\n<SURNAME/>本世纪最大最坏的独裁者！！<pause:30/>\n<SURNAME/>这个你总该知道吧？\n",
+      "\n<SURNAME/>引发第二次世界大战的罪魁祸首，\n<SURNAME/>本世纪最大最恶的独裁者!!<pause:30/>\n<SURNAME/>这点你应该知道吧?\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:14dff04dde9f",
+    "contents": [
+      "\n<SURNAME/>听说拉面白石的大妈，\n<SURNAME/>真的是俄罗斯女间谍呢。",
+      "\n<SURNAME/>听说拉面白石的老板娘，\n<SURNAME/>真是俄罗斯女间谍的说呢。",
+      "\n<SURNAME/>拉面白石的大妈，\n<SURNAME/>听说真的是俄罗斯女间谍呢。",
+      "\n<SURNAME/>据说白石拉面店的那位大婶，\n<SURNAME/>真的是俄罗斯的女间谍呢～"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:14f5d39cdab4",
+    "contents": [
+      "\n<SURNAME/>据说时间城有传说武器卖，\n<SURNAME/>但那里的店主为了抬价，\n<SURNAME/>就硬说没有那种东西。",
+      "\n<SURNAME/>时间城好像有传说中的武器，\n<SURNAME/>但那里的店主为了抬价，\n<SURNAME/>硬说没有这种东西。",
+      "\n<SURNAME/>时间城好像有传说武器，\n<SURNAME/>但那里的店主为了抬价，\n<SURNAME/>硬说没有那种东西。",
+      "\n<SURNAME/>时间城有传说武器这种东西的说\n<SURNAME/>但那里的店主，为了抬价，\n<SURNAME/>好像坚持说没有那种东西的说哦。",
+      "\n<SURNAME/>时间城有传说武器，\n<SURNAME/>但店主为抬价，\n<SURNAME/>硬说没有。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:18270b879da4",
+    "contents": [
+      "\n<SURNAME/>静寂…<pause:15/>此卡意味着，尔将如常度过\n<SURNAME/>平凡时光。<pause:15/>\n<SURNAME/>无甚可圈可点…然此乃重要之事",
+      "\n<SURNAME/>静寂…<pause:15/>此卡意味着，汝将日复一日\n<SURNAME/>度过平凡的时光。<pause:15/>\n<SURNAME/>无可无不可…但那也是重要的事啊"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:19f59f719879",
+    "contents": [
+      "\n<SURNAME/>咦?<pause:10/>\n<SURNAME/>又是般若校长…",
+      "\n<SURNAME/>咦？<pause:10/>\n<SURNAME/>又是般若校长…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:1a739461e909",
+    "contents": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>没发现那位美人夫人所说的，\n<SURNAME/>外遇的迹象。\n<SURNAME/>大概，那种懦弱的男人也搞不了外遇吧\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>没有看到那位美丽夫人所说的，\n<SURNAME/>出轨的迹象。\n<SURNAME/>大概，那种懦弱的男人不可能出轨吧\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:1ca6cebddd2f",
+    "contents": [
+      "\n<SURNAME/>我也以为这场连环恐怖袭击的犯人是假面党，\n<SURNAME/>但是最近又有传闻说犯人是年轻的5人组，\n<SURNAME/>到底哪个是真相啊？",
+      "\n<SURNAME/>我也以为连续恐怖袭击的犯人是假面党，\n<SURNAME/>但最近听说有传闻说是年轻的五人组\n<SURNAME/>是犯人。真相到底是哪个呢?",
+      "\n<SURNAME/>我也以为连续恐怖袭击的犯人是假面党，\n<SURNAME/>但最近听说，是五个年轻人干的。\n<SURNAME/>真相到底是哪个?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:1db1bbb591de",
+    "contents": [
+      "\n<SURNAME/>内、内、内裤番长! \n<SURNAME/>后后后、后面、后面后面啊!!\n",
+      "\n<SURNAME/>内、内裤番长！\n<SURNAME/>后后后、后面、后面啊!!\n"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:1e6ffc3c4987",
+    "contents": [
+      "\n<SURNAME/>可恶!!\n<SURNAME/>别想逃!\n",
+      "\n<SURNAME/>可恶!!\n<SURNAME/>怎么能逃跑呢！\n",
+      "\n<SURNAME/>可恶!! \n<SURNAME/>别想逃!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:1f04e392fe12",
+    "contents": [
+      "\n<SURNAME/>哇哈哈!<SURNAME/>我终于当上了梦寐以求的社长啦。\n<SURNAME/>工作什么的都交给部下干就好，然后大白天就像这样\n<SURNAME/>坐在这吃着寿司，真真切切感受到自己出息了呢!",
+      "\n<SURNAME/>哈哈!<SURNAME/>终于当上梦寐以求的社长了。\n<SURNAME/>工作都交给手下，像这样大白天就吃着寿司，\n<SURNAME/>真真切切感受到自己出息了啊!",
+      "\n<SURNAME/>嘎哈哈!<SURNAME/>终于当上梦寐以求的社长啦。\n<SURNAME/>工作都丢给手下，大白天就吃寿司，\n<SURNAME/>这才感觉出人头地了呢!",
+      "\n<SURNAME/>嘎哈哈!<SURNAME/>终于当上梦寐以求的社长啦。\n<SURNAME/>工作都交给手下，像这样大白天就吃寿司，\n<SURNAME/>真真切切感受到自己出息了呢!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:203893070973",
+    "contents": [
+      "\n<SURNAME/>微笑平坂不过是个车站大楼而已?<pause:15/>\n<SURNAME/>犯人炸掉那种地方，\n<SURNAME/>到底想干什么呢?",
+      "\n<SURNAME/>微笑平坂不过是个车站大楼而已?<pause:15/>\n<SURNAME/>犯人炸那种地方，\n<SURNAME/>到底想干什么?",
+      "\n<SURNAME/>微笑平坂只是个车站大楼而已吧？<pause:15/>\n<SURNAME/>犯人炸掉那种地方，\n<SURNAME/>是打算干什么啊？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:207765621f06",
+    "contents": [
+      "\n<SURNAME/>那里打不开喵♥\n<SURNAME/>放弃喵♥",
+      "\n<SURNAME/>那里打不开喵～♥\n<SURNAME/>放弃吧喵～♥"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:21e053fe2f8a",
+    "contents": [
+      "\n<SURNAME/>好棒的歌啊…<pause:30/>\n<SURNAME/>怎么说呢，仿佛触动灵魂…<pause:30/>\n<SURNAME/>不觉得非常放松吗？",
+      "\n<SURNAME/>好美的歌…<pause:30/>\n<SURNAME/>怎么说呢，直击灵魂…<pause:30/>\n<SURNAME/>不觉得超放松吗？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:226398954e21",
+    "contents": [
+      "\n<SURNAME/>克雷尔·德·吕讷卖传说武器\n<SURNAME/>的传闻。\n<SURNAME/>真有那东西?",
+      "\n<SURNAME/>在Claire de Lune卖传说武器\n<SURNAME/>的传闻听说了的说。\n<SURNAME/>那种东西真的存在吗？",
+      "\n<SURNAME/>在月光听到卖传说武器\n<SURNAME/>的传闻呢。\n<SURNAME/>那种东西真的存在吗？",
+      "\n<SURNAME/>我听到有传闻说月光之清\n<SURNAME/>有传说武器卖。\n<SURNAME/>但是那种东西真的存在吗?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2564823a022f",
+    "contents": [
+      "\n<SURNAME/>了解！\n<SURNAME/>想申请的时候再来找我哦～",
+      "\n<SURNAME/>收到!\n<SURNAME/>那，想应募的时候再来吧。",
+      "\n<SURNAME/>收到！\n<SURNAME/>那么，想应征的时候再来吧。",
+      "\n<SURNAME/>收到！\n<SURNAME/>那么，想报名的时候再来吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:26dd215e64ce",
+    "contents": [
+      "\n<SURNAME/>什么什么，七姐妹的钟楼…真的…<pause:15/>\n<SURNAME/>有幽灵出现?<SURNAME/>哇啊，我，对付不来怪谈题材啊。<pause:15/>\n<SURNAME/>赶紧把这边情报说完就结束吧。",
+      "\n<SURNAME/>什么什么，在七姊妹学园的钟楼…真…<pause:15/>\n<SURNAME/>看到幽灵了？<SURNAME/>哇啊我，鬼故事不行啊。<pause:15/>\n<SURNAME/>赶紧说完这边的信息就结束吧。",
+      "\n<SURNAME/>什么什么，在七姊妹的钟楼…真…<pause:15/>\n<SURNAME/>看到幽灵了？<SURNAME/>哇啊我，鬼故事不行啊。<pause:15/>\n<SURNAME/>赶紧把这边情报说完就结束吧。",
+      "\n<SURNAME/>什么什么，在七姊妹的钟楼…真的…<pause:15/>\n<SURNAME/>看到幽灵了？<SURNAME/>哇啊我，鬼故事不行啊。<pause:15/>\n<SURNAME/>赶紧把这边情报说完就结束吧。",
+      "\n<SURNAME/>什么什么，在七姊妹的钟楼…真的…<pause:15/>\n<SURNAME/>看到幽灵了？<SURNAME/>哇啊，我，恐怖故事不行啊。<pause:15/>\n<SURNAME/>赶紧把这边情报说完就结束吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2a923e5ec41f",
+    "contents": [
+      "\n<SURNAME/>听说在梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质和价格都算普通。",
+      "\n<SURNAME/>听说在梦崎区的托尼的店，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说品质和价格都还算普通呢。",
+      "\n<SURNAME/>听说梦崎区托尼's店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质价格都算普通。",
+      "\n<SURNAME/>听说梦崎区的托尼店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质和价格都还行哦。",
+      "\n<SURNAME/>听说梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质和价格都普普通通就是了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2a930056995d",
+    "contents": [
+      "\n<SURNAME/>听说中了悬赏杂志的奖，\n<SURNAME/>真品武器和道具就会送上门呢。\n<SURNAME/>虽然很难中，但送来的东西不错。",
+      "\n<SURNAME/>听说中奖杂志的奖品是真武器或\n<SURNAME/>道具会寄来。\n<SURNAME/>虽难中，但东西不错。",
+      "\n<SURNAME/>悬赏杂志中奖的话真武器\n<SURNAME/>和道具就会送来呢。\n<SURNAME/>虽难中奖，但据说东西不错哦。",
+      "\n<SURNAME/>我听说，要是中了悬赏杂志上的奖的话，\n<SURNAME/>会送来真武器和道具呢。\n<SURNAME/>虽然中奖率很低，但送来的都是好东西呢。",
+      "\n<SURNAME/>抽中Kensho Magazine的奖品\n<SURNAME/>真武器和道具就会送到的说呢。\n<SURNAME/>虽然难中，但听说会送来好东西的说"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2ac05a627ca9",
+    "contents": [
+      "\n<SURNAME/>在梦崎区的<c1d:13/>托尼的店<c1d:1/>，能买到<c1d:13/>真武器<c1d:1/>的\n<SURNAME/>传闻哦。顺便说，<c1d:13/>价格便宜但\n<SURNAME/>质量不好<c1d:1/>啦。<pause:15/>怎样？<SURNAME/>厉害吧？",
+      "\n<SURNAME/>在梦崎区的<c1d:13/>托尼的店<c1d:1/>，能买到<c1d:13/>真武器<c1d:1/>的\n<SURNAME/>传闻有哦。顺便说，<c1d:13/>价格便宜但\n<SURNAME/>质量不好<c1d:1/>的样子。<pause:15/>怎样？<SURNAME/>厉害吧？",
+      "\n<SURNAME/>有传闻说在梦崎区的<c1d:13/>托尼的店<c1d:1/>能买到<c1d:13/>真武器<c1d:1/>。\n<SURNAME/>顺便一提，<c1d:13/>价格便宜但质量不咋地<c1d:1/>。<pause:15/>怎么样？厉害吧？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2b51969f3d9f",
+    "contents": [
+      "\n<SURNAME/>刚、刚才在那儿的社长大叔啊，\n<SURNAME/>冲出去了。<pause:15/>\n<SURNAME/>该不会是想跟那帮家伙干架吧?",
+      "\n<SURNAME/>刚、刚才在那坐着的社长大叔，\n<SURNAME/>冲到外面去了。<pause:15/>\n<SURNAME/>难不成他要和那群家伙干架吗?",
+      "\n<SURNAME/>刚、刚才还在那儿的社长先生，\n<SURNAME/>冲到外面去了。<pause:15/>\n<SURNAME/>难不成他打算和那帮家伙干一架?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2f9427893591",
+    "contents": [
+      "\n<SURNAME/>听说在Ramen Shiraishi，\n<SURNAME/>在卖传说武器的说不是吗？\n<SURNAME/>到底是什么武器呢的说。",
+      "\n<SURNAME/>听说在拉面白石，\n<SURNAME/>在卖传说中的武器，不是吗？\n<SURNAME/>到底是什么样的武器呢？",
+      "\n<SURNAME/>听说在拉面白石，\n<SURNAME/>有卖传说武器不是吗？\n<SURNAME/>到底是什么武器呢？",
+      "\n<SURNAME/>听说拉面白石在卖\n<SURNAME/>传说武器呢。\n<SURNAME/>到底是什么武器啊？",
+      "\n<SURNAME/>我听说白石拉面店在卖\n<SURNAME/>传说武器，\n<SURNAME/>那到底是什么样的武器啊？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3358e15cfd25",
+    "contents": [
+      "\n<SURNAME/>在学生之间，传闻说新头目比荣吉还弱\n<SURNAME/>到处都在传呢…\n<SURNAME/>荣吉和那个新头目是谁啊？",
+      "\n<SURNAME/>在学生之间，好像到处都在传闻新头目比荣吉弱…\n<SURNAME/>那个荣吉啊、新头目啊，到底是谁啊？",
+      "\n<SURNAME/>在学生群体里头，四处在传\n<SURNAME/>新头目比荣吉还弱的传闻呢…\n<SURNAME/>可是荣吉是谁？还有那个新头目又是谁啊？",
+      "\n<SURNAME/>学生们之间都在传，新老大比荣吉还弱，\n<SURNAME/>到处都这么说…\n<SURNAME/>荣吉是谁？那个新老大又是谁啊？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3458da7d33f6",
+    "contents": [
+      "\n<SURNAME/>你也有同感吧？<SURNAME/><c12/>。\n<SURNAME/>明明是第一次见面…<pause:30/>\n<SURNAME/>莫非，这就是命运的love？",
+      "\n<SURNAME/>你也这么觉得吧？<SURNAME/><c12/>。\n<SURNAME/>明明是第一次见面的人呢…<pause:30/>\n<SURNAME/>莫非，这就是所谓的命运之爱吗？",
+      "\n<SURNAME/>你也这样吧?<SURNAME/><c12/>。\n<SURNAME/>明明是第一次见面的人…<pause:30/>\n<SURNAME/>莫非，这就是命运之爱吗?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:352b907fdbed",
+    "contents": [
+      "\n<SURNAME/>听说在莲华台的时间城在卖真武器\n<SURNAME/>是啊。真是危险的话题呢。\n<SURNAME/>据说品质好但价格高。",
+      "\n<SURNAME/>听说在莲华台的时间城，有卖真正的武器\n<SURNAME/>呢。真是危险的话题呢。\n<SURNAME/>据说品质好但价格高呢。",
+      "\n<SURNAME/>听说莲华台时间城在卖\n<SURNAME/>真武器呢。真危险啊。\n<SURNAME/>据说品质好但价格高。",
+      "\n<SURNAME/>听说莲华台的时间城在卖真\n<SURNAME/>武器呢。真危险哦。\n<SURNAME/>品质好但价格高呢。",
+      "\n<SURNAME/>我听说莲华台的时间城在卖真武器。\n<SURNAME/>真是个危险的话题啊。\n<SURNAME/>据说品质很好，不过价格也很贵就是了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3590be11f58d",
+    "contents": [
+      "\n<SURNAME/>我，以前一直觉得老师只是烦人，\n<SURNAME/><pause:10/>真是大错特错。<pause:15/>明明她一直\n<SURNAME/>那样守护着我们…\n",
+      "\n<SURNAME/>我，以前觉得老师只是烦人，<pause:10/>但大错特错了。<pause:15/>那样\n<SURNAME/>一直保护着我们…"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:362586cec4f8",
+    "contents": [
+      "\n<SURNAME/><c1d:9/>地受<SURNAME/>风削蚀<SURNAME/>育水\n<SURNAME/>水沿<SURNAME/>地流淌<SURNAME/>制火<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>地受<SURNAME/>风蚀而<SURNAME/>育水\n<SURNAME/>水沿<SURNAME/>地流淌<SURNAME/>制火<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>地受风削<SURNAME/>滋养水\n<SURNAME/>水沿地流<SURNAME/>制约火<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>地被<SURNAME/>风削蚀<SURNAME/>孕育水\n<SURNAME/>水沿<SURNAME/>地流淌<SURNAME/>抑制火<c1d:1/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:36df439039e9",
+    "contents": [
+      "\n<SURNAME/>听八卦是开心，但总是什么武器\n<SURNAME/>防具的危险话题，真烦。\n<SURNAME/>传这些…是大家都想要武器吗？",
+      "\n<SURNAME/>听料是开心啦，但老是什么武器\n<SURNAME/>防具的危险话题，烦死了。\n<SURNAME/>传这些…大伙儿都想要家伙？",
+      "\n<SURNAME/>能听到八卦是挺开心的，但老是武器\n<SURNAME/>啊防具啊这些危险话题，真讨厌。\n<SURNAME/>会变成传闻，说明大家都想要武器吗？",
+      "\n<SURNAME/>虽然能听到各种各样的传闻是很开心了，但是\n<SURNAME/>像是武器啊防具啊这类危险话题也太多了，听都听烦了。\n<SURNAME/>既然能成传闻，难不成大家都想买武器吗?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:37c8635f0c26",
+    "contents": [
+      "\n<SURNAME/>淳!!\n<SURNAME/>你也说点什么啊!!\n<SURNAME/>和大姐姐分开，真的好吗!?\n",
+      "\n<SURNAME/>淳!!\n<SURNAME/>你也说点啥啊!\n<SURNAME/>和姐姐分开，真的好吗!?\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3820dce5e55a",
+    "contents": [
+      "\n<SURNAME/>如果是老师的话，\n<SURNAME/>刚才看到往自行车存车处去了。<pause:15/>\n<SURNAME/>应该还在那儿吧？",
+      "\n<SURNAME/>老师的话，\n<SURNAME/>刚才看到往存车处方向去了。<pause:15/>\n<SURNAME/>应该还在那儿吧?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:38e1345a9ba6",
+    "contents": [
+      "\n<SURNAME/>你听说了吗？<SURNAME/>春日山高中有\n<SURNAME/>妖怪诡异酱出没哦。\n<SURNAME/>先是假面党，然后是这个，真是个热闹的学校啊。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>在春日山高中\n<SURNAME/>有妖怪诡异酱出现呢。\n<SURNAME/>又是假面舞会，真是个热闹的学校呢。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>春日山高中有\n<SURNAME/>妖怪布基米酱出没呢。\n<SURNAME/>假面舞会也是，真热闹的学校哦。",
+      "\n<SURNAME/>听说了吗？<SURNAME/>春日山高中好像会出没叫“恐怖子”的妖怪哦。\n<SURNAME/>假面舞会也好，真是热闹的学校。",
+      "\n<SURNAME/>听说了吗？<SURNAME/>春日山高中有\n<SURNAME/>妖怪布基米酱会出现哦。\n<SURNAME/>还有假面党，真是个热闹的学校呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3a232842d9e7",
+    "contents": [
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>对象在职场外接触的，\n<SURNAME/>只有名为冈村的同事教师和名为须藤的学生，\n<SURNAME/>与冈村之间也没有男女关系。\n",
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>对象在职场外接触的，\n<SURNAME/>只有名为冈村的同事教师和须藤这名学生，\n<SURNAME/>与冈村之间也未发现男女关系。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3a6d90333fd2",
+    "contents": [
+      "\n<SURNAME/>冴子老师不是会服从这种命令的人。<pause:30/>\n<SURNAME/>要是道理讲不通，\n<SURNAME/>就算对方是文部大臣她也照揍不误。",
+      "\n<SURNAME/>冴子老师才不是会服从这种指示的人。<pause:30/>\n<SURNAME/>要是说不通的话， \n<SURNAME/>管他是文部大臣也照揍不误。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3ae4e6afe13f",
+    "contents": [
+      "\n<SURNAME/>呀。又来了?\n<SURNAME/>我今天也状态绝佳。\n<SURNAME/>Not，有点胀气呢。",
+      "\n<SURNAME/>呀。又来了?\n<SURNAME/>我今天也绝佳状态。\n<SURNAME/>没有腹胀感呢。",
+      "\n<SURNAME/>呀。又来了？\n<SURNAME/>我今天也状态绝佳。\n<SURNAME/>不，是饱腹感呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3b8f5229fbcd",
+    "contents": [
+      "\n<SURNAME/>呜呜…<pause:15/>听到个恐怖传闻…<pause:15/>\n<SURNAME/>断…断头台…在废工厂…<pause:15/>\n<SURNAME/>啊啊！不想再回忆了！",
+      "\n<SURNAME/>呜呜…<pause:15/>听到了可怕的事…<pause:15/>\n<SURNAME/>库…库丹的…库丹在废弃工厂…<pause:15/>\n<SURNAME/>啊，再也不想回忆了!",
+      "\n<SURNAME/>呜呜…<pause:15/>听到了可怕的故事呢…<pause:15/>\n<SURNAME/>橱…橱柜的…橱柜在废弃工厂…<pause:15/>\n<SURNAME/>啊啊，再也不想回忆起来了呢!",
+      "\n<SURNAME/>呜呜…<pause:15/>听说了可怕的事…<pause:15/>\n<SURNAME/>九…件的…件在废弃工厂…<pause:15/>\n<SURNAME/>啊啊，再也不想回忆起来了！",
+      "\n<SURNAME/>呜呜…<pause:15/>我听到了超可怕的事情…<pause:15/>\n<SURNAME/>件…件…件在废工厂里…<pause:15/>\n<SURNAME/>啊啊，我再也不想回忆了！"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:414b56678b56",
+    "contents": [
+      "\n<SURNAME/>好啦～ \n<SURNAME/>校长先生，如我所料的行动了呢。<pause:30/>\n<SURNAME/>快找钥匙，去钟楼！Let's go！",
+      "\n<SURNAME/>那么〜，\n<SURNAME/>校长果然如预料行动了哦。<pause:30/>\n<SURNAME/>赶紧找到钥匙，然后向着钟楼Let's Goー!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:4259e538eb63",
+    "contents": [
+      "\n<SURNAME/>听说在梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质好但价格高。",
+      "\n<SURNAME/>听说在梦崎区的托尼的店，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说品质好但价格高呢。",
+      "\n<SURNAME/>听说梦崎区托尼's店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质好但价格高。",
+      "\n<SURNAME/>听说梦崎区的托尼店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质好但价格高哦。",
+      "\n<SURNAME/>听说梦崎区的托尼的店\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质不错，但价格也很高就是了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:44e8069a8e0b",
+    "contents": [
+      "\n<SURNAME/>小雪好厉害!!\n<SURNAME/>好〜我也不能输哦！",
+      "\n<SURNAME/>小雪超棒！！\n<SURNAME/>好～的我也不能输哟！"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:44fc740cbfb4",
+    "contents": [
+      "\n<SURNAME/>从今往后一段时间，汝的积极态度，\n<SURNAME/>将唤起新感情的萌芽和意志的沟通，任何\n<SURNAME/>交涉都能顺利推进吧。",
+      "\n<SURNAME/>此后片刻，汝之积极态度，\n<SURNAME/>将唤起新情愫与意志相通，任何\n<SURNAME/>谈判皆可顺畅推进。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:47d1071ac456",
+    "contents": [
+      "\n<SURNAME/> 时间已再度开始流动…<pause:30/> \n<SURNAME/>聆听这宣告梦想的钟声吧!\n",
+      "\n<SURNAME/>时间已再度开始流动…<pause:30/>\n<SURNAME/>倾听宣告梦想的钟声!\n"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:48e528188b67",
+    "contents": [
+      "\n<SURNAME/>Persona因种类不同，\n<SURNAME/>能力也各异。\n<SURNAME/>既有优势亦有缺陷。",
+      "\n<SURNAME/>Persona，\n<SURNAME/>根据其种类，拥有的能力不同。\n<SURNAME/>不仅有优点，也有缺点。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:4dded04c932d",
+    "contents": [
+      "\n<SURNAME/>那是通往希巴尔巴的钥匙，也是动力源!!\n<SURNAME/>掌控希巴尔巴和理想能量的人，\n<SURNAME/>就能掌控人类的历史!!\n",
+      "\n<SURNAME/>那是通往希巴尔巴的钥匙，也是动力源！！\n<SURNAME/>控制希巴尔巴和理想能量的人，\n<SURNAME/>就能掌控人类的历史！！\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:4eb4b6f7b467",
+    "contents": [
+      "\n<SURNAME/>在港南区的Jolly Roger，\n<SURNAME/>似乎有卖真正的武器呢。\n<SURNAME/>据说品质和价格都还算普通呢。",
+      "\n<SURNAME/>在港南区的乔利罗杰\n<SURNAME/>好像在卖真武器哦。\n<SURNAME/>质量和价格据说还算普通。",
+      "\n<SURNAME/>据说港南区的海盗旗咖啡店\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>不过品质和价格都普普通通就是了。",
+      "\n<SURNAME/>港南区Jolly Roger\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质价格都算普通。",
+      "\n<SURNAME/>港南区的快乐罗杰\n<SURNAME/>似乎在卖真武器呢。\n<SURNAME/>品质和价格都算普通。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:4f71ddf0a646",
+    "contents": [
+      "\n<SURNAME/>Black Jack\n<SURNAME/>「JOIN<SURNAME/>FORCES」有。",
+      "\n<SURNAME/>二十一点\n<SURNAME/>「JOIN<SURNAME/>FORCES」"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:50f9650645ee",
+    "contents": [
+      "\n<SURNAME/>葛叶侦探事务所的招财猫会说话？\n<SURNAME/>哈哈哈，这料女孩子会喜欢吧。\n<SURNAME/>嘛好吧。那么来分享这边的料。",
+      "\n<SURNAME/>葛叶侦探事务所的招财猫会说话？\n<SURNAME/>哈哈，女孩子会喜欢的料呢。\n<SURNAME/>嘛，好吧。那分享这边的料。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5108dcc1a4df",
+    "contents": [
+      "\n<SURNAME/>哦，渣校番长要组乐队啊。\n<SURNAME/>然后主唱要自己来？\n<SURNAME/>呵呵，这种话经常听到呢。",
+      "\n<SURNAME/>哦，渣校的番长要组乐队啊。\n<SURNAME/>然后，主唱非要自己来？\n<SURNAME/>呵呵，这种故事，经常听说呢。",
+      "\n<SURNAME/>嘿~渣高的番长想组乐队，\n<SURNAME/>而且还非得自己当主唱?\n<SURNAME/>呵呵，我经常听说这事呢。",
+      "\n<SURNAME/>嘿～渣校番长要组乐队啊。\n<SURNAME/>还非要自己当主唱？\n<SURNAME/>呵呵，这种事儿听多了～",
+      "\n<SURNAME/>嚯？渣校番长要组乐队啊。\n<SURNAME/>还非要自己当主唱？\n<SURNAME/>呵呵，这种事儿见多了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:527bf84590dc",
+    "contents": [
+      "\n<SURNAME/>你好像掌握了很多传闻呢。<pause:15/>\n<SURNAME/>我也会搞点新消息。\n<SURNAME/>到时再交换吧。",
+      "\n<SURNAME/>你好像有很多消息呢。<pause:15/>\n<SURNAME/>我也会去搞点新消息。\n<SURNAME/>到时候再交换吧。",
+      "\n<SURNAME/>你小子料不少嘛～<pause:15/>\n<SURNAME/>我也去搞点新料，\n<SURNAME/>到时候再交换呗。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:529860499fa2",
+    "contents": [
+      "\n<SURNAME/>1989年<SURNAME/>□月□□日<SURNAME/>雨\n<SURNAME/>今天，橿原的调查也结束了。\n<SURNAME/>顺便，今天才知道夫人是女演员。\n",
+      "\n<SURNAME/>1989年<SURNAME/>□月□□日<SURNAME/>雨\n<SURNAME/>今日橿原的调查也结束。\n<SURNAME/>顺便，今天才知道夫人是女演员。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:535e20a77049",
+    "contents": [
+      "\n<SURNAME/><c1d:9/>火因<SURNAME/>水而息<SURNAME/>起风\n<SURNAME/>风自<SURNAME/>火而生<SURNAME/>平大地<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>火被<SURNAME/>水平息<SURNAME/>掀起风\n<SURNAME/>风从<SURNAME/>火而生<SURNAME/>平整地<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>火被<SURNAME/>水镇灭<SURNAME/>起风\n<SURNAME/>风从<SURNAME/>火生<SURNAME/>平地<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>火被水镇<SURNAME/>升起风\n<SURNAME/>风从火生<SURNAME/>平定地<c1d:1/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:54ac6206b670",
+    "contents": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>我辈明明饿着肚子，\n<SURNAME/>橿原却似乎要和冈村去蜗牛山远足。\n<SURNAME/>以为是决定性现场，但错了。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>我辈正饿着肚子，\n<SURNAME/>橿原却和冈村去蜗牛山远足的样子。\n<SURNAME/>本以为会是决定性现场，但并非如此。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:552d896fa8ee",
+    "contents": [
+      "\n<SURNAME/>………<pause:60/>\n<SURNAME/>哼…好吧。<pause:30/>\n<SURNAME/>淳…你已偏离了命运之轮。\n",
+      "\n<SURNAME/>………<pause:60/>\n<SURNAME/>哼…好吧。<pause:30/>\n<SURNAME/>淳…你已经脱离了命运之轮。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:56680ebd9d96",
+    "contents": [
+      "\n<SURNAME/>在港南区的Jolly Roger\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>回收价不错，但但商品种类听说很差的说。",
+      "\n<SURNAME/>在港南区的乔利罗杰\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>回收价不错，但品种据说很差。",
+      "\n<SURNAME/>据说港南区的海盗旗咖啡店\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>回收价不错，但种类也很少就是了。",
+      "\n<SURNAME/>港南区Jolly Roger\n<SURNAME/>在卖真武器呢。\n<SURNAME/>回收价高但品种少。",
+      "\n<SURNAME/>港南区的快乐罗杰\n<SURNAME/>似乎在卖真武器呢。\n<SURNAME/>回收价高但品种少。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:56d3c32d7bb8",
+    "contents": [
+      "\n<SURNAME/>哇哈哈哈，你们看到了吗，微笑平坂烧起来的样子。<pause:15/>\n<SURNAME/>没错，就是那火焰。那火焰会把这无聊的世界上的一切\n<SURNAME/>全都烧得干干净净。烧吧，烧吧！",
+      "\n<SURNAME/>嘎哈哈哈，看到没，微笑平坂烧得多旺。<pause:15/>\n<SURNAME/>对，就是那火焰。它会把这无聊世界\n<SURNAME/>烧个干净。烧吧烧吧!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:58764b1bb9e8",
+    "contents": [
+      "\n<SURNAME/>不过啊，就算我早不是学生了，\n<SURNAME/>学园祭让街上热闹起来，\n<SURNAME/>连我都跟着兴奋呢。",
+      "\n<SURNAME/>不过啊，虽然学生时代早就结束了，\n<SURNAME/>但学园祭让城市热闹起来的时候，\n<SURNAME/>连我这边都跟着兴奋起来了呢。",
+      "\n<SURNAME/>不过话说回来，虽然自己早就不是学生了，\n<SURNAME/>但是一到举办学园祭、城里热热闹闹的时候，\n<SURNAME/>自己还是会兴奋起来呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:58d031046940",
+    "contents": [
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>07号机。",
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>有07号机。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:59f10a826f04",
+    "contents": [
+      "\n<SURNAME/>今天的推荐是…<pause:15/>\n<SURNAME/>全部啦…<pause:10/>每样都是新鲜的海味！\n<SURNAME/>来，下一位要点啥？",
+      "\n<SURNAME/>今天的推荐是…<pause:15/>\n<SURNAME/>全部啦…<pause:10/>每样都是新鲜的海鲜!\n<SURNAME/>来，下一个要点什么?",
+      "\n<SURNAME/>今天的推荐是…<pause:15/>\n<SURNAME/>全部啦…<pause:10/>每样都是海鲜哦！\n<SURNAME/>来，接下来要点啥？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5a355eab3311",
+    "contents": [
+      "\n<SURNAME/>咦?<SURNAME/>侦探事务所的招财猫\n<SURNAME/>会说话?<SURNAME/>哈哈，很有趣的传闻呢。\n<SURNAME/>那，来交换传闻吧。",
+      "\n<SURNAME/>咦？<SURNAME/>那个侦探事务所里的招财猫\n<SURNAME/>会说话？<SURNAME/>哈哈，那也是个有趣的传闻呢。\n<SURNAME/>那么，我们来交换传闻吧。",
+      "\n<SURNAME/>诶？<SURNAME/>那个侦探事务所放的招财猫\n<SURNAME/>会说话？<SURNAME/>哈哈，那也很有趣的传闻呢。\n<SURNAME/>那，来交换传闻吧。",
+      "\n<SURNAME/>诶？<SURNAME/>那个侦探事务所放的招财猫\n<SURNAME/>会说话？<SURNAME/>哈哈，那也很有趣的料呢。\n<SURNAME/>那，我们来交换传闻吧。",
+      "\n<SURNAME/>诶？<SURNAME/>那家侦探事务所的招财猫\n<SURNAME/>会说话？<SURNAME/>哈哈，这传闻有意思。\n<SURNAME/>那咱们交换情报吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5d5afb9e1d73",
+    "contents": [
+      "\n<SURNAME/>真让人想起那时候啊…<pause:30/>\n<SURNAME/>我和以前的伙伴们，也经常受照顾呢。<pause:30/>\n<SURNAME/>虽然发生了很多事，但真的很开心。",
+      "\n<SURNAME/>让人想起那时候呢…<pause:30/>\n<SURNAME/>我和以前的伙伴们也常受照顾。<pause:30/>\n<SURNAME/>虽然发生了很多事，但真的很开心。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5de7e16ae7d8",
+    "contents": [
+      "\n<SURNAME/>老师和我一样是七姐妹学园的世界史教师。\n<SURNAME/>而且，他总在烦恼是否在教错误的历史，\n<SURNAME/>不是吗…",
+      "\n<SURNAME/>老师和我一样是七姐妹学园的世界史教师。\n<SURNAME/>而且，他总在烦恼是否在教错误的历史，\n<SURNAME/>不是吗…\n"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5e4797303e24",
+    "contents": [
+      "\n<SURNAME/>在那种情况下，\n<SURNAME/>之前降魔的Persona，\n<SURNAME/>会变回卡片状态。",
+      "\n<SURNAME/>届时，\n<SURNAME/>原先降魔的Persona，\n<SURNAME/>将回归卡片状态。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5e642d6d1378",
+    "contents": [
+      "\n<SURNAME/>哈哈，时间城的传说武器，\n<SURNAME/>好像被恶魔抢走了。\n<SURNAME/>真是丢人的故事啊。",
+      "\n<SURNAME/>啊哈哈，我听说时间城的传说武器\n<SURNAME/>被恶魔抢走了。\n<SURNAME/>真是丢人啊。",
+      "\n<SURNAME/>啊哈哈，时间城的传说武器，\n<SURNAME/>听说被恶魔抢走了。\n<SURNAME/>真是糟糕的故事呢。",
+      "\n<SURNAME/>啊哈哈，时间城的传说武器，\n<SURNAME/>好像被恶魔抢走了呢。\n<SURNAME/>真是丢人的故事呢。",
+      "\n<SURNAME/>啊哈哈，时间城的传说武器，\n<SURNAME/>被恶魔抢了。\n<SURNAME/>真够惨的。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5f10707e3c1d",
+    "contents": [
+      "\n<SURNAME/>命运…<pause:15/>此卡预示汝之运势上升。<pause:15/>\n<SURNAME/>从今往后，你将受幸运眷顾，\n<SURNAME/>度过幸福时光。",
+      "\n<SURNAME/>命运…<pause:15/>这张卡片意味着你的运气提升。<pause:15/>\n<SURNAME/>此后一段时间，将受幸运眷顾，\n<SURNAME/>能够度过幸福的日子。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:608202c57dc2",
+    "contents": [
+      "\n<SURNAME/>还有太多不明白的事。<pause:30/>\n<SURNAME/>关于淳君的父亲、那个Persona…<pause:30/>\n<SURNAME/>为什么传闻会变成现实…\n",
+      "\n<SURNAME/>还有太多未解之事。<pause:30/>\n<SURNAME/>淳君父亲的事，那个Persona的事…<pause:30/>\n<SURNAME/>为何传闻会成真…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:60b78bfed45f",
+    "contents": [
+      "\n<SURNAME/>看到咱们的脸就逃，\n<SURNAME/>怎么想都可疑!\n<SURNAME/><c12/>，快追上去!\n",
+      "\n<SURNAME/>看到老子的脸就逃跑，\n<SURNAME/>怎么想都很可疑!\n<SURNAME/><c12/>、赶紧追上去!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:63f5e6f2a8f3",
+    "contents": [
+      "\n<SURNAME/>传闻对销售很有用呢～\n<SURNAME/>你要是听到什么有趣的传闻，一定要告诉我哦。\n<SURNAME/>作为交换，我会提供我知道的传闻。",
+      "\n<SURNAME/>传闻对销售有用呢~\n<SURNAME/>你要是听到什么有趣的传闻，一定要告诉我哦。\n<SURNAME/>作为交换，我会提供我知道的传闻。",
+      "\n<SURNAME/>传闻对销售有用啊～\n<SURNAME/>你有趣传闻要告诉我。\n<SURNAME/>交换我提供知道的传闻。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:648aacc0d877",
+    "contents": [
+      "\n<SURNAME/>还剩一个了…<pause:30/>\n<SURNAME/>剩一个，除了天之水晶骷髅，\n<SURNAME/>所有骷髅就都集齐了。\n",
+      "\n<SURNAME/>还剩一个了…<pause:30/>\n<SURNAME/>还剩一个，除天之水晶骷髅外，\n<SURNAME/>所有的骷髅就都集齐了。\n",
+      "\n<SURNAME/>还剩一个了…<pause:30/>\n<SURNAME/>还剩一个，除天之水晶骷髅外，\n<SURNAME/>所有骷髅就集齐了。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6612cbfdc580",
+    "contents": [
+      "\n<SURNAME/>你的能力受影响的方面，\n<SURNAME/>取决于所降魔的Persona种类。\n<SURNAME/>这一点也请考虑进去吧。",
+      "\n<SURNAME/>它会影响您能力的哪一部分，\n<SURNAME/>取决于降魔的Persona种类。\n<SURNAME/>这一点也请考虑。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:66f8a4ed4720",
+    "contents": [
+      "\n<SURNAME/>传奇女演员吉川小百合的日历。\n<SURNAME/>仔细一看，是30年前的东西!!\n<SURNAME/>嘴唇部分，不知为何泡涨了…",
+      "\n<SURNAME/>传奇女演员，吉川小百合的日历。\n<SURNAME/>仔细一看，居然是30年前的东西了!!\n<SURNAME/>不知为何，嘴唇部分湿漉漉的…",
+      "\n<SURNAME/>传奇女演员，吉川小百合的日历。 \n<SURNAME/>仔细一看，居然是30年前的东西了!! \n<SURNAME/>不知为何，嘴唇部分湿漉漉的…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6709a9210dc9",
+    "contents": [
+      "\n<SURNAME/>据说圣枪骑士团发现了体现基督奇迹的，\n<SURNAME/>朗基努斯之枪！！\n",
+      "\n<SURNAME/>据说圣枪骑士团发现了，\n<SURNAME/>体现基督奇迹的朗基努斯之枪!!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6730ee5ab3d5",
+    "contents": [
+      "\n<SURNAME/>…嘻<pause:30/>\n<SURNAME/>…咿嘻<pause:30/>…嘻哈!<pause:30/>\n<SURNAME/>嘻—哈哈哈啊啊啊!!\n",
+      "\n<SURNAME/>…嘻<pause:30/>\n<SURNAME/>…嘿嘿<pause:30/>…呀哈!<pause:30/>\n<SURNAME/>呀哈哈哈啊啊啊!!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:67f371a31231",
+    "contents": [
+      "\n<SURNAME/>太感激了!<SURNAME/>太感激了!\n<SURNAME/>一直担心的雀斑消失了!\n<SURNAME/>这也是多亏了实现梦想的咒语啊!",
+      "\n<SURNAME/>太感激了!<SURNAME/>太感激了!\n<SURNAME/>一直担心的雀斑消失了!\n<SURNAME/>这都多亏实现梦想的咒语啊!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:69f4925d683b",
+    "contents": [
+      "\n<SURNAME/>世界之灵那地方\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说价格很便宜，但是品质很差就是了。",
+      "\n<SURNAME/>那个Anima Mundi\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>便宜但但质量听说不好的说的说。",
+      "\n<SURNAME/>那个阿尼玛·蒙迪\n<SURNAME/>居然能买到真防具？\n<SURNAME/>听说便宜但品质差。",
+      "\n<SURNAME/>那个阿尼玛蒙迪\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说便宜但质量差呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6bd8e2267c1b",
+    "contents": [
+      "\n<SURNAME/>刚才那个人…<pause:30/>\n<SURNAME/>总觉得在哪见过～?\n<SURNAME/>算了，总之先追上去!\n",
+      "\n<SURNAME/>刚才那人…<pause:30/>\n<SURNAME/>总觉得在哪见过~\n<SURNAME/>算了先追吧!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6d2bc8393628",
+    "contents": [
+      "\n<SURNAME/>父亲…?\n<SURNAME/>是啊…<pause:30/>\n<SURNAME/>是父亲…\n",
+      "\n<SURNAME/>父亲…？\n<SURNAME/>是啊…<pause:30/>\n<SURNAME/>是父亲…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6d7f629a73ec",
+    "contents": [
+      "\n<SURNAME/>真是倒霉啊，<c12/>前辈。\n<SURNAME/>不过反谷校长莫名地受欢迎呢。<pause:30/> \n<SURNAME/>我也是，明明看他很不爽，却又有点喜欢…这到底是怎么一回事？",
+      "<SURNAME/>真是倒霉啊，<c12/>前辈。\n<SURNAME/>不过反谷校长莫名地受欢迎呢。<pause:30/> \n<SURNAME/>我也是，明明看他很不爽，却又有点喜欢…这到底是怎么一回事？"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6e8d9fbf99b0",
+    "contents": [
+      "\n<SURNAME/>你听说了吗？<SURNAME/>青华区的月光之清\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质好，但价格也高就是了。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>在青华区的Claire de Lune，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说品质好但价格高呢。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>青华区的克雷尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质好但价格高哦。",
+      "\n<SURNAME/>听说了吗？<SURNAME/>青华区的克蕾尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质好但价格高。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6ed0a635fa5c",
+    "contents": [
+      "\n<SURNAME/>呵呵，我这边超顺利的。最新八卦源源不断呢。<pause:15/>\n<SURNAME/>你那边怎么样？<SURNAME/>要不，我的最新八卦\n<SURNAME/>可以跟你交换哦。",
+      "\n<SURNAME/>唔呵，我这儿情报爆棚呢。<pause:15/>\n<SURNAME/>你咋样？<SURNAME/>要不拿我的新料\n<SURNAME/>跟你交换？",
+      "\n<SURNAME/>唔呵，我这儿行情超好～新料爆棚。<pause:15/>\n<SURNAME/>你咋样？<SURNAME/>要不拿我最新传闻\n<SURNAME/>跟你换也行哦～",
+      "\n<SURNAME/>唔呼，我这边绝佳。新传闻一堆。<pause:15/>\n<SURNAME/>你那边怎么样?<SURNAME/>那要不拿我掌握的最新传闻\n<SURNAME/>跟你的交换一下？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6f1f3a51dbf3",
+    "contents": [
+      "\n<SURNAME/>这声音是…般若!?\n<SURNAME/>在上面!\n",
+      "\n<SURNAME/>这声音是…般若！？\n<SURNAME/>在上面！\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6f70dc0e6d36",
+    "contents": [
+      "\n<SURNAME/>世界之灵那地方\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说品质很好，但价格也很高就是了。",
+      "\n<SURNAME/>那个Anima Mundi\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>质量不错但但价格听说高的说的说。",
+      "\n<SURNAME/>那个阿尼玛·蒙迪\n<SURNAME/>居然能买到真防具？\n<SURNAME/>听说品质好但价格高。",
+      "\n<SURNAME/>那个阿尼玛蒙迪\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说质量好但价格很高呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6fffd00e0d22",
+    "contents": [
+      "\n<SURNAME/>象征大十字的四个星座，\n<SURNAME/>分别被分配了\n<SURNAME/>地水火风四大元素…\n",
+      "\n<SURNAME/>象征大十字的四个星座，\n<SURNAME/>分别被赋予了\n<SURNAME/>地水火风四大元素…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:704f7a561c33",
+    "contents": [
+      "\n<SURNAME/>这个浮雕…<pause:30/>\n<SURNAME/>是在表现四个神殿的事吧？\n<SURNAME/>是什么呢…顺序…平衡…？\n",
+      "\n<SURNAME/>这个浮雕…<pause:30/>\n<SURNAME/>是在表示4个神殿的事吧？\n<SURNAME/>是什么呢…顺序…平衡…？\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:71a4fec8ca8b",
+    "contents": [
+      "\n<SURNAME/>话虽如此，既有与你亲近的存在，\n<SURNAME/>也有疏远的存在吧。",
+      "\n<SURNAME/>话虽如此，既有与您亲近者，\n<SURNAME/>也有疏远者吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:73c1d998e537",
+    "contents": [
+      "\n<SURNAME/><c13/>君，\n<SURNAME/>那边不是刚才进来的门吗?\n<SURNAME/>从对面的门出去吧。\n",
+      "\n<SURNAME/><c13/>，\n<SURNAME/>那边不是刚才进来的门吗?\n<SURNAME/>从反方向那扇出去吧。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:748275853351",
+    "contents": [
+      "\n<SURNAME/>话说回来，<c14/>的班主任，<pause:10/>\n<SURNAME/>相当有女中豪杰风范啊。<pause:15/>\n<SURNAME/>嘿嘿，和鼻血子很像呢。",
+      "\n<SURNAME/>话说回来，<c14/>的班主任，<pause:10/>\n<SURNAME/>真是个大姐头风范的人啊。<pause:15/>\n<SURNAME/>嘿嘿，和姐很像呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:74df8cf3e64c",
+    "contents": [
+      "\n<SURNAME/>哎呀…<pause:15/>\n<SURNAME/>各位似乎毫发无伤、健康得很。<pause:15/>\n<SURNAME/>无需治疗呢。",
+      "\n<SURNAME/>哎呀…<pause:15/>\n<SURNAME/>诸位毫发无伤健康得很呢。<pause:15/>\n<SURNAME/>无需治疗。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:765a40164b7a",
+    "contents": [
+      "\n<SURNAME/>此卡意味着尔之财运下降。<pause:15/>\n<SURNAME/>从今往后，囊中将羞涩，\n<SURNAME/>贫苦度日，饱受饥馑之苦。",
+      "\n<SURNAME/>此牌预示财运衰败。<pause:15/>\n<SURNAME/>此后囊中羞涩，\n<SURNAME/>贫寒度日饥肠辘辘。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:79298601ace3",
+    "contents": [
+      "\n<SURNAME/>嘿～<pause:30/>\n<SURNAME/>七姊妹的校长，突然长头发了?\n<SURNAME/>可能是向小丑大人许愿了吧。",
+      "\n<SURNAME/>嘿～<pause:30/>\n<SURNAME/>七姐妹的校长，突然长头发了?\n<SURNAME/>可能是向JOKER大人许愿了吧。",
+      "\n<SURNAME/>诶～<pause:30/>\n<SURNAME/>七姊妹学园的校长，突然长头发了？\n<SURNAME/>是不是向小丑大人许愿了？",
+      "\n<SURNAME/>诶～<pause:30/>\n<SURNAME/>七姊妹的校长，突然长头发了？\n<SURNAME/>可能是向小丑大人许愿了吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7a7a829c6925",
+    "contents": [
+      "\n<SURNAME/>我的目的、不仅仅是复仇。\n",
+      "\n<SURNAME/>我的目的，不仅仅是复仇。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7a81c6e77592",
+    "contents": [
+      "\n<SURNAME/><c1d:9/>空无一物。<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>里面什么都没有。<c1d:1/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7b1d6529581a",
+    "contents": [
+      "\n<SURNAME/><c1d:9/>什么也没有。<c1d:1/>",
+      "\n<SURNAME/><c1d:9/>什么也没有。<c1d:1/>\n"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7b5428bee5e2",
+    "contents": [
+      "\n<SURNAME/>那就是…JOKER!?\n",
+      "\n<SURNAME/>那就是…JOKER?!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7ba94a683271",
+    "contents": [
+      "\n<SURNAME/>胜利与达成…<pause:15/>此牌预示汝之金运UP，\n<SURNAME/>意味于此。<pause:15/>此后片刻，汝之囊中\n<SURNAME/>将暖，安享奢华可期。",
+      "\n<SURNAME/>胜利与达成…<pause:15/>这张卡片意味着你的财运上升。<pause:15/>\n<SURNAME/>此后一段时间，你的腰包会暖意融融，\n<SURNAME/>可以轻松大手大脚地享受了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7bbecbb0a6d3",
+    "contents": [
+      "\n<SURNAME/>听说在莲华台的时间城，\n<SURNAME/>在卖真正的武器哦。真是危险的话题呢。\n<SURNAME/>据说价格和质量都普通。",
+      "\n<SURNAME/>听说在莲华台的时间城，有卖真正的武器\n<SURNAME/>呢。真是危险的话题呢。\n<SURNAME/>据说品质和价格都普通呢。",
+      "\n<SURNAME/>听说莲华台时间城在卖\n<SURNAME/>真武器呢。真危险啊。\n<SURNAME/>据说品质价格都普通。",
+      "\n<SURNAME/>听说莲华台的时间城在卖真\n<SURNAME/>武器呢。真危险哦。\n<SURNAME/>品质和价格都普通呢。",
+      "\n<SURNAME/>我听说莲华台的时间城在卖真武器，\n<SURNAME/>真是个危险的话题啊，\n<SURNAME/>不过品质和价格都普普通通就是了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7db6937af6bb",
+    "contents": [
+      "\n<SURNAME/>1989年<SURNAME/>○月○○日<SURNAME/>晴\n<SURNAME/>在饥饿中，我辈今天也进行橿原的调查。\n<SURNAME/>本以为叫冈村的女人是情妇，但似乎不是。\n",
+      "\n<SURNAME/>1989年<SURNAME/>○月○○日<SURNAME/>晴\n<SURNAME/>饿着肚子，我辈今日也调查橿原。\n<SURNAME/>怀疑冈村这女人是情人，但似乎不对。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:81d86bae2967",
+    "contents": [
+      "\n<SURNAME/>终于，现在、过去、未来、\n<SURNAME/>相连的时间之环开始转动，\n<SURNAME/>希巴尔巴现出了其身影。\n",
+      "\n<SURNAME/>终于，现在、过去、未来，\n<SURNAME/>连绵的时间之环开始转动，\n<SURNAME/>希巴尔巴现出了身影。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8285c8dcd89d",
+    "contents": [
+      "\n<SURNAME/>………!?\n",
+      "\n<SURNAME/>………！？\n",
+      "<SURNAME/>………！？"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:82a14bc8955b",
+    "contents": [
+      "\n<SURNAME/>那个大叔突然就阔绰起来了，\n<SURNAME/>可是他以前不还老哭穷说什么自己是万年小员工，\n<SURNAME/>工资少，而且还总念叨什么赤字螺旋吗?",
+      "\n<SURNAME/>那大叔，突然就阔气起来了。\n<SURNAME/>明明一直抱怨自己是万年小职员，工资低，\n<SURNAME/>入不敷出呢？",
+      "\n<SURNAME/>那老头，突然就阔起来了。\n<SURNAME/>明明一直抱怨万年小职员的低工资，入不敷出，\n<SURNAME/>整天唉声叹气的不是？",
+      "\n<SURNAME/>那边的老爹，突然就飞黄腾达了。\n<SURNAME/>以前总抱怨自己是万年小职员，工资低，入不敷出。\n<SURNAME/>整天唉声叹气的。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:84fbb70a198f",
+    "contents": [
+      "\n<SURNAME/>欢迎来到天鹅绒房间。\n<SURNAME/>今天有何贵干？",
+      "\n<SURNAME/>欢迎来到天鹅绒房间。\n<SURNAME/>今日，有何贵干呢?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:865a4bbb1558",
+    "contents": [
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>05号机。",
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>05号机有。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8769e1e5aea9",
+    "contents": [
+      "\n<SURNAME/>啥？<SURNAME/>荣吉的意愿？\n<SURNAME/>别胡说八道，小哥！！\n<SURNAME/>儿子继承老子的家业！<SURNAME/>天经地义的事！",
+      "\n<SURNAME/>嗯?<SURNAME/>荣吉的意愿?\n<SURNAME/>别说傻话，小哥!!\n<SURNAME/>儿子要继承老子的衣钵!<SURNAME/>这是自古就定好的规矩!",
+      "\n<SURNAME/>嗯？<SURNAME/>荣吉的意志？\n<SURNAME/>别胡说八道了，小哥！！\n<SURNAME/>儿子继承老子的衣钵！<SURNAME/>自古以来就定好的！"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:87d84a8ddc51",
+    "contents": [
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>但同三人避开他人视线，\n<SURNAME/>在市内文化遗产和蜗牛山探索等，\n<SURNAME/>发现了几处可疑之处。\n",
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>但是，这三人似乎避开他人视线，\n<SURNAME/>探索市内的文化遗产和蜗牛山等，\n<SURNAME/>发现了一些奇异之处。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8886f0073c3a",
+    "contents": [
+      "\n<SURNAME/>啊〜呀，开玩笑、开玩笑!!<pause:30/>\n<SURNAME/>那种事不可能有吧!<pause:30/>\n<SURNAME/>因为是个好男人，姐姐我看入迷了♥",
+      "\n<SURNAME/>啊哈哈〜开玩笑的，开玩笑!!<pause:30/>\n<SURNAME/>那种事嘛！<pause:30/>\n<SURNAME/>因为是个好男人，姐姐我看入迷了♥"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:89338d1a015a",
+    "contents": [
+      "\n<SURNAME/>1989年<SURNAME/>△月△△日<SURNAME/>晴\n<SURNAME/>我辈今天也进行橿原的调查。\n<SURNAME/>前几天的登山调查，让老毛病腰痛加剧了。\n",
+      "\n<SURNAME/>1989年<SURNAME/>△月△△日<SURNAME/>晴\n<SURNAME/>我辈今日也调查橿原。\n<SURNAME/>因前几天的登山调查，老毛病腰痛加剧。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8972eef6044f",
+    "contents": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>学校事件后，橿原不再外出。\n<SURNAME/>据夫人说，似乎在热心地写作什么。\n<SURNAME/>但今天要和儿子外出。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>学校那件事以来，橿原不再外出。\n<SURNAME/>据夫人说，似乎在热心撰写什么。\n<SURNAME/>但今天似乎要和儿子外出。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8aa73b2f9b99",
+    "contents": [
+      "\n<SURNAME/>…诶?\n",
+      "\n<SURNAME/>…诶？\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8bf810d4f76e",
+    "contents": [
+      "\n<SURNAME/>真是的，说到那小子，\n<SURNAME/>每天就知道闲逛。<pause:30/>\n<SURNAME/>我都担心他能不能继承衣钵啊。",
+      "\n<SURNAME/>真是的，那小子啊，\n<SURNAME/>整天就知道到处鬼混。<pause:30/>\n<SURNAME/>我都担心他能不能继承我的衣钵啊。",
+      "\n<SURNAME/>真是的，那小子啊，\n<SURNAME/>每天就知道瞎逛。<pause:30/>\n<SURNAME/>我都担心他能不能继承家业呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8d26192ed4f4",
+    "contents": [
+      "\n<SURNAME/>那个校长，难道装了加速装置吗？\n<SURNAME/>之前战斗时的力量也还留着的样子…\n<SURNAME/>真是的，变成个不得了的校长了啊。",
+      "\n<SURNAME/>那校长装了加速装置不成?\n<SURNAME/>上次打架时的力量也还在…\n<SURNAME/>靠，变成不得了的校长了啊。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8e55ee992046",
+    "contents": [
+      "\n<SURNAME/>辛苦了！\n<SURNAME/>那么，有什么事吗？",
+      "\n<SURNAME/>辛苦啦!\n<SURNAME/>那么，有什么事吗?",
+      "\n<SURNAME/>辛苦啦！\n<SURNAME/>那么，有什么事吗？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8f4830ebaa50",
+    "contents": [
+      "\n<SURNAME/>是的，Persona的等级越高，\n<SURNAME/>所需的塔罗牌数量也会增加呢。",
+      "\n<SURNAME/>是的，等级越高的Persona，\n<SURNAME/>所需塔罗牌也越多。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:91982dca1b1f",
+    "contents": [
+      "\n<SURNAME/>听说在港南区的废弃工厂，有叫衣柜婆婆的\n<SURNAME/>妖怪出现呢。<pause:15/>\n<SURNAME/>话说，是什么样的妖怪呢?",
+      "\n<SURNAME/>据说在港南区的废工厂里，\n<SURNAME/>有个叫衣柜婆婆的妖怪出没。<pause:15/>\n<SURNAME/>那到底是什么样的妖怪啊？",
+      "\n<SURNAME/>港南区的废弃工厂里，据说有\n<SURNAME/>叫衣柜婆婆的妖怪出现。<pause:15/>\n<SURNAME/>话说，是什么样的妖怪啊？",
+      "\n<SURNAME/>港南区的废弃工厂，有叫衣柜婆婆的\n<SURNAME/>妖怪出没呢。<pause:15/>\n<SURNAME/>那是什么妖怪啊?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:91e76ed743bc",
+    "contents": [
+      "\n<SURNAME/>一次仅能降魔一体Persona。\n<SURNAME/>但持有卡片时，\n<SURNAME/>可随时更换降魔对象。",
+      "\n<SURNAME/>降魔一次只能进行一体。\n<SURNAME/>但是，如果有Persona卡片，\n<SURNAME/>随时可以降魔其他Persona。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:938a0aec2cf3",
+    "contents": [
+      "\n<SURNAME/>箱子里，不知为何放着粗绳和蜡烛…\n<SURNAME/>但愿只是应急用的…",
+      "\n<SURNAME/>箱子里，不知为何放着粗绳和蜡烛… \n<SURNAME/>但愿只是应急用的…",
+      "\n<SURNAME/>里面，不知为何有粗绳和蜡烛…\n<SURNAME/>想当作是紧急用的…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:93f1d4721e1d",
+    "contents": [
+      "\n<SURNAME/>对了，有学生说 \n<SURNAME/>职员室也有校徽。<pause:15/>\n\n<SURNAME/>那就只剩职员室的了吧?",
+      "\n<SURNAME/>说起来，有学生说，\n<SURNAME/>职员室也有校徽哦。<pause:15/>\n<SURNAME/>那剩下的就只有职员室里的那些了吧?"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:94a1914b00e4",
+    "contents": [
+      "\n<SURNAME/>你听说了吗？<SURNAME/>青华区的月光之清\n<SURNAME/>在卖真武器呢。\n<SURNAME/>虽然价格便宜，但品质一般就是了。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>在青华区的Claire de Lune，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说价格便宜但品质一般呢。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>青华区的克雷尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>价格便宜但品质一般哦。",
+      "\n<SURNAME/>听说了吗？<SURNAME/>青华区的克蕾尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>价格便宜但品质一般。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9518ef70807a",
+    "contents": [
+      "\n<SURNAME/>果然这儿超适合收集情报～\n<SURNAME/>能打探消息，寿司又赞，吧唧吧唧…<pause:15/>\n<SURNAME/>哈啊…简直满载而归～",
+      "\n<SURNAME/>果然这里是收集情报的好地方。\n<SURNAME/>能听到消息，寿司又好吃，嚼嚼…<pause:15/>\n<SURNAME/>哈…感觉一切都大丰收了。",
+      "\n<SURNAME/>果然这里适合收集情报。\n<SURNAME/>不仅能听传闻，还能吃到好吃的寿司，嚼嚼…<pause:15/>\n<SURNAME/>哈…感觉一切大丰收啊。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9526d2cd2793",
+    "contents": [
+      "\n<SURNAME/>顺便，新召唤的Persona，\n<SURNAME/>由我妥善保管。\n<SURNAME/>需要时请吩咐。",
+      "\n<SURNAME/>顺带一提，新召唤的Persona，\n<SURNAME/>都由我妥善保管。\n<SURNAME/>需要时请随时吩咐。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9630bc91e496",
+    "contents": [
+      "\n<SURNAME/>咦?<SURNAME/>侦探事务所的环酱，\n<SURNAME/>其实是恶魔召唤师?<SURNAME/><pause:15/>…那是什么?<pause:15/>\n<SURNAME/>特别的工作吗…<pause:15/>算了。",
+      "\n<SURNAME/>咦？<SURNAME/>侦探事务所的玉木酱，\n<SURNAME/>其实是恶魔召唤师？<SURNAME/><pause:15/>……等等，那是什么？<pause:15/>\n<SURNAME/>是某种特别的工作吗……<pause:15/>算了。",
+      "\n<SURNAME/>咦？<SURNAME/>侦探事务所的玉木酱，\n<SURNAME/>其实是恶魔召唤师？<SURNAME/><pause:15/>……那是什么？<pause:15/>\n<SURNAME/>是某种特别的工作吗……<pause:15/>算了。",
+      "\n<SURNAME/>咦？<SURNAME/>侦探事务所的环酱，\n<SURNAME/>其实是恶魔召唤师？<SURNAME/><pause:15/>……等等，那是啥？<pause:15/>\n<SURNAME/>什么特殊工作吗…<pause:15/>算了不管了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:965341b14fb9",
+    "contents": [
+      "\n<SURNAME/>今后等待诸君的，\n<SURNAME/>将是伏行而来的混沌所编织的、更为严酷的命运吧…\n",
+      "\n<SURNAME/>从今往后，等待诸君的，\n<SURNAME/>是这伏行之混沌所编织的更残酷的命运…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:96f3eae6a8d4",
+    "contents": [
+      "\n<SURNAME/>什么也没有。",
+      "\n<SURNAME/>里面什么也没有。",
+      "\n<SURNAME/>里面什么都没有。"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:99ce7f1532bf",
+    "contents": [
+      "\n<SURNAME/>为了那些孩子们，\n<SURNAME/>我必须阻止父亲…<pause:30/>\n<SURNAME/>绝不能当一辈子傀儡!!\n",
+      "\n<SURNAME/>为了那些孩子，\n<SURNAME/>我必须阻止父亲…<pause:30/>\n<SURNAME/>绝不能当一辈子傀儡!!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9a823586299b",
+    "contents": [
+      "\n<SURNAME/>世界之灵那地方\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>不过听说质量和价格都普普通通就是了。",
+      "\n<SURNAME/>那个Anima Mundi\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说质量和价格都普通的说的说。",
+      "\n<SURNAME/>那个阿尼玛·蒙迪\n<SURNAME/>居然能买到真防具？\n<SURNAME/>听说品质和价格都普通。",
+      "\n<SURNAME/>那个阿尼玛蒙迪\n<SURNAME/>居然能买到真防具吗？\n<SURNAME/>听说质量和价格都普通呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9aec0d13f390",
+    "contents": [
+      "\n<SURNAME/>死与再生…<pause:15/>这张卡片意味着你的运气下降。<pause:15/>\n<SURNAME/>此后一段时间，将被好运抛弃，\n<SURNAME/>度过不幸的日子吧。",
+      "\n<SURNAME/>死亡与重生…<pause:15/>此卡预示汝之运势下降。<pause:15/>\n<SURNAME/>从今往后，你将失去运气，\n<SURNAME/>度过不幸时光。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9cd5362db74a",
+    "contents": [
+      "\n<SURNAME/>但仅与同种恶魔交涉可不行。\n<SURNAME/>恶魔等级越高，\n<SURNAME/>持有的塔罗牌数量也越多。",
+      "\n<SURNAME/>但只交涉同种恶魔不行。\n<SURNAME/>等级越高的恶魔，\n<SURNAME/>持有塔罗牌也越多。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9f1da4c62644",
+    "contents": [
+      "\n<SURNAME/>刚才前辈已经把他破坏掉了， \n<SURNAME/>这个房间的纹章是最后一个了!! \n<SURNAME/>得快点破坏其他房间的!!",
+      "\n<SURNAME/>既然刚才前辈破坏掉了，\n<SURNAME/>这间房间里的徽章就是最后一个了!!\n<SURNAME/>得快点破坏其他房间的!!"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9fd6816f3994",
+    "contents": [
+      "\n<SURNAME/>小雪的事，我已经跟老师说了。\n<SURNAME/>为了不输给那两个人\n<SURNAME/>，我们也要加油啊!",
+      "\n<SURNAME/>小雪的事，我已经跟老师说了。\n<SURNAME/>为了不输给那两个人，\n<SURNAME/>我们也得加油呢！"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a01a41be3678",
+    "contents": [
+      "\n<SURNAME/>什么，悬赏?<SURNAME/>好像没收到什么…\n<SURNAME/>是不是时间还没到?\n<SURNAME/>过会儿再来怎么样?",
+      "\n<SURNAME/>什么，悬赏？<SURNAME/>好像什么也没到…\n<SURNAME/>是不是时间还没到呢？\n<SURNAME/>过一会儿再来怎么样？",
+      "\n<SURNAME/>什么，悬赏？<SURNAME/>好像什么也没收到啊…\n<SURNAME/>是不是时间还没到呢？\n<SURNAME/>过一会儿再来怎么样？",
+      "\n<SURNAME/>什么，抽奖？<SURNAME/>好像还没收到东西啊…\n<SURNAME/>是不是时间还没到呢？\n<SURNAME/>过会儿再来怎么样？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a114868ead6c",
+    "contents": [
+      "\n<SURNAME/>别一直盯着我看!\n<SURNAME/>我也不想这样来学校啊。\n<SURNAME/>但最爱的校长说别请假…",
+      "\n<SURNAME/>请不要一直盯着我看!\n<SURNAME/>我也不想这副样子来学校的。\n<SURNAME/>但是，我最喜欢的校长先生说不要请假…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a14e888879f3",
+    "contents": [
+      "\n<SURNAME/>传奇女演员，吉川小百合的日历。 \n<SURNAME/>不知为何，嘴唇部分湿漉漉的…",
+      "\n<SURNAME/>传奇女演员，吉川小百合的海报。\n<SURNAME/>不知为何，嘴唇部分湿漉漉的…"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a18746b8634c",
+    "contents": [
+      "\n<SURNAME/>呵呵呵，又有新八卦进来了。\n<SURNAME/>你那边怎么样？<SURNAME/>有新消息吗？\n<SURNAME/>那我们就交换八卦吧。",
+      "\n<SURNAME/>唔呵呵，又搞到新传闻啦。\n<SURNAME/>你那边呢？<SURNAME/>有新货没？\n<SURNAME/>有就跟我换呗。",
+      "\n<SURNAME/>唔呵呵～又搞到新料啦。\n<SURNAME/>你那边呢？<SURNAME/>有新货没？\n<SURNAME/>有就跟我交换呗～",
+      "\n<SURNAME/>唔呼呼，又有新传闻啦。\n<SURNAME/>你那边怎么样?<SURNAME/>有新消息了?\n<SURNAME/>那就来交换吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a29b8bd3f57e",
+    "contents": [
+      "\n<SURNAME/>你听说了吗？<SURNAME/>青华区的月光之清\n<SURNAME/>在卖真武器呢。\n<SURNAME/>种类齐全，但回收价非常低就是了。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>在青华区的Claire de Lune，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说品种齐全但回收价格低呢。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>青华区的克雷尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种多但回收价低哦。",
+      "\n<SURNAME/>听说了吗？<SURNAME/>青华区的克蕾尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种齐全但回收价低。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a7d906128eca",
+    "contents": [
+      "\n<SURNAME/>自从连环恐怖袭击事件发生后，\n<SURNAME/>连新的传闻都听不到了。\n<SURNAME/>真头疼啊…",
+      "\n<SURNAME/>自从连续恐怖事件发生后，新八卦\n<SURNAME/>也听不到了。\n<SURNAME/>真头疼啊…",
+      "\n<SURNAME/>连环恐袭闹开后，\n<SURNAME/>新传闻都听不着了。\n<SURNAME/>愁死人啊…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:aad23017dc9e",
+    "contents": [
+      "\n<SURNAME/>如果把她关在神社直到明天，\n<SURNAME/>大姐姐，就哪里也去不了啦!!\n",
+      "\n<SURNAME/>把你关在神社到明天，\n<SURNAME/>姐姐，就哪儿也去不了啦!!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ab5d9fc3f16f",
+    "contents": [
+      "\n<SURNAME/>我手头就这些料啦。\n<SURNAME/>等有新情报，\n<SURNAME/>再交换传闻。说定了～",
+      "\n<SURNAME/>我现在知道的八卦就这些了。\n<SURNAME/>等有新消息到手，\n<SURNAME/>我们再交换八卦。说定了哦。",
+      "\n<SURNAME/>现在我掌握的传闻，就这些了。\n<SURNAME/>等再有什么新情报到手，\n<SURNAME/>我们再交换传闻吧。说定了。",
+      "\n<SURNAME/>现在我知道的传闻就这些了。\n<SURNAME/>如果又搞到新情报，\n<SURNAME/>就交换传闻吧。说定了。",
+      "\n<SURNAME/>目前我知道的传闻就这些。\n<SURNAME/>有新消息的话\n<SURNAME/>再来交换吧。约好了哦。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:abd02cda989f",
+    "contents": [
+      "\n<SURNAME/>伏行之混沌…<pause:30/>\n<SURNAME/>那到底是什么…?<pause:30/>\n",
+      "\n<SURNAME/>伏行之混沌…<pause:30/>\n<SURNAME/>那究竟是什么…?<pause:30/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ad0d7ced9da5",
+    "contents": [
+      "\n<SURNAME/>时间城的传说武器好像是花，\n<SURNAME/>那个店主居然把它给了某个\n<SURNAME/>短发的女人。",
+      "\n<SURNAME/>时间城的传说武器是花，\n<SURNAME/>店主竟把它给了个\n<SURNAME/>短发女。",
+      "\n<SURNAME/>时间城里的传说武器，好像是花，\n<SURNAME/>那个店主居然把它给了某个\n<SURNAME/>短发的女性，听说呢。",
+      "\n<SURNAME/>时间城里的传说武器，好像是花，\n<SURNAME/>那个店主居然把它给了某个\n<SURNAME/>短头发的女人。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:adcf444602db",
+    "contents": [
+      "\n<SURNAME/>小雪的事，\n<SURNAME/>我已经跟冴子老师说了…\n<SURNAME/>老师虽然说不相信…",
+      "\n<SURNAME/>小雪的事，\n<SURNAME/>我已经跟冴子老师说了…\n<SURNAME/>老师说她不相信…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ae5d9ef3fe14",
+    "contents": [
+      "\n<SURNAME/>不是有传闻说岩户山上有裂口女吗？\n<SURNAME/>我小时候也经常被老师吓唬说，如果绕远路的话\n<SURNAME/>就会被裂口女追赶的。",
+      "\n<SURNAME/>岩户山上有那个裂口女在，不是吗？\n<SURNAME/>我小时候也常被老师吓唬，说如果绕道，\n<SURNAME/>裂口女会追来。",
+      "\n<SURNAME/>岩户山不是有裂口女吗？\n<SURNAME/>我小时候也被老师吓唬：绕路的话\n<SURNAME/>裂口女会追上来呢。",
+      "\n<SURNAME/>岩户山有那个裂口女出没不是吗。\n<SURNAME/>我小时候也常被老师吓唬，说乱逛的话\n<SURNAME/>裂口女会追来呢。",
+      "\n<SURNAME/>岩户山有那个裂口女在，不是吗?\n<SURNAME/>我小时候也常被老师威胁说，如果绕路\n<SURNAME/>裂口女会追来呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:aec7210c9031",
+    "contents": [
+      "\n<SURNAME/>听说时间城的传说武器，\n<SURNAME/>被某个看起来不幸的女人\n<SURNAME/>买走了。",
+      "\n<SURNAME/>听说时间城里的传说武器，\n<SURNAME/>被某个看起来不幸的女人\n<SURNAME/>买走了呢。",
+      "\n<SURNAME/>据说时间城的传说武器，\n<SURNAME/>被某个看起来不幸的女人\n<SURNAME/>买走了呢。",
+      "\n<SURNAME/>据说时间城里的传说武器，\n<SURNAME/>被某个命苦的女性\n<SURNAME/>买走了呢。",
+      "\n<SURNAME/>时间城的传说武器，\n<SURNAME/>被个福薄女人\n<SURNAME/>买走了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:af6455001928",
+    "contents": [
+      "\n<SURNAME/>葛叶侦探事务所的环小姐的本职是，\n<SURNAME/>恶魔召唤师？<SURNAME/>是什么特殊工作吗？\n<SURNAME/>没听说过这种职业呢…嘛好吧。",
+      "\n<SURNAME/>葛叶侦探事务所的环酱本业是，\n<SURNAME/>恶魔召唤师？<SURNAME/>什么特殊工作啊？\n<SURNAME/>没听过这种职业…嘛，好吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:af8da76858d0",
+    "contents": [
+      "\n<SURNAME/>他们准备了各种高科技武器和\n<SURNAME/>超人部队，等待时机成熟！\n",
+      "\n<SURNAME/>他们准备了各种高科技武器和\n<SURNAME/>超人部队，等待着时机成熟!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b0a68d64b647",
+    "contents": [
+      "\n<SURNAME/>听说在莲华台的时间城在卖真武器\n<SURNAME/>是啊。真是危险的话题呢。\n<SURNAME/>据说价格便宜但品质一般。",
+      "\n<SURNAME/>听说在莲华台的时间城，有卖真正的武器\n<SURNAME/>呢。真是危险的话题呢。\n<SURNAME/>据说价格便宜但品质一般呢。",
+      "\n<SURNAME/>听说莲华台时间城在卖\n<SURNAME/>真武器呢。真危险啊。\n<SURNAME/>据说价格便宜但品质一般。",
+      "\n<SURNAME/>听说莲华台的时间城在卖真\n<SURNAME/>武器呢。真危险哦。\n<SURNAME/>价格便宜但品质一般呢。",
+      "\n<SURNAME/>我听说莲华台的时间城在卖真武器。\n<SURNAME/>真是个危险的话题啊。\n<SURNAME/>据说价格很便宜，不过品质很一般就是了。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b0e527b086d4",
+    "contents": [
+      "\n<SURNAME/>…<pause:30/>\n<SURNAME/>诶?<SURNAME/>啊，没什么…<pause:30/>\n<SURNAME/>不要紧的…",
+      "\n<SURNAME/>……<pause:30/>\n<SURNAME/>诶？<SURNAME/>啊，没什么……<pause:30/>\n<SURNAME/>没事……"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b140ac030f81",
+    "contents": [
+      "\n<SURNAME/>塔罗牌由恶魔持有。\n<SURNAME/>他们持有的卡，\n<SURNAME/>是同种族的阿尔卡纳塔罗。",
+      "\n<SURNAME/>塔罗牌由恶魔持有。\n<SURNAME/>它们携带的卡片，\n<SURNAME/>与其种族同属一个阿尔卡纳。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b2d9bd38bc3c",
+    "contents": [
+      "\n<SURNAME/>我可保管24体Persona。\n<SURNAME/>不仅新召唤的，\n<SURNAME/>原有Persona也保管。",
+      "\n<SURNAME/>我最多可保管24体Persona。\n<SURNAME/>不仅限于新召唤的，\n<SURNAME/>既有Persona也可托管。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b5b79967f773",
+    "contents": [
+      "\n<SURNAME/>不抓紧时间的话连我也要患上怪病了!<pause:10/>\n\n<SURNAME/>拜托了，把职员室的纹章也破坏掉吧!",
+      "\n<SURNAME/>动作不快点的话、连我也会得怪病的!<pause:10/>\n<SURNAME/>求您了，把职员室的徽章也破坏掉!"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b5fac355c9bf",
+    "contents": [
+      "\n<SURNAME/>我是寿司爱好者同好会「寿司贵族」的成员，\n<SURNAME/>我们「寿司贵族」\n<SURNAME/>都把这里当作交换情报的场所。",
+      "\n<SURNAME/>我是寿司贵族成员的说。\n<SURNAME/>寿司同好会“寿司贵族”，\n<SURNAME/>把这儿当情报交换据点的说。",
+      "\n<SURNAME/>我是寿司贵族的一员。\n<SURNAME/>寿司爱好者同好会「寿司贵族」，\n<SURNAME/>把这里当作情报交换的场所。",
+      "\n<SURNAME/>我是寿司贵族的成员。\n<SURNAME/>寿司爱好者同好会「寿司贵族」，\n<SURNAME/>把这里当作情报交换的场所。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b6f7409f95b3",
+    "contents": [
+      "\n<SURNAME/>这辆副岛摩托，\n<SURNAME/>是<c12/>你自己保养的吧？\n<SURNAME/>看来你擅长机械的传闻是真的。\n",
+      "<SURNAME/>这副岛的摩托，\n<SURNAME/>是<c12/>你自己保养的吧？\n<SURNAME/>看来你擅长机械这传闻是真的。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b72c943a0ebf",
+    "contents": [
+      "\n<SURNAME/>丽莎…在哭…<pause:30/>\n<SURNAME/>怎样都…无所谓了…\n",
+      "\n<SURNAME/>丽莎…在哭呢…<pause:30/>\n<SURNAME/>怎样都…无所谓啦…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b75968de7c1f",
+    "contents": [
+      "\n<SURNAME/>嘛~理所当然啦~当今最红的\n<SURNAME/>全能艺人史棕大人怎么可能有人不认识~\n<SURNAME/>那就用本名自我介绍了~",
+      "\n<SURNAME/>嘛，当然啦。现如今，作为多才艺人\n<SURNAME/>大活跃中的这位史棕大人，不知道的家伙\n<SURNAME/>不存在吧。那么用本名自我介绍吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b78b4ec2a1b1",
+    "contents": [
+      "\n<SURNAME/>因为，你们追查的对象\n<SURNAME/>就是JOKER本人对吧?\n<SURNAME/>要是能抓到，不就是超劲爆的独家新闻嘛!\n",
+      "\n<SURNAME/>因为，你们追的是\n<SURNAME/>小丑本人对吧?\n<SURNAME/>如果抓到了，不是大新闻吗!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:bae2bcff8aed",
+    "contents": [
+      "\n<SURNAME/>那个人，果然也是假面党员吧?\n<SURNAME/>…不过，不是挺帅的吗?\n<SURNAME/>当然，<c13/>绝对更棒啦♥\n",
+      "\n<SURNAME/>那人也是假面党员?\n<SURNAME/>…不过挺帅的耶~\n<SURNAME/>当然<c13/>更棒啦♥\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:bae55acc5dd1",
+    "contents": [
+      "\n<SURNAME/>要在战斗中发动Persona，\n<SURNAME/>必须将其降魔于自身。\n<SURNAME/>仅持有卡片是无效的。",
+      "\n<SURNAME/>要在战斗中发动召唤的Persona，\n<SURNAME/>需要您自身降魔。\n<SURNAME/>仅持有Persona卡片是不够的。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:bbe815847989",
+    "contents": [
+      "\n<SURNAME/>我都当上社长了，\n<SURNAME/>可不能再说那些小气吧唧的话了呀。<pause:15/>\n<SURNAME/>喂，老板，给我盛少点饭啊。哇哈哈!",
+      "\n<SURNAME/>毕竟我当上社长了，\n<SURNAME/>可不能小气吧啦的。<pause:15/>\n<SURNAME/>喂，老板。醋饭少点啊。嘎哈哈!",
+      "\n<SURNAME/>毕竟我当上社长了，\n<SURNAME/>可不能小气巴拉的了。<pause:15/>\n<SURNAME/>喂，老板。米饭少点啊。嘎哈哈!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:be82fd6945f5",
+    "contents": [
+      "\n<SURNAME/>这里的校徽都处理完了。 \n<SURNAME/>接下来去哪儿?",
+      "\n<SURNAME/>这里的校徽，已经全部处理掉了。\n<SURNAME/>那么接下来是哪里呢?"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:bf4abc8cf903",
+    "contents": [
+      "\n<SURNAME/>In Lak'ech…哇哈哈哈，不是挺棒的吗。\n<SURNAME/>等这个无聊的地上世界灭亡了，我们就作为新人类\n<SURNAME/>踏上新的道路。这才是真正的理想啊。哇哈哈",
+      "\n<SURNAME/>In Lak'ech…嘎哈哈，太棒了。\n<SURNAME/>这无聊的地上世界灭亡，我们作为新人类，\n<SURNAME/>踏上新道路。这才是真正的理想。嘎哈哈",
+      "\n<SURNAME/>《イン・ラケチ》…嘎哈哈哈，太棒了不是吗。\n<SURNAME/>这无聊的地上世界灭亡，我们作为新人类，\n<SURNAME/>踏上新的道路。这才是真正的理想啊。嘎哈哈"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:bfccd7047483",
+    "contents": [
+      "\n<SURNAME/>在吉川小百合的照片中…<pause:60/>\n<SURNAME/>找到了混在其中的小百合的剪报…",
+      "\n<SURNAME/>在吉川小百合的照片中混着…<pause:60/>\n<SURNAME/>有吉川小百合的剪报…",
+      "\n<SURNAME/>在成堆的吉川小百合的写真照里头……<pause:60/>\n<SURNAME/>竟还夹杂着一张吉川小百合的剪报……"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c0c8a726af00",
+    "contents": [
+      "\n<SURNAME/>他自己，言外之意就是这么说的!<pause:30/>\n<SURNAME/>从玛雅咒术师那里学习魔术，\n<SURNAME/>追求世界各地遗迹秘密的不死魔术师!\n",
+      "\n<SURNAME/>他自己，言外之意就是这么说的！<pause:30/>\n<SURNAME/>他从玛雅咒术师那里学习魔术，\n<SURNAME/>追求世界各地遗迹秘密的不死魔术师！\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c1f10068be4c",
+    "contents": [
+      "\n<SURNAME/>那你用JOKER的力量\n<SURNAME/>又得到了什么!?\n",
+      "\n<SURNAME/>那你用JOKER的力量\n<SURNAME/>又得到了什么?!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c2dd5f835586",
+    "contents": [
+      "\n<SURNAME/><c1d:9/>只是装着定时点火装置而已。<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>只有定时点火装置。<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>只有定时点火装置在里面。<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>里面只有定时点火装置。<c1d:1/>\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c68b23359dcd",
+    "contents": [
+      "\n<SURNAME/>嘛，虽是小道消息，\n<SURNAME/>既然你都告诉我了，那这次就算你免费。\n<SURNAME/>我把我知道的传闻也告诉你吧。",
+      "\n<SURNAME/>嘛，虽然是个本地消息，\n<SURNAME/>但既然你告诉我了，这次就免费。\n<SURNAME/>我也告诉你个消息吧。",
+      "\n<SURNAME/>嘛，虽然是个本地的小传闻，\n<SURNAME/>但难得你告诉我，这次就免费服务。\n<SURNAME/>我也告诉你一个传闻吧。",
+      "\n<SURNAME/>嘛，虽然是小道消息，\n<SURNAME/>但看在你分享的份上破例。\n<SURNAME/>这个情报免费送你啦。",
+      "\n<SURNAME/>嘛～虽说是本地小料，\n<SURNAME/>但你好心告诉我，这次特别服务。\n<SURNAME/>这个传闻也告诉你吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c979dc8c353e",
+    "contents": [
+      "\n<SURNAME/>其实我们刚才一直在找你。<pause:30/>\n<SURNAME/>因为，七姐妹最受欢迎的<c13/>君，\n<SURNAME/>不采访可不行呢！",
+      "\n<SURNAME/>其实我们，一直在找你。<pause:30/>\n<SURNAME/>因为，七姊妹最受欢迎的<c13/>君\n<SURNAME/>不能不采访啊!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c9c12faacfb2",
+    "contents": [
+      "\n<SURNAME/>什么，悬赏？\n<SURNAME/>哦，说起来好像收到了这样的东西啊。\n<SURNAME/>拿去吧。",
+      "\n<SURNAME/>什么，悬赏？\n<SURNAME/>哦，说起来有这个东西送到了。\n<SURNAME/>请收下。",
+      "\n<SURNAME/>什么，抽奖？\n<SURNAME/>哦，说起来有收到这么个东西啊。\n<SURNAME/>拿去吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cb542c3c68ae",
+    "contents": [
+      "\n<SURNAME/>听说在青华公园，有以前在那里饿死的\n<SURNAME/>偶像的幽灵出现呢。\n<SURNAME/>但是偶像饿死，真是悲惨啊…",
+      "\n<SURNAME/>听说青华公园会出现\n<SURNAME/>饿死在那里的偶像幽灵呢。\n<SURNAME/>偶像居然饿死…太悲惨了…",
+      "\n<SURNAME/>据说在青华公园里，会有一个以前在那里饿死的\n<SURNAME/>偶像的幽灵出没。\n<SURNAME/>不过，偶像居然会饿死，真是惨无人道啊…",
+      "\n<SURNAME/>青华公园有传闻说，会出现以前饿死在那的\n<SURNAME/>偶像的幽灵呢。\n<SURNAME/>但偶像饿死也太惨了…",
+      "\n<SURNAME/>青华公园里，据说有\n<SURNAME/>以前在那里饿死的偶像的幽灵出现哦。\n<SURNAME/>但是偶像饿死，真是悲惨啊…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cc6123d0d6df",
+    "contents": [
+      "\n<SURNAME/>在港南区的Jolly Roger\n<SURNAME/>好像在卖真武器哦。\n<SURNAME/>商品种类不错，但回收价听说很低的说。",
+      "\n<SURNAME/>在港南区的乔利罗杰\n<SURNAME/>好像在卖真武器哦。\n<SURNAME/>品种齐全，但回收价据说很低。",
+      "\n<SURNAME/>据说港南区的海盗旗咖啡店\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>种类齐全，但回收价非常低就是了。",
+      "\n<SURNAME/>港南区Jolly Roger\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种全但回收价低。",
+      "\n<SURNAME/>港南区的快乐罗杰\n<SURNAME/>似乎在卖真武器呢。\n<SURNAME/>品种齐全但回收价低。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cc694327a3d0",
+    "contents": [
+      "\n<SURNAME/>印·拉凯奇在玛雅语中，\n<SURNAME/>意思是“我是另一个你”…<pause:30/>\n<SURNAME/>是从须藤君收到的预言中命名的\n",
+      "\n<SURNAME/>印·拉凯奇，在玛雅语中，\n<SURNAME/>意思是「我是另一个你」…<pause:30/>\n<SURNAME/>是从须藤君收到的预言中这样命名的\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cd089d937af6",
+    "contents": [
+      "\n<SURNAME/>你听说了吗？<SURNAME/>青华区的月光之清\n<SURNAME/>在卖真武器呢。\n<SURNAME/>虽然种类很少，但回收价还不错就是了。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>在青华区的Claire de Lune，\n<SURNAME/>有卖真正的武器呢。\n<SURNAME/>据说品种少但回收价格好呢。",
+      "\n<SURNAME/>听说了吗?<SURNAME/>青华区的克雷尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种少但回收价高哦。",
+      "\n<SURNAME/>听说了吗？<SURNAME/>青华区的克蕾尔·德·吕讷\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品种少但回收价高。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cd8c7ffac74b",
+    "contents": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>两人调查了奇怪的岩石和地形，\n<SURNAME/>兴奋地下山了。\n<SURNAME/>莫非是在寻找埋藏金吧。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>二人调查了奇怪的岩石和地形，\n<SURNAME/>兴奋地下山了。\n<SURNAME/>莫非是在找埋藏金吧。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cef29e3982b2",
+    "contents": [
+      "\n<SURNAME/>诶～！？\n<SURNAME/>理想老师被，\n<SURNAME/>Prince金牛抓走了！？\n",
+      "\n<SURNAME/>诶～！？\n<SURNAME/>理想老师被，\n<SURNAME/>Prince金牛抓走了～！？\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cf58d7aaf7cc",
+    "contents": [
+      "\n<SURNAME/>那他到底在哪里换衣服和化妆啊，\n<SURNAME/>那家伙…<pause:30/>\n<SURNAME/>该不会是在车站厕所里换吧？",
+      "\n<SURNAME/>那家伙到底在哪换衣服\n<SURNAME/>还化妆啊…<pause:30/>\n<SURNAME/>该不会是在车站厕所吧?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cfc45d9a0f76",
+    "contents": [
+      "\n<SURNAME/>来吧淳…<pause:30/>\n<SURNAME/>完成复仇、开启通往理想乡的道路吧。\n",
+      "\n<SURNAME/>来吧淳…<pause:30/>\n<SURNAME/>完成复仇，开启通往理想乡的道路吧。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d02540ad36b9",
+    "contents": [
+      "\n<SURNAME/>你知道千兆猛男音像店的隐藏CD吗？\n<SURNAME/>好像真有那种CD呢。<pause:15/>\n<SURNAME/>好想知道里面是什么曲子啊。",
+      "\n<SURNAME/>知道Giga Matchiyo的隐藏CD吗？\n<SURNAME/>好像有那样的CD哦。<pause:15/>\n<SURNAME/>真想听听里面有什么曲子呢。",
+      "\n<SURNAME/>知道Giga Matchy的隐藏CD吗?\n<SURNAME/>似乎有那样的CD呢。<pause:15/>\n<SURNAME/>真想听听里面有什么曲子呢。",
+      "\n<SURNAME/>知道Giga Match的隐藏CD吗？\n<SURNAME/>好像真有这种CD呢。<pause:15/>\n<SURNAME/>好想知道收录了什么曲子啊。",
+      "\n<SURNAME/>知道Giga·Match的隐藏CD吗?\n<SURNAME/>好像真有呢。<pause:15/>\n<SURNAME/>好想听听里面是什么曲子哦"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d3038e4e87e6",
+    "contents": [
+      "\n<SURNAME/>放着保鲜膜包好的菜肴。",
+      "\n<SURNAME/>里面有保鲜膜包着的小菜。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d3b50715b81c",
+    "contents": [
+      "\n<SURNAME/>我以画作诉说心情。\n<SURNAME/>虽不擅言辞…\n<SURNAME/>但与你似乎很投缘。",
+      "\n<SURNAME/>我，用画作表达自己的心情。\n<SURNAME/>不太擅长说话…\n<SURNAME/>但和你似乎很投缘。",
+      "\n<SURNAME/>我，用绘画诉说心情。\n<SURNAME/>不太擅长说话…\n<SURNAME/>但和你似乎很投缘。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d545d5431a6f",
+    "contents": [
+      "\n<SURNAME/>旧电视。<pause:30/>\n<SURNAME/>频道还是转盘式的。",
+      "\n<SURNAME/>旧电视机。<pause:30/>\n<SURNAME/>调频还是旋钮式的。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d5e3fcfabbe4",
+    "contents": [
+      "\n<SURNAME/>那么，他为什么发动世界大战你知道吗？\n<SURNAME/>他真正的目的是将人类推向毁灭边缘，\n<SURNAME/>以此来促进进化！\n",
+      "\n<SURNAME/>那么，你知道他为什么发动世界大战吗?\n<SURNAME/>他真正的目的是将人类推向毁灭边缘，\n<SURNAME/>以此来促进进化!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d6c05c1b80ff",
+    "contents": [
+      "\n<SURNAME/>我家傻儿子好像添麻烦了啊！\n<SURNAME/>嘛，请多关照他啦！！",
+      "\n<SURNAME/>我家那傻儿子好像给你们添麻烦啦！\n<SURNAME/>嘛，还请多关照他啊！！",
+      "\n<SURNAME/>看来我家傻儿子给你添麻烦了啊!\n<SURNAME/>总之，请多关照他啊!!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d7a0f08db3d5",
+    "contents": [
+      "\n<SURNAME/>1989年<SURNAME/>X月XX日<SURNAME/>曇り\n<SURNAME/>我辈今天也进行橿原的调查。\n<SURNAME/>委托的预付款，已如银弹之梦般消散…\n",
+      "\n<SURNAME/>1989年<SURNAME/>X月XX日<SURNAME/>阴\n<SURNAME/>我辈今日也调查橿原。\n<SURNAME/>委托的定金，如梦幻泡影般消失了…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d81b30c4eb65",
+    "contents": [
+      "\n<SURNAME/>我记得七姐妹的纹章，\n<SURNAME/>是模仿昴宿星团的吧？",
+      "\n<SURNAME/>记得七姊妹的纹章，\n<SURNAME/>是模仿昴星团的吧?"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d847b95f3dcf",
+    "contents": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>无奈只好躲藏等待，\n<SURNAME/>没想到橿原竟以那种方式事故死…\n<SURNAME/>委托的尾款还没收到呢…\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>无奈，决定躲藏附近等待，\n<SURNAME/>没想到橿原竟那样事故死了…\n<SURNAME/>委托的尾款还没收到呢…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:daba7b1425a8",
+    "contents": [
+      "\n<SURNAME/>尤其新召唤的Persona，\n<SURNAME/>此倾向更为显著。",
+      "\n<SURNAME/>特别是对新召唤的Persona，\n<SURNAME/>这种倾向尤为明显。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:dbc6c3fb1901",
+    "contents": [
+      "\n<SURNAME/>卑、卑鄙…\n<SURNAME/>早知道就不搞得这么乱了…<pause:30/>\n<SURNAME/>以老子的智商都猜不到这展开!",
+      "\n<SURNAME/>太、太琐碎了… \n<SURNAME/>不该弄得这么乱…<pause:30/>\n<SURNAME/>就算以我的头脑，也完全预测不到如今的发展!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:de2c97c0d876",
+    "contents": [
+      "\n<SURNAME/>啊，那五个人是跟假面党战斗的英雄!<pause:15/>\n<SURNAME/>那不就是我们的敌人吗!\n<SURNAME/>可没听说有这种家伙啊!",
+      "\n<SURNAME/>啊，那五个人是跟假面党战斗的英雄!<pause:15/>\n<SURNAME/>那不就是我们的敌人吗!\n<SURNAME/>可没听说有这种家伙在啊!",
+      "\n<SURNAME/>那、那5个人居然是和假面党作对的“英雄”！<pause:15/>\n<SURNAME/>那不就是我们的敌人吗！\n<SURNAME/>我可没听说过有这么一群人在啊！"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:df453959e13a",
+    "contents": [
+      "\n<SURNAME/>是吗，小哥，是我家小子的朋友啊。\n<SURNAME/>来来，吃吧吃吧!!\n<SURNAME/>有好料哦!!",
+      "\n<SURNAME/>是吗，小哥，是我家蠢儿子的朋友啊。\n<SURNAME/>来来，吃吧吃吧!!\n<SURNAME/>有好材料哦!!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:dfcb94d85422",
+    "contents": [
+      "\n<SURNAME/>一个传闻出现完全相反的传闻\n<SURNAME/>也很少见呢。<pause:15/>但是，如果有和假面党战斗\n<SURNAME/>的家伙，那也很有趣呢。",
+      "\n<SURNAME/>一个传闻出现完全相反的传闻，\n<SURNAME/>也挺少见的。<pause:15/>不过，如果有和假面党战斗\n<SURNAME/>的家伙在，那也挺有意思的。",
+      "\n<SURNAME/>一个传闻刚出，就有完全相反的传闻流传，\n<SURNAME/>这还挺少见的。<pause:15/>不过，如果有和假面党\n<SURNAME/>对抗的家伙，那也挺有意思的。",
+      "\n<SURNAME/>针对一个传闻直接唱反调的传闻\n<SURNAME/>流传起来也挺少见的。<pause:15/>不过，如果有和假面党\n<SURNAME/>战斗的家伙在，那也挺有意思的。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e03446bd226f",
+    "contents": [
+      "\n<SURNAME/>死…?<pause:30/>\n<SURNAME/>无所谓…反正…\n",
+      "\n<SURNAME/>要死…?<pause:30/>\n<SURNAME/>无所谓…反正…\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e126e6b9a923",
+    "contents": [
+      "\n<SURNAME/>真是的，那个当社长的大叔真有够顽固…<pause:15/>\n<SURNAME/>小孩子的话信一下又没坏处，\n<SURNAME/>所谓大人就该是心胸宽广的人啊。",
+      "\n<SURNAME/>真是的，那个社长先生也太顽固了…<pause:15/>\n<SURNAME/>至少该相信孩子说的话吧。\n<SURNAME/>大人就该是心胸宽广的人啊。",
+      "\n<SURNAME/>真是的，那个社长大叔也太顽固了…<pause:15/>\n<SURNAME/>孩子说的话信一下不就好了。\n<SURNAME/>大人就该有宽广的胸怀啊。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e27369947218",
+    "contents": [
+      "\n<SURNAME/>恕我直言，金额似乎不足。\n<SURNAME/>请改日光临。",
+      "\n<SURNAME/>抱歉，钱好像不够。\n<SURNAME/>请下次再来。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e4d843e6baf7",
+    "contents": [
+      "\n<SURNAME/><c13/>…<pause:30/>\n<SURNAME/>一直…<pause:30/>\n<SURNAME/>都在为我留着吗…?\n",
+      "\n<SURNAME/><c13/>…<pause:30/>\n<SURNAME/>一直…<pause:30/>\n<SURNAME/>都在为我留着着吗…?\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e549559022ad",
+    "contents": [
+      "\n<SURNAME/>在港南区的Jolly Roger\n<SURNAME/>好像在卖真武器哦。\n<SURNAME/>质量虽然一般，但听说价格很实惠的说。",
+      "\n<SURNAME/>在港南区的乔利罗杰\n<SURNAME/>好像在卖真武器哦。\n<SURNAME/>质量虽然一般，但价格据说很实惠。",
+      "\n<SURNAME/>据说港南区的海盗旗咖啡店\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>虽然品质一般，但价格还挺合适就是了。",
+      "\n<SURNAME/>港南区Jolly Roger\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质一般但价格实惠。",
+      "\n<SURNAME/>港南区的快乐罗杰\n<SURNAME/>似乎在卖真武器呢。\n<SURNAME/>品质一般但价格实惠。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e632400ff2d9",
+    "contents": [
+      "\n<SURNAME/>疯狂…<pause:15/>此卡预示经验值获取下降。<pause:15/>\n<SURNAME/>从今往后，你将心神不宁，\n<SURNAME/>注意力涣散，<pause:15/>所学甚少。",
+      "\n<SURNAME/>疯狂…<pause:15/>这张卡片意味着获得经验值下降。<pause:15/>\n<SURNAME/>此后一段时间，心中无法平静，\n<SURNAME/>注意力涣散，<pause:15/>能学到的东西也会减少吧。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e744cec2f9c9",
+    "contents": [
+      "\n<SURNAME/>虽有些许差异，\n<SURNAME/>但将你自身的熟练度，\n<SURNAME/>视为「Persona的成长」亦无不可。",
+      "\n<SURNAME/>虽然有些细微差别，\n<SURNAME/>但您自身的这种熟练度，\n<SURNAME/>也可以视为“Persona的成长”。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e8aeb1bbca57",
+    "contents": [
+      "\n<SURNAME/>之后…<pause:30/>\n<SURNAME/>就只剩打倒父亲了。\n",
+      "\n<SURNAME/>之后便是…<pause:30/>\n<SURNAME/>打倒父亲。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e9ce8a48ed40",
+    "contents": [
+      "\n<SURNAME/>不过啊，既然挂上社长的头衔了，\n<SURNAME/>本想吃点生鱼片拼盘什么的奢侈一下，\n<SURNAME/>但口味还是没变呢。<pause:15/>老板，来份金枪鱼腩",
+      "\n<SURNAME/>不过啊，既然有了社长头衔，\n<SURNAME/>本该点些生鱼拼盘啥的摆摆谱，\n<SURNAME/>可口味还是没变。<pause:15/>老板，来份金枪鱼腩",
+      "\n<SURNAME/>不过啊，本来想着都有社长的头衔了，\n<SURNAME/>要吃点生鱼片什么的奢侈一下，\n<SURNAME/>但自己的口味还是没变呢。<pause:15/>老板，来一份金枪鱼腩。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e9ff56168556",
+    "contents": [
+      "\n<SURNAME/>住手吧…爸爸…<pause:30/>\n<SURNAME/>我只是想像大姐姐那样、\n<SURNAME/>成为引导大家走向理想的人而已!\n",
+      "\n<SURNAME/>住手吧…爸爸…<pause:30/>\n<SURNAME/>我只是想像大姐姐那样，\n<SURNAME/>成为引导大家走向理想的人而已!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ea54c8a78c56",
+    "contents": [
+      "\n<SURNAME/>在港南区的Jolly Roger\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>质量不错，但但价格听说很高的说。",
+      "\n<SURNAME/>在港南区的乔利罗杰\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>质量虽好，但价格据说很高。",
+      "\n<SURNAME/>据说港南区的海盗旗咖啡店\n<SURNAME/>好像在卖真武器呢。\n<SURNAME/>品质很好，但价格也很高就是了。",
+      "\n<SURNAME/>港南区Jolly Roger\n<SURNAME/>在卖真武器呢。\n<SURNAME/>品质好但价格高。",
+      "\n<SURNAME/>港南区的快乐罗杰\n<SURNAME/>似乎在卖真武器呢。\n<SURNAME/>品质好但价格高。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:eb30ac615f72",
+    "contents": [
+      "\n<SURNAME/>当然，这是熟练运用Persona的结果，\n<SURNAME/>所需SP\n<SURNAME/>并不会减少。",
+      "\n<SURNAME/>当然，那是\n<SURNAME/>因为熟练掌握了Persona的结果，\n<SURNAME/>所需的SP不会改变。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ec622ce2b6d2",
+    "contents": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>果然，一定是在寻找埋藏金。\n<SURNAME/>如果那样，希望我辈的梦想\n<SURNAME/>也能顺便实现。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>果然，一定是在找埋藏金。\n<SURNAME/>如果那样，我辈的梦想\n<SURNAME/>也顺便想实现呢。\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ed6724b5266b",
+    "contents": [
+      "\n<SURNAME/>诶！<SURNAME/>那个佐佐木<SURNAME/>银次\n<SURNAME/>其实是假面党的一员？<SURNAME/>哇，真的吗？\n<SURNAME/>超劲爆的料啊，太好啦。<pause:15/>那作为回礼…",
+      "\n<SURNAME/>诶！<SURNAME/>那个佐佐木<SURNAME/>银次\n<SURNAME/>其实是假面党的一员？<SURNAME/>哇，真的？\n<SURNAME/>超棒的料，太棒了。<pause:15/>那作为回礼…",
+      "\n<SURNAME/>诶！<SURNAME/>那个佐佐木<SURNAME/>银次\n<SURNAME/>其实是假面党的一员？<SURNAME/>哇，那真的？\n<SURNAME/>厉害的传闻啊，太好了。<pause:15/>那作为回报…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ee8abfd0acb1",
+    "contents": [
+      "\n<option:6/>阅读报告\n阅读日记1\n阅读日记2\n阅读日记3\n阅读日记4\n不管它\n<option_end/>",
+      "\n<option:6/>阅读报告\n阅读日记1\n阅读日记2\n阅读日记3\n阅读日记4\n放着不管\n<option_end/>"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ee8ec2db4848",
+    "contents": [
+      "\n<SURNAME/>即，\n<SURNAME/>从想召唤Persona同种族的恶魔处，\n<SURNAME/>获取塔罗牌即可。",
+      "\n<SURNAME/>换言之，\n<SURNAME/>只需从与目标Persona同种族的恶魔处，\n<SURNAME/>获取塔罗牌即可。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:eeb50419c992",
+    "contents": [
+      "\n<SURNAME/>如果没事就别叫我!!\n",
+      "\n<SURNAME/>没事就别叫我！！\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:eeba1b8f1deb",
+    "contents": [
+      "\n<SURNAME/>啊!\n<SURNAME/>别碍事!!\n",
+      "\n<SURNAME/>滚啊! \n<SURNAME/>别挡道!!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ef0a352cf4c4",
+    "contents": [
+      "\n<SURNAME/>唔…看到了…<pause:15/>在这水晶中，映出了你的未来…唔…<pause:15/>\n<SURNAME/>这是…<pause:15/>自我…<pause:15/>人之业，自制心衰退…",
+      "\n<SURNAME/>嗯…看到了…<pause:15/>这水晶中映照出\n<SURNAME/>你的未来…嗯…<pause:15/>\n<SURNAME/>这是…<pause:15/>Ego…<pause:15/>人心业障，自制崩坏…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:effe82e7a883",
+    "contents": [
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>06号机。",
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>06号机有。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:f23c6c51fbbb",
+    "contents": [
+      "\n\n<SURNAME/>啊、恶魔!?<pause:30/>\n<SURNAME/>但、但是逃也…",
+      "\n<SURNAME/>啊、恶魔!?<pause:30/>\n<SURNAME/>但、但是逃也…"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:f25ab42cf110",
+    "contents": [
+      "\n<SURNAME/>Persona卡可持10张，\n<SURNAME/>但包括降魔中的Persona，\n<SURNAME/>需注意。",
+      "\n<SURNAME/>Persona卡片最多持有10张，\n<SURNAME/>这包含已降魔的Persona，\n<SURNAME/>请务必留意。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:f26343acd5ef",
+    "contents": [
+      "\n<SURNAME/>切…多管闲事…<pause:30/>\n<SURNAME/>就是这么回事丽莎。\n<SURNAME/>剩下时间不多，陪我跳支舞吧!!\n",
+      "\n<SURNAME/>切…多管闲事…<pause:30/>\n<SURNAME/>就是这样，丽莎君。\n<SURNAME/>剩余时间不多，就请你和我跳一支舞吧!!\n"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:f9ba9cc8a83c",
+    "contents": [
+      "\n<SURNAME/>且收集的塔罗牌数，\n<SURNAME/>也需匹配该Persona的等级\n<SURNAME/>才行。",
+      "\n<SURNAME/>同时，所需塔罗牌的数量，\n<SURNAME/>也必须与Persona的等级\n<SURNAME/>相匹配才行。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:f9d9f3d21898",
+    "contents": [
+      "\n<SURNAME/>我还听说，她还在用那时的关系、\n<SURNAME/>通过俄罗斯的一些渠道搞来武器偷偷卖，\n<SURNAME/>而且还雇了保镖呢。",
+      "\n<SURNAME/>据说她利用当时的关系，\n<SURNAME/>走私从俄国弄来的武器的说。\n<SURNAME/>还雇了保镖的传闻的说。",
+      "\n<SURNAME/>据说，她利用那时的关系，\n<SURNAME/>通过俄罗斯走私武器来卖。\n<SURNAME/>还雇了保镖呢。",
+      "\n<SURNAME/>据说，她利用那时的关系，\n<SURNAME/>通过俄罗斯走私武器来卖呢。\n<SURNAME/>还雇了保镖的传闻。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fa83113e6ba8",
+    "contents": [
+      "\n<SURNAME/>来了啊…\n<SURNAME/>今天什么事？",
+      "\n<SURNAME/>来了啊…\n<SURNAME/>今天有什么事？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:faa1002bdc13",
+    "contents": [
+      "\n<SURNAME/>想召唤高等级Persona，\n<SURNAME/>需交涉高等级恶魔。\n<SURNAME/>那是高效集牌的诀窍。",
+      "\n<SURNAME/>若想召唤高等级Persona，\n<SURNAME/>必须与高等级恶魔交涉。\n<SURNAME/>这才是高效集牌的诀窍。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fb7c4e4e5cde",
+    "contents": [
+      "\n<SURNAME/>连环恐怖袭击之后是In Lak'ech吗？\n<SURNAME/>真是现实比传闻更离奇…<pause:15/>\n<SURNAME/>谁也说不准接下来还会发生什么啊。",
+      "\n<SURNAME/>连续恐怖袭击之后又是In Lak'ech吗？\n<SURNAME/>真是现实比传闻更离奇啊…<pause:15/>\n<SURNAME/>会发生什么完全预料不到呢。",
+      "\n<SURNAME/>连续恐怖袭击之后是In Lak'ech吗。\n<SURNAME/>真是现实比传闻更离奇…<pause:15/>\n<SURNAME/>接下来会发生什么，真不知道啊。",
+      "\n<SURNAME/>连续恐怖袭击之后是In Lak'ech呢。\n<SURNAME/>真是现实比传闻更离奇…<pause:15/>\n<SURNAME/>会发生什么，真不知道呢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fbb6fb06693f",
+    "contents": [
+      "<c1d:11/>舞耶<c1d:1/>\n<SURNAME/>你刚才，是想保护她们两个对吧?\n<SURNAME/>没事的…等她们俩下次醒来，\n<SURNAME/>一定会笑出来的。\n",
+      "<c1d:11/>舞耶<c1d:1/>\n<SURNAME/>你刚才，是想保护她们两个对吧?\n<SURNAME/>没事的…等她们俩下次醒来，\n<SURNAME/>一定会笑出来的。\n\n"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fc23efbd5846",
+    "contents": [
+      "\n<SURNAME/>哦，<c12/>啊。那时你的拳头，\n<SURNAME/>深深震撼了我的心。<pause:15/>我能这样回来\n<SURNAME/>也是托你们的福。<pause:15/>再次道谢。",
+      "\n<SURNAME/>噢，<c12/>啊。你那一拳，\n<SURNAME/>深深震撼了吾心。<pause:15/>能重返此地\n<SURNAME/>也是托诸位的福。<pause:15/>容吾再次致谢。"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fd2e3e6559fc",
+    "contents": [
+      "\n<SURNAME/>唔…看到了…<pause:15/>在这水晶中，映出了你的未来…唔…<pause:15/>\n<SURNAME/>这是…<pause:15/>节制…",
+      "\n<SURNAME/>嗯…看见了…<pause:15/>在这水晶中，汝的结局\n<SURNAME/>映现出来…嗯…<pause:15/>\n<SURNAME/>这是…<pause:15/>节制…"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fd394aea80e1",
+    "contents": [
+      "\n<SURNAME/>第三个人终于公布了。<pause:15/>\n<SURNAME/>可惜是广播，只能听到声音，\n<SURNAME/>不过，好期待是什么样的孩子啊!",
+      "\n<SURNAME/>第三个人终于公布了呢。<pause:15/>\n<SURNAME/>可惜是广播，只能听到声音，\n<SURNAME/>不过，好期待是什么样的女孩啊!",
+      "\n<SURNAME/>第三人终于公布了，<pause:15/>\n<SURNAME/>遗憾的是因为是广播，所以只能听到声音，\n<SURNAME/>哎呀呀，好期待是什么样的孩子啊！",
+      "\n<SURNAME/>第三位成员终于公布了呢。<pause:15/>\n<SURNAME/>可惜是通过广播，只能听到声音，\n<SURNAME/>不过，还是很期待是什么样的孩子呢!"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:00722513d7ec",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻抗性\n魔攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物攻耐性\n魔攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>物理耐性\n魔法弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0345aa8a48cb",
+    "contents": [
+      "召唤的Persona:○键决定",
+      "将召唤的Persona：○键确定",
+      "要召唤的Persona：○键确定"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:03a335d67987",
+    "contents": [
+      "<pause:0/><c1e:0/>为健康勿吸烟过度",
+      "<pause:0/><c1e:0/>为健康勿吸过度",
+      "<pause:0/><c1e:0/>为健康请勿过量吸烟"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:04afa8682ef2",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基抗性\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系抗性\n阿夸系弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系耐性\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基耐性\n阿夸弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0763be33b2d3",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>精神/神经无效\n电击属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>精神/神经系无效\n弱电系",
+      "<c1c:13/><pause:0/><c1e:0/>精神/神经系无效\n电击弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0800de147597",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/亚基抗性\n飞具/阿夸/地变弱点",
+      "<c1c:13/><pause:0/><c1e:0/>强剑击/战技/亚基\n弱飞具/阿夸/地变",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/亚基系\n弱射击/水/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/亚基系强\n飞具/阿夸/地变系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0a0349420b3a",
+    "contents": [
+      "请选择要添加卡片",
+      "选择要添加的卡片"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0d413383fc7d",
+    "contents": [
+      "<pause:0/><c1e:0/>带凯蒂猫标志",
+      "<pause:0/><c1e:0/>带凯蒂猫标记",
+      "<pause:0/><c1e:0/>带有凯蒂猫标志"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0efbf73d5766",
+    "contents": [
+      "设定\n",
+      "设置"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:15a257c45413",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具系无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:1a176859db99",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内TEC提升6点",
+      "<pause:0/><c1e:0/>一定时间技巧提升6点",
+      "<pause:0/><c1e:0/>暂时TEC提升6"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:20cab89eeb42",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>使神圣丝无效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣属性无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:21d00e79b909",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>斩击外物理攻击无效\n斩击/神圣系弱",
+      "<c1c:13/><pause:0/><c1e:0/>非剑击物理无效\n剑击/神圣属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>非斩击物攻无效\n弱斩/圣系"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:22abc27db01f",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>抗风系\n圣/暗系无效",
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性抗性\n神圣/暗黑属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>疾风强\n神圣/暗黑无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:26c3edf0eb9e",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基属性无效<NAME/><NAME/>核热属性吸收\n阿夸属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>吸收核热\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>核热吸收\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热吸收\n\n弱点：水"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:26e9904a4bb0",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风系反射<NAME/><NAME/>暗黑系无效\n对电击系弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风系反射<NAME/><NAME/>暗黑系无效\n电击系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:27003a6c3a0c",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>神圣系无效\n回复易生效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣系无效化\n易恢复"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2c8a8327fe39",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技系反射"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2ca7faeb7292",
+    "contents": [
+      "确定删除吗？",
+      "确定要删除吗？",
+      "确认删除吗？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2da4007378f4",
+    "contents": [
+      "<pause:0/><c1e:0/>这边才想问呢",
+      "<pause:0/><c1e:0/>问这个"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2de0ee5c7a9e",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内STR提升8点",
+      "<pause:0/><c1e:0/>一定时间力量提升8点",
+      "<pause:0/><c1e:0/>一定期间STR提升8点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2f661da79518",
+    "contents": [
+      "<pause:0/><c1e:0/>今日起你也是黄猫头鹰",
+      "<pause:0/><c1e:0/>今日起你也是黄鸮"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2fb668cb9081",
+    "contents": [
+      "持有数已达上限",
+      "无法再持有",
+      "无法持有更多"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2ff5966b1907",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性抗性\n神圣/暗黑属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>地变强\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>抗地系\n圣/暗系无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:301292d0f2a9",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效\n疾风属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>地无效\n\n弱点：风"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:305639b13fe8",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>核热强\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>对核热系强\n对阿夸系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热系强\n阿夸系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:32ddd4568162",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内STR提升7点",
+      "<pause:0/><c1e:0/>一定时间力量提升7点",
+      "<pause:0/><c1e:0/>暂时STR提升7"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:35815cdffab6",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/暗黑抗性\n飞具/地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/暗系\n弱射击/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/暗黑系强\n飞具/地变系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:35a5b2b07c26",
+    "contents": [
+      "<pause:0/><c1e:0/>为何有此物是个谜",
+      "<pause:0/><c1e:0/>为何有这东西真谜",
+      "<pause:0/><c1e:0/>此物为何存在是个谜"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:363a98ddc0ca",
+    "contents": [
+      "相性差无法使用",
+      "相性差，无法使用"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:367218744e5b",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性抗性\n疾风属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>地变强\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>耐地属性\n\n弱点：风"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:372a0c8d4929",
+    "contents": [
+      "<pause:0/><c1e:0/>一定期间VIT提升4",
+      "<pause:0/><c1e:0/>一段时间内VIT+4"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:39e2658beeaa",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>暗黑系无效",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑系无效化"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:3a30371a65fb",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内力量+6",
+      "<pause:0/><c1e:0/>一段时间内STR+6",
+      "<pause:0/><c1e:0/>暂时STR提升6"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:3ec67e805ec4",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内技巧+1",
+      "<pause:0/><c1e:0/>一定时间技巧提升1点",
+      "<pause:0/><c1e:0/>一定期间TEC提升1",
+      "<pause:0/><c1e:0/>一段时间内TEC+1",
+      "<pause:0/><c1e:0/>暂时TEC提升1"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:42d1ab188ec0",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/疾风抗性\n飞具/地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/风系\n弱射击/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/疾风系强\n飞具/地变系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:42dd8cd309d4",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间体力提升2点",
+      "<pause:0/><c1e:0/>一定时间内VIT+2",
+      "<pause:0/><c1e:0/>一定时间内体力+2",
+      "<pause:0/><c1e:0/>一定期间VIT提升2",
+      "<pause:0/><c1e:0/>一段时间内VIT+2",
+      "<pause:0/><c1e:0/>暂时VIT提升2"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:43d005bda8d8",
+    "contents": [
+      "<pause:0/><c1e:0/>一定期间VIT提升8",
+      "<pause:0/><c1e:0/>一段时间内VIT+8"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:44cd2da56a60",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内AGI+2",
+      "<pause:0/><c1e:0/>一定时间内AGI提升2点",
+      "<pause:0/><c1e:0/>一定时间内敏捷+2",
+      "<pause:0/><c1e:0/>一定时间敏捷提升2点",
+      "<pause:0/><c1e:0/>一定期间AGI提升2点",
+      "<pause:0/><c1e:0/>一段时间内AGI+2",
+      "<pause:0/><c1e:0/>暂时AGI提升2"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:45056cb70a35",
+    "contents": [
+      "<pause:0/><c1e:0/>水晶头骨\n似乎是火属性",
+      "<pause:0/><c1e:0/>水晶骷髅\n火属性"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:485dbc5ede75",
+    "contents": [
+      "<pause:0/><c1e:0/>水晶头骨\n内有水却...不流动",
+      "<pause:0/><c1e:0/>水晶骷髅\n仔细看水...没有流动",
+      "<pause:0/><c1e:0/>水晶骷髅\n内部无水流动"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:49803f3ab4c0",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热/神圣/暗黑无效\n对阿夸/冰结系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热/神圣/暗黑无效\n阿夸/冰结弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热/神圣/暗黑无效\n阿夸/冰结系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:4a3cf93bf6b0",
+    "contents": [
+      "<pause:0/><c1e:0/>青春之喜与悲？",
+      "<pause:0/><c1e:0/>青春悲欢？",
+      "<pause:0/><c1e:0/>青春的喜与悲？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:4b5d944fb420",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内TEC+3",
+      "<pause:0/><c1e:0/>一定时间内TEC提升3点",
+      "<pause:0/><c1e:0/>一定时间内技巧+3",
+      "<pause:0/><c1e:0/>一定时间技巧提升3点",
+      "<pause:0/><c1e:0/>一段时间内TEC+3",
+      "<pause:0/><c1e:0/>暂时TEC提升3"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:4e029120e5e5",
+    "contents": [
+      "<pause:0/><c1e:0/>确实是个谜",
+      "<pause:0/><c1e:0/>确是个谜"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:53e0f777f3a3",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间体力提升3点",
+      "<pause:0/><c1e:0/>一定时间内VIT+3",
+      "<pause:0/><c1e:0/>一定时间内体力+3",
+      "<pause:0/><c1e:0/>一定期间VIT提升3",
+      "<pause:0/><c1e:0/>一段时间内VIT+3",
+      "<pause:0/><c1e:0/>暂时VIT提升3"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:540fe7b129a7",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技系无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:573029cb86e1",
+    "contents": [
+      "<pause:0/><c1e:0/>水晶制成的骷髅\n温暖的风...",
+      "<pause:0/><c1e:0/>水晶头骨\n有温暖的风...",
+      "<pause:0/><c1e:0/>水晶骷髅\n散发暖风"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5917c41cc9aa",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>水/冰无效\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/冰结属性无效\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/冰结无效\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/冰结无效\n弱亚基"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5d0f51560c99",
+    "contents": [
+      "狂野",
+      "离谱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5d31e05aba3b",
+    "contents": [
+      "<pause:0/><c1e:0/>别戴头上",
+      "<pause:0/><c1e:0/>别戴头上哦",
+      "<pause:0/><c1e:0/>注意别戴头上"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5d494f0bae89",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内AGI+3",
+      "<pause:0/><c1e:0/>一定时间内AGI提升3点",
+      "<pause:0/><c1e:0/>一定时间内敏捷+3",
+      "<pause:0/><c1e:0/>一定时间敏捷提升3点",
+      "<pause:0/><c1e:0/>一段时间内AGI+3",
+      "<pause:0/><c1e:0/>暂时AGI提升3"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5ee2137e5c93",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性抗性\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风强\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>耐风属性\n\n弱点：地"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5ff1f6cf127a",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内技巧+7",
+      "<pause:0/><c1e:0/>一定时间技巧提升7点",
+      "<pause:0/><c1e:0/>暂时TEC提升7"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:666b4b286c37",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>圣/暗系无效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑属性无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:66c1c7b9c22c",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>圣系无效\n弱暗系",
+      "<c1c:13/><pause:0/><c1e:0/>神圣属性无效\n暗黑属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>神圣无效\n暗黑弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:67f33cc1cbbf",
+    "contents": [
+      "<pause:0/><c1e:0/>火灾预告卡·通",
+      "<pause:0/><c1e:0/>火灾预告卡通",
+      "<pause:0/><c1e:0/>预示火灾的卡通"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:68b62e9fce40",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射魔法\n对物理攻击弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔法反射\n物理攻击弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6a07c0420a11",
+    "contents": [
+      "已降魔Persona无法删除",
+      "装备中的Persona无法删除"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6a6e1d6d203f",
+    "contents": [
+      "<pause:0/><c1e:0/>今日起你也是粉红阿撒斯",
+      "<pause:0/><c1e:0/>今日起你也是粉红阿萨斯",
+      "<pause:0/><c1e:0/>今日起你也是粉红鹫"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6b30928022d1",
+    "contents": [
+      "<pause:0/><c1e:0/>不经意成珍品",
+      "<pause:0/><c1e:0/>不经意间成珍品"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6d8a0b1ac94e",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技属性抗性\n飞具/地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技系\n弱射击/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技系强\n飞具/地变系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6db3190ba5c6",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间体力提升5点",
+      "<pause:0/><c1e:0/>一定时间内VIT提升5点",
+      "<pause:0/><c1e:0/>一定期间VIT提升5点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6ee8277ae57b",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性无效<NAME/><NAME/>电击属性反射\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风无效<NAME/><NAME/>电击反射\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风无效<NAME/><NAME/>电反射\n\n弱点：地"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:714bee9125bc",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间体力提升1点",
+      "<pause:0/><c1e:0/>一定时间内VIT+1",
+      "<pause:0/><c1e:0/>一定时间内VIT提升1点",
+      "<pause:0/><c1e:0/>一定时间内体力+1",
+      "<pause:0/><c1e:0/>一定期间VIT提升1点",
+      "<pause:0/><c1e:0/>暂时VIT提升1"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:718c993c50b4",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>吸收地属性\n\n弱点：风",
+      "<c1c:13/><pause:0/><c1e:0/>地变吸收\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变属性吸收\n疾风属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7996686bab8f",
+    "contents": [
+      "<pause:0/><c1e:0/>火灾预告卡\n名副其实",
+      "<pause:0/><c1e:0/>预示火灾的卡\n名副其实"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7a7a2f3e6d11",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射暗系\n弱圣系",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑反射\n神圣弱",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑属性反射\n神圣属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7d34b2814646",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻反射\n魔攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>物攻反射\n魔攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物理反射\n魔法弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7e3fb013b376",
+    "contents": [
+      "相性不佳无法降魔",
+      "相性差无法装备",
+      "相性差无法降魔",
+      "相性差，无法召唤Persona",
+      "相性差，无法装备"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7ff34fed6ef6",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效<NAME/><NAME/>疾风属性弱点\n冰结/电击/核热属性吸收",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效<NAME/><NAME/>疾风弱\n冰结/电击/核热吸收",
+      "<c1c:13/><pause:0/><c1e:0/>地系无效<NAME/><NAME/>弱风系\n吸收冰/电/核系"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:810707dd5d5d",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣/暗黑\n弱点亚基",
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣/暗黑属性\n弱点亚基属性",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣/暗黑系无效\n亚基系弱",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣/暗黑系无效\n对亚基系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:82111154c158",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>无效疾风/神圣/暗黑\n弱点地变",
+      "<c1c:13/><pause:0/><c1e:0/>疾风/神圣/暗黑系无效\n地变系弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风/神圣/暗黑系无效\n地变系弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:826c05f06f88",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基吸收<NAME/><NAME/>核热/神圣无效\n阿夸/冰结系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基吸收<NAME/><NAME/>核热/神圣无效\n阿夸/冰结系弱点",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基<NAME/><NAME/>无效核热/神圣\n弱点阿夸/冰结",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基<NAME/><NAME/>无效核热/神圣\n弱点阿夸/冰结属性"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:82e1f167f850",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内STR+3",
+      "<pause:0/><c1e:0/>一定时间内STR提升3点",
+      "<pause:0/><c1e:0/>一定时间力量提升3点",
+      "<pause:0/><c1e:0/>一定期间STR提升3",
+      "<pause:0/><c1e:0/>一定期间STR提升3点",
+      "<pause:0/><c1e:0/>一段时间内STR+3"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:839c4c262a72",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>暗系无效\n弱圣系",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑属性无效\n神圣属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑无效\n神圣弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:84e7ee961cfe",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>强物理<NAME/><NAME/>暗黑无效\n弱亚基/神圣",
+      "<c1c:13/><pause:0/><c1e:0/>物攻强<NAME/><NAME/>暗系无效\n弱亚基/圣系",
+      "<c1c:13/><pause:0/><c1e:0/>物理强<NAME/><NAME/>暗黑系无效\n亚基/神圣系弱",
+      "<c1c:13/><pause:0/><c1e:0/>物理抗性<NAME/><NAME/>暗黑无效\n亚基/神圣属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:85346a85ef96",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>水无效\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性无效\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效\n弱亚基"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:878502eb8bb7",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基/神圣无效\n阿夸/冰结/暗黑弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/神圣系无效\n阿夸/冰结/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/神圣系无效化\n对阿夸/冰结/暗黑系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:87bd3c90d7a9",
+    "contents": [
+      "<pause:0/><c1e:0/>保质期过了啊",
+      "<pause:0/><c1e:0/>喂，保质期过了",
+      "<pause:0/><c1e:0/>已过期了哦"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:88b424eebde1",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内TEC+2",
+      "<pause:0/><c1e:0/>一定时间内TEC提升2点",
+      "<pause:0/><c1e:0/>一定时间内技巧+2",
+      "<pause:0/><c1e:0/>一定时间技巧提升2点",
+      "<pause:0/><c1e:0/>一定期间TEC提升2点",
+      "<pause:0/><c1e:0/>暂时TEC提升2"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8a017d0326c7",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射圣系\n弱暗系",
+      "<c1c:13/><pause:0/><c1e:0/>神圣反射\n暗黑弱",
+      "<c1c:13/><pause:0/><c1e:0/>神圣属性反射\n暗黑属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8bbf52586256",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>吸收风属性\n\n弱点：地",
+      "<c1c:13/><pause:0/><c1e:0/>疾风吸收\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性吸收\n地变属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8c4247646b47",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻无效\n魔攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>物攻无效\n魔攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物理无效\n魔法弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8d87861b182b",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基反射<NAME/><NAME/>核热强\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系反射<NAME/><NAME/>对核热系强\n对阿夸系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系反射<NAME/><NAME/>核热系强\n阿夸系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:91cb6cddf26c",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>魔攻无效\n物攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔攻无效\n物攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔法无效\n物理弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:94224464ab4d",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣/暗黑系无效\n对疾风系弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣/暗黑系无效\n疾风系弱",
+      "<c1c:13/><pause:0/><c1e:0/>无效地变/神圣/暗黑\n弱点疾风"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:950b5524d379",
+    "contents": [
+      "自我意识过剩",
+      "自我过剩"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:98427d1776f0",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣\n弱点亚基/核热/暗黑",
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣属性\n弱点亚基/核热/暗黑属性",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣系无效\n亚基/核热/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣系无效化\n对亚基/核热/暗黑系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9ac2fcbd1aa2",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>冰结/电击/核热抗性\n打击/战技属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>冰结/电击/核热系强\n打击/战技系弱",
+      "<c1c:13/><pause:0/><c1e:0/>抗冰/电/核系\n弱打击/战技系"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9c8d8b8e3523",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内敏捷+1",
+      "<pause:0/><c1e:0/>一定时间敏捷提升1点",
+      "<pause:0/><c1e:0/>暂时AGI提升1"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9cec0213643c",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射风属性\n\n弱点：地",
+      "<c1c:13/><pause:0/><c1e:0/>疾风反射\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性反射\n地变属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9d1daeaad309",
+    "contents": [
+      "<pause:0/><c1e:0/>火灾预告卡SUN",
+      "<pause:0/><c1e:0/>预示火灾的卡SUN"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9f3ab75b10f9",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内技巧+5",
+      "<pause:0/><c1e:0/>一段时间内TEC+5",
+      "<pause:0/><c1e:0/>暂时TEC提升5"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a2e0f21e2883",
+    "contents": [
+      "<pause:0/><c1e:0/>什么啊，镀金的",
+      "<pause:0/><c1e:0/>什么嘛，镀金的啊",
+      "<pause:0/><c1e:0/>是镀金的啊"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a45d13e120e2",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射圣/暗系",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑反射",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑属性反射"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a6a0e83e44e1",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神系无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a898d860fb23",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内AGI+5",
+      "<pause:0/><c1e:0/>一定期间AGI提升5",
+      "<pause:0/><c1e:0/>一段时间内AGI+5"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a997c95d9d7c",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内STR+1",
+      "<pause:0/><c1e:0/>一定时间内STR提升1点",
+      "<pause:0/><c1e:0/>一定时间内力量+1",
+      "<pause:0/><c1e:0/>一定时间力量提升1点",
+      "<pause:0/><c1e:0/>一段时间内STR+1",
+      "<pause:0/><c1e:0/>暂时STR提升1"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:af760c5ec1d4",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射地属性\n\n弱点：风",
+      "<c1c:13/><pause:0/><c1e:0/>地变反射\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变属性反射\n疾风属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:b3137c4bf623",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内TEC+4",
+      "<pause:0/><c1e:0/>一定时间内技巧+4",
+      "<pause:0/><c1e:0/>一定时间技巧提升4点",
+      "<pause:0/><c1e:0/>一段时间内TEC+4",
+      "<pause:0/><c1e:0/>暂时TEC提升4"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:b6b76ffbc62e",
+    "contents": [
+      "已召唤Persona",
+      "已经召唤Persona",
+      "已经降魔"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:b7518d1530e0",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间体力提升7点",
+      "<pause:0/><c1e:0/>一定时间内体力+7",
+      "<pause:0/><c1e:0/>暂时VIT提升7"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:bb5f380a1f78",
+    "contents": [
+      "请选择替换Persona",
+      "选择替换的Persona"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:bbb5b4015256",
+    "contents": [
+      "<pause:0/><c1e:0/>微小的喜悦？",
+      "<pause:0/><c1e:0/>微悦？",
+      "<pause:0/><c1e:0/>隐约之喜？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:be72d8b2be30",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具系反射"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c056c35682d8",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内敏捷+8",
+      "<pause:0/><c1e:0/>一段时间内AGI+8"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c1df10e6c601",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>魔攻抗性\n物攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔攻耐性\n物攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔法攻击抗性\n物理攻击弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔法耐性\n物理弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c1e4e79a4378",
+    "contents": [
+      "<pause:0/><c1e:0/>这个也是真的……\n不，只是镀层厚",
+      "<pause:0/><c1e:0/>这个也真...\n不，镀层厚而已",
+      "<pause:0/><c1e:0/>这个也真货…\n不，镀层厚而已"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c264bf3d8966",
+    "contents": [
+      "请选择要重生的Persona",
+      "请选择重生Persona",
+      "选择要重生的Persona"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c2965c59358d",
+    "contents": [
+      "<pause:0/><c1e:0/>出租车司机帽<SURNAME/>By富永",
+      "<pause:0/><c1e:0/>出租车司机帽<SURNAME/>by富永",
+      "<pause:0/><c1e:0/>出租车帽<SURNAME/>By富永"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c32f84a987b5",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>反射核热\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>核热反射\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热反射\n\n弱点：水",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热系反射\n阿夸弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c36ea6fd6e2b",
+    "contents": [
+      "已降魔Persona无法卸下",
+      "装备中的Persona无法卸下"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c4182ed23f59",
+    "contents": [
+      "<pause:0/><c1e:0/>水晶头骨\n不知为何有大地属性",
+      "<pause:0/><c1e:0/>水晶骷髅\n不知为何像地属性",
+      "<pause:0/><c1e:0/>水晶骷髅\n产地不明"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c4721479b316",
+    "contents": [
+      "请选择召唤Persona",
+      "请选择要召唤的Persona",
+      "选择召唤的Persona"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c49b9ce096f1",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>(备用)",
+      "<c1c:13/><pause:0/><c1e:0/>(预留)",
+      "<c1c:13/><pause:0/><c1e:0/>（保留）"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c6581517fe23",
+    "contents": [
+      "变异为此Persona:○键决定",
+      "变异为此Persona：○键确定",
+      "将变异为此Persona：○键确定"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c7579ac0085f",
+    "contents": [
+      "已降魔Persona无法变异",
+      "装备中的Persona无法变异"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c90a68925acc",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>魔攻反射\n物攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔攻反射\n物攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔法反射\n物理弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c966a1b58c4c",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>抗暗系\n弱圣系",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑属性抗性\n神圣属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑系强\n神圣系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ca88491f8e2b",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>冰结强\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>强阿夸\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>抗水系\n圣/暗系无效",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性抗性\n神圣/暗黑属性无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:cdb65863e9d5",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>吸收水属性\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>吸收阿夸\n弱亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸吸收\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性吸收\n亚基属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:cf4c5d34f5cc",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>耐水属性\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>耐阿夸\n弱亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性抗性\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸抗性\n亚基弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d043cab830a2",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑/神经/精神系\n无效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑/神经/精神系\n无效化"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d0f126712e06",
+    "contents": [
+      "<pause:0/><c1e:0/>好像没电了",
+      "<pause:0/><c1e:0/>电池好像没电了",
+      "<pause:0/><c1e:0/>电池耗尽"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d1be30771b93",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效<NAME/><NAME/>疾风属性弱点\n冰结/电击/核热属性抗性",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效<NAME/><NAME/>疾风弱\n冰结/电击/核热强",
+      "<c1c:13/><pause:0/><c1e:0/>地无效<NAME/><NAME/>弱点：风\n\n耐冰/电/核热"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d2ba0ec47d07",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效<NAME/><NAME/>疾风属性弱点\n冰结/电击/核热属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效<NAME/><NAME/>疾风弱\n冰结/电击/核热反射",
+      "<c1c:13/><pause:0/><c1e:0/>地无效<NAME/><NAME/>弱点：风\n\n反射冰/电/核热"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d53408da679d",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射水属性\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>反射阿夸\n弱亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸反射\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性反射\n亚基属性弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d92591083cdb",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热无效\n\n弱点：水",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热无效\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热无效\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热系无效\n阿夸弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d9796dbb64e5",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基反射\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>反射亚基\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>反射亚基系\n弱点：水"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d9b239dcd113",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻稍强\n弱神经/精神系",
+      "<c1c:13/><pause:0/><c1e:0/>物理攻击稍强\n神经/精神属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物理攻击较强\n神经/精神系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:db73d44c44ea",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>投具/战技/圣/暗/\n精神/神经系无效",
+      "<c1c:13/><pause:0/><c1e:0/>投具/战技/神圣/暗黑/\n精神/神经属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>投具/战技/神圣/暗黑/\n精神/神经系无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:de8aa9516fe7",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基属性抗性\n神圣/暗黑属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>亚基强\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>强亚基\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>抗亚基系\n圣/暗系无效"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:dee3ad39c90e",
+    "contents": [
+      "已存在相同Persona",
+      "已有相同Persona",
+      "相同的Persona已经存在"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e078b9612f09",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>水无效<NAME/><NAME/>冰反射\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性无效<NAME/><NAME/>冰结属性反射\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>冰结反射\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>反射冰结\n弱亚基"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e2b299980723",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>水无效<NAME/><NAME/>冰吸收\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性无效<NAME/><NAME/>冰结属性吸收\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>冰结吸收\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>吸收冰结\n弱亚基"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e34c82995161",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内AGI+4",
+      "<pause:0/><c1e:0/>一定时间内AGI提升4点",
+      "<pause:0/><c1e:0/>一定时间内敏捷+4",
+      "<pause:0/><c1e:0/>一定期间AGI提升4点",
+      "<pause:0/><c1e:0/>一段时间内AGI+4"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e438348a2820",
+    "contents": [
+      "<pause:0/><c1e:0/>天○的骷髅？",
+      "<pause:0/><c1e:0/>天恩的头骨？",
+      "<pause:0/><c1e:0/>天恩的骷髅？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e69361c9576e",
+    "contents": [
+      "高傲",
+      "高慢"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e70d4b8b9f52",
+    "contents": [
+      "其他成员已降魔",
+      "其他成员正在召唤Persona",
+      "其他成员装备中",
+      "成员降魔中"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e7a2db3afea3",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内技巧+8",
+      "<pause:0/><c1e:0/>一定时间技巧提升8点",
+      "<pause:0/><c1e:0/>暂时TEC提升8"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e8a54fdadc6c",
+    "contents": [
+      "请选择删除Persona",
+      "选择删除的Persona"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:eadcec663707",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效\n阿夸系弱点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ebfff5c0e6dd",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内敏捷+6",
+      "<pause:0/><c1e:0/>一定时间敏捷提升6点",
+      "<pause:0/><c1e:0/>暂时AGI提升6"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ece8b74c3615",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>BOSS相性帮助显示\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>BOSS相性帮助显示部分\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>Boss相性帮助显示\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>Boss相性帮助显示部分\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>ボス用の相性へルプ表示部分\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>用于首领的属性帮助显示部分\n1234567890123"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ef896b61210a",
+    "contents": [
+      "<pause:0/><c1e:0/>海潮香气",
+      "<pause:0/><c1e:0/>潮之香"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:efd4f2c2fc1a",
+    "contents": [
+      "强势",
+      "强硬"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f0bfe28bfded",
+    "contents": [
+      "确定吗?",
+      "这样可以吗？"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f0c9f724dc03",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内STR+2",
+      "<pause:0/><c1e:0/>一定时间内力量+2",
+      "<pause:0/><c1e:0/>一定时间力量提升2点",
+      "<pause:0/><c1e:0/>一定期间STR提升2",
+      "<pause:0/><c1e:0/>一段时间内STR+2",
+      "<pause:0/><c1e:0/>暂时STR提升2"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f0e948db78a9",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基吸收\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基系\n\n弱点：水"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f11d39dd09aa",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内VIT提升6点",
+      "<pause:0/><c1e:0/>一定期间VIT提升6点"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f2bf135e32b8",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内力量+5",
+      "<pause:0/><c1e:0/>一段时间内STR+5"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f32a3ad11ad0",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣系无效\n疾风/冰结/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣系无效化\n对疾风/冰结/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>无效地变/神圣\n弱点疾风/冰结/暗黑"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f380c2beaab7",
+    "contents": [
+      "<pause:0/><c1e:0/>一定时间内STR+4",
+      "<pause:0/><c1e:0/>一定时间内力量+4",
+      "<pause:0/><c1e:0/>一定时间力量提升4点",
+      "<pause:0/><c1e:0/>一段时间内STR+4",
+      "<pause:0/><c1e:0/>暂时STR提升4"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f3fa97dd1124",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性无效<NAME/><NAME/>电击属性吸收\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风无效<NAME/><NAME/>电击吸收\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风无效<NAME/><NAME/>电吸收\n\n弱点：地"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f52d1e42b775",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/阿夸抗性\n飞具/亚基/地变弱点",
+      "<c1c:13/><pause:0/><c1e:0/>强剑击/战技/阿夸\n弱飞具/亚基/地变",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/水系\n弱射击/亚基/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/阿夸系强\n飞具/亚基/地变系弱"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f63ad4e26fcb",
+    "contents": [
+      "<pause:0/><c1e:0/>召唤【正义】哪吒\n召唤所需卡片",
+      "<pause:0/><c1e:0/>召唤【正义】哪吒\n召唤所需的卡片",
+      "<pause:0/><c1e:0/>召唤【正义】哪吒\n所需的卡牌"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:fb0d074473cb",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性无效\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风无效\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风无效\n\n弱点：地"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:fea5e61d10c8",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>反射神经/精神系",
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神系反射"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:feed8a087aaa",
+    "contents": [
+      "<pause:0/><c1e:0/>一定期间AGI提升7",
+      "<pause:0/><c1e:0/>一段时间内AGI+7"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ffeb4cea94e0",
+    "contents": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风/电击属性无效\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风/电击无效\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风/电无效\n\n弱点：地"
+    ],
+    "reasons": [
+      "manual_diff"
+    ]
+  }
+]

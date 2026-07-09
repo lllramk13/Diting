@@ -1,0 +1,115 @@
+[
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5de7e16ae7d8",
+    "jp": "\n<SURNAME/>先生は、私と同じセブンスの世界史教諭だった。\n<SURNAME/>そして、いつも誤った歴史を教えているんじゃ\n<SURNAME/>ないかと、悩んでおられたわ…\n",
+    "local_candidates": [
+      "\n<SURNAME/>老师和我一样是七姐妹学园的世界史教师。\n<SURNAME/>而且，他总在烦恼是否在教错误的历史，\n<SURNAME/>不是吗…",
+      "\n<SURNAME/>老师和我一样是七姐妹学园的世界史教师。\n<SURNAME/>而且，他总在烦恼是否在教错误的历史，\n<SURNAME/>不是吗…\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/>老师和我一样是七姐妹学园的世界史教师。\n<SURNAME/>而且，他总在烦恼是否在教错误的历史，\n<SURNAME/>不是吗…\n",
+    "latest_pr_created_at": "2026-06-27 07:28:31.10981+00",
+    "latest_pr_id": "f391071a-8be3-49de-a8e0-abdc3daca7eb"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7a7a829c6925",
+    "jp": "\n<SURNAME/>僕の目的は、復讐のみではない。\n",
+    "local_candidates": [
+      "\n<SURNAME/>我的目的、不仅仅是复仇。\n",
+      "\n<SURNAME/>我的目的，不仅仅是复仇。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/>我的目的、不仅仅是复仇。\n",
+    "latest_pr_created_at": "2026-06-25 02:29:59.622059+00",
+    "latest_pr_id": "4b51181e-c032-49a7-b170-13286b1dff6e"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7b1d6529581a",
+    "jp": "\n<SURNAME/><c1d:9/>何も無い。<c1d:1/>\n",
+    "local_candidates": [
+      "\n<SURNAME/><c1d:9/>什么也没有。<c1d:1/>",
+      "\n<SURNAME/><c1d:9/>什么也没有。<c1d:1/>\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/><c1d:9/>什么也没有。<c1d:1/>\n",
+    "latest_pr_created_at": "2026-06-27 07:28:31.10981+00",
+    "latest_pr_id": "f391071a-8be3-49de-a8e0-abdc3daca7eb"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8aa73b2f9b99",
+    "jp": "\n<SURNAME/>…へ?\n",
+    "local_candidates": [
+      "\n<SURNAME/>…诶?\n",
+      "\n<SURNAME/>…诶？\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/>…诶？\n",
+    "latest_pr_created_at": "2026-06-25 02:29:59.622059+00",
+    "latest_pr_id": "4b51181e-c032-49a7-b170-13286b1dff6e"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:96f3eae6a8d4",
+    "jp": "\n<SURNAME/>何も入ってない。",
+    "local_candidates": [
+      "\n<SURNAME/>什么也没有。",
+      "\n<SURNAME/>里面什么也没有。",
+      "\n<SURNAME/>里面什么都没有。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/>里面什么也没有。",
+    "latest_pr_created_at": "2026-06-27 07:28:31.10981+00",
+    "latest_pr_id": "f391071a-8be3-49de-a8e0-abdc3daca7eb"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9f1da4c62644",
+    "jp": "\n<SURNAME/>今先輩ガ壊したので、\n<SURNAME/>この部屋のエンブレムは最後よ!!\n<SURNAME/>早く他の部屋のも壊さないと!!",
+    "local_candidates": [
+      "\n<SURNAME/>刚才前辈已经把他破坏掉了， \n<SURNAME/>这个房间的纹章是最后一个了!! \n<SURNAME/>得快点破坏其他房间的!!",
+      "\n<SURNAME/>既然刚才前辈破坏掉了，\n<SURNAME/>这间房间里的徽章就是最后一个了!!\n<SURNAME/>得快点破坏其他房间的!!"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/>刚才前辈已经把他破坏掉了， \n<SURNAME/>这个房间的纹章是最后一个了!! \n<SURNAME/>得快点破坏其他房间的!!",
+    "latest_pr_created_at": "2026-06-27 07:28:31.10981+00",
+    "latest_pr_id": "f391071a-8be3-49de-a8e0-abdc3daca7eb"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:be82fd6945f5",
+    "jp": "\n<SURNAME/>ここのエンブレムは、もう全部処分したよ。\n<SURNAME/>さあ次はどこだい?",
+    "local_candidates": [
+      "\n<SURNAME/>这里的校徽都处理完了。 \n<SURNAME/>接下来去哪儿?",
+      "\n<SURNAME/>这里的校徽，已经全部处理掉了。\n<SURNAME/>那么接下来是哪里呢?"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/>这里的校徽都处理完了。 \n<SURNAME/>接下来去哪儿?",
+    "latest_pr_created_at": "2026-06-27 07:28:31.10981+00",
+    "latest_pr_id": "f391071a-8be3-49de-a8e0-abdc3daca7eb"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c1f10068be4c",
+    "jp": "\n<SURNAME/>そういうアンタは、ジヨーカーの力で\n<SURNAME/>なにを手に入れたんだい!?\n",
+    "local_candidates": [
+      "\n<SURNAME/>那你用JOKER的力量\n<SURNAME/>又得到了什么!?\n",
+      "\n<SURNAME/>那你用JOKER的力量\n<SURNAME/>又得到了什么?!\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "latest_pr_content": "\n<SURNAME/>那你用JOKER的力量\n<SURNAME/>又得到了什么?!\n",
+    "latest_pr_created_at": "2026-06-25 02:30:17.703888+00",
+    "latest_pr_id": "4a8b2b74-e936-46af-be48-fa3894e6f398"
+  }
+]

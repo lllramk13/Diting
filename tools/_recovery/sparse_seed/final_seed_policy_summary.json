@@ -1,0 +1,9 @@
+{
+  "duplicate_pr_rows": 688,
+  "duplicate_pr_unique_ids": 688,
+  "duplicate_pr_missing_current_ids": 0,
+  "non_duplicate_high_confidence": 4683,
+  "final_seed_rows": 5371,
+  "local_duplicate_conflicts_ignored": true,
+  "website_duplicate_baseline_written_to_database": false
+}

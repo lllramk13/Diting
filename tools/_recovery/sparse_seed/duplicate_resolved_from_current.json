@@ -1,0 +1,48 @@
+[
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:005026632682",
+    "contents": [
+      "\n<SURNAME/>………！！\n",
+      "<SURNAME/>………！！"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ],
+    "current_dup_content": "<SURNAME/>………！！",
+    "content": "<SURNAME/>………！！",
+    "resolution": "current_dup_matches_candidate"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3590be11f58d",
+    "contents": [
+      "\n<SURNAME/>我，以前一直觉得老师只是烦人，\n<SURNAME/><pause:10/>真是大错特错。<pause:15/>明明她一直\n<SURNAME/>那样守护着我们…\n",
+      "\n<SURNAME/>我，以前觉得老师只是烦人，<pause:10/>但大错特错了。<pause:15/>那样\n<SURNAME/>一直保护着我们…"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ],
+    "current_dup_content": "\n<SURNAME/>我，以前一直觉得老师只是烦人，\n<SURNAME/><pause:10/>真是大错特错。<pause:15/>明明她一直\n<SURNAME/>那样守护着我们…\n",
+    "content": "\n<SURNAME/>我，以前一直觉得老师只是烦人，\n<SURNAME/><pause:10/>真是大错特错。<pause:15/>明明她一直\n<SURNAME/>那样守护着我们…\n",
+    "resolution": "current_dup_matches_candidate"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8285c8dcd89d",
+    "contents": [
+      "\n<SURNAME/>………!?\n",
+      "\n<SURNAME/>………！？\n",
+      "<SURNAME/>………！？"
+    ],
+    "reasons": [
+      "manual_diff",
+      "merged_pr_with_base"
+    ],
+    "current_dup_content": "<SURNAME/>………！？",
+    "content": "<SURNAME/>………！？",
+    "resolution": "current_dup_matches_candidate"
+  }
+]

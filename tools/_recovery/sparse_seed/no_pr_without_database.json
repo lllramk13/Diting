@@ -1,0 +1,3358 @@
+[
+  {
+    "source_file": "dup:field",
+    "string_id": "dup:5497c7186bc3",
+    "jp": "<c5:0/><c1e:0/>【飾】地属性の魔法を受けると変化\\nアイテムとして使うとマハマグナの効果\\n<c6/>\\n",
+    "local_candidates": [
+      "<c5:0/><c1e:0/>【饰】受到地属性魔法攻击时会变化\\n作为物品使用时具有哈玛玛格纳的效果\\n<c6/>\\n",
+      "<c5:0/><c1e:0/>【饰】受到地属性魔法攻击时会变化\\n作为物品使用时具有玛哈玛玛格纳的效果\\n<c6/>\\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:00c1a11bd23a",
+    "jp": "<c1d:11/>調査報告書No.32<c1d:1/>\n<SURNAME/>調査対象の素行を2週間に渡り調査した結果、\n<SURNAME/>依頼者の危惧する結果は得られなかった。\n",
+    "local_candidates": [
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>经过两周对调查对象的品行调查，\n<SURNAME/>未发现委托人所担忧的结果。\n",
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>经过两周对调查对象的品行调查，\n<SURNAME/>没有获得委托人担忧的结果。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:01ad6b8f612a",
+    "jp": "\n<SURNAME/>はい、では…\n<SURNAME/>みなさんで1200円になりますガ…",
+    "local_candidates": [
+      "\n<SURNAME/>好的，那么…\n<SURNAME/>共计1200日元…",
+      "\n<SURNAME/>好的，那么…\n<SURNAME/>各位需支付1200日元…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0207377d3ae7",
+    "jp": "\n<SURNAME/>ペルソナは貴方の隠れた一面…\n<SURNAME/>それに相応しい状態に変化するというわけですな。\n<SURNAME/>貴方ガ武器を扱えるのも、そのせいなのです。",
+    "local_candidates": [
+      "\n<SURNAME/>Persona是你隐藏的一面…\n<SURNAME/>你将为契合它而改变形态。\n<SURNAME/>正因如此，你才能使用武器。",
+      "\n<SURNAME/>Persona是您隐藏的一面…\n<SURNAME/>因此它会变化为与之相应的状态。\n<SURNAME/>您能使用武器，也是这个原因。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:05cb7d6443e9",
+    "jp": "\n<SURNAME/>はい、いらっしゃいませ。\n<SURNAME/>今日はどのような香りをお求めですか?",
+    "local_candidates": [
+      "\n<SURNAME/>欢迎光临。\n<SURNAME/>今日您需要何种芬芳？",
+      "\n<SURNAME/>欢迎光临。\n<SURNAME/>今日想寻何种香气?"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:05fbe998c3e2",
+    "jp": "\n<SURNAME/>僕はいつでもここにいる。\n<SURNAME/>また気ガ向いたら立ち寄るといい。\n<SURNAME/>ここでは、時間は意味を成さないからな。",
+    "local_candidates": [
+      "\n<SURNAME/>我随时都在这里。\n<SURNAME/>兴致来了就再来吧。\n<SURNAME/>在这里，时间没有意义。",
+      "\n<SURNAME/>我随时都在这里。\n<SURNAME/>等你有空时再来吧。\n<SURNAME/>因为在这里，时间没有意义。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0ba4a64bd4fe",
+    "jp": "\n<SURNAME/>繋ガりガ希薄なペルソナの場合、\n<SURNAME/>貴方には扱えないかもしれません。\n<SURNAME/>そう、中には降魔出来ない場合もあるのです。",
+    "local_candidates": [
+      "\n<SURNAME/>对于连接稀薄的Persona，\n<SURNAME/>你可能无法驾驭。\n<SURNAME/>是的，其中有些甚至无法降魔。",
+      "\n<SURNAME/>若连接稀薄，\n<SURNAME/>您可能无法驾驭。\n<SURNAME/>是的，有些甚至无法降魔。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:0dc98babc404",
+    "jp": "\n<SURNAME/>これも噂のせいか?<SURNAME/><pause:15/>噂ガ本当になって、\n<SURNAME/>あの校長戻ってきちまったのか?<pause:15/>\n<SURNAME/>おいおい…マジかよ…",
+    "local_candidates": [
+      "\n<SURNAME/>又是传闻搞的鬼?<SURNAME/><pause:15/>传闻成真，\n<SURNAME/>那校长真回来了?<pause:15/>\n<SURNAME/>喂喂…真的假的…",
+      "\n<SURNAME/>这也是传闻的错吗？<SURNAME/><pause:15/>传闻成真了，\n<SURNAME/>那个校长回来了吗？<pause:15/>\n<SURNAME/>喂喂…真的假的…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:10fcd6ac4483",
+    "jp": "\n<SURNAME/>ありガとニャー♥",
+    "local_candidates": [
+      "\n<SURNAME/>谢谢喵♥",
+      "\n<SURNAME/>谢谢喵～♥"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:138a5d3c20d5",
+    "jp": "\n<SURNAME/>第二次世界大戦を引き起こした張本人、\n<SURNAME/>今世紀最大最悪の独裁者!!<pause:30/>\n<SURNAME/>それくらいは知ってるわよね?\n",
+    "local_candidates": [
+      "\n<SURNAME/>引发第二次世界大战的罪魁祸首，\n<SURNAME/>本世纪最大最坏的独裁者！！<pause:30/>\n<SURNAME/>这个你总该知道吧？\n",
+      "\n<SURNAME/>引发第二次世界大战的罪魁祸首，\n<SURNAME/>本世纪最大最恶的独裁者!!<pause:30/>\n<SURNAME/>这点你应该知道吧?\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:18270b879da4",
+    "jp": "\n<SURNAME/>静寂…<pause:15/>このカードは、そなたガ日々と変わらず\n<SURNAME/>平凡な時を過ごす事を意味している。<pause:15/>\n<SURNAME/>可も無く不可も無い…しかしそれは大切な事じゃ",
+    "local_candidates": [
+      "\n<SURNAME/>静寂…<pause:15/>此卡意味着，尔将如常度过\n<SURNAME/>平凡时光。<pause:15/>\n<SURNAME/>无甚可圈可点…然此乃重要之事",
+      "\n<SURNAME/>静寂…<pause:15/>此卡意味着，汝将日复一日\n<SURNAME/>度过平凡的时光。<pause:15/>\n<SURNAME/>无可无不可…但那也是重要的事啊"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:19f59f719879",
+    "jp": "\n<SURNAME/>あれっ?<pause:10/>\n<SURNAME/>またハンニャ校長…",
+    "local_candidates": [
+      "\n<SURNAME/>咦?<pause:10/>\n<SURNAME/>又是般若校长…",
+      "\n<SURNAME/>咦？<pause:10/>\n<SURNAME/>又是般若校长…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:1a739461e909",
+    "jp": "<c1d:11/>轟<SURNAME/>大助の日記<c1d:1/>\n<SURNAME/>あの美人の奥方ガ言う様な、\n<SURNAME/>浮気の兆候は見られない。\n<SURNAME/>大体、あんな気の弱そうな男に浮気などできまい\n",
+    "local_candidates": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>没发现那位美人夫人所说的，\n<SURNAME/>外遇的迹象。\n<SURNAME/>大概，那种懦弱的男人也搞不了外遇吧\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>没有看到那位美丽夫人所说的，\n<SURNAME/>出轨的迹象。\n<SURNAME/>大概，那种懦弱的男人不可能出轨吧\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:207765621f06",
+    "jp": "\n<SURNAME/>そこは開かないニャー♥\n<SURNAME/>あきらめるニャー♥",
+    "local_candidates": [
+      "\n<SURNAME/>那里打不开喵♥\n<SURNAME/>放弃喵♥",
+      "\n<SURNAME/>那里打不开喵～♥\n<SURNAME/>放弃吧喵～♥"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:21e053fe2f8a",
+    "jp": "\n<SURNAME/>素敵な歌だね…<pause:30/>\n<SURNAME/>何て言うか、魂に響いて来るような…<pause:30/>\n<SURNAME/>すっごくリラックスした気分にならない?",
+    "local_candidates": [
+      "\n<SURNAME/>好棒的歌啊…<pause:30/>\n<SURNAME/>怎么说呢，仿佛触动灵魂…<pause:30/>\n<SURNAME/>不觉得非常放松吗？",
+      "\n<SURNAME/>好美的歌…<pause:30/>\n<SURNAME/>怎么说呢，直击灵魂…<pause:30/>\n<SURNAME/>不觉得超放松吗？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2564823a022f",
+    "jp": "\n<SURNAME/>ラジャー!\n<SURNAME/>じゃあ、応募したくなったらまた来てね。",
+    "local_candidates": [
+      "\n<SURNAME/>了解！\n<SURNAME/>想申请的时候再来找我哦～",
+      "\n<SURNAME/>收到!\n<SURNAME/>那，想应募的时候再来吧。",
+      "\n<SURNAME/>收到！\n<SURNAME/>那么，想应征的时候再来吧。",
+      "\n<SURNAME/>收到！\n<SURNAME/>那么，想报名的时候再来吧。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:2ac05a627ca9",
+    "jp": "\n<SURNAME/>夢崎区の<c1d:13/>トニーの店<c1d:1/>で、<c1d:13/>本物の武器<c1d:1/>ガ買えるって\n<SURNAME/>噂ガあるんだよ。ついでに言うと、<c1d:13/>値段は安いけど\n<SURNAME/>質ガ良くない<c1d:1/>んだってさ。<pause:15/>どう?<SURNAME/>凄いだろ?",
+    "local_candidates": [
+      "\n<SURNAME/>在梦崎区的<c1d:13/>托尼的店<c1d:1/>，能买到<c1d:13/>真武器<c1d:1/>的\n<SURNAME/>传闻哦。顺便说，<c1d:13/>价格便宜但\n<SURNAME/>质量不好<c1d:1/>啦。<pause:15/>怎样？<SURNAME/>厉害吧？",
+      "\n<SURNAME/>在梦崎区的<c1d:13/>托尼的店<c1d:1/>，能买到<c1d:13/>真武器<c1d:1/>的\n<SURNAME/>传闻有哦。顺便说，<c1d:13/>价格便宜但\n<SURNAME/>质量不好<c1d:1/>的样子。<pause:15/>怎样？<SURNAME/>厉害吧？",
+      "\n<SURNAME/>有传闻说在梦崎区的<c1d:13/>托尼的店<c1d:1/>能买到<c1d:13/>真武器<c1d:1/>。\n<SURNAME/>顺便一提，<c1d:13/>价格便宜但质量不咋地<c1d:1/>。<pause:15/>怎么样？厉害吧？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3820dce5e55a",
+    "jp": "\n<SURNAME/>先生だったら、\n<SURNAME/>さっき駐輪場の方に行くの見ましたよ。<pause:15/>\n<SURNAME/>まだそこにいるんじゃないですか?",
+    "local_candidates": [
+      "\n<SURNAME/>如果是老师的话，\n<SURNAME/>刚才看到往自行车存车处去了。<pause:15/>\n<SURNAME/>应该还在那儿吧？",
+      "\n<SURNAME/>老师的话，\n<SURNAME/>刚才看到往存车处方向去了。<pause:15/>\n<SURNAME/>应该还在那儿吧?"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3a232842d9e7",
+    "jp": "<c1d:11/>調査報告書No.32<c1d:1/>\n<SURNAME/>対象ガ職場外で接触したのは、\n<SURNAME/>岡村という同僚教諭と須藤という生徒のみであり、\n<SURNAME/>岡村との間にも、男女の関係は見られなかった。\n",
+    "local_candidates": [
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>对象在职场外接触的，\n<SURNAME/>只有名为冈村的同事教师和名为须藤的学生，\n<SURNAME/>与冈村之间也没有男女关系。\n",
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>对象在职场外接触的，\n<SURNAME/>只有名为冈村的同事教师和须藤这名学生，\n<SURNAME/>与冈村之间也未发现男女关系。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:3ae4e6afe13f",
+    "jp": "\n<SURNAME/>やあ。また来たね?\n<SURNAME/>僕は今日も絶好調さ。\n<SURNAME/>ノット、膨満感だね。",
+    "local_candidates": [
+      "\n<SURNAME/>呀。又来了?\n<SURNAME/>我今天也状态绝佳。\n<SURNAME/>Not，有点胀气呢。",
+      "\n<SURNAME/>呀。又来了?\n<SURNAME/>我今天也绝佳状态。\n<SURNAME/>没有腹胀感呢。",
+      "\n<SURNAME/>呀。又来了？\n<SURNAME/>我今天也状态绝佳。\n<SURNAME/>不，是饱腹感呢。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:44e8069a8e0b",
+    "jp": "\n<SURNAME/>ユッキーやっるう!!\n<SURNAME/>よ〜し私も負けないわよお!",
+    "local_candidates": [
+      "\n<SURNAME/>小雪好厉害!!\n<SURNAME/>好〜我也不能输哦！",
+      "\n<SURNAME/>小雪超棒！！\n<SURNAME/>好～的我也不能输哟！"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:44fc740cbfb4",
+    "jp": "\n<SURNAME/>これよりしばしの間、そなたの積極的な態度ガ、\n<SURNAME/>新たな感情の芽生えと意志の疎通を呼び、いかなる\n<SURNAME/>交渉ごとも円滑に、進める事ガできようぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>从今往后一段时间，汝的积极态度，\n<SURNAME/>将唤起新感情的萌芽和意志的沟通，任何\n<SURNAME/>交涉都能顺利推进吧。",
+      "\n<SURNAME/>此后片刻，汝之积极态度，\n<SURNAME/>将唤起新情愫与意志相通，任何\n<SURNAME/>谈判皆可顺畅推进。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:48e528188b67",
+    "jp": "\n<SURNAME/>ペルソナは、\n<SURNAME/>その種類によって持っている能力ガ違います。\n<SURNAME/>メリットだけでなくデメリットもありますぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>Persona因种类不同，\n<SURNAME/>能力也各异。\n<SURNAME/>既有优势亦有缺陷。",
+      "\n<SURNAME/>Persona，\n<SURNAME/>根据其种类，拥有的能力不同。\n<SURNAME/>不仅有优点，也有缺点。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:4dded04c932d",
+    "jp": "\n<SURNAME/>アレは、シバルバーへの鍵であり、動力源!!\n<SURNAME/>シバルバーとイデアルエナジーを制する者ガ、\n<SURNAME/>人類の歴史を制するのよ!!\n",
+    "local_candidates": [
+      "\n<SURNAME/>那是通往希巴尔巴的钥匙，也是动力源!!\n<SURNAME/>掌控希巴尔巴和理想能量的人，\n<SURNAME/>就能掌控人类的历史!!\n",
+      "\n<SURNAME/>那是通往希巴尔巴的钥匙，也是动力源！！\n<SURNAME/>控制希巴尔巴和理想能量的人，\n<SURNAME/>就能掌控人类的历史！！\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:4f71ddf0a646",
+    "jp": "\n<SURNAME/>ブラックジャック\n<SURNAME/>「JOIN<SURNAME/>FORCES」ガある。",
+    "local_candidates": [
+      "\n<SURNAME/>Black Jack\n<SURNAME/>「JOIN<SURNAME/>FORCES」有。",
+      "\n<SURNAME/>二十一点\n<SURNAME/>「JOIN<SURNAME/>FORCES」"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:50f9650645ee",
+    "jp": "\n<SURNAME/>葛華探偵事務所の招きネコガ、言華を話すのか?\n<SURNAME/>ははは、女の子ガ喜びそうなネタだな。\n<SURNAME/>まぁいいだろう。ではこちらのネタだ。",
+    "local_candidates": [
+      "\n<SURNAME/>葛叶侦探事务所的招财猫会说话？\n<SURNAME/>哈哈哈，这料女孩子会喜欢吧。\n<SURNAME/>嘛好吧。那么来分享这边的料。",
+      "\n<SURNAME/>葛叶侦探事务所的招财猫会说话？\n<SURNAME/>哈哈，女孩子会喜欢的料呢。\n<SURNAME/>嘛，好吧。那分享这边的料。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:529860499fa2",
+    "jp": "\n<SURNAME/>1989年<SURNAME/>□月□□日<SURNAME/>雨\n<SURNAME/>本日で、橿原の調査も終了。\n<SURNAME/>ついでに、奥方ガ女優だと、今日知った。\n",
+    "local_candidates": [
+      "\n<SURNAME/>1989年<SURNAME/>□月□□日<SURNAME/>雨\n<SURNAME/>今天，橿原的调查也结束了。\n<SURNAME/>顺便，今天才知道夫人是女演员。\n",
+      "\n<SURNAME/>1989年<SURNAME/>□月□□日<SURNAME/>雨\n<SURNAME/>今日橿原的调查也结束。\n<SURNAME/>顺便，今天才知道夫人是女演员。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:54ac6206b670",
+    "jp": "<c1d:11/>轟<SURNAME/>大助の日記<c1d:1/>\n<SURNAME/>我ガ輩ガ腹ぺこだというのに、\n<SURNAME/>橿原は、岡村と蝸牛山へハイキングに行く様子。\n<SURNAME/>決定的な現場かと思ったガ、違かった。\n",
+    "local_candidates": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>我辈明明饿着肚子，\n<SURNAME/>橿原却似乎要和冈村去蜗牛山远足。\n<SURNAME/>以为是决定性现场，但错了。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>我辈正饿着肚子，\n<SURNAME/>橿原却和冈村去蜗牛山远足的样子。\n<SURNAME/>本以为会是决定性现场，但并非如此。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:58d031046940",
+    "jp": "\n<SURNAME/>スロットマシン\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>07番台ガある。",
+    "local_candidates": [
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>07号机。",
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>有07号机。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:59f10a826f04",
+    "jp": "\n<SURNAME/>今日のオススメは…<pause:15/>\n<SURNAME/>全部だな…<pause:10/>どれもこれも新鮮な海の幸ばかりよ!\n<SURNAME/>さぁ、次は何でい?",
+    "local_candidates": [
+      "\n<SURNAME/>今天的推荐是…<pause:15/>\n<SURNAME/>全部啦…<pause:10/>每样都是新鲜的海味！\n<SURNAME/>来，下一位要点啥？",
+      "\n<SURNAME/>今天的推荐是…<pause:15/>\n<SURNAME/>全部啦…<pause:10/>每样都是新鲜的海鲜!\n<SURNAME/>来，下一个要点什么?",
+      "\n<SURNAME/>今天的推荐是…<pause:15/>\n<SURNAME/>全部啦…<pause:10/>每样都是海鲜哦！\n<SURNAME/>来，接下来要点啥？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5d5afb9e1d73",
+    "jp": "\n<SURNAME/>あの頃を思い出すね…<pause:30/>\n<SURNAME/>アタシと昔の仲間も、よく世話になったもんさ。<pause:30/>\n<SURNAME/>色々あったけど、ほんと楽しかったよ。",
+    "local_candidates": [
+      "\n<SURNAME/>真让人想起那时候啊…<pause:30/>\n<SURNAME/>我和以前的伙伴们，也经常受照顾呢。<pause:30/>\n<SURNAME/>虽然发生了很多事，但真的很开心。",
+      "\n<SURNAME/>让人想起那时候呢…<pause:30/>\n<SURNAME/>我和以前的伙伴们也常受照顾。<pause:30/>\n<SURNAME/>虽然发生了很多事，但真的很开心。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5e4797303e24",
+    "jp": "\n<SURNAME/>その場合、\n<SURNAME/>それまで降魔していたペルソナは、\n<SURNAME/>カードの状態に戻ります。",
+    "local_candidates": [
+      "\n<SURNAME/>在那种情况下，\n<SURNAME/>之前降魔的Persona，\n<SURNAME/>会变回卡片状态。",
+      "\n<SURNAME/>届时，\n<SURNAME/>原先降魔的Persona，\n<SURNAME/>将回归卡片状态。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:5f10707e3c1d",
+    "jp": "\n<SURNAME/>運命…<pause:15/>このカードは汝の運気向上を意味して\n<SURNAME/>いる。<pause:15/>これよりしばしの間、幸運に恵まれ、\n<SURNAME/>幸せな日々を送る事ガできようぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>命运…<pause:15/>此卡预示汝之运势上升。<pause:15/>\n<SURNAME/>从今往后，你将受幸运眷顾，\n<SURNAME/>度过幸福时光。",
+      "\n<SURNAME/>命运…<pause:15/>这张卡片意味着你的运气提升。<pause:15/>\n<SURNAME/>此后一段时间，将受幸运眷顾，\n<SURNAME/>能够度过幸福的日子。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:60b78bfed45f",
+    "jp": "\n<SURNAME/>俺らの顔見ていきなり逃げ出すなんて、\n<SURNAME/>どう考えても怪しいぜ!\n<SURNAME/><c12/>、さっさと追いかけよう!\n",
+    "local_candidates": [
+      "\n<SURNAME/>看到咱们的脸就逃，\n<SURNAME/>怎么想都可疑!\n<SURNAME/><c12/>，快追上去!\n",
+      "\n<SURNAME/>看到老子的脸就逃跑，\n<SURNAME/>怎么想都很可疑!\n<SURNAME/><c12/>、赶紧追上去!\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:63f5e6f2a8f3",
+    "jp": "\n<SURNAME/>噂話は、セールスの役に立つからね〜\n<SURNAME/>君も、何か面白い噂を聞いたら、ぜひ教えてよ。\n<SURNAME/>かわりに、僕の知ってる噂を提供するからさ。",
+    "local_candidates": [
+      "\n<SURNAME/>传闻对销售很有用呢～\n<SURNAME/>你要是听到什么有趣的传闻，一定要告诉我哦。\n<SURNAME/>作为交换，我会提供我知道的传闻。",
+      "\n<SURNAME/>传闻对销售有用呢~\n<SURNAME/>你要是听到什么有趣的传闻，一定要告诉我哦。\n<SURNAME/>作为交换，我会提供我知道的传闻。",
+      "\n<SURNAME/>传闻对销售有用啊～\n<SURNAME/>你有趣传闻要告诉我。\n<SURNAME/>交换我提供知道的传闻。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6612cbfdc580",
+    "jp": "\n<SURNAME/>貴方の能力のどの部分に影響を与えるかは、\n<SURNAME/>降魔しているペルソナの種類によって違います。\n<SURNAME/>その点も、考慮するとよいでしょうな。",
+    "local_candidates": [
+      "\n<SURNAME/>你的能力受影响的方面，\n<SURNAME/>取决于所降魔的Persona种类。\n<SURNAME/>这一点也请考虑进去吧。",
+      "\n<SURNAME/>它会影响您能力的哪一部分，\n<SURNAME/>取决于降魔的Persona种类。\n<SURNAME/>这一点也请考虑。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6709a9210dc9",
+    "jp": "\n<SURNAME/>聖槍騎士団は、キリストの奇跡を体現した、\n<SURNAME/>ロンギヌスの槍を発見したと言われているの!!\n",
+    "local_candidates": [
+      "\n<SURNAME/>据说圣枪骑士团发现了体现基督奇迹的，\n<SURNAME/>朗基努斯之枪！！\n",
+      "\n<SURNAME/>据说圣枪骑士团发现了，\n<SURNAME/>体现基督奇迹的朗基努斯之枪!!\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6730ee5ab3d5",
+    "jp": "\n<SURNAME/>…ヒ<pause:30/>\n<SURNAME/>…イヒ<pause:30/>…ヒャハ!<pause:30/>\n<SURNAME/>ヒャーハハハァァァァ!!\n",
+    "local_candidates": [
+      "\n<SURNAME/>…嘻<pause:30/>\n<SURNAME/>…咿嘻<pause:30/>…嘻哈!<pause:30/>\n<SURNAME/>嘻—哈哈哈啊啊啊!!\n",
+      "\n<SURNAME/>…嘻<pause:30/>\n<SURNAME/>…嘿嘿<pause:30/>…呀哈!<pause:30/>\n<SURNAME/>呀哈哈哈啊啊啊!!\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:67f371a31231",
+    "jp": "\n<SURNAME/>感激です!<SURNAME/>感激です!\n<SURNAME/>ずっと気にしてたソバカスガ消えたんですよ!\n<SURNAME/>これも、夢ガ叶うおまじないのおかげだわ!",
+    "local_candidates": [
+      "\n<SURNAME/>太感激了!<SURNAME/>太感激了!\n<SURNAME/>一直担心的雀斑消失了!\n<SURNAME/>这也是多亏了实现梦想的咒语啊!",
+      "\n<SURNAME/>太感激了!<SURNAME/>太感激了!\n<SURNAME/>一直担心的雀斑消失了!\n<SURNAME/>这都多亏实现梦想的咒语啊!"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:6bd8e2267c1b",
+    "jp": "\n<SURNAME/>さっきの人…<pause:30/>\n<SURNAME/>どっかで見たような気ガするんだけどな〜?\n<SURNAME/>ま、いいわ。とにかく追いかけましょ!\n",
+    "local_candidates": [
+      "\n<SURNAME/>刚才那个人…<pause:30/>\n<SURNAME/>总觉得在哪见过～?\n<SURNAME/>算了，总之先追上去!\n",
+      "\n<SURNAME/>刚才那人…<pause:30/>\n<SURNAME/>总觉得在哪见过~\n<SURNAME/>算了先追吧!\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:71a4fec8ca8b",
+    "jp": "\n<SURNAME/>とはいえ、貴方に近い存在もあれば、\n<SURNAME/>遠い存在もあるでしょう。",
+    "local_candidates": [
+      "\n<SURNAME/>话虽如此，既有与你亲近的存在，\n<SURNAME/>也有疏远的存在吧。",
+      "\n<SURNAME/>话虽如此，既有与您亲近者，\n<SURNAME/>也有疏远者吧。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:73c1d998e537",
+    "jp": "\n<SURNAME/><c13/>クン、\n<SURNAME/>そっち、さっき入ってきたドアじゃない?\n<SURNAME/>反対のドアから出ましょ。\n",
+    "local_candidates": [
+      "\n<SURNAME/><c13/>君，\n<SURNAME/>那边不是刚才进来的门吗?\n<SURNAME/>从对面的门出去吧。\n",
+      "\n<SURNAME/><c13/>，\n<SURNAME/>那边不是刚才进来的门吗?\n<SURNAME/>从反方向那扇出去吧。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:748275853351",
+    "jp": "\n<SURNAME/>それにしても<c14/>の担任、<pause:10/>\n<SURNAME/>随分と姐御肌な人だなぁ。<pause:15/>\n<SURNAME/>へへ、姐さんとよく似てらぁ。",
+    "local_candidates": [
+      "\n<SURNAME/>话说回来，<c14/>的班主任，<pause:10/>\n<SURNAME/>相当有女中豪杰风范啊。<pause:15/>\n<SURNAME/>嘿嘿，和鼻血子很像呢。",
+      "\n<SURNAME/>话说回来，<c14/>的班主任，<pause:10/>\n<SURNAME/>真是个大姐头风范的人啊。<pause:15/>\n<SURNAME/>嘿嘿，和姐很像呢。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:74df8cf3e64c",
+    "jp": "\n<SURNAME/>あら…<pause:15/>\n<SURNAME/>皆さん、怪我も無く健康そのもののようです。<pause:15/>\n<SURNAME/>治療は必要無いでしょう。",
+    "local_candidates": [
+      "\n<SURNAME/>哎呀…<pause:15/>\n<SURNAME/>各位似乎毫发无伤、健康得很。<pause:15/>\n<SURNAME/>无需治疗呢。",
+      "\n<SURNAME/>哎呀…<pause:15/>\n<SURNAME/>诸位毫发无伤健康得很呢。<pause:15/>\n<SURNAME/>无需治疗。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:765a40164b7a",
+    "jp": "\n<SURNAME/>このカードはそなたの金運Downを意味する。<pause:15/>\n<SURNAME/>これよりしばしの間、その懐寒くなり、\n<SURNAME/>貧乏暮らしでひもじい思いを強いられようぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>此卡意味着尔之财运下降。<pause:15/>\n<SURNAME/>从今往后，囊中将羞涩，\n<SURNAME/>贫苦度日，饱受饥馑之苦。",
+      "\n<SURNAME/>此牌预示财运衰败。<pause:15/>\n<SURNAME/>此后囊中羞涩，\n<SURNAME/>贫寒度日饥肠辘辘。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7a81c6e77592",
+    "jp": "\n<SURNAME/><c1d:9/>何も入っていない。<c1d:1/>\n",
+    "local_candidates": [
+      "\n<SURNAME/><c1d:9/>空无一物。<c1d:1/>\n",
+      "\n<SURNAME/><c1d:9/>里面什么都没有。<c1d:1/>\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7ba94a683271",
+    "jp": "\n<SURNAME/>勝利と達成…<pause:15/>このカードは汝の金運UPを\n<SURNAME/>意味している。<pause:15/>これよりしばしの間、その懐\n<SURNAME/>曖かく、左団扇で豪遊叶おうぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>胜利与达成…<pause:15/>此牌预示汝之金运UP，\n<SURNAME/>意味于此。<pause:15/>此后片刻，汝之囊中\n<SURNAME/>将暖，安享奢华可期。",
+      "\n<SURNAME/>胜利与达成…<pause:15/>这张卡片意味着你的财运上升。<pause:15/>\n<SURNAME/>此后一段时间，你的腰包会暖意融融，\n<SURNAME/>可以轻松大手大脚地享受了。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:7db6937af6bb",
+    "jp": "\n<SURNAME/>1989年<SURNAME/>○月○○日<SURNAME/>晴\n<SURNAME/>腹ぺこの中、我ガ輩、本日も橿原の調査を行う。\n<SURNAME/>岡村という女ガ愛人かと睨んだガ、違う様子。\n",
+    "local_candidates": [
+      "\n<SURNAME/>1989年<SURNAME/>○月○○日<SURNAME/>晴\n<SURNAME/>在饥饿中，我辈今天也进行橿原的调查。\n<SURNAME/>本以为叫冈村的女人是情妇，但似乎不是。\n",
+      "\n<SURNAME/>1989年<SURNAME/>○月○○日<SURNAME/>晴\n<SURNAME/>饿着肚子，我辈今日也调查橿原。\n<SURNAME/>怀疑冈村这女人是情人，但似乎不对。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:84fbb70a198f",
+    "jp": "\n<SURNAME/>ようこそベルベットルームへ。\n<SURNAME/>今日は、どんな御用ですかな?",
+    "local_candidates": [
+      "\n<SURNAME/>欢迎来到天鹅绒房间。\n<SURNAME/>今天有何贵干？",
+      "\n<SURNAME/>欢迎来到天鹅绒房间。\n<SURNAME/>今日，有何贵干呢?"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:865a4bbb1558",
+    "jp": "\n<SURNAME/>スロットマシン\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>05番台ガある。",
+    "local_candidates": [
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>05号机。",
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>05号机有。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:87d84a8ddc51",
+    "jp": "<c1d:11/>調査報告書No.32<c1d:1/>\n<SURNAME/>但し、同3名は人目を避けるように、\n<SURNAME/>市内の文化遺産や蝸牛山を探索するなど、\n<SURNAME/>幾つか奇異な点ガ見られた。\n",
+    "local_candidates": [
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>但同三人避开他人视线，\n<SURNAME/>在市内文化遗产和蜗牛山探索等，\n<SURNAME/>发现了几处可疑之处。\n",
+      "<c1d:11/>调查报告No.32<c1d:1/>\n<SURNAME/>但是，这三人似乎避开他人视线，\n<SURNAME/>探索市内的文化遗产和蜗牛山等，\n<SURNAME/>发现了一些奇异之处。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8886f0073c3a",
+    "jp": "\n<SURNAME/>なあ〜んて、冗談、冗談!!<pause:30/>\n<SURNAME/>そんなことあるわけないよね!<pause:30/>\n<SURNAME/>イイ男だから、お姉さん見とれちゃった♥",
+    "local_candidates": [
+      "\n<SURNAME/>啊〜呀，开玩笑、开玩笑!!<pause:30/>\n<SURNAME/>那种事不可能有吧!<pause:30/>\n<SURNAME/>因为是个好男人，姐姐我看入迷了♥",
+      "\n<SURNAME/>啊哈哈〜开玩笑的，开玩笑!!<pause:30/>\n<SURNAME/>那种事嘛！<pause:30/>\n<SURNAME/>因为是个好男人，姐姐我看入迷了♥"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:89338d1a015a",
+    "jp": "\n<SURNAME/>1989年<SURNAME/>△月△△日<SURNAME/>晴\n<SURNAME/>我ガ輩、本日も橿原の調査。\n<SURNAME/>先日の登山調査で、持病の腰痛ガひどい。\n",
+    "local_candidates": [
+      "\n<SURNAME/>1989年<SURNAME/>△月△△日<SURNAME/>晴\n<SURNAME/>我辈今天也进行橿原的调查。\n<SURNAME/>前几天的登山调查，让老毛病腰痛加剧了。\n",
+      "\n<SURNAME/>1989年<SURNAME/>△月△△日<SURNAME/>晴\n<SURNAME/>我辈今日也调查橿原。\n<SURNAME/>因前几天的登山调查，老毛病腰痛加剧。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8972eef6044f",
+    "jp": "<c1d:11/>轟<SURNAME/>大助の日記<c1d:1/>\n<SURNAME/>学校での一件以来、橿原は外出しなくなった。\n<SURNAME/>奥方の話だと、熱心に何やら執筆しているらしい。\n<SURNAME/>だガ、今日は息子と外出するようだ。\n",
+    "local_candidates": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>学校事件后，橿原不再外出。\n<SURNAME/>据夫人说，似乎在热心地写作什么。\n<SURNAME/>但今天要和儿子外出。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>学校那件事以来，橿原不再外出。\n<SURNAME/>据夫人说，似乎在热心撰写什么。\n<SURNAME/>但今天似乎要和儿子外出。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8d26192ed4f4",
+    "jp": "\n<SURNAME/>あの校長、加速装置でも搭載してるのか?\n<SURNAME/>前に戦った時の力も残ってるみたいだしなぁ…\n<SURNAME/>ったく、とんでもない校長になったもんだぜ。",
+    "local_candidates": [
+      "\n<SURNAME/>那个校长，难道装了加速装置吗？\n<SURNAME/>之前战斗时的力量也还留着的样子…\n<SURNAME/>真是的，变成个不得了的校长了啊。",
+      "\n<SURNAME/>那校长装了加速装置不成?\n<SURNAME/>上次打架时的力量也还在…\n<SURNAME/>靠，变成不得了的校长了啊。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8e55ee992046",
+    "jp": "\n<SURNAME/>おつかれー!\n<SURNAME/>さて、ご用件はなにかしら?",
+    "local_candidates": [
+      "\n<SURNAME/>辛苦了！\n<SURNAME/>那么，有什么事吗？",
+      "\n<SURNAME/>辛苦啦!\n<SURNAME/>那么，有什么事吗?",
+      "\n<SURNAME/>辛苦啦！\n<SURNAME/>那么，有什么事吗？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:8f4830ebaa50",
+    "jp": "\n<SURNAME/>そう、レベルガ高いペルソナほど、\n<SURNAME/>必要なタロットの枚数も増えるわけですな。",
+    "local_candidates": [
+      "\n<SURNAME/>是的，Persona的等级越高，\n<SURNAME/>所需的塔罗牌数量也会增加呢。",
+      "\n<SURNAME/>是的，等级越高的Persona，\n<SURNAME/>所需塔罗牌也越多。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:91e76ed743bc",
+    "jp": "\n<SURNAME/>降魔は一度に一体しか出来ません。\n<SURNAME/>ですガ、ペルソナカードガあれば、\n<SURNAME/>いつでも別のペルソナを降魔することガ出来ます",
+    "local_candidates": [
+      "\n<SURNAME/>一次仅能降魔一体Persona。\n<SURNAME/>但持有卡片时，\n<SURNAME/>可随时更换降魔对象。",
+      "\n<SURNAME/>降魔一次只能进行一体。\n<SURNAME/>但是，如果有Persona卡片，\n<SURNAME/>随时可以降魔其他Persona。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9526d2cd2793",
+    "jp": "\n<SURNAME/>ちなみに、新しく召喚したペルソナは、\n<SURNAME/>私ガ大切に預かっております。\n<SURNAME/>必要な時は、私にお申しつけください。",
+    "local_candidates": [
+      "\n<SURNAME/>顺便，新召唤的Persona，\n<SURNAME/>由我妥善保管。\n<SURNAME/>需要时请吩咐。",
+      "\n<SURNAME/>顺带一提，新召唤的Persona，\n<SURNAME/>都由我妥善保管。\n<SURNAME/>需要时请随时吩咐。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9aec0d13f390",
+    "jp": "\n<SURNAME/>死と再生…<pause:15/>このカードは、そなたの運気低下を意味\n<SURNAME/>している。<pause:15/>これよりしばしの間、ツキに見放され、\n<SURNAME/>不幸な日々を過ごす事となろう。",
+    "local_candidates": [
+      "\n<SURNAME/>死与再生…<pause:15/>这张卡片意味着你的运气下降。<pause:15/>\n<SURNAME/>此后一段时间，将被好运抛弃，\n<SURNAME/>度过不幸的日子吧。",
+      "\n<SURNAME/>死亡与重生…<pause:15/>此卡预示汝之运势下降。<pause:15/>\n<SURNAME/>从今往后，你将失去运气，\n<SURNAME/>度过不幸时光。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9cd5362db74a",
+    "jp": "\n<SURNAME/>但し、同じ悪魔とだけ交渉していてもダメですぞ。\n<SURNAME/>レベルの高い悪魔ほど、\n<SURNAME/>所持しているタロットの枚数も多いのです。",
+    "local_candidates": [
+      "\n<SURNAME/>但仅与同种恶魔交涉可不行。\n<SURNAME/>恶魔等级越高，\n<SURNAME/>持有的塔罗牌数量也越多。",
+      "\n<SURNAME/>但只交涉同种恶魔不行。\n<SURNAME/>等级越高的恶魔，\n<SURNAME/>持有塔罗牌也越多。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:9fd6816f3994",
+    "jp": "\n<SURNAME/>ユッキーの事は、私から先生に話しておいたわ。\n<SURNAME/>あの二人に負けないように\n<SURNAME/>私達も頑張らないとね!",
+    "local_candidates": [
+      "\n<SURNAME/>小雪的事，我已经跟老师说了。\n<SURNAME/>为了不输给那两个人\n<SURNAME/>，我们也要加油啊!",
+      "\n<SURNAME/>小雪的事，我已经跟老师说了。\n<SURNAME/>为了不输给那两个人，\n<SURNAME/>我们也得加油呢！"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a01a41be3678",
+    "jp": "\n<SURNAME/>なに、懸賞?<SURNAME/>なにも届いていないようだガ…\n<SURNAME/>まだ時間ガ経っていないのではないかね?\n<SURNAME/>もう少ししてから来たらどうかな?",
+    "local_candidates": [
+      "\n<SURNAME/>什么，悬赏?<SURNAME/>好像没收到什么…\n<SURNAME/>是不是时间还没到?\n<SURNAME/>过会儿再来怎么样?",
+      "\n<SURNAME/>什么，悬赏？<SURNAME/>好像什么也没到…\n<SURNAME/>是不是时间还没到呢？\n<SURNAME/>过一会儿再来怎么样？",
+      "\n<SURNAME/>什么，悬赏？<SURNAME/>好像什么也没收到啊…\n<SURNAME/>是不是时间还没到呢？\n<SURNAME/>过一会儿再来怎么样？",
+      "\n<SURNAME/>什么，抽奖？<SURNAME/>好像还没收到东西啊…\n<SURNAME/>是不是时间还没到呢？\n<SURNAME/>过会儿再来怎么样？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:a114868ead6c",
+    "jp": "\n<SURNAME/>あんまりジロジロ見ないでくださいっ!\n<SURNAME/>私だって、こんな姿で学校に来たくないですよ。\n<SURNAME/>でも、大好きな校長先生ガ休むなって言うから…",
+    "local_candidates": [
+      "\n<SURNAME/>别一直盯着我看!\n<SURNAME/>我也不想这样来学校啊。\n<SURNAME/>但最爱的校长说别请假…",
+      "\n<SURNAME/>请不要一直盯着我看!\n<SURNAME/>我也不想这副样子来学校的。\n<SURNAME/>但是，我最喜欢的校长先生说不要请假…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ad0d7ced9da5",
+    "jp": "\n<SURNAME/>時間城にあった伝説の武器は、花らしいんスガ、\n<SURNAME/>こともあろうにあの店主、それをどこかの\n<SURNAME/>シヨートへアーの女性にあげてしまったそうッス",
+    "local_candidates": [
+      "\n<SURNAME/>时间城的传说武器好像是花，\n<SURNAME/>那个店主居然把它给了某个\n<SURNAME/>短发的女人。",
+      "\n<SURNAME/>时间城的传说武器是花，\n<SURNAME/>店主竟把它给了个\n<SURNAME/>短发女。",
+      "\n<SURNAME/>时间城里的传说武器，好像是花，\n<SURNAME/>那个店主居然把它给了某个\n<SURNAME/>短发的女性，听说呢。",
+      "\n<SURNAME/>时间城里的传说武器，好像是花，\n<SURNAME/>那个店主居然把它给了某个\n<SURNAME/>短头发的女人。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:adcf444602db",
+    "jp": "\n<SURNAME/>ユッキーの事は、\n<SURNAME/>私から冴子先生に話しておいたわ…\n<SURNAME/>先生、信じられないって言ってたけど…",
+    "local_candidates": [
+      "\n<SURNAME/>小雪的事，\n<SURNAME/>我已经跟冴子老师说了…\n<SURNAME/>老师虽然说不相信…",
+      "\n<SURNAME/>小雪的事，\n<SURNAME/>我已经跟冴子老师说了…\n<SURNAME/>老师说她不相信…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:af6455001928",
+    "jp": "\n<SURNAME/>葛華探偵事務所のたまきちゃんの本業は、\n<SURNAME/>デビルサマナー?<SURNAME/>何か特殊な仕事なのかな?\n<SURNAME/>そんな職は聞いた事ガ無いガ…まあいいだろう。",
+    "local_candidates": [
+      "\n<SURNAME/>葛叶侦探事务所的环小姐的本职是，\n<SURNAME/>恶魔召唤师？<SURNAME/>是什么特殊工作吗？\n<SURNAME/>没听说过这种职业呢…嘛好吧。",
+      "\n<SURNAME/>葛叶侦探事务所的环酱本业是，\n<SURNAME/>恶魔召唤师？<SURNAME/>什么特殊工作啊？\n<SURNAME/>没听过这种职业…嘛，好吧。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:af8da76858d0",
+    "jp": "\n<SURNAME/>奴らは、様々なハイテク兵器や\n<SURNAME/>超人部隊を用意して、時ガ満ちるのを待っている!\n",
+    "local_candidates": [
+      "\n<SURNAME/>他们准备了各种高科技武器和\n<SURNAME/>超人部队，等待时机成熟！\n",
+      "\n<SURNAME/>他们准备了各种高科技武器和\n<SURNAME/>超人部队，等待着时机成熟!\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b0e527b086d4",
+    "jp": "\n<SURNAME/>…<pause:30/>\n<SURNAME/>え?<SURNAME/>ああ、何でもないの…<pause:30/>\n<SURNAME/>大丈夫よ…",
+    "local_candidates": [
+      "\n<SURNAME/>…<pause:30/>\n<SURNAME/>诶?<SURNAME/>啊，没什么…<pause:30/>\n<SURNAME/>不要紧的…",
+      "\n<SURNAME/>……<pause:30/>\n<SURNAME/>诶？<SURNAME/>啊，没什么……<pause:30/>\n<SURNAME/>没事……"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b140ac030f81",
+    "jp": "\n<SURNAME/>タロットカードは悪魔ガ持っています。\n<SURNAME/>彼らガ持っているカードは、\n<SURNAME/>その悪魔の種族と同じアルカナのタロットです。",
+    "local_candidates": [
+      "\n<SURNAME/>塔罗牌由恶魔持有。\n<SURNAME/>他们持有的卡，\n<SURNAME/>是同种族的阿尔卡纳塔罗。",
+      "\n<SURNAME/>塔罗牌由恶魔持有。\n<SURNAME/>它们携带的卡片，\n<SURNAME/>与其种族同属一个阿尔卡纳。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b2d9bd38bc3c",
+    "jp": "\n<SURNAME/>私は、ペルソナを24体まで預ることガできます。\n<SURNAME/>もちろん、新しく召喚したペルソナだけでなく、\n<SURNAME/>それまで所持していたペルソナも預りますぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>我可保管24体Persona。\n<SURNAME/>不仅新召唤的，\n<SURNAME/>原有Persona也保管。",
+      "\n<SURNAME/>我最多可保管24体Persona。\n<SURNAME/>不仅限于新召唤的，\n<SURNAME/>既有Persona也可托管。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b72c943a0ebf",
+    "jp": "\n<SURNAME/>リサ…泣いてるう…<pause:30/>\n<SURNAME/>どうでも…いいかなぁ…\n",
+    "local_candidates": [
+      "\n<SURNAME/>丽莎…在哭…<pause:30/>\n<SURNAME/>怎样都…无所谓了…\n",
+      "\n<SURNAME/>丽莎…在哭呢…<pause:30/>\n<SURNAME/>怎样都…无所谓啦…\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:b75968de7c1f",
+    "jp": "\n<SURNAME/>ま、当然だよなァ。今日日、マルチタレントとして\n<SURNAME/>大活躍中のこのブラウン様を知らないなんて奴は\n<SURNAME/>いないよなァ。じゃ本名で自己紹介だ。",
+    "local_candidates": [
+      "\n<SURNAME/>嘛~理所当然啦~当今最红的\n<SURNAME/>全能艺人史棕大人怎么可能有人不认识~\n<SURNAME/>那就用本名自我介绍了~",
+      "\n<SURNAME/>嘛，当然啦。现如今，作为多才艺人\n<SURNAME/>大活跃中的这位史棕大人，不知道的家伙\n<SURNAME/>不存在吧。那么用本名自我介绍吧。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:bae2bcff8aed",
+    "jp": "\n<SURNAME/>あの人も、やっぱ仮面党員なのかな?\n<SURNAME/>…でも、ちょっとカッコよくなかった?\n<SURNAME/>もちろん、<c13/>の方ガ断然上だけどね♥\n",
+    "local_candidates": [
+      "\n<SURNAME/>那个人，果然也是假面党员吧?\n<SURNAME/>…不过，不是挺帅的吗?\n<SURNAME/>当然，<c13/>绝对更棒啦♥\n",
+      "\n<SURNAME/>那人也是假面党员?\n<SURNAME/>…不过挺帅的耶~\n<SURNAME/>当然<c13/>更棒啦♥\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:bae55acc5dd1",
+    "jp": "\n<SURNAME/>召喚したペルソナを戦闘で発動させるには、\n<SURNAME/>貴方自身に降魔することガ必要です。\n<SURNAME/>ペルソナカードを持っているだけではダメですぞ",
+    "local_candidates": [
+      "\n<SURNAME/>要在战斗中发动Persona，\n<SURNAME/>必须将其降魔于自身。\n<SURNAME/>仅持有卡片是无效的。",
+      "\n<SURNAME/>要在战斗中发动召唤的Persona，\n<SURNAME/>需要您自身降魔。\n<SURNAME/>仅持有Persona卡片是不够的。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c0c8a726af00",
+    "jp": "\n<SURNAME/>奴自身、言外にそう言っている!<pause:30/>\n<SURNAME/>マヤの呪術師から魔術を学び、\n<SURNAME/>世界中の遺跡の秘密を求めた不死身の魔術師!\n",
+    "local_candidates": [
+      "\n<SURNAME/>他自己，言外之意就是这么说的!<pause:30/>\n<SURNAME/>从玛雅咒术师那里学习魔术，\n<SURNAME/>追求世界各地遗迹秘密的不死魔术师!\n",
+      "\n<SURNAME/>他自己，言外之意就是这么说的！<pause:30/>\n<SURNAME/>他从玛雅咒术师那里学习魔术，\n<SURNAME/>追求世界各地遗迹秘密的不死魔术师！\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:c9c12faacfb2",
+    "jp": "\n<SURNAME/>なに、懸賞?\n<SURNAME/>おお、そう言えばこんなものガ届いていたぞ。\n<SURNAME/>受け取りたまえ。",
+    "local_candidates": [
+      "\n<SURNAME/>什么，悬赏？\n<SURNAME/>哦，说起来好像收到了这样的东西啊。\n<SURNAME/>拿去吧。",
+      "\n<SURNAME/>什么，悬赏？\n<SURNAME/>哦，说起来有这个东西送到了。\n<SURNAME/>请收下。",
+      "\n<SURNAME/>什么，抽奖？\n<SURNAME/>哦，说起来有收到这么个东西啊。\n<SURNAME/>拿去吧。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cc694327a3d0",
+    "jp": "\n<SURNAME/>イン・ラケチとは、マヤの言華で、\n<SURNAME/>「私はもう一人のあなたである」という意味よ…<pause:30/>\n<SURNAME/>須藤君に送られてきた託宣から、そう名付けたの\n",
+    "local_candidates": [
+      "\n<SURNAME/>印·拉凯奇在玛雅语中，\n<SURNAME/>意思是“我是另一个你”…<pause:30/>\n<SURNAME/>是从须藤君收到的预言中命名的\n",
+      "\n<SURNAME/>印·拉凯奇，在玛雅语中，\n<SURNAME/>意思是「我是另一个你」…<pause:30/>\n<SURNAME/>是从须藤君收到的预言中这样命名的\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:cd8c7ffac74b",
+    "jp": "<c1d:11/>轟<SURNAME/>大助の日記<c1d:1/>\n<SURNAME/>二人は、変な岩や地形を調べると、\n<SURNAME/>興奮した様子で下山した。\n<SURNAME/>もしかして、埋蔵金でも調べているのだろうか。\n",
+    "local_candidates": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>两人调查了奇怪的岩石和地形，\n<SURNAME/>兴奋地下山了。\n<SURNAME/>莫非是在寻找埋藏金吧。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>二人调查了奇怪的岩石和地形，\n<SURNAME/>兴奋地下山了。\n<SURNAME/>莫非是在找埋藏金吧。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d3b50715b81c",
+    "jp": "\n<SURNAME/>僕は、己ガ心情を絵で語る。\n<SURNAME/>あまり喋りは得意じゃないんだガ…\n<SURNAME/>君となら気ガ合いそうだ。",
+    "local_candidates": [
+      "\n<SURNAME/>我以画作诉说心情。\n<SURNAME/>虽不擅言辞…\n<SURNAME/>但与你似乎很投缘。",
+      "\n<SURNAME/>我，用画作表达自己的心情。\n<SURNAME/>不太擅长说话…\n<SURNAME/>但和你似乎很投缘。",
+      "\n<SURNAME/>我，用绘画诉说心情。\n<SURNAME/>不太擅长说话…\n<SURNAME/>但和你似乎很投缘。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d5e3fcfabbe4",
+    "jp": "\n<SURNAME/>ではなぜ、奴ガ世界戦争を起したかわかる?\n<SURNAME/>奴の本当の狙いは、人類を破滅の際に\n<SURNAME/>追い込むことで、進化を促進する事だったのよ!\n",
+    "local_candidates": [
+      "\n<SURNAME/>那么，他为什么发动世界大战你知道吗？\n<SURNAME/>他真正的目的是将人类推向毁灭边缘，\n<SURNAME/>以此来促进进化！\n",
+      "\n<SURNAME/>那么，你知道他为什么发动世界大战吗?\n<SURNAME/>他真正的目的是将人类推向毁灭边缘，\n<SURNAME/>以此来促进进化!\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d7a0f08db3d5",
+    "jp": "\n<SURNAME/>1989年<SURNAME/>X月XX日<SURNAME/>曇り\n<SURNAME/>我ガ輩、本日も橿原の調査を行う。\n<SURNAME/>依頼の前金は、儚く銀玉の夢と消えた…\n",
+    "local_candidates": [
+      "\n<SURNAME/>1989年<SURNAME/>X月XX日<SURNAME/>曇り\n<SURNAME/>我辈今天也进行橿原的调查。\n<SURNAME/>委托的预付款，已如银弹之梦般消散…\n",
+      "\n<SURNAME/>1989年<SURNAME/>X月XX日<SURNAME/>阴\n<SURNAME/>我辈今日也调查橿原。\n<SURNAME/>委托的定金，如梦幻泡影般消失了…\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:d847b95f3dcf",
+    "jp": "<c1d:11/>轟<SURNAME/>大助の日記<c1d:1/>\n<SURNAME/>仕方ないので、付近に隠れ待つことにしたガ、\n<SURNAME/>まさかあんな形で橿原ガ事故死するとは\n<SURNAME/>思わなかった…依頼の後金、もらってないのに…\n",
+    "local_candidates": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>无奈只好躲藏等待，\n<SURNAME/>没想到橿原竟以那种方式事故死…\n<SURNAME/>委托的尾款还没收到呢…\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>无奈，决定躲藏附近等待，\n<SURNAME/>没想到橿原竟那样事故死了…\n<SURNAME/>委托的尾款还没收到呢…\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:daba7b1425a8",
+    "jp": "\n<SURNAME/>特に、新しく召喚したペルソナには、\n<SURNAME/>その傾向ガ顕著に現われます。",
+    "local_candidates": [
+      "\n<SURNAME/>尤其新召唤的Persona，\n<SURNAME/>此倾向更为显著。",
+      "\n<SURNAME/>特别是对新召唤的Persona，\n<SURNAME/>这种倾向尤为明显。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:df453959e13a",
+    "jp": "\n<SURNAME/>そうかい、兄ちゃん、うちのせガれの友達かい。\n<SURNAME/>ささ、食いねぇ食いねぇ!!\n<SURNAME/>いいネタ入ってるぜい!!",
+    "local_candidates": [
+      "\n<SURNAME/>是吗，小哥，是我家小子的朋友啊。\n<SURNAME/>来来，吃吧吃吧!!\n<SURNAME/>有好料哦!!",
+      "\n<SURNAME/>是吗，小哥，是我家蠢儿子的朋友啊。\n<SURNAME/>来来，吃吧吃吧!!\n<SURNAME/>有好材料哦!!"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e03446bd226f",
+    "jp": "\n<SURNAME/>死ぬ…?<pause:30/>\n<SURNAME/>別に…それでも…\n",
+    "local_candidates": [
+      "\n<SURNAME/>死…?<pause:30/>\n<SURNAME/>无所谓…反正…\n",
+      "\n<SURNAME/>要死…?<pause:30/>\n<SURNAME/>无所谓…反正…\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e27369947218",
+    "jp": "\n<SURNAME/>失礼ですガ、代金ガ足りないようです。\n<SURNAME/>またおいでください。",
+    "local_candidates": [
+      "\n<SURNAME/>恕我直言，金额似乎不足。\n<SURNAME/>请改日光临。",
+      "\n<SURNAME/>抱歉，钱好像不够。\n<SURNAME/>请下次再来。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e632400ff2d9",
+    "jp": "\n<SURNAME/>狂気…<pause:15/>このカードは取得経験値Downを意味して\n<SURNAME/>いる。<pause:15/>これよりしばしの間、胸中穏やかでなく\n<SURNAME/>注意力散漫、<pause:15/>学ぶ事も少なくなろう。",
+    "local_candidates": [
+      "\n<SURNAME/>疯狂…<pause:15/>此卡预示经验值获取下降。<pause:15/>\n<SURNAME/>从今往后，你将心神不宁，\n<SURNAME/>注意力涣散，<pause:15/>所学甚少。",
+      "\n<SURNAME/>疯狂…<pause:15/>这张卡片意味着获得经验值下降。<pause:15/>\n<SURNAME/>此后一段时间，心中无法平静，\n<SURNAME/>注意力涣散，<pause:15/>能学到的东西也会减少吧。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:e744cec2f9c9",
+    "jp": "\n<SURNAME/>多少ニュアンスは違いますガ、\n<SURNAME/>この貴方自身の慣れを、\n<SURNAME/>「ペルソナの成長」と考えてもいいでしょう。",
+    "local_candidates": [
+      "\n<SURNAME/>虽有些许差异，\n<SURNAME/>但将你自身的熟练度，\n<SURNAME/>视为「Persona的成长」亦无不可。",
+      "\n<SURNAME/>虽然有些细微差别，\n<SURNAME/>但您自身的这种熟练度，\n<SURNAME/>也可以视为“Persona的成长”。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:eb30ac615f72",
+    "jp": "\n<SURNAME/>もちろんそれは、\n<SURNAME/>ペルソナを使いこなせるようになった結果なので、\n<SURNAME/>必要なSPに変わりはありません。",
+    "local_candidates": [
+      "\n<SURNAME/>当然，这是熟练运用Persona的结果，\n<SURNAME/>所需SP\n<SURNAME/>并不会减少。",
+      "\n<SURNAME/>当然，那是\n<SURNAME/>因为熟练掌握了Persona的结果，\n<SURNAME/>所需的SP不会改变。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ec622ce2b6d2",
+    "jp": "<c1d:11/>轟<SURNAME/>大助の日記<c1d:1/>\n<SURNAME/>やはり、埋蔵金を探しているに違いない。\n<SURNAME/>もしそうなら、我ガ輩の夢も\n<SURNAME/>ついでに叶えてもらいたい。\n",
+    "local_candidates": [
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>果然，一定是在寻找埋藏金。\n<SURNAME/>如果那样，希望我辈的梦想\n<SURNAME/>也能顺便实现。\n",
+      "<c1d:11/>轰<SURNAME/>大助的日记<c1d:1/>\n<SURNAME/>果然，一定是在找埋藏金。\n<SURNAME/>如果那样，我辈的梦想\n<SURNAME/>也顺便想实现呢。\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ed6724b5266b",
+    "jp": "\n<SURNAME/>え!<SURNAME/>あの佐々木<SURNAME/>銀次ガ\n<SURNAME/>実は仮面党の一人?<SURNAME/>うわっ、それ本当?\n<SURNAME/>凄いネタだよ、やったぁ。<pause:15/>じゃあお返しに…",
+    "local_candidates": [
+      "\n<SURNAME/>诶！<SURNAME/>那个佐佐木<SURNAME/>银次\n<SURNAME/>其实是假面党的一员？<SURNAME/>哇，真的吗？\n<SURNAME/>超劲爆的料啊，太好啦。<pause:15/>那作为回礼…",
+      "\n<SURNAME/>诶！<SURNAME/>那个佐佐木<SURNAME/>银次\n<SURNAME/>其实是假面党的一员？<SURNAME/>哇，真的？\n<SURNAME/>超棒的料，太棒了。<pause:15/>那作为回礼…",
+      "\n<SURNAME/>诶！<SURNAME/>那个佐佐木<SURNAME/>银次\n<SURNAME/>其实是假面党的一员？<SURNAME/>哇，那真的？\n<SURNAME/>厉害的传闻啊，太好了。<pause:15/>那作为回报…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ee8abfd0acb1",
+    "jp": "\n<option:6/>報告書を読む\n日記1を読む\n日記2を読む\n日記3を読む\n日記4を読む\n放っておく\n<option_end/>",
+    "local_candidates": [
+      "\n<option:6/>阅读报告\n阅读日记1\n阅读日记2\n阅读日记3\n阅读日记4\n不管它\n<option_end/>",
+      "\n<option:6/>阅读报告\n阅读日记1\n阅读日记2\n阅读日记3\n阅读日记4\n放着不管\n<option_end/>"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ee8ec2db4848",
+    "jp": "\n<SURNAME/>つまり、\n<SURNAME/>召喚したいペルソナと同じ種族の悪魔から、\n<SURNAME/>タロットを手に入れればよいわけですな。",
+    "local_candidates": [
+      "\n<SURNAME/>即，\n<SURNAME/>从想召唤Persona同种族的恶魔处，\n<SURNAME/>获取塔罗牌即可。",
+      "\n<SURNAME/>换言之，\n<SURNAME/>只需从与目标Persona同种族的恶魔处，\n<SURNAME/>获取塔罗牌即可。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:eeb50419c992",
+    "jp": "\n<SURNAME/>用ガないなら呼ばないで頂戴!!\n",
+    "local_candidates": [
+      "\n<SURNAME/>如果没事就别叫我!!\n",
+      "\n<SURNAME/>没事就别叫我！！\n"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:ef0a352cf4c4",
+    "jp": "\n<SURNAME/>うーん…見える…<pause:15/>この水晶に、そなたの行末ガ\n<SURNAME/>映し出されておる…うーん…<pause:15/>\n<SURNAME/>これは…<pause:15/>Ego…<pause:15/>人の業、自制心の薄れ…",
+    "local_candidates": [
+      "\n<SURNAME/>唔…看到了…<pause:15/>在这水晶中，映出了你的未来…唔…<pause:15/>\n<SURNAME/>这是…<pause:15/>自我…<pause:15/>人之业，自制心衰退…",
+      "\n<SURNAME/>嗯…看到了…<pause:15/>这水晶中映照出\n<SURNAME/>你的未来…嗯…<pause:15/>\n<SURNAME/>这是…<pause:15/>Ego…<pause:15/>人心业障，自制崩坏…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:effe82e7a883",
+    "jp": "\n<SURNAME/>スロットマシン\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>06番台ガある。",
+    "local_candidates": [
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>06号机。",
+      "\n<SURNAME/>老虎机\n<SURNAME/>「AROUSE<SURNAME/>BLANK」\n<SURNAME/>06号机有。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:f25ab42cf110",
+    "jp": "\n<SURNAME/>ペルソナカードは10枚まで所持出来ますガ、\n<SURNAME/>これには降魔中のペルソナも含まれますので\n<SURNAME/>注意ガ必要ですぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>Persona卡可持10张，\n<SURNAME/>但包括降魔中的Persona，\n<SURNAME/>需注意。",
+      "\n<SURNAME/>Persona卡片最多持有10张，\n<SURNAME/>这包含已降魔的Persona，\n<SURNAME/>请务必留意。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:f9ba9cc8a83c",
+    "jp": "\n<SURNAME/>また、集めるタロットの枚数も、\n<SURNAME/>そのペルソナのレベルに見合った分だけ\n<SURNAME/>必要となりますぞ。",
+    "local_candidates": [
+      "\n<SURNAME/>且收集的塔罗牌数，\n<SURNAME/>也需匹配该Persona的等级\n<SURNAME/>才行。",
+      "\n<SURNAME/>同时，所需塔罗牌的数量，\n<SURNAME/>也必须与Persona的等级\n<SURNAME/>相匹配才行。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fa83113e6ba8",
+    "jp": "\n<SURNAME/>来たか…\n<SURNAME/>今日の用件はなんだ?",
+    "local_candidates": [
+      "\n<SURNAME/>来了啊…\n<SURNAME/>今天什么事？",
+      "\n<SURNAME/>来了啊…\n<SURNAME/>今天有什么事？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:faa1002bdc13",
+    "jp": "\n<SURNAME/>高レベルのペルソナを召喚したいのであれば、\n<SURNAME/>同じく高レベルの悪魔と交渉することガ必要です。\n<SURNAME/>それガ、効率よくタロットを集めるコツですな。",
+    "local_candidates": [
+      "\n<SURNAME/>想召唤高等级Persona，\n<SURNAME/>需交涉高等级恶魔。\n<SURNAME/>那是高效集牌的诀窍。",
+      "\n<SURNAME/>若想召唤高等级Persona，\n<SURNAME/>必须与高等级恶魔交涉。\n<SURNAME/>这才是高效集牌的诀窍。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fc23efbd5846",
+    "jp": "\n<SURNAME/>おお、<c12/>か。あの時のお前のパンチ、\n<SURNAME/>私の心にズンと響いたぞ。<pause:15/>ここにこうして戻って\n<SURNAME/>これたのもお前達の御陰だ。<pause:15/>改めて礼を言おう。",
+    "local_candidates": [
+      "\n<SURNAME/>哦，<c12/>啊。那时你的拳头，\n<SURNAME/>深深震撼了我的心。<pause:15/>我能这样回来\n<SURNAME/>也是托你们的福。<pause:15/>再次道谢。",
+      "\n<SURNAME/>噢，<c12/>啊。你那一拳，\n<SURNAME/>深深震撼了吾心。<pause:15/>能重返此地\n<SURNAME/>也是托诸位的福。<pause:15/>容吾再次致谢。"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:script",
+    "string_id": "dup:fd2e3e6559fc",
+    "jp": "\n<SURNAME/>うーん…見える…<pause:15/>この水晶に、そなたの行末ガ\n<SURNAME/>映し出されておる…うーん…<pause:15/>\n<SURNAME/>これは…<pause:15/>Temperance…",
+    "local_candidates": [
+      "\n<SURNAME/>唔…看到了…<pause:15/>在这水晶中，映出了你的未来…唔…<pause:15/>\n<SURNAME/>这是…<pause:15/>节制…",
+      "\n<SURNAME/>嗯…看见了…<pause:15/>在这水晶中，汝的结局\n<SURNAME/>映现出来…嗯…<pause:15/>\n<SURNAME/>这是…<pause:15/>节制…"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:00722513d7ec",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>物理攻撃に強い\n魔法攻撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻抗性\n魔攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物攻耐性\n魔攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>物理耐性\n魔法弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0345aa8a48cb",
+    "jp": "召喚されるペルソナです:○ボタンで決定\n",
+    "local_candidates": [
+      "召唤的Persona:○键决定",
+      "将召唤的Persona：○键确定",
+      "要召唤的Persona：○键确定"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:03a335d67987",
+    "jp": "<pause:0/><c1e:0/>健康のため吸いすぎに注意しましょう\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>为健康勿吸烟过度",
+      "<pause:0/><c1e:0/>为健康勿吸过度",
+      "<pause:0/><c1e:0/>为健康请勿过量吸烟"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:04afa8682ef2",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸に強い\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基抗性\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系抗性\n阿夸系弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系耐性\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基耐性\n阿夸弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0763be33b2d3",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>精神/神経糸無効\n電撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>精神/神经无效\n电击属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>精神/神经系无效\n弱电系",
+      "<c1c:13/><pause:0/><c1e:0/>精神/神经系无效\n电击弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0800de147597",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃/戦技/火炎糸に強い\n飛具/水撃/地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/亚基抗性\n飞具/阿夸/地变弱点",
+      "<c1c:13/><pause:0/><c1e:0/>强剑击/战技/亚基\n弱飞具/阿夸/地变",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/亚基系\n弱射击/水/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/亚基系强\n飞具/阿夸/地变系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0a0349420b3a",
+    "jp": "加えたいカードを選択してください\n",
+    "local_candidates": [
+      "请选择要添加卡片",
+      "选择要添加的卡片"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0d413383fc7d",
+    "jp": "<pause:0/><c1e:0/>キ○ィちゃんマーク入り\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>带凯蒂猫标志",
+      "<pause:0/><c1e:0/>带凯蒂猫标记",
+      "<pause:0/><c1e:0/>带有凯蒂猫标志"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:0efbf73d5766",
+    "jp": "コンフィグ\n",
+    "local_candidates": [
+      "设定\n",
+      "设置"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:15a257c45413",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>飛具/投具糸を無効にする\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具系无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:1a176859db99",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ6アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内TEC提升6点",
+      "<pause:0/><c1e:0/>一定时间技巧提升6点",
+      "<pause:0/><c1e:0/>暂时TEC提升6"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:20cab89eeb42",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神聖糸を無効にする\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>使神圣丝无效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣属性无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:21d00e79b909",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃以外の物理攻撃無効\n剣撃/神聖糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>斩击外物理攻击无效\n斩击/神圣系弱",
+      "<c1c:13/><pause:0/><c1e:0/>非剑击物理无效\n剑击/神圣属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>非斩击物攻无效\n弱斩/圣系"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:22abc27db01f",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸に強い\n神聖/暗黒糸を無効にする",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>抗风系\n圣/暗系无效",
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性抗性\n神圣/暗黑属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>疾风强\n神圣/暗黑无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:26c3edf0eb9e",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸無効<NAME/><NAME/>核熱糸吸収\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基属性无效<NAME/><NAME/>核热属性吸收\n阿夸属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>吸收核热\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>核热吸收\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热吸收\n\n弱点：水"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:26e9904a4bb0",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸反射<NAME/><NAME/>暗黒糸無効\n電撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风系反射<NAME/><NAME/>暗黑系无效\n对电击系弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风系反射<NAME/><NAME/>暗黑系无效\n电击系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:27003a6c3a0c",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神聖糸を無効にする\n回復しやすい",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>神圣系无效\n回复易生效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣系无效化\n易恢复"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2c8a8327fe39",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃/戦技糸を反射する\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技系反射"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2ca7faeb7292",
+    "jp": "削除してよろしいですか?\n",
+    "local_candidates": [
+      "确定删除吗？",
+      "确定要删除吗？",
+      "确认删除吗？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2da4007378f4",
+    "jp": "<pause:0/><c1e:0/>こっちガ聞きたい\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>这边才想问呢",
+      "<pause:0/><c1e:0/>问这个"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2de0ee5c7a9e",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ8アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内STR提升8点",
+      "<pause:0/><c1e:0/>一定时间力量提升8点",
+      "<pause:0/><c1e:0/>一定期间STR提升8点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2f661da79518",
+    "jp": "<pause:0/><c1e:0/>今日からあなたもイエローアウル\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>今日起你也是黄猫头鹰",
+      "<pause:0/><c1e:0/>今日起你也是黄鸮"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2fb668cb9081",
+    "jp": "これ以上所持できません\n",
+    "local_candidates": [
+      "持有数已达上限",
+      "无法再持有",
+      "无法持有更多"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:2ff5966b1907",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸に強い\n神聖/暗黒糸を無効にする",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性抗性\n神圣/暗黑属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>地变强\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>抗地系\n圣/暗系无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:301292d0f2a9",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸を無効にする\n疾風糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效\n疾风属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>地无效\n\n弱点：风"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:305639b13fe8",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸無効<NAME/><NAME/>核熱糸に強い\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>核热强\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>对核热系强\n对阿夸系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热系强\n阿夸系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:32ddd4568162",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ7アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内STR提升7点",
+      "<pause:0/><c1e:0/>一定时间力量提升7点",
+      "<pause:0/><c1e:0/>暂时STR提升7"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:35815cdffab6",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃/戦技/暗黒糸に強い\n飛具/地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/暗黑抗性\n飞具/地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/暗系\n弱射击/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/暗黑系强\n飞具/地变系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:35a5b2b07c26",
+    "jp": "<pause:0/><c1e:0/>なぜこのような物ガあるのか謎である\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>为何有此物是个谜",
+      "<pause:0/><c1e:0/>为何有这东西真谜",
+      "<pause:0/><c1e:0/>此物为何存在是个谜"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:363a98ddc0ca",
+    "jp": "相性ガ悪くて使えません\n",
+    "local_candidates": [
+      "相性差无法使用",
+      "相性差，无法使用"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:367218744e5b",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸に強い\n疾風糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性抗性\n疾风属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>地变强\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>耐地属性\n\n弱点：风"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:372a0c8d4929",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ4アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定期间VIT提升4",
+      "<pause:0/><c1e:0/>一段时间内VIT+4"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:39e2658beeaa",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>暗黒糸を無効にする\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>暗黑系无效",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑系无效化"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:3a30371a65fb",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ6アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内力量+6",
+      "<pause:0/><c1e:0/>一段时间内STR+6",
+      "<pause:0/><c1e:0/>暂时STR提升6"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:3ec67e805ec4",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ1アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内技巧+1",
+      "<pause:0/><c1e:0/>一定时间技巧提升1点",
+      "<pause:0/><c1e:0/>一定期间TEC提升1",
+      "<pause:0/><c1e:0/>一段时间内TEC+1",
+      "<pause:0/><c1e:0/>暂时TEC提升1"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:42d1ab188ec0",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃/戦技/疾風糸に強い\n飛具/地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/疾风抗性\n飞具/地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/风系\n弱射击/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/疾风系强\n飞具/地变系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:42dd8cd309d4",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ2アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间体力提升2点",
+      "<pause:0/><c1e:0/>一定时间内VIT+2",
+      "<pause:0/><c1e:0/>一定时间内体力+2",
+      "<pause:0/><c1e:0/>一定期间VIT提升2",
+      "<pause:0/><c1e:0/>一段时间内VIT+2",
+      "<pause:0/><c1e:0/>暂时VIT提升2"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:43d005bda8d8",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ8アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定期间VIT提升8",
+      "<pause:0/><c1e:0/>一段时间内VIT+8"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:44cd2da56a60",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ2アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内AGI+2",
+      "<pause:0/><c1e:0/>一定时间内AGI提升2点",
+      "<pause:0/><c1e:0/>一定时间内敏捷+2",
+      "<pause:0/><c1e:0/>一定时间敏捷提升2点",
+      "<pause:0/><c1e:0/>一定期间AGI提升2点",
+      "<pause:0/><c1e:0/>一段时间内AGI+2",
+      "<pause:0/><c1e:0/>暂时AGI提升2"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:45056cb70a35",
+    "jp": "<pause:0/><c1e:0/>水晶で出来た髑髏\n火属性らしい\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>水晶头骨\n似乎是火属性",
+      "<pause:0/><c1e:0/>水晶骷髅\n火属性"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:485dbc5ede75",
+    "jp": "<pause:0/><c1e:0/>水晶で出来た髑髏\n良く見ると中に水ガ・・・流れていない\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>水晶头骨\n内有水却...不流动",
+      "<pause:0/><c1e:0/>水晶骷髅\n仔细看水...没有流动",
+      "<pause:0/><c1e:0/>水晶骷髅\n内部无水流动"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:49803f3ab4c0",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎/核熱/神聖/暗黒無効\n水撃/氷結糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热/神圣/暗黑无效\n对阿夸/冰结系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热/神圣/暗黑无效\n阿夸/冰结弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热/神圣/暗黑无效\n阿夸/冰结系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:4a3cf93bf6b0",
+    "jp": "<pause:0/><c1e:0/>青春の歓びと悲しみ?\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>青春之喜与悲？",
+      "<pause:0/><c1e:0/>青春悲欢？",
+      "<pause:0/><c1e:0/>青春的喜与悲？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:4b5d944fb420",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ3アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内TEC+3",
+      "<pause:0/><c1e:0/>一定时间内TEC提升3点",
+      "<pause:0/><c1e:0/>一定时间内技巧+3",
+      "<pause:0/><c1e:0/>一定时间技巧提升3点",
+      "<pause:0/><c1e:0/>一段时间内TEC+3",
+      "<pause:0/><c1e:0/>暂时TEC提升3"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:4e029120e5e5",
+    "jp": "<pause:0/><c1e:0/>まさしく謎である\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>确实是个谜",
+      "<pause:0/><c1e:0/>确是个谜"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:53e0f777f3a3",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ3アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间体力提升3点",
+      "<pause:0/><c1e:0/>一定时间内VIT+3",
+      "<pause:0/><c1e:0/>一定时间内体力+3",
+      "<pause:0/><c1e:0/>一定期间VIT提升3",
+      "<pause:0/><c1e:0/>一段时间内VIT+3",
+      "<pause:0/><c1e:0/>暂时VIT提升3"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:540fe7b129a7",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃/戦技糸を無効にする\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技系无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:573029cb86e1",
+    "jp": "<pause:0/><c1e:0/>水晶で出来た髑髏\n生あたたかい風ガ・・・\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>水晶制成的骷髅\n温暖的风...",
+      "<pause:0/><c1e:0/>水晶头骨\n有温暖的风...",
+      "<pause:0/><c1e:0/>水晶骷髅\n散发暖风"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5917c41cc9aa",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃/氷結糸を無効にする\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>水/冰无效\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/冰结属性无效\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/冰结无效\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/冰结无效\n弱亚基"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5d0f51560c99",
+    "jp": "ぶっ飛び\n",
+    "local_candidates": [
+      "狂野",
+      "离谱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5d31e05aba3b",
+    "jp": "<pause:0/><c1e:0/>頭につけないよーに\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>别戴头上",
+      "<pause:0/><c1e:0/>别戴头上哦",
+      "<pause:0/><c1e:0/>注意别戴头上"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5d494f0bae89",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ3アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内AGI+3",
+      "<pause:0/><c1e:0/>一定时间内AGI提升3点",
+      "<pause:0/><c1e:0/>一定时间内敏捷+3",
+      "<pause:0/><c1e:0/>一定时间敏捷提升3点",
+      "<pause:0/><c1e:0/>一段时间内AGI+3",
+      "<pause:0/><c1e:0/>暂时AGI提升3"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5ee2137e5c93",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸に強い\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性抗性\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风强\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>耐风属性\n\n弱点：地"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:5ff1f6cf127a",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ7アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内技巧+7",
+      "<pause:0/><c1e:0/>一定时间技巧提升7点",
+      "<pause:0/><c1e:0/>暂时TEC提升7"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:666b4b286c37",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神聖/暗黒糸を無効にする\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>圣/暗系无效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑属性无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:66c1c7b9c22c",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神聖糸を無効にする\n暗黒糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>圣系无效\n弱暗系",
+      "<c1c:13/><pause:0/><c1e:0/>神圣属性无效\n暗黑属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>神圣无效\n暗黑弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:67f33cc1cbbf",
+    "jp": "<pause:0/><c1e:0/>炎上を予告するカード通\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>火灾预告卡·通",
+      "<pause:0/><c1e:0/>火灾预告卡通",
+      "<pause:0/><c1e:0/>预示火灾的卡通"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:68b62e9fce40",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>魔法を反射する\n物理攻撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射魔法\n对物理攻击弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔法反射\n物理攻击弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6a07c0420a11",
+    "jp": "降魔しているペルソナは削除できません\n",
+    "local_candidates": [
+      "已降魔Persona无法删除",
+      "装备中的Persona无法删除"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6a6e1d6d203f",
+    "jp": "<pause:0/><c1e:0/>今日からあなたもピンクアーザス\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>今日起你也是粉红阿撒斯",
+      "<pause:0/><c1e:0/>今日起你也是粉红阿萨斯",
+      "<pause:0/><c1e:0/>今日起你也是粉红鹫"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6b30928022d1",
+    "jp": "<pause:0/><c1e:0/>なにげにプレミアもの\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>不经意成珍品",
+      "<pause:0/><c1e:0/>不经意间成珍品"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6d8a0b1ac94e",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃/戦技糸に強い\n飛具/地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技属性抗性\n飞具/地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技系\n弱射击/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技系强\n飞具/地变系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6db3190ba5c6",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ5アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间体力提升5点",
+      "<pause:0/><c1e:0/>一定时间内VIT提升5点",
+      "<pause:0/><c1e:0/>一定期间VIT提升5点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:6ee8277ae57b",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸無効<NAME/><NAME/>電撃糸反射\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性无效<NAME/><NAME/>电击属性反射\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风无效<NAME/><NAME/>电击反射\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风无效<NAME/><NAME/>电反射\n\n弱点：地"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:714bee9125bc",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ1アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间体力提升1点",
+      "<pause:0/><c1e:0/>一定时间内VIT+1",
+      "<pause:0/><c1e:0/>一定时间内VIT提升1点",
+      "<pause:0/><c1e:0/>一定时间内体力+1",
+      "<pause:0/><c1e:0/>一定期间VIT提升1点",
+      "<pause:0/><c1e:0/>暂时VIT提升1"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:718c993c50b4",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸を吸収する\n疾風糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>吸收地属性\n\n弱点：风",
+      "<c1c:13/><pause:0/><c1e:0/>地变吸收\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变属性吸收\n疾风属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7996686bab8f",
+    "jp": "<pause:0/><c1e:0/>炎上を予告するカード\nそのまんま\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>火灾预告卡\n名副其实",
+      "<pause:0/><c1e:0/>预示火灾的卡\n名副其实"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7a7a2f3e6d11",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>暗黒糸を反射する\n神聖糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射暗系\n弱圣系",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑反射\n神圣弱",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑属性反射\n神圣属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7d34b2814646",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>物理攻撃を反射する\n魔法攻撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻反射\n魔攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>物攻反射\n魔攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物理反射\n魔法弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7e3fb013b376",
+    "jp": "相性ガ悪く降魔できません\n",
+    "local_candidates": [
+      "相性不佳无法降魔",
+      "相性差无法装备",
+      "相性差无法降魔",
+      "相性差，无法召唤Persona",
+      "相性差，无法装备"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:7ff34fed6ef6",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸無効<NAME/><NAME/>疾風糸に弱い\n氷結/電撃/核熱糸を吸収",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效<NAME/><NAME/>疾风属性弱点\n冰结/电击/核热属性吸收",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效<NAME/><NAME/>疾风弱\n冰结/电击/核热吸收",
+      "<c1c:13/><pause:0/><c1e:0/>地系无效<NAME/><NAME/>弱风系\n吸收冰/电/核系"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:810707dd5d5d",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃/神聖/暗黒糸無効\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣/暗黑\n弱点亚基",
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣/暗黑属性\n弱点亚基属性",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣/暗黑系无效\n亚基系弱",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣/暗黑系无效\n对亚基系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:82111154c158",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風/神聖/暗黒糸無効\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>无效疾风/神圣/暗黑\n弱点地变",
+      "<c1c:13/><pause:0/><c1e:0/>疾风/神圣/暗黑系无效\n地变系弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风/神圣/暗黑系无效\n地变系弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:826c05f06f88",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎吸収<NAME/><NAME/>核熱/神聖無効\n水撃/氷結糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基吸收<NAME/><NAME/>核热/神圣无效\n阿夸/冰结系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基吸收<NAME/><NAME/>核热/神圣无效\n阿夸/冰结系弱点",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基<NAME/><NAME/>无效核热/神圣\n弱点阿夸/冰结",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基<NAME/><NAME/>无效核热/神圣\n弱点阿夸/冰结属性"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:82e1f167f850",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ3アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内STR+3",
+      "<pause:0/><c1e:0/>一定时间内STR提升3点",
+      "<pause:0/><c1e:0/>一定时间力量提升3点",
+      "<pause:0/><c1e:0/>一定期间STR提升3",
+      "<pause:0/><c1e:0/>一定期间STR提升3点",
+      "<pause:0/><c1e:0/>一段时间内STR+3"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:839c4c262a72",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>暗黒糸を無効にする\n神聖糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>暗系无效\n弱圣系",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑属性无效\n神圣属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑无效\n神圣弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:84e7ee961cfe",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>物理に強い<NAME/><NAME/>暗黒糸無効\n火炎/神聖糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>强物理<NAME/><NAME/>暗黑无效\n弱亚基/神圣",
+      "<c1c:13/><pause:0/><c1e:0/>物攻强<NAME/><NAME/>暗系无效\n弱亚基/圣系",
+      "<c1c:13/><pause:0/><c1e:0/>物理强<NAME/><NAME/>暗黑系无效\n亚基/神圣系弱",
+      "<c1c:13/><pause:0/><c1e:0/>物理抗性<NAME/><NAME/>暗黑无效\n亚基/神圣属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:85346a85ef96",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃糸を無効にする\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>水无效\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性无效\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效\n弱亚基"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:878502eb8bb7",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎/神聖糸を無効にする\n水撃/氷結/暗黒糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基/神圣无效\n阿夸/冰结/暗黑弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/神圣系无效\n阿夸/冰结/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/神圣系无效化\n对阿夸/冰结/暗黑系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:87bd3c90d7a9",
+    "jp": "<pause:0/><c1e:0/>って賞味期限切れてるぞ\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>保质期过了啊",
+      "<pause:0/><c1e:0/>喂，保质期过了",
+      "<pause:0/><c1e:0/>已过期了哦"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:88b424eebde1",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ2アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内TEC+2",
+      "<pause:0/><c1e:0/>一定时间内TEC提升2点",
+      "<pause:0/><c1e:0/>一定时间内技巧+2",
+      "<pause:0/><c1e:0/>一定时间技巧提升2点",
+      "<pause:0/><c1e:0/>一定期间TEC提升2点",
+      "<pause:0/><c1e:0/>暂时TEC提升2"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8a017d0326c7",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神聖糸を反射する\n暗黒糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射圣系\n弱暗系",
+      "<c1c:13/><pause:0/><c1e:0/>神圣反射\n暗黑弱",
+      "<c1c:13/><pause:0/><c1e:0/>神圣属性反射\n暗黑属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8bbf52586256",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸を吸収する\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>吸收风属性\n\n弱点：地",
+      "<c1c:13/><pause:0/><c1e:0/>疾风吸收\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性吸收\n地变属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8c4247646b47",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>物理攻撃を無効にする\n魔法攻撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻无效\n魔攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>物攻无效\n魔攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物理无效\n魔法弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:8d87861b182b",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸反射<NAME/><NAME/>核熱糸に強い\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基反射<NAME/><NAME/>核热强\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系反射<NAME/><NAME/>对核热系强\n对阿夸系弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系反射<NAME/><NAME/>核热系强\n阿夸系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:91cb6cddf26c",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>魔法攻撃を無効にする\n物理攻撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>魔攻无效\n物攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔攻无效\n物攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔法无效\n物理弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:94224464ab4d",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変/神聖/暗黒糸無効\n疾風糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣/暗黑系无效\n对疾风系弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣/暗黑系无效\n疾风系弱",
+      "<c1c:13/><pause:0/><c1e:0/>无效地变/神圣/暗黑\n弱点疾风"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:950b5524d379",
+    "jp": "自意識過剰\n",
+    "local_candidates": [
+      "自我意识过剩",
+      "自我过剩"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:98427d1776f0",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃/神聖糸を無効にする\n火炎/核熱/暗黒糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣\n弱点亚基/核热/暗黑",
+      "<c1c:13/><pause:0/><c1e:0/>无效阿夸/神圣属性\n弱点亚基/核热/暗黑属性",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣系无效\n亚基/核热/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸/神圣系无效化\n对亚基/核热/暗黑系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9ac2fcbd1aa2",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>氷結/電撃/核熱糸に強い\n打撃/戦技糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>冰结/电击/核热抗性\n打击/战技属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>冰结/电击/核热系强\n打击/战技系弱",
+      "<c1c:13/><pause:0/><c1e:0/>抗冰/电/核系\n弱打击/战技系"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9c8d8b8e3523",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ1アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内敏捷+1",
+      "<pause:0/><c1e:0/>一定时间敏捷提升1点",
+      "<pause:0/><c1e:0/>暂时AGI提升1"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9cec0213643c",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸を反射する\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射风属性\n\n弱点：地",
+      "<c1c:13/><pause:0/><c1e:0/>疾风反射\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性反射\n地变属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9d1daeaad309",
+    "jp": "<pause:0/><c1e:0/>炎上を予告するカードSUN\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>火灾预告卡SUN",
+      "<pause:0/><c1e:0/>预示火灾的卡SUN"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:9f3ab75b10f9",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ5アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内技巧+5",
+      "<pause:0/><c1e:0/>一段时间内TEC+5",
+      "<pause:0/><c1e:0/>暂时TEC提升5"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a2e0f21e2883",
+    "jp": "<pause:0/><c1e:0/>なんだ、メッキじゃん\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>什么啊，镀金的",
+      "<pause:0/><c1e:0/>什么嘛，镀金的啊",
+      "<pause:0/><c1e:0/>是镀金的啊"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a45d13e120e2",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神聖/暗黒糸を反射する\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射圣/暗系",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑反射",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑属性反射"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a6a0e83e44e1",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神経/精神糸を無効にする\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神系无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a898d860fb23",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ5アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内AGI+5",
+      "<pause:0/><c1e:0/>一定期间AGI提升5",
+      "<pause:0/><c1e:0/>一段时间内AGI+5"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:a997c95d9d7c",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ1アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内STR+1",
+      "<pause:0/><c1e:0/>一定时间内STR提升1点",
+      "<pause:0/><c1e:0/>一定时间内力量+1",
+      "<pause:0/><c1e:0/>一定时间力量提升1点",
+      "<pause:0/><c1e:0/>一段时间内STR+1",
+      "<pause:0/><c1e:0/>暂时STR提升1"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:af760c5ec1d4",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸を反射する\n疾風糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射地属性\n\n弱点：风",
+      "<c1c:13/><pause:0/><c1e:0/>地变反射\n疾风弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变属性反射\n疾风属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:b3137c4bf623",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ4アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内TEC+4",
+      "<pause:0/><c1e:0/>一定时间内技巧+4",
+      "<pause:0/><c1e:0/>一定时间技巧提升4点",
+      "<pause:0/><c1e:0/>一段时间内TEC+4",
+      "<pause:0/><c1e:0/>暂时TEC提升4"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:b6b76ffbc62e",
+    "jp": "すでに降魔しています\n",
+    "local_candidates": [
+      "已召唤Persona",
+      "已经召唤Persona",
+      "已经降魔"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:b7518d1530e0",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ7アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间体力提升7点",
+      "<pause:0/><c1e:0/>一定时间内体力+7",
+      "<pause:0/><c1e:0/>暂时VIT提升7"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:bb5f380a1f78",
+    "jp": "入れ替えるペルソナを選択してください\n",
+    "local_candidates": [
+      "请选择替换Persona",
+      "选择替换的Persona"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:bbb5b4015256",
+    "jp": "<pause:0/><c1e:0/>ほのかな喜び?\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>微小的喜悦？",
+      "<pause:0/><c1e:0/>微悦？",
+      "<pause:0/><c1e:0/>隐约之喜？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:be72d8b2be30",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>飛具/投具糸を反射する\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>飞具/投具系反射"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c056c35682d8",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ8アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内敏捷+8",
+      "<pause:0/><c1e:0/>一段时间内AGI+8"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c1df10e6c601",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>魔法攻撃に強い\n物理攻撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>魔攻抗性\n物攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔攻耐性\n物攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔法攻击抗性\n物理攻击弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔法耐性\n物理弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c1e4e79a4378",
+    "jp": "<pause:0/><c1e:0/>これも本物・・・\nいや、メッキガ厚いだけだ\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>这个也是真的……\n不，只是镀层厚",
+      "<pause:0/><c1e:0/>这个也真...\n不，镀层厚而已",
+      "<pause:0/><c1e:0/>这个也真货…\n不，镀层厚而已"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c264bf3d8966",
+    "jp": "生まれ変わらせるペルソナを選択してください\n",
+    "local_candidates": [
+      "请选择要重生的Persona",
+      "请选择重生Persona",
+      "选择要重生的Persona"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c2965c59358d",
+    "jp": "<pause:0/><c1e:0/>タクシー運転手の帽子<SURNAME/>By富永\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>出租车司机帽<SURNAME/>By富永",
+      "<pause:0/><c1e:0/>出租车司机帽<SURNAME/>by富永",
+      "<pause:0/><c1e:0/>出租车帽<SURNAME/>By富永"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c32f84a987b5",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸無効<NAME/><NAME/>核熱糸反射\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>反射核热\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效<NAME/><NAME/>核热反射\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热反射\n\n弱点：水",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效<NAME/><NAME/>核热系反射\n阿夸弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c36ea6fd6e2b",
+    "jp": "降魔しているペルソナは外せません\n",
+    "local_candidates": [
+      "已降魔Persona无法卸下",
+      "装备中的Persona无法卸下"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c4182ed23f59",
+    "jp": "<pause:0/><c1e:0/>水晶で出来た髑髏\nどこか地なのかよくわからない\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>水晶头骨\n不知为何有大地属性",
+      "<pause:0/><c1e:0/>水晶骷髅\n不知为何像地属性",
+      "<pause:0/><c1e:0/>水晶骷髅\n产地不明"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c4721479b316",
+    "jp": "召喚するペルソナを選択してください\n",
+    "local_candidates": [
+      "请选择召唤Persona",
+      "请选择要召唤的Persona",
+      "选择召唤的Persona"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c49b9ce096f1",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>(リザーブ)\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>(备用)",
+      "<c1c:13/><pause:0/><c1e:0/>(预留)",
+      "<c1c:13/><pause:0/><c1e:0/>（保留）"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c6581517fe23",
+    "jp": "このペルソナに変異します:○ボタンで決定\n",
+    "local_candidates": [
+      "变异为此Persona:○键决定",
+      "变异为此Persona：○键确定",
+      "将变异为此Persona：○键确定"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c7579ac0085f",
+    "jp": "降魔しているペルソナは変異できません\n",
+    "local_candidates": [
+      "已降魔Persona无法变异",
+      "装备中的Persona无法变异"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c90a68925acc",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>魔法攻撃を反射する\n物理攻撃に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>魔攻反射\n物攻弱",
+      "<c1c:13/><pause:0/><c1e:0/>魔攻反射\n物攻弱点",
+      "<c1c:13/><pause:0/><c1e:0/>魔法反射\n物理弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:c966a1b58c4c",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>暗黒糸に強い\n神聖糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>抗暗系\n弱圣系",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑属性抗性\n神圣属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>暗黑系强\n神圣系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ca88491f8e2b",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃糸に強い\n神聖/暗黒糸を無効にする",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>冰结强\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>强阿夸\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>抗水系\n圣/暗系无效",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性抗性\n神圣/暗黑属性无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:cdb65863e9d5",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃糸を吸収する\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>吸收水属性\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>吸收阿夸\n弱亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸吸收\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性吸收\n亚基属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:cf4c5d34f5cc",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃糸に強い\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>耐水属性\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>耐阿夸\n弱亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性抗性\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸抗性\n亚基弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d043cab830a2",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神聖/暗黒/神経/精神糸を\n無効にする",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑/神经/精神系\n无效",
+      "<c1c:13/><pause:0/><c1e:0/>神圣/暗黑/神经/精神系\n无效化"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d0f126712e06",
+    "jp": "<pause:0/><c1e:0/>何か電池切れてるし\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>好像没电了",
+      "<pause:0/><c1e:0/>电池好像没电了",
+      "<pause:0/><c1e:0/>电池耗尽"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d1be30771b93",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸無効<NAME/><NAME/>疾風糸に弱い\n氷結/電撃/核熱糸に強い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效<NAME/><NAME/>疾风属性弱点\n冰结/电击/核热属性抗性",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效<NAME/><NAME/>疾风弱\n冰结/电击/核热强",
+      "<c1c:13/><pause:0/><c1e:0/>地无效<NAME/><NAME/>弱点：风\n\n耐冰/电/核热"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d2ba0ec47d07",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変糸無効<NAME/><NAME/>疾風糸に弱い\n氷結/電撃/核熱糸を反射",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变属性无效<NAME/><NAME/>疾风属性弱点\n冰结/电击/核热属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>地变无效<NAME/><NAME/>疾风弱\n冰结/电击/核热反射",
+      "<c1c:13/><pause:0/><c1e:0/>地无效<NAME/><NAME/>弱点：风\n\n反射冰/电/核热"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d53408da679d",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃糸を反射する\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射水属性\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>反射阿夸\n弱亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸反射\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性反射\n亚基属性弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d92591083cdb",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎/核熱糸を無効にする\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热无效\n\n弱点：水",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热无效\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热无效\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基/核热系无效\n阿夸弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d9796dbb64e5",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸を反射する\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基反射\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>反射亚基\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>反射亚基系\n弱点：水"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:d9b239dcd113",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>物理攻撃にやや強い\n神経/精神糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>物攻稍强\n弱神经/精神系",
+      "<c1c:13/><pause:0/><c1e:0/>物理攻击稍强\n神经/精神属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>物理攻击较强\n神经/精神系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:db73d44c44ea",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>投具/戦技/神聖/暗黒/\n精神/神経糸を無効にする",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>投具/战技/圣/暗/\n精神/神经系无效",
+      "<c1c:13/><pause:0/><c1e:0/>投具/战技/神圣/暗黑/\n精神/神经属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>投具/战技/神圣/暗黑/\n精神/神经系无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:de8aa9516fe7",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸に強い\n神聖/暗黒糸を無効にする",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基属性抗性\n神圣/暗黑属性无效",
+      "<c1c:13/><pause:0/><c1e:0/>亚基强\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>强亚基\n神圣/暗黑无效",
+      "<c1c:13/><pause:0/><c1e:0/>抗亚基系\n圣/暗系无效"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:dee3ad39c90e",
+    "jp": "同じペルソナガすでにいます\n",
+    "local_candidates": [
+      "已存在相同Persona",
+      "已有相同Persona",
+      "相同的Persona已经存在"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e078b9612f09",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃糸無効<NAME/><NAME/>氷結糸反射\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>水无效<NAME/><NAME/>冰反射\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性无效<NAME/><NAME/>冰结属性反射\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>冰结反射\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>反射冰结\n弱亚基"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e2b299980723",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>水撃糸無効<NAME/><NAME/>氷結糸吸収\n火炎糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>水无效<NAME/><NAME/>冰吸收\n\n弱点：亚基",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸属性无效<NAME/><NAME/>冰结属性吸收\n亚基属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>冰结吸收\n亚基弱点",
+      "<c1c:13/><pause:0/><c1e:0/>阿夸无效<NAME/><NAME/>吸收冰结\n弱亚基"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e34c82995161",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ4アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内AGI+4",
+      "<pause:0/><c1e:0/>一定时间内AGI提升4点",
+      "<pause:0/><c1e:0/>一定时间内敏捷+4",
+      "<pause:0/><c1e:0/>一定期间AGI提升4点",
+      "<pause:0/><c1e:0/>一段时间内AGI+4"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e438348a2820",
+    "jp": "<pause:0/><c1e:0/>テン○ンの髑髏?\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>天○的骷髅？",
+      "<pause:0/><c1e:0/>天恩的头骨？",
+      "<pause:0/><c1e:0/>天恩的骷髅？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e69361c9576e",
+    "jp": "高慢\n",
+    "local_candidates": [
+      "高傲",
+      "高慢"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e70d4b8b9f52",
+    "jp": "他のメンバーガ降魔しています\n",
+    "local_candidates": [
+      "其他成员已降魔",
+      "其他成员正在召唤Persona",
+      "其他成员装备中",
+      "成员降魔中"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e7a2db3afea3",
+    "jp": "<pause:0/><c1e:0/>一定期間TECガ8アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内技巧+8",
+      "<pause:0/><c1e:0/>一定时间技巧提升8点",
+      "<pause:0/><c1e:0/>暂时TEC提升8"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:e8a54fdadc6c",
+    "jp": "削除するペルソナを選択してください\n",
+    "local_candidates": [
+      "请选择删除Persona",
+      "选择删除的Persona"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:eadcec663707",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸を無効にする\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基无效\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效\n阿夸弱",
+      "<c1c:13/><pause:0/><c1e:0/>亚基系无效\n阿夸系弱点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ebfff5c0e6dd",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ6アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内敏捷+6",
+      "<pause:0/><c1e:0/>一定时间敏捷提升6点",
+      "<pause:0/><c1e:0/>暂时AGI提升6"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ece8b74c3615",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>ボス用の相性へルプ表示部分\n1234567890123",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>BOSS相性帮助显示\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>BOSS相性帮助显示部分\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>Boss相性帮助显示\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>Boss相性帮助显示部分\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>ボス用の相性へルプ表示部分\n1234567890123",
+      "<c1c:13/><pause:0/><c1e:0/>用于首领的属性帮助显示部分\n1234567890123"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ef896b61210a",
+    "jp": "<pause:0/><c1e:0/>潮の香り\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>海潮香气",
+      "<pause:0/><c1e:0/>潮之香"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:efd4f2c2fc1a",
+    "jp": "強気\n",
+    "local_candidates": [
+      "强势",
+      "强硬"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f0bfe28bfded",
+    "jp": "これでよろしいですか?\n",
+    "local_candidates": [
+      "确定吗?",
+      "这样可以吗？"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f0c9f724dc03",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ2アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内STR+2",
+      "<pause:0/><c1e:0/>一定时间内力量+2",
+      "<pause:0/><c1e:0/>一定时间力量提升2点",
+      "<pause:0/><c1e:0/>一定期间STR提升2",
+      "<pause:0/><c1e:0/>一段时间内STR+2",
+      "<pause:0/><c1e:0/>暂时STR提升2"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f0e948db78a9",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>火炎糸を吸収する\n水撃糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>亚基吸收\n阿夸弱点",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基\n弱阿夸",
+      "<c1c:13/><pause:0/><c1e:0/>吸收亚基系\n\n弱点：水"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f11d39dd09aa",
+    "jp": "<pause:0/><c1e:0/>一定期間VITガ6アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内VIT提升6点",
+      "<pause:0/><c1e:0/>一定期间VIT提升6点"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f2bf135e32b8",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ5アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内力量+5",
+      "<pause:0/><c1e:0/>一段时间内STR+5"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f32a3ad11ad0",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>地変/神聖糸を無効にする\n疾風/氷結/暗黒糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣系无效\n疾风/冰结/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>地变/神圣系无效化\n对疾风/冰结/暗黑系弱",
+      "<c1c:13/><pause:0/><c1e:0/>无效地变/神圣\n弱点疾风/冰结/暗黑"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f380c2beaab7",
+    "jp": "<pause:0/><c1e:0/>一定期間STRガ4アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定时间内STR+4",
+      "<pause:0/><c1e:0/>一定时间内力量+4",
+      "<pause:0/><c1e:0/>一定时间力量提升4点",
+      "<pause:0/><c1e:0/>一段时间内STR+4",
+      "<pause:0/><c1e:0/>暂时STR提升4"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f3fa97dd1124",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸無効<NAME/><NAME/>電撃糸吸収\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性无效<NAME/><NAME/>电击属性吸收\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风无效<NAME/><NAME/>电击吸收\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风无效<NAME/><NAME/>电吸收\n\n弱点：地"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:f52d1e42b775",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>剣撃/戦技/水撃糸に強い\n飛具/火炎/地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>剑击/战技/阿夸抗性\n飞具/亚基/地变弱点",
+      "<c1c:13/><pause:0/><c1e:0/>强剑击/战技/阿夸\n弱飞具/亚基/地变",
+      "<c1c:13/><pause:0/><c1e:0/>抗斩/战技/水系\n弱射击/亚基/地系",
+      "<c1c:13/><pause:0/><c1e:0/>斩击/战技/阿夸系强\n飞具/亚基/地变系弱"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:fb0d074473cb",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風糸無効\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风属性无效\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风无效\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风无效\n\n弱点：地"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:fea5e61d10c8",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>神経/精神糸を反射する\n",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>反射神经/精神系",
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神属性反射",
+      "<c1c:13/><pause:0/><c1e:0/>神经/精神系反射"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:feed8a087aaa",
+    "jp": "<pause:0/><c1e:0/>一定期間AGIガ7アップする\n",
+    "local_candidates": [
+      "<pause:0/><c1e:0/>一定期间AGI提升7",
+      "<pause:0/><c1e:0/>一段时间内AGI+7"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  },
+  {
+    "source_file": "dup:strtbl",
+    "string_id": "dup:ffeb4cea94e0",
+    "jp": "<c1c:13/><pause:0/><c1e:0/>疾風/電撃糸を無効にする\n地変糸に弱い",
+    "local_candidates": [
+      "<c1c:13/><pause:0/><c1e:0/>疾风/电击属性无效\n地变属性弱点",
+      "<c1c:13/><pause:0/><c1e:0/>疾风/电击无效\n地变弱",
+      "<c1c:13/><pause:0/><c1e:0/>风/电无效\n\n弱点：地"
+    ],
+    "database_content": null,
+    "database_updated_at": null,
+    "decision": "preserve_local_positions_detach"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "total_ids": 5281,
+  "classifications": {
+    "local_conflict_review": 1301,
+    "local_matches_candidate": 892,
+    "merged_versions_conflict": 496,
+    "multiple_versions_review": 54,
+    "no_merged_candidate": 483,
+    "safe_merged_patch": 2055
+  }
+}
