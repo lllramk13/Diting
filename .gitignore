@@ -1,0 +1,18 @@
+node_modules/
+dist/
+build/
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 数据库备份不进版本控制
+*.dump
+*backup*.sql
+
+# supabase CLI 本地状态
+supabase/.temp/
+
+*.log
+.DS_Store
