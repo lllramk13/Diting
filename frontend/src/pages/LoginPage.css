@@ -1,0 +1,185 @@
+/* ============================================================
+   登录页 · 黑白终端 HUD · 点阵背景
+   换主色只改 --hud
+   ============================================================ */
+.login-screen {
+  --hud: #e8ecef;                       /* 主色:近白 */
+  --hud-dim: rgba(232, 236, 239, 0.35);
+  --hud-faint: rgba(232, 236, 239, 0.14);
+
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
+  background: #050505;
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+/* canvas 点阵铺满 */
+.dot-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* 柔光泛光层:中心一团柔和亮光,四周自然渐隐,整体发亮不发脏 */
+.crt-bloom {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center,
+    rgba(232, 236, 239, 0.06) 0%,
+    transparent 60%);
+}
+
+/* ============ 双层边框 ============ */
+.hud-outer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 440px;
+  padding: 14px;                        /* 四边间距一致 */
+  border-radius: 8px;
+  /* 柔光留在这层(不受下面挖洞影响),更浓更弥散 */
+  box-shadow:
+    0 0 18px rgba(232, 236, 239, 0.45),
+    0 0 45px rgba(232, 236, 239, 0.25),
+    0 0 90px rgba(232, 236, 239, 0.12);
+}
+/* 边框画在这一层,连续一圈;三角是实心不透明的,天然盖住自己底下那一小段边框,
+   不需要再挖洞——挖洞会露出洞里纯黑的背景,边框的模糊光晕照不到那么远,
+   看起来就是一块突兀的黑斑,这正是之前的问题所在 */
+.hud-outer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 5px solid rgba(232, 236, 239, 0.7);    /* 加宽 */
+  border-radius: 8px;
+  /* 高斯模糊边框本体 + 两层高斯光晕 */
+  filter:
+    blur(1.4px)
+    drop-shadow(0 0 6px rgba(232, 236, 239, 0.55))
+    drop-shadow(0 0 16px rgba(232, 236, 239, 0.35));
+  pointer-events: none;
+}
+
+/* 四边实心三角(SVG),偏移不居中,底边与边框持平 */
+.hud-tick {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 2;                           /* 盖在边框之上 */
+}
+.hud-tick svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter:
+    blur(0.8px)
+    drop-shadow(0 0 4px rgba(232, 236, 239, 0.5));
+}
+/* 四个三角都贴边(-15px 让底边落在 5px 宽边框上);各自往自身左手方向挪(24%/76%) */
+.hud-tick.top    { top: -15px;   left: 24%; transform: translateX(-50%); }
+.hud-tick.bottom { bottom: -15px; left: 76%; transform: translateX(-50%) rotate(180deg); }
+.hud-tick.left   { left: -15px;  top: 76%; transform: translateY(-50%) rotate(-90deg); }
+.hud-tick.right  { right: -15px; top: 24%; transform: translateY(-50%) rotate(90deg); }
+
+/* 内层面板 */
+.hud-inner {
+  position: relative;
+  border-radius: 4px;
+  padding: 2.25rem 2rem;
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(6px);
+  box-shadow: inset 0 0 30px rgba(232, 236, 239, 0.05);
+}
+/* 内框边线单独一层,做高斯模糊光晕(和外框一致) */
+.hud-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid rgba(232, 236, 239, 0.5);
+  border-radius: 4px;
+  pointer-events: none;
+  filter:
+    blur(1px)
+    drop-shadow(0 0 5px rgba(232, 236, 239, 0.4));
+}
+
+/* ============ 标题 ============ */
+.hud-title {
+  color: var(--hud);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(232, 236, 239, 0.4);
+  margin: 0 0 1.75rem;
+}
+
+/* ============ 输入 / 按钮 ============ */
+.hud-field {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--hud-dim);
+  border-radius: 3px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.9rem;
+  color: #f0f2f4;
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.hud-field::placeholder { color: rgba(232, 236, 239, 0.3); }
+.hud-field:focus {
+  border-color: var(--hud);
+  box-shadow: 0 0 12px rgba(232, 236, 239, 0.2);
+}
+
+.hud-actions { display: flex; gap: 0.75rem; margin-top: 0.4rem; }
+.hud-btn {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.hud-btn.primary {
+  background: var(--hud);
+  border: 1px solid var(--hud);
+  color: #050505;
+  font-weight: 700;
+}
+.hud-btn.primary:hover { box-shadow: 0 0 18px rgba(232, 236, 239, 0.4); }
+.hud-btn.ghost {
+  background: transparent;
+  border: 1px solid var(--hud-dim);
+  color: rgba(232, 236, 239, 0.75);
+}
+.hud-btn.ghost:hover { border-color: var(--hud); color: var(--hud); }
+
+.hud-error {
+  color: #ff8080;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.9rem;
+}
+.hud-disclaimer {
+  color: rgba(232, 236, 239, 0.3);
+  font-size: 0.65rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-top: 1.25rem;
+  line-height: 1.6;
+}
