@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { signIn, signUp } from '../api/auth'
-import DotField from '../components/DotField'
+import { signIn, signUp } from '../../api/auth'
+import DotField from '../../shared/components/DotField'
 import './LoginPage.css'
 
 function LoginPage() {
