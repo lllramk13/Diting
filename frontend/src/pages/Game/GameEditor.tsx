@@ -662,6 +662,7 @@ export default function GameEditor() {
   const [onlyChanged, setOnlyChanged] = useState(false)
   const [onlyWarn, setOnlyWarn] = useState(false)
   const [page, setPage] = useState(1)
+  const [jumpPage, setJumpPage] = useState('')
 
   const [showPRModal, setShowPRModal] = useState(false)
 
@@ -1056,6 +1057,14 @@ export default function GameEditor() {
   }, [sourceStrings, rowStates, query, onlyChanged, onlyWarn])
 
   const totalPages = Math.max(1, Math.ceil(filteredRows.length / PAGE_SIZE))
+
+  function goToPage() {
+    const requestedPage = Number.parseInt(jumpPage, 10)
+    if (Number.isNaN(requestedPage)) return
+
+    setPage(Math.min(totalPages, Math.max(1, requestedPage)))
+    setJumpPage('')
+  }
 
   const pageRows = useMemo(() => {
     const safePage = Math.min(page, totalPages)
@@ -1469,6 +1478,29 @@ export default function GameEditor() {
               <span className="ed-pager-info">
                 {String(Math.min(page, totalPages)).padStart(2, '0')} / {String(totalPages).padStart(2, '0')}
               </span>
+
+              <div className="ed-pager-jump">
+                <input
+                  className="ed-pager-input"
+                  type="number"
+                  min={1}
+                  max={totalPages}
+                  value={jumpPage}
+                  aria-label="跳转页码"
+                  placeholder="页码"
+                  onChange={event => setJumpPage(event.target.value)}
+                  onKeyDown={event => {
+                    if (event.key === 'Enter') goToPage()
+                  }}
+                />
+                <button
+                  className="ed-pager-btn ed-pager-go"
+                  disabled={jumpPage.trim() === ''}
+                  onClick={goToPage}
+                >
+                  跳转
+                </button>
+              </div>
 
               <button
                 className="ed-pager-btn"

@@ -665,6 +665,7 @@ textarea {
 
   .ed-pager {
     gap: 8px;
+    flex-wrap: wrap;
   }
 
   .ed-pager-btn {

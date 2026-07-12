@@ -780,6 +780,34 @@
   font-size: 12px;
   color: var(--gt-muted);
 }
+.ed-pager-jump {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ed-pager-input {
+  width: 68px;
+  min-height: 35px;
+  box-sizing: border-box;
+  background: var(--gt-card);
+  border: 1px solid var(--gt-line);
+  border-radius: 8px;
+  color: var(--gt-text);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-align: center;
+  outline: none;
+}
+.ed-pager-input:focus {
+  border-color: var(--gt-accent-border);
+}
+.ed-pager-input::placeholder {
+  color: var(--gt-faint);
+}
+.ed-pager-go {
+  padding-inline: 12px;
+  letter-spacing: 0;
+}
 .ed-aside {
   position: sticky;
   top: 24px;
