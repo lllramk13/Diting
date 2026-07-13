@@ -1,12 +1,12 @@
-import { Outlet } from 'react-router'
+import { Link, Outlet } from 'react-router'
 
 function RelayLayout() {
     return (
         <>
             <nav>
-                <a href="/relay"></a>
-                <a href="/relay/tutorial"></a>
-                <a href="/relay/projects"></a>
+                <Link to="/relay">Relay</Link>
+                <Link to="/relay/tutorial">教程</Link>
+                <Link to="/relay/projects">项目</Link>
             </nav>
             <Outlet />
             <footer></footer>

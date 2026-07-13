@@ -3,6 +3,7 @@ import RelayHomePage from '../../relay/public/pages/RelayHomePage'
 import LoginPage from '../../auth/pages/LoginPage'
 import NotFoundPage from '../../shared/pages/NotFoundPage'
 import RelayLayout from '../layouts/RelayLayout'
+import AuthLayout from '../layouts/AuthLayout'
 
 export const router = createBrowserRouter([
     {
