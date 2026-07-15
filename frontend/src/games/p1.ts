@@ -13,7 +13,7 @@ export const p1: GameConfig = {
     ghostChar: '',
 
     status: 'planning',
-    progress: 0,
+    progress: 28,
 
     coverImage: '',
 
