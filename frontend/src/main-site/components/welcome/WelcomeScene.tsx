@@ -451,7 +451,7 @@ function WelcomeScene() {
 
         // Soft neutral ambience preserves detail in the shadows.
         const ambientLight = new THREE.HemisphereLight(
-            0xb7c3d2,
+            0x8b91a0,
             0x17110d,
             0.55,
         )
@@ -633,11 +633,9 @@ function WelcomeScene() {
                                 const delayStep = 60
 
                                 const style = {
-                                    // hover：从左向右
                                     '--enter-delay':
                                         `${index * delayStep}ms`,
 
-                                    // 离开：从右向左
                                     '--leave-delay':
                                         `${(
                                             interactiveLetters.length -
