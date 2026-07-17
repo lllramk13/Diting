@@ -98,7 +98,6 @@ function MainSiteLayout() {
                     <Link className="nav-logo" to="/">DITING</Link>
                 </div>
                 <nav className="nav-center" aria-label="主导航">
-                    <NavLink className={navLinkClass} to="/" end>首页</NavLink>
                     <NavLink className={navLinkClass} to="/relay">游戏汉化</NavLink>
                     <NavLink className={navLinkClass} to="/works">项目</NavLink>
                     <NavLink className={navLinkClass} to="/blog">博客</NavLink>

@@ -1,15 +1,9 @@
-import Marquee from "../components/Marquee"
-import HomeSections from "../components/HomeSections"
-import BottomStage from "../components/BottomStage"
+import WelcomeScene from "../components/welcome/WelcomeScene"
 
 function HomePage() {
     return (
         <div className="home-page">
-            <section className="home-hero">
-                <Marquee />
-                <BottomStage />
-            </section>
-            <HomeSections />
+            <WelcomeScene />
         </div>
     )
 }

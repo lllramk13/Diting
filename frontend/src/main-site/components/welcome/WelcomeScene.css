@@ -1,0 +1,160 @@
+.welcome-scene {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    height: calc(100svh - 76px);
+    min-height: 680px;
+
+    overflow: hidden;
+    background: #08090b;
+    color: #dedbd3;
+}
+
+.welcome-scene-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.welcome-scene-canvas canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-scene-copy {
+    position: absolute;
+    left: clamp(120px, 13vw, 360px);
+    top: 40%;
+    z-index: 2;
+
+    width: min(40vw, 680px);
+    transform: translateY(-50%);
+}
+
+.welcome-scene-title {
+    margin: 0;
+
+    color: #d8d0c4;
+    font-family:
+        Baskerville,
+        "Iowan Old Style",
+        "Palatino Linotype",
+        Georgia,
+        serif;
+
+    font-size: clamp(100px, 4.4vw, 86px);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+}
+
+.welcome-scene-title > span {
+    display: block;
+}
+
+.welcome-scene {
+    --ribbon-gold: #C9A26E;
+}
+
+.curiosity-word {
+    display: inline;
+    color: var(--ribbon-gold);
+
+    text-shadow:
+        0 0 22px rgba(203, 191, 174, 0.15);
+}
+
+.interactive-word {
+    display: inline-block;
+    position: relative;
+
+    white-space: nowrap;
+    perspective: 1000px;
+
+    color: inherit;
+}
+
+.interactive-letter {
+    color: var(--ribbon-gold);
+    display: inline-block;
+    position: relative;
+
+    transform:
+        perspective(1000px)
+        rotateY(0turn);
+
+    transform-origin: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    transition:
+        transform 900ms
+            cubic-bezier(0.2, 0.8, 0.2, 1)
+            var(--leave-delay),
+        color 300ms
+            ease
+            var(--leave-delay),
+        text-shadow 300ms
+            ease
+            var(--leave-delay);
+
+    will-change: transform;
+}
+
+.interactive-word:hover .interactive-letter {
+    transform:
+        perspective(1000px)
+        rotateY(1turn);
+
+    text-shadow:
+        0 0 22px
+        rgba(203, 191, 174, 0.22);
+
+    transition-delay: var(--enter-delay);
+}
+
+.welcome-scene-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 30px;
+    padding: 0;
+
+    color: rgba(216, 208, 196, 0.88);
+    background: none;
+    border: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: clamp(20px, 0.7vw, 12px);
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media (max-width: 899px) {
+    .welcome-scene-copy {
+        left: 24px;
+        top: 14%;
+
+        width: calc(100% - 48px);
+        transform: none;
+    }
+
+    .welcome-scene-eyebrow {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+    }
+
+    .welcome-scene-title {
+        font-size: clamp(42px, 11vw, 66px);
+        line-height: 0.98;
+    }
+
+    .welcome-scene-summary {
+        max-width: 300px;
+        font-size: 13px;
+    }
+}
