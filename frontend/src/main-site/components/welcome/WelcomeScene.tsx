@@ -291,13 +291,13 @@ function WelcomeScene() {
                 phase: Math.random() * Math.PI * 2,
             })
         }
-
+        
         createDataRibbon({
             points: [
                 new THREE.Vector3(-6, 2.4, -0.8),
                 new THREE.Vector3(-3.5, 2.1, 0.4),
                 new THREE.Vector3(-1.4, 2.7, -0.2),
-                new THREE.Vector3(0.8, 1.8, 0),
+                new THREE.Vector3(0.8, 1.6, 0),
             ],
             direction: 1,
             width: 0.2,
@@ -313,7 +313,7 @@ function WelcomeScene() {
                 new THREE.Vector3(-2.5, 5.5, -1.4),
                 new THREE.Vector3(-2, 4, -0.7),
                 new THREE.Vector3(-0.3, 3.2, 0.2),
-                new THREE.Vector3(0.9, 2.2, 0),
+                new THREE.Vector3(1.2, 1.65, 0),
             ],
             direction: 1,
             width: 0.14,
@@ -326,19 +326,111 @@ function WelcomeScene() {
 
         createDataRibbon({
             points: [
-                new THREE.Vector3(1, 2.1, 0),
-                new THREE.Vector3(2.7, 3, 0.7),
-                new THREE.Vector3(4.4, 2.8, -0.4),
-                new THREE.Vector3(7, 4.2, -1),
+                new THREE.Vector3(1.1, 1.75, 0),
+
+                new THREE.Vector3(2.4, 1.55, -0.3),
+                new THREE.Vector3(3.6, 2.15, -0.55),
+                new THREE.Vector3(4.4, 2.85, -0.7),
+
+                new THREE.Vector3(6.5, 2.75, -0.9),
             ],
-            direction: 1,
-            width: 0.17,
-            speed: 0.04,
-            amount: 12,
-            symbols: ['0', '1'],
-            floatAmplitude: 0.045,
-            floatFrequency: 0.32,
+
+            direction: -1,
+            width: 0.09,
+            speed: 0.032,
+            amount: 9,
+
+            symbols: ['1', '0'],
+
+            floatAmplitude: 0.025,
+            floatFrequency: 0.3,
         })
+
+        createDataRibbon({
+            points: [
+                new THREE.Vector3(-8, 0.25, -0.45),
+
+                new THREE.Vector3(-4.5, 0.15, -0.2),
+
+                new THREE.Vector3(-2.6, 1.5, -0.15),
+                new THREE.Vector3(-1.5, 1.7, -0.3),
+
+                new THREE.Vector3(-0.2, 1.2, 0.25),
+
+                new THREE.Vector3(0.5, 1.4, 0.25)
+            ],
+
+            direction: 1,
+            width: 0.3,
+            speed: 0.038,
+            amount: 10,
+
+            symbols: ['0', '1'],
+
+            floatAmplitude: 0.03,
+            floatFrequency: 0.42,
+        })
+
+        createDataRibbon({
+            points: [
+                new THREE.Vector3(1.3,1.5,-0.2,),
+                new THREE.Vector3(1.8,2.45,0.3,),
+                new THREE.Vector3(4,2.72,0.55,),
+            ],
+
+            direction: -1,
+            width: 0.11,
+            speed: 0.032,
+            amount: 12,
+
+            symbols: [
+                '0',
+                '1',
+                '0',
+                '1',
+            ],
+
+            floatAmplitude: 0.02,
+            floatFrequency: 0.3,
+        })
+
+        createDataRibbon({
+            points: [
+                new THREE.Vector3(1.5,1,-1),
+                new THREE.Vector3(6.5, -0.5, 1),
+            ],
+
+            direction: -1,
+            width: 0.2,
+            speed: 0.032,
+            amount: 8,
+
+            symbols: ['1', '0'],
+
+            floatAmplitude: 0.02,
+            floatFrequency: 0.26,
+        })
+
+        createDataRibbon({
+            points: [
+                new THREE.Vector3(-1, 0, 4.15),
+                new THREE.Vector3(0.45, 0.35, 3.1),
+                new THREE.Vector3(-0.25, 0.1, 2.1),
+                new THREE.Vector3(-0.65, 0.035, 1.25),
+                new THREE.Vector3(-0.35, 0.5, 0.65),
+            ],
+
+            direction: 1,
+            width: 0.3,
+            speed: 0.038,
+            amount: 10,
+
+            symbols: ['0', '1'],
+
+            floatAmplitude: 0.03,
+            floatFrequency: 0.42,
+        })
+
 
         // room texture
         const roomMaterial = new THREE.MeshStandardMaterial({
