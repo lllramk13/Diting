@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from 'react-router'
+import { NavLink, Outlet } from 'react-router'
 
 function navLinkClass({ isActive }: { isActive: boolean }): string {
     return 'nav-link' + (isActive ? ' active' : '')
