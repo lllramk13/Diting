@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js'
 import ModelLoader from '../loading/ModelLoader'
 import './WelcomeScene.css'
 
@@ -84,12 +85,16 @@ function WelcomeScene({ active }:WelcomeSceneProps) {
 
         // glb loader
         const loader = new GLTFLoader()
+        const dracoLoader = new DRACOLoader()
+
+        dracoLoader.setDecoderPath('/draco/')
+        loader.setDRACOLoader(dracoLoader)
 
         let loadedModel: THREE.Object3D | null = null
         let cancelled = false
 
         loader.load(
-            '/models/main.glb',
+            '/models/main-optimized.glb',
 
             (gltf) => {
                 if (cancelled) return
@@ -644,6 +649,7 @@ function WelcomeScene({ active }:WelcomeSceneProps) {
                 material.map?.dispose()
                 material.dispose()
             }
+            dracoLoader.dispose()
 
             glyphMaterials.clear()
             dataFlowGroup.clear()
