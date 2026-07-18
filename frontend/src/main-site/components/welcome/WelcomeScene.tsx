@@ -33,7 +33,7 @@ function WelcomeScene({ active }:WelcomeSceneProps) {
     }, [active])
 
     useEffect(() => {
-        const minimumLoaderDuration = 800
+        const minimumLoaderDuration = 1800
         const loadingStartedAt = performance.now()
 
         let hideLoaderTimer: number | undefined

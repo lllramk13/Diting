@@ -36,7 +36,7 @@
             rgba(89, 216, 255, 0.45)
         );
 
-    transition: clip-path 180ms ease-out;
+    transition: clip-path 600ms ease-out;
 }
 
 .model-loader {
