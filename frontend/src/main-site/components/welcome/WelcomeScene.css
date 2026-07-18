@@ -3,7 +3,9 @@
     isolation: isolate;
 
     width: 100%;
-    height: calc(100svh - 76px);
+    height: calc(
+        100svh - clamp(56px, 6.5vh, 76px)
+    );
     min-height: 680px;
 
     overflow: hidden;

@@ -1,7 +1,10 @@
 import * as THREE from 'three'
-import { useEffect, useRef, type CSSProperties } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import ModelLoader from '../loading/ModelLoader'
 import './WelcomeScene.css'
+
+let hasPlayedLoader = false
 
 const interactiveLetters = 'interactive'.split('')
 type LetterStyle = CSSProperties & {
@@ -9,10 +12,31 @@ type LetterStyle = CSSProperties & {
     '--leave-delay':string
 }
 
-function WelcomeScene() {
+type WelcomeSceneProps = {
+    active: boolean
+}
+
+function WelcomeScene({ active }:WelcomeSceneProps) {
+    const shouldShowLoader = !hasPlayedLoader
+    const [loadProgress, setLoadProgress] = useState(
+        shouldShowLoader ? 0 : 100,
+    )
+    const [sceneReady, setScanReady] = useState(
+        !shouldShowLoader,
+    )
     const containerRef = useRef<HTMLDivElement>(null)
+        const activeRef = useRef(active)
 
     useEffect(() => {
+        activeRef.current = active
+    }, [active])
+
+    useEffect(() => {
+        const minimumLoaderDuration = 800
+        const loadingStartedAt = performance.now()
+
+        let hideLoaderTimer: number | undefined
+
         const container = containerRef.current
         if (!container) return
         const sceneContainer = container
@@ -89,17 +113,31 @@ function WelcomeScene() {
                 })
 
                 scene.add(model)
+                 
+                if (!shouldShowLoader) return
+
+                setLoadProgress(100)
+
+                const elapsed = performance.now() - loadingStartedAt
+                const remaining = Math.max(0, minimumLoaderDuration - elapsed)
+
+                hideLoaderTimer = window.setTimeout(() => {
+                    if (!cancelled) {
+                        hasPlayedLoader = true
+                        setScanReady(true)
+                    }
+                }, remaining)
             },
 
             (event) => {
-                if (event.total > 0) {
-                    const percent = 
-                        event.loaded / event.total * 100
-                    
-                    console.log(
-                        `PROGRESS: ${percent.toFixed(1)}%`
-                    )
-                }
+                if (!event.lengthComputable || event.total <= 0) return
+
+                const percent = Math.min(
+                    100,
+                    (event.loaded / event.total) * 100,
+                )
+
+                setLoadProgress(percent)
             },
 
             (error) => {
@@ -516,6 +554,8 @@ function WelcomeScene() {
         const flowPosition = new THREE.Vector3()
 
         function animate(timestamp: number) {
+            if (!activeRef.current) return
+
             timer.update(timestamp)
 
             const elapsed = timer.getElapsed()
@@ -558,6 +598,10 @@ function WelcomeScene() {
 
         return () => {
             cancelled = true
+
+            if (hideLoaderTimer !== undefined) {
+                window.clearTimeout(hideLoaderTimer)
+}
 
             renderer.setAnimationLoop(null)
             resizeObSERVER.disconnect()
@@ -613,6 +657,11 @@ function WelcomeScene() {
 
     return (
         <section className="welcome-scene">
+            <ModelLoader
+                progress={loadProgress}
+                visible={active && shouldShowLoader && !sceneReady}
+            />
+            
             <div
                 ref={containerRef}
                 className="welcome-scene-canvas"

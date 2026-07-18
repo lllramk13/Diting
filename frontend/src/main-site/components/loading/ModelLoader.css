@@ -1,0 +1,104 @@
+.model-loader-progress {
+    position: absolute;
+
+    left: 27.986%;
+    top: 70.801%;
+
+    width: 44.167%;
+    height: 1.953%;
+
+    overflow: hidden;
+}
+
+.model-loader-progress-fill {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: repeating-linear-gradient(
+        90deg,
+        #59d8ff 0 3.145%,
+        transparent 3.145% 4.088%
+    );
+
+    clip-path: inset(
+        0
+        calc(100% - var(--progress))
+        0
+        0
+    );
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            rgba(89, 216, 255, 0.45)
+        );
+
+    transition: clip-path 180ms ease-out;
+}
+
+.model-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    background: #000;
+    opacity: 1;
+    visibility: visible;
+
+    container-type: size;
+
+    transition:
+        opacity 300ms ease,
+        visibility 0s linear;
+}
+
+.model-loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 300ms ease,
+        visibility 0s linear 300ms;
+}
+
+.model-loader-artboard {
+    position: relative;
+
+    /* Preserve the SVG's 1440 × 1024 aspect ratio */
+    width: min(
+        100cqw,
+        calc(100cqh * 1.40625),
+        1440px
+    );
+    aspect-ratio: 1440 / 1024;
+}
+
+.model-loader-image {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.model-loader-percent {
+    position: absolute;
+    left: 50%;
+    top: 74.5%;
+
+    transform: translateX(-50%);
+
+    color: #a8f2ff;
+    font-family: monospace;
+    font-size: clamp(12px, 1.2vw, 18px);
+    letter-spacing: 0.12em;
+}

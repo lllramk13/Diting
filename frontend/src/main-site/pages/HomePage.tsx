@@ -1,9 +1,13 @@
 import WelcomeScene from "../components/welcome/WelcomeScene"
 
-function HomePage() {
+type HomePageProps = {
+    active: boolean
+}
+
+function HomePage({ active }: HomePageProps) {
     return (
         <div className="home-page">
-            <WelcomeScene />
+            <WelcomeScene active={active} />
         </div>
     )
 }

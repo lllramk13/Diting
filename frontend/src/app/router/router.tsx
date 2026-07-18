@@ -5,33 +5,35 @@ import NotFoundPage from '../../shared/pages/NotFoundPage'
 import RelayLayout from '../layouts/RelayLayout'
 import AuthLayout from '../layouts/AuthLayout'
 import MainSiteLayout from '../layouts/MainSiteLayout'
-import HomePage from '../../main-site/pages/HomePage'
+import RootLayout from '../layouts/RootLayout'
 
 export const router = createBrowserRouter([
     {
-        Component:MainSiteLayout,
+        Component: RootLayout,
         children: [
-            { path: '/', Component: HomePage },
-            // TODO add all need component and path
+            {
+                Component: MainSiteLayout,
+                children: [
+                    { path: '/', Component: null },
+                ],
+            },
+            {
+                path: '/relay',
+                Component: RelayLayout,
+                children: [
+                    { index: true, Component: RelayHomePage },
+                ],
+            },
+            {
+                Component: AuthLayout,
+                children: [
+                    { path: '/auth/login', Component: LoginPage },
+                ],
+            },
+            {
+                path: '*',
+                Component: NotFoundPage,
+            },
         ],
     },
-    {
-        path:'/relay',
-        Component:RelayLayout,
-        children: [
-            { index: true, Component: RelayHomePage },
-            // TODO add all need component and path
-        ],
-    },
-    {
-        Component:AuthLayout,
-        children: [
-            { path:'/auth/login', Component: LoginPage },
-            // TODO add all need component and path
-        ],
-    },
-    {
-        path:'*',
-        Component: NotFoundPage
-    }
 ])
