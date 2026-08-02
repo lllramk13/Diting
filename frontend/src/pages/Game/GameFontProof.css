@@ -257,6 +257,8 @@
 }
 .fp-cell {
   position: relative;
+  min-width: 0;
+  overflow: hidden;
   padding: 0;
   border: none;
   background: #000;

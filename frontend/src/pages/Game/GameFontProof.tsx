@@ -45,6 +45,9 @@ type FontCharUpsertRow = {
 }
 
 const GRID_ROWS = 16
+const GRID_COLS = 16
+const GRID_GLYPH_SIZE = 32
+const FOCUS_GLYPH_SIZE = GRID_GLYPH_SIZE * 6
 const SUPABASE_PAGE_SIZE = 1000
 const UPSERT_BATCH_SIZE = 500
 
@@ -360,6 +363,9 @@ export default function GameFontProof() {
   const cols = imgSize ? Math.floor(imgSize.w / tileW) : manifest?.cols ?? 16
   const rows = imgSize ? Math.floor(imgSize.h / tileH) : 0
   const total = cols * rows
+  const gridCols = Math.min(cols, GRID_COLS)
+  const gridGlyphScale = Math.min(1, GRID_GLYPH_SIZE / tileW, GRID_GLYPH_SIZE / tileH)
+  const focusGlyphScale = Math.min(6, FOCUS_GLYPH_SIZE / tileW, FOCUS_GLYPH_SIZE / tileH)
 
   // keep draft in sync with current cell AND loaded server entries
   useEffect(() => {
@@ -439,10 +445,10 @@ export default function GameFontProof() {
 
       const clamped = Math.max(0, Math.min(total - 1, idx))
       setCurrent(clamped)
-      setPage(Math.floor(clamped / Math.max(1, cols * GRID_ROWS)))
+      setPage(Math.floor(clamped / Math.max(1, gridCols * GRID_ROWS)))
       setSaveStatus('idle')
     },
-    [total, cols],
+    [total, gridCols],
   )
 
   const commitAndNext = useCallback(async () => {
@@ -579,7 +585,7 @@ export default function GameFontProof() {
   }
 
   // grid pagination
-  const perPage = cols * GRID_ROWS
+  const perPage = gridCols * GRID_ROWS
   const pageCount = total > 0 ? Math.ceil(total / perPage) : 0
   const pageStart = page * perPage
   const pageEnd = Math.min(total, pageStart + perPage)
@@ -735,7 +741,7 @@ export default function GameFontProof() {
           {view === 'focus' && (
             <div className="fp-focus">
               <div className="fp-glyph-box">
-                <div className="fp-glyph" style={glyphVars(current, 6)} />
+                <div className="fp-glyph" style={glyphVars(current, focusGlyphScale)} />
 
                 {entries[current] !== undefined && (
                   <div className={`fp-recog${entries[current] === '' ? ' is-blank' : ''}`}>
@@ -826,7 +832,7 @@ export default function GameFontProof() {
                 <Btn onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}>→</Btn>
               </div>
 
-              <div className="fp-grid" style={{ '--fp-cols': cols } as CSSProperties}>
+              <div className="fp-grid" style={{ '--fp-cols': gridCols } as CSSProperties}>
                 {Array.from({ length: pageEnd - pageStart }, (_, k) => {
                   const idx = pageStart + k
                   const val = entries[idx]
@@ -841,7 +847,7 @@ export default function GameFontProof() {
                       }}
                       title={`#${idx}`}
                     >
-                      <div className="fp-glyph" style={glyphVars(idx, 1)} />
+                      <div className="fp-glyph" style={glyphVars(idx, gridGlyphScale)} />
 
                       {val !== undefined && (
                         <span className={`fp-badge${val === '' ? ' is-blank' : ''}`}>
