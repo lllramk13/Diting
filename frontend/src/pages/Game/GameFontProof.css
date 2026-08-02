@@ -40,6 +40,33 @@
   font-size: 13px;
 }
 
+.fp-font-picker {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--fp-muted);
+  font-family: var(--fp-mono);
+  font-size: 13px;
+}
+.fp-select {
+  min-width: 180px;
+  padding: 7px 34px 7px 10px;
+  border: 1px solid var(--fp-border);
+  border-radius: 6px;
+  background: var(--fp-panel-strong);
+  color: var(--fp-text);
+  font: inherit;
+  cursor: pointer;
+}
+.fp-select:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+.fp-font-id {
+  color: var(--fp-faint);
+}
+
 .fp-error {
   color: var(--fp-warn);
   font-family: var(--fp-mono);

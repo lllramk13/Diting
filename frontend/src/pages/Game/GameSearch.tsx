@@ -120,10 +120,7 @@ function GameSearch() {
   useEffect(() => {
     const currentGame = getGameBySlug(gameSlug ?? '')
 
-    if (!currentGame) {
-      setLoading(false)
-      return
-    }
+    if (!currentGame) return
 
     async function fetchJson(url: string): Promise<unknown | null> {
       const res = await fetch(url)
@@ -145,18 +142,21 @@ function GameSearch() {
       const parts = Array.isArray(manifest)
         ? (manifest as string[])
         : ['merged_jp_zh.json']
+      let sourceAvailable = Array.isArray(manifest)
 
       const all: SearchRow[] = []
       for (const part of parts) {
         const data = await fetchJson(`${activeGame.dataPath}/${part}`)
         if (Array.isArray(data)) {
+          sourceAvailable = true
           all.push(...(data as SearchRow[]))
         } else if (data && Array.isArray((data as { entries?: unknown }).entries)) {
+          sourceAvailable = true
           all.push(...((data as { entries: SearchRow[] }).entries))
         }
       }
 
-      if (all.length === 0) {
+      if (all.length === 0 && !sourceAvailable) {
         alert(`读取搜索数据失败：${activeGame.dataPath}/merged_jp_zh.json`)
       }
 

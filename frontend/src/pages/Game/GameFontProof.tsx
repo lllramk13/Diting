@@ -9,11 +9,21 @@ import GamePageShell from './GamePageShell'
 import './GameFontProof.css'
 
 type Manifest = {
-  image: string
+  image?: string
   tileW: number
   tileH: number
   cols?: number
   chars?: string[]
+}
+
+type FontDefinition = {
+  id: string
+  label: string
+  manifest: string
+}
+
+type FontCatalog = {
+  fonts: FontDefinition[]
 }
 
 type Entries = Record<number, string>
@@ -27,6 +37,7 @@ type FontCharRow = {
 
 type FontCharUpsertRow = {
   game_slug: string
+  font_id: string
   idx: number
   ch: string
   updated_by: string | null
@@ -37,7 +48,39 @@ const GRID_ROWS = 16
 const SUPABASE_PAGE_SIZE = 1000
 const UPSERT_BATCH_SIZE = 500
 
-async function loadAllFontChars(slug: string): Promise<FontCharRow[]> {
+const DEFAULT_FONT: FontDefinition = {
+  id: 'default',
+  label: '默认字库',
+  manifest: 'font.json',
+}
+
+function isFontCatalog(value: unknown): value is FontCatalog {
+  if (!value || typeof value !== 'object' || !('fonts' in value)) return false
+
+  const fonts = (value as { fonts?: unknown }).fonts
+
+  return (
+    Array.isArray(fonts) &&
+    fonts.length > 0 &&
+    fonts.every(
+      (font) =>
+        font !== null &&
+        typeof font === 'object' &&
+        typeof (font as FontDefinition).id === 'string' &&
+        (font as FontDefinition).id.length > 0 &&
+        typeof (font as FontDefinition).label === 'string' &&
+        (font as FontDefinition).label.length > 0 &&
+        typeof (font as FontDefinition).manifest === 'string' &&
+        (font as FontDefinition).manifest.length > 0,
+    )
+  )
+}
+
+function resolveAssetUrl(manifestUrl: string, assetPath: string) {
+  return new URL(assetPath, new URL(manifestUrl, window.location.origin)).toString()
+}
+
+async function loadAllFontChars(slug: string, fontId: string): Promise<FontCharRow[]> {
   let from = 0
   const all: FontCharRow[] = []
 
@@ -46,6 +89,7 @@ async function loadAllFontChars(slug: string): Promise<FontCharRow[]> {
       .from('font_char')
       .select('idx, ch')
       .eq('game_slug', slug)
+      .eq('font_id', fontId)
       .order('idx', { ascending: true })
       .range(from, from + SUPABASE_PAGE_SIZE - 1)
 
@@ -75,7 +119,7 @@ async function upsertFontCharRows(rows: FontCharUpsertRow[]) {
 
     const { error } = await supabase
       .from('font_char')
-      .upsert(batch, { onConflict: 'game_slug,idx' })
+      .upsert(batch, { onConflict: 'game_slug,font_id,idx' })
 
     if (error) {
       throw error
@@ -93,6 +137,9 @@ export default function GameFontProof() {
   const [uid, setUid] = useState<string | null>(null)
 
   const [manifest, setManifest] = useState<Manifest | null>(null)
+  const [fonts, setFonts] = useState<FontDefinition[]>([])
+  const [fontId, setFontId] = useState('')
+  const [catalogBase, setCatalogBase] = useState('')
   const [imgUrl, setImgUrl] = useState('')
   const [imgSize, setImgSize] = useState<{ w: number; h: number } | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
@@ -111,6 +158,19 @@ export default function GameFontProof() {
 
   const composingRef = useRef(false)
   const inputRef = useRef<HTMLInputElement | null>(null)
+
+  const resetProof = useCallback(() => {
+    setManifest(null)
+    setImgUrl('')
+    setImgSize(null)
+    setLoadError(null)
+    setMissing(false)
+    setEntries({})
+    setCurrent(0)
+    setDraft('')
+    setPage(0)
+    setSaveStatus('idle')
+  }, [])
 
   // ---- admin check (does not block viewing) ----
   useEffect(() => {
@@ -132,30 +192,85 @@ export default function GameFontProof() {
     }
   }, [])
 
-  // ---- load manifest + image ----
+  // ---- discover available fonts (legacy games fall back to font.json) ----
   useEffect(() => {
     let alive = true
 
-    setManifest(null)
-    setImgSize(null)
-    setLoadError(null)
-    setMissing(false)
-    setEntries({})
-    setCurrent(0)
-    setDraft('')
-    setPage(0)
-    setSaveStatus('idle')
+    ;(async () => {
+      try {
+        const res = await fetch(`${base}/fonts.json`)
+        let nextFonts = [DEFAULT_FONT]
+
+        if (!res.ok && res.status !== 404) {
+          throw new Error(`fonts.json ${res.status}`)
+        }
+
+        if (res.ok) {
+          try {
+            const catalog = (await res.json()) as unknown
+
+            if (!isFontCatalog(catalog)) {
+              throw new Error('fonts.json 格式无效或未配置任何字库')
+            }
+
+            const ids = catalog.fonts.map((font) => font.id)
+
+            if (new Set(ids).size !== ids.length) {
+              throw new Error('fonts.json 中的字库 id 不能重复')
+            }
+
+            nextFonts = catalog.fonts
+          } catch (e) {
+            // Vite dev server may return index.html for a missing static asset.
+            if (res.headers.get('content-type')?.includes('application/json')) {
+              throw e
+            }
+          }
+        }
+
+        if (!alive) return
+
+        resetProof()
+        setCatalogBase(base)
+        setFonts(nextFonts)
+        setFontId(nextFonts[0].id)
+      } catch (e) {
+        if (alive) {
+          resetProof()
+          setCatalogBase(base)
+          setFonts([])
+          setFontId('')
+          setLoadError(String(e instanceof Error ? e.message : e))
+        }
+      }
+    })()
+
+    return () => {
+      alive = false
+    }
+  }, [base, resetProof])
+
+  // ---- load the selected font manifest + image ----
+  useEffect(() => {
+    if (!fontId || catalogBase !== base) return
+
+    const selectedFont = fonts.find((font) => font.id === fontId)
+
+    if (!selectedFont) return
+
+    let alive = true
 
     ;(async () => {
       try {
-        const res = await fetch(`${base}/font.json`)
+        const manifestUrl = resolveAssetUrl(`${base}/`, selectedFont.manifest)
+        const res = await fetch(manifestUrl)
 
         if (res.status === 404) {
           if (alive) setMissing(true)
           return
         }
 
-        if (!res.ok) throw new Error(`font.json ${res.status}`)
+        if (!res.ok) throw new Error(`${selectedFont.manifest} ${res.status}`)
 
         let m: Manifest
 
@@ -171,7 +286,7 @@ export default function GameFontProof() {
 
         setManifest(m)
 
-        const url = `${base}/${m.image || 'font_grid.png'}`
+        const url = resolveAssetUrl(manifestUrl, m.image || 'font_grid.png')
         setImgUrl(url)
 
         const img = new Image()
@@ -193,7 +308,7 @@ export default function GameFontProof() {
     return () => {
       alive = false
     }
-  }, [base])
+  }, [base, catalogBase, fontId, fonts])
 
   // ---- load: published baseline (manifest.chars) overlaid with live edits (font_char) ----
   useEffect(() => {
@@ -213,7 +328,7 @@ export default function GameFontProof() {
       }
 
       try {
-        const rows = await loadAllFontChars(slug)
+        const rows = await loadAllFontChars(slug, fontId)
 
         if (!alive) return
 
@@ -238,7 +353,7 @@ export default function GameFontProof() {
     return () => {
       alive = false
     }
-  }, [manifest, slug])
+  }, [fontId, manifest, slug])
 
   const tileW = manifest?.tileW ?? 16
   const tileH = manifest?.tileH ?? 16
@@ -280,12 +395,13 @@ export default function GameFontProof() {
         .upsert(
           {
             game_slug: slug,
+            font_id: fontId,
             idx: current,
             ch: value,
             updated_by: uid,
             updated_at: new Date().toISOString(),
           },
-          { onConflict: 'game_slug,idx' },
+          { onConflict: 'game_slug,font_id,idx' },
         )
 
       setSaving(false)
@@ -314,7 +430,7 @@ export default function GameFontProof() {
       setSaveStatus('saved')
       return true
     },
-    [current, entries, isAdmin, saving, slug, uid],
+    [current, entries, fontId, isAdmin, saving, slug, uid],
   )
 
   const goto = useCallback(
@@ -385,7 +501,7 @@ export default function GameFontProof() {
     const a = document.createElement('a')
 
     a.href = URL.createObjectURL(blob)
-    a.download = `font.${slug}.json`
+    a.download = `font.${slug}.${fontId}.json`
     a.click()
 
     URL.revokeObjectURL(a.href)
@@ -414,6 +530,7 @@ export default function GameFontProof() {
           next[i] = ch
           rowsToUpsert.push({
             game_slug: slug,
+            font_id: fontId,
             idx: i,
             ch,
             updated_by: uid,
@@ -476,6 +593,8 @@ export default function GameFontProof() {
           ? '保存失败'
           : ''
 
+  const selectedFont = fonts.find((font) => font.id === fontId)
+
   const body = (
     <div className="fp-body">
       <div className="fp-head">
@@ -485,13 +604,36 @@ export default function GameFontProof() {
         </span>
       </div>
 
+      {fonts.length > 0 && (
+        <div className="fp-font-picker">
+          <label htmlFor="fp-font-select">字库</label>
+          <select
+            id="fp-font-select"
+            className="fp-select"
+            value={fontId}
+            disabled={saving || fonts.length === 1}
+            onChange={(e) => {
+              resetProof()
+              setFontId(e.target.value)
+            }}
+          >
+            {fonts.map((font) => (
+              <option key={font.id} value={font.id}>
+                {font.label}
+              </option>
+            ))}
+          </select>
+          {selectedFont && <span className="fp-font-id">ID: {selectedFont.id}</span>}
+        </div>
+      )}
+
       {loadError && <div className="fp-error">⚠ {loadError}</div>}
 
       {missing && (
         <div className="fp-missing">
           该游戏暂未提供字库
           <div className="fp-missing-sub">
-            放入 <code>{base}/font.json</code> 与字模图后，此页会自动显示。
+            请检查字库清单 <code>{selectedFont?.manifest ?? `${base}/font.json`}</code> 与字模图。
           </div>
         </div>
       )}

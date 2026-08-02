@@ -44,7 +44,7 @@
 
 .hs-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -70,6 +70,14 @@
   --hs-tag-fg: #ff8a98;
   background: linear-gradient(135deg, rgba(232, 69, 90, 0.14), rgba(232, 69, 90, 0.03));
   border: 1px solid rgba(232, 69, 90, 0.28);
+}
+.hs-card.is-dds1 {
+  --hs-accent: #e06b3c;
+  --hs-ghost: rgba(224, 107, 60, 0.1);
+  --hs-tag-bg: rgba(224, 107, 60, 0.15);
+  --hs-tag-fg: #f3a077;
+  background: linear-gradient(135deg, rgba(224, 107, 60, 0.14), rgba(224, 107, 60, 0.03));
+  border: 1px solid rgba(224, 107, 60, 0.28);
 }
 
 .hs-ghost {

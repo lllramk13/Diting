@@ -16,6 +16,7 @@ const statusLabels: Record<string, string> = {
 
 const platformNames: Record<string, string> = {
   psx: 'PlayStation',
+  ps2: 'PlayStation 2',
   psp: 'PlayStation Portable',
   switch: 'Nintendo Switch',
   gba: 'Game Boy Advance',
@@ -26,12 +27,16 @@ type Filter = { label: string; test: (g: GameConfig) => boolean }
 const FILTERS: Filter[] = [
   { label: '全部', test: () => true },
   { label: 'PSX', test: g => g.platform === 'psx' },
+  { label: 'PS2', test: g => g.platform === 'ps2' },
   { label: '进行中', test: g => g.status === 'in_progress' || g.status === 'planning' },
   { label: '已完成', test: g => g.status === 'translated' || g.status === 'released' },
 ]
 
 function enShort(g: GameConfig) {
-  return g.title.replace(/^Persona\s*2:\s*/i, '').toUpperCase()
+  return g.title
+    .replace(/^Persona\s*2:\s*/i, '')
+    .replace(/^Shin Megami Tensei:\s*/i, '')
+    .toUpperCase()
 }
 
 function hexToRgb(hex: string): string {

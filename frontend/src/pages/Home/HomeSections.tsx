@@ -54,6 +54,25 @@ export default function HomeSections() {
               </div>
             </div>
           </div>
+          {/* 数码恶魔 SAGA 1 */}
+          <div className="hs-card is-dds1" onClick={() => navigate('/game/ps2/dds1/announce')}>
+            <div className="hs-ghost">喰</div>
+            <div className="hs-card-body">
+              <div className="hs-platform">PS2 · DIGITAL DEVIL SAGA</div>
+              <div className="hs-title">数码恶魔 SAGA 1</div>
+              <div className="hs-subtitle">Shin Megami Tensei: Digital Devil Saga</div>
+              <div className="hs-progress-row">
+                <div className="hs-progress">
+                  <div className="hs-progress-bar" style={{ '--hs-pct': '0%' } as CSSProperties} />
+                </div>
+                <span className="hs-percent">0%</span>
+              </div>
+              <div className="hs-tags">
+                <span className="hs-tag hs-tag--status">计划中</span>
+                <span className="hs-tag hs-tag--ver">筹备中</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
