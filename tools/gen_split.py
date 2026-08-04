@@ -21,7 +21,17 @@ GAMES = {
     'p1': ['talk', 'efile', 'dfile', 'slps'],
     'p2is': ['script','field','strtbl','config','contactui','mainmenu','map_names','names','nametable'],
     'p2ep': ['script','field','strtbl','SLUS','free'],
+    # dds1 categories are content domains, not extraction formats: battle holds both
+    # bf and bmd negotiation scripts, and a translator picks work by scene, not by format.
+    'dds1': ['field','event','battle','facility','exe','msgtbl','fldall','slpm_raw'],
 }
+
+SOURCE_NAME = {'p1': 'all_text.json', 'dds1': 'translation.json'}
+
+# dds1 flat address tables have no file boundary, so groups are address pages: the group
+# is the address shifted right by these bits. Page-based (not fixed-size chunks) so that
+# re-extracting with extra lines does not shift every later group's name.
+DDS1_PAGE_BITS = {'msgtbl': 12, 'fldall': 12, 'slpm_raw': 16}
 
 def cat_of(s, cats):
     for c in cats:
@@ -49,8 +59,26 @@ def write_merged(out_dir, flat, max_bytes=20_000_000):
     json.dump(parts, open(f'{out_dir}/merged_index.json', 'w'), ensure_ascii=False)
     return parts
 
+def dds1_group(cat, locator):
+    """Group key for one dds1 id. Two rules:
+    - the prefix before ':' must be the category, because the main-sets page classifies a
+      group by source_file.startsWith(category);
+    - only ':' may survive as a separator, because the editor maps a group name to its file
+      with replaceAll(':', '_') and nothing else — '/', '.' and '@' must be flattened here
+      or it requests a filename that does not exist.
+    The format (bf/bmd/pm1/...) stays readable in the flattened locator's extension."""
+    return f'{cat}:' + locator.replace('/', '_').replace('.', '_').replace('@', '_')
+
+def dds1_category(fmt, locator, cats):
+    # lmap is the 3-line world-map prompt set; folded into field rather than left as 其他
+    for prefix, cat in (('fld/', 'field'), ('lmap/', 'field'), ('event/', 'event'),
+                        ('battle/', 'battle'), ('facility/', 'facility'), ('SLPM', 'exe')):
+        if locator.startswith(prefix):
+            return cat
+    return fmt if fmt in cats else '其他'
+
 def build_positions(game, cats):
-    source_name = 'all_text.json' if game == 'p1' else 'merged_jp_zh.json'
+    source_name = SOURCE_NAME.get(game, 'merged_jp_zh.json')
     source_data = json.load(open(f'{ROOT}/{game}/{source_name}'))
     items = source_data.get('entries', []) if game == 'p1' else source_data
     # p2ep source must be the ORIGINAL deduped merged (with srcs); if the live file has already
@@ -74,6 +102,31 @@ def build_positions(game, cats):
                 'jp': it.get('jp', ''), 'zh': it.get('zh', ''),
                 'speaker_jp': it.get('speaker_jp', '') or '',
                 'speaker_zh': it.get('speaker_zh', '') or '',
+            })
+    elif game == 'dds1':
+        # ids come in two shapes:
+        #   <fmt>:<source file or table>#<label>  -> group = the source file (a scene, a table)
+        #   <fmt>:<hex address>                   -> flat table, group = address page
+        flattened = {}
+        for it in items:
+            fmt, rest = it['id'].split(':', 1)
+            locator = rest.split('#', 1)[0]
+            category = dds1_category(fmt, locator, cats)
+            if '#' in rest:
+                group = dds1_group(category, locator)
+                # flattening '/' and '.' could in principle collide two distinct source files
+                if flattened.setdefault(group, f'{fmt}:{locator}') != f'{fmt}:{locator}':
+                    raise ValueError(f'dds1: group {group} claimed by both '
+                                     f'{flattened[group]} and {fmt}:{locator}')
+            else:
+                bits = DDS1_PAGE_BITS.get(fmt, 12)
+                page = (int(rest, 16) >> bits) << bits
+                group = f'{category}:0x{page:05x}'   # category == fmt for the flat tables
+            positions.append({
+                'pos_id': it['id'], 'group': group,
+                'category': category,
+                'jp': it.get('jp',''), 'zh': it.get('zh',''),
+                'speaker_jp': it.get('speaker','') or '', 'speaker_zh': it.get('speaker_zh','') or '',
             })
     elif game == 'p2ep':
         def grp(s): return ':'.join(s.split(':')[:2])

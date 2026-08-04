@@ -33,7 +33,7 @@ export const dds1: GameConfig = {
     font: '/game/ps2/dds1/font',
   },
 
-  categories: [],
+  categories: ['field', 'event', 'battle', 'facility', 'exe', 'msgtbl', 'fldall', 'slpm_raw'],
 
   announcement: {
     version: '筹备中',
