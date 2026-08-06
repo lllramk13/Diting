@@ -342,7 +342,7 @@ function EntryRow({
           </div>
 
           <div>
-            <div className="ed-field-label">AI 初稿 · 仅供参考</div>
+            <div className="ed-field-label">AI / 人工 初稿</div>
             <div className="ed-ref-text">
               {row.zh?.trim() ? renderTextWithCodePills(row.zh) : '（暂无）'}
             </div>
