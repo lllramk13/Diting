@@ -1,1 +1,1 @@
-[{"id": "slpm_msg:SLPM_655.97@0x27d920#cmp_cmd_skill_01", "jp": "覚えたスキルをセットし\n戦闘中やフィールドで\n使用可能にします。", "zh": "", "dup": null}, {"id": "slpm_msg:SLPM_655.97@0x27d920#cmp_cmd_skill_02", "jp": "発現したことがある\nリンケージスキルの\n一覧です。", "zh": "", "dup": null}]
+[{"id": "slpm_msg:SLPM_655.97@0x27d920#cmp_cmd_skill_01", "jp": "覚えたスキルをセットし\n戦闘中やフィールドで\n使用可能にします。", "zh": "设置已学会的技能，使其在战斗中或地图上可使用。", "dup": null}, {"id": "slpm_msg:SLPM_655.97@0x27d920#cmp_cmd_skill_02", "jp": "発現したことがある\nリンケージスキルの\n一覧です。", "zh": "已显现的连锁技能列表。", "dup": null}]

@@ -2,7 +2,7 @@
 {
 "category": "battle",
 "set_key": "dup:battle",
-"count": 294
+"count": 295
 },
 {
 "category": "event",
@@ -32,7 +32,7 @@
 {
 "category": "msgtbl",
 "set_key": "dup:msgtbl",
-"count": 349
+"count": 350
 },
 {
 "category": "slpm_raw",
