@@ -1,42 +1,42 @@
 import type { GameConfig } from './types'
 
-export const smtif: GameConfig = {
-  slug: 'smtif',
-  title: 'Shin Megami Tensei: If...',
-  shortTitle: 'SMTIF',
-  platform: 'ps1',
-  series: 'Shin Megami Tensei',
+export const dds2: GameConfig = {
+  slug: 'dds2',
+  title: 'Shin Megami Tensei: Digital Devil Saga 2',
+  shortTitle: 'DDS2',
+  platform: 'ps2',
+  series: 'Digital Devil Saga',
 
-  titleZh: '真・女神转生 If...',
-  accent: '#1a2188',
-  accentSoft: '#a8a3c9',
-  ghostChar: 'IF',
+  titleZh: '数码恶魔传说 天魔变 2',
+  accent: '#cfc6c7',
+  accentSoft: '#b43688',
+  ghostChar: '魔',
 
-  status: 'translated',
-  progress: 95,
+  status: 'planning',
+  progress: 5,
 
   coverImage: '',
 
-  basePath: '/game/ps1/smtif',
-  dataPath: '/games/smtif',
-  groupIndexPath: '/games/smtif/index.json',
+  basePath: '/game/ps2/dds2',
+  dataPath: '/games/dds2',
+  groupIndexPath: '/games/dds2/index.json',
 
-  description: '《真・女神转生 If...》PS1 汉化项目',
+  description: '《数码恶魔传说 天魔变 2》PS2 汉化项目',
 
   routes: {
-    announce: '/game/ps1/smtif/announce',
-    main: '/game/ps1/smtif/main',
-    search: '/game/ps1/smtif/search',
-    issues: '/game/ps1/smtif/issues',
-    glossary: '/game/ps1/smtif/glossary',
-    requests: '/game/ps1/smtif/requests',
-    font: '/game/ps1/smtif/font',
+    announce: '/game/ps2/dds2/announce',
+    main: '/game/ps2/dds2/main',
+    search: '/game/ps2/dds2/search',
+    issues: '/game/ps2/dds2/issues',
+    glossary: '/game/ps2/dds2/glossary',
+    requests: '/game/ps2/dds2/requests',
+    font: '/game/ps2/dds2/font',
   },
 
-  categories: [],
+  categories: ['field', 'event', 'battle', 'facility', 'exe', 'msgtbl', 'fldall', 'slpm_raw'],
 
   announcement: {
-    version: '测试中',
+    version: '筹备中',
     updated: '2026-08-09',
     downloadLinks: [],
     notes: [
