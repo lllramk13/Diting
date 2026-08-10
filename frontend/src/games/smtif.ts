@@ -4,7 +4,7 @@ export const smtif: GameConfig = {
   slug: 'smtif',
   title: 'Shin Megami Tensei: If...',
   shortTitle: 'SMTIF',
-  platform: 'ps1',
+  platform: 'psx',
   series: 'Shin Megami Tensei',
 
   titleZh: '真・女神转生 If...',
