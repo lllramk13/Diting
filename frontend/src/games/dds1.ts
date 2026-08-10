@@ -8,7 +8,7 @@ export const dds1: GameConfig = {
   series: 'Digital Devil Saga',
 
   titleZh: '数码恶魔传说 天魔变',
-  accent: '#E06B3C',
+  accent: '#cfc6c7',
   accentSoft: '#F3A077',
   ghostChar: '魔',
 
