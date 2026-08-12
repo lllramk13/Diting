@@ -13,7 +13,7 @@ export const dds1: GameConfig = {
   ghostChar: '魔',
 
   status: 'in_progress',
-  progress: 37.5,
+  progress: 60.5,
 
   coverImage: '',
 
