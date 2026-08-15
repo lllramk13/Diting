@@ -20,7 +20,8 @@ export type GameChangelogEntry = {
 
 export type GameAnnouncement = {
   version: string
-  size?: string          // 补丁包大小，如「48.6 MB」
+  releaseKind?: 'patch' | 'full_game'
+  size?: string          // 发布包大小，如「48.6 MB」
   updated?: string       // 更新日期，如「2026-05-30」
   videoUrl?: string
   downloadLinks: GameDownloadLink[]

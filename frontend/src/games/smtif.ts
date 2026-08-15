@@ -51,6 +51,7 @@ export const smtif: GameConfig = {
 
   announcement: {
     version: '完成',
+    releaseKind: 'full_game',
     updated: '2026-08-15',
     downloadLinks: [
       {
@@ -66,7 +67,7 @@ export const smtif: GameConfig = {
     ],
     notes: [
       '这是民间汉化项目，与 ATLUS 官方无关。',
-      '项目目前处于筹备阶段，暂未提供可下载的汉化补丁。',
+      '本次发布为已整合汉化内容的完整版，无需另行安装补丁。',
       '请使用合法来源的游戏镜像。',
     ],
     installGuide: [

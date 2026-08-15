@@ -126,6 +126,7 @@ export default function GameAnnounce() {
   }
 
   const a = game.announcement
+  const isFullGameRelease = a.releaseKind === 'full_game'
 
   const secret = secretConfigs[game.slug] ?? defaultSecretConfig
   const secretCodeLabel = secret.code
@@ -166,6 +167,8 @@ export default function GameAnnounce() {
 
                 <span className="an-tag-ver">当前版本 {a.version}</span>
 
+                {isFullGameRelease && <span className="an-tag-ver">发布类型 完整版</span>}
+
                 {a.updated && <span className="an-tag-ver">更新 {a.updated}</span>}
               </div>
             </div>
@@ -195,7 +198,7 @@ export default function GameAnnounce() {
 
               {/* tutorial */}
               <div className="an-card">
-                <div className="an-card-title">补丁使用教程</div>
+                <div className="an-card-title">{isFullGameRelease ? '游玩说明' : '补丁使用教程'}</div>
 
                 <ol className="an-steps">
                   {a.installGuide.map((s, i) => (
@@ -288,7 +291,9 @@ export default function GameAnnounce() {
             {/* right sticky */}
             <div className="an-col-side">
               <div className="an-download">
-                <div className="an-download-title">下载补丁</div>
+                <div className="an-download-title">
+                  {isFullGameRelease ? '下载完整版' : '下载补丁'}
+                </div>
 
                 <div className="an-download-meta">
                   {a.version}
@@ -303,7 +308,7 @@ export default function GameAnnounce() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    ⬇ 下载主补丁包
+                    {isFullGameRelease ? '⬇ 下载完整游戏' : '⬇ 下载主补丁包'}
                   </a>
                 )}
 
