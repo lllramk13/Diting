@@ -53,6 +53,12 @@ export type GameStatsContributionAdjustment = {
   note?: string
 }
 
+export type GameCredit = {
+  role: string
+  members: string[]
+  note?: string
+}
+
 export type GameConfig = {
     slug: string
     title: string
@@ -77,6 +83,7 @@ export type GameConfig = {
     groupIndexPath: string
 
     description: string
+    credits?: GameCredit[]
 
     routes: {
         announce: string

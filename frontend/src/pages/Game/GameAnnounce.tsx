@@ -238,6 +238,43 @@ export default function GameAnnounce() {
                 </div>
               )}
 
+              {/* credits */}
+              {game.credits && game.credits.length > 0 && (
+                <div className="an-card an-credits">
+                  <div className="an-credits-head">
+                    <div>
+                      <div className="an-card-title an-card-title--tight">制作名单</div>
+                      <p className="an-credits-intro">感谢每一位参与项目制作与文本整理的贡献者。</p>
+                    </div>
+
+                    <Link className="an-credits-link" to={`${game.basePath}/stats`}>
+                      完整贡献数据 →
+                    </Link>
+                  </div>
+
+                  <div className="an-credits-table-wrap">
+                    <table className="an-credits-table">
+                      <thead>
+                        <tr>
+                          <th scope="col">贡献内容</th>
+                          <th scope="col">贡献者</th>
+                          <th scope="col">范围</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {game.credits.map((credit, index) => (
+                          <tr key={`${credit.role}-${index}`}>
+                            <td>{credit.role}</td>
+                            <td className="an-credits-members">{credit.members.join(' · ')}</td>
+                            <td className="an-credits-note">{credit.note ?? '—'}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
               {/* copyright */}
               <div className="an-copyright">
                 <div className="an-copyright-title">版权声明 · 禁止倒卖</div>
