@@ -26,12 +26,12 @@ export const dds1: GameConfig = {
     { role: '程序', members: ['Mark'] },
     {
       role: '翻译',
-      members: ['匿名1', '雷吼君','HeiseiFish8','ycx','茶','福建千里香混沌王','美工椒','Forget','JerryHOEI','Mark'],
+      members: ['匿名1', '雷吼君','HeiseiFish8','汣酌','茶','福建千里香混沌王','美工椒','Forget','JerryHOEI','Mark', '米跳拉斯'],
     },
-    { role: '修图', members: ['Forget', '渲酱'] },
+    { role: '修图', members: ['Forget', '渲酱', 'Mark'] },
     {
       role: '测试',
-      members: ['Mark', 'Forget', 'Smirk', '雷吼君', '一个星期', '哆啦海皇·A梦', '渲酱', '匿名1', 'T.K.', '杭城', '4mL Na', 'pootis penser here', 'Chelly大人的五音', 'Firomia Alencon', 'Gaia Rage', 'JH', 'Mo_xiaoying', '饼干', '飞翔的企鹅', '汣酌', '牵', '塞特', '私の物語', '星迷'],
+      members: ['Mark', 'Forget', 'Smirk', '雷吼君', '一个星期', '哆啦海皇·A梦', '渲酱', '匿名1', 'T.K.', '杭城', '4mL Na', '伊恩', 'pootis penser here', 'Chelly大人的五音', 'Firomia Alencon', 'Gaia Rage', 'JH', 'Mo_xiaoying', '饼干', '飞翔的企鹅', '汣酌', '牵', '塞特', '私の物語', '星迷'],
     },
   ],
 
