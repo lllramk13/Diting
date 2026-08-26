@@ -12,8 +12,8 @@ export const dds2: GameConfig = {
   accentSoft: '#b43688',
   ghostChar: '魔',
 
-  status: 'planning',
-  progress: 5,
+  status: 'in_progress',
+  progress: 57,
 
   coverImage: '',
 
