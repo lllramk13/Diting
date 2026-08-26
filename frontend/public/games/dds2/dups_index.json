@@ -1,0 +1,27 @@
+[
+{
+"category": "battle",
+"set_key": "dup:battle",
+"count": 433
+},
+{
+"category": "event",
+"set_key": "dup:event",
+"count": 116
+},
+{
+"category": "exe",
+"set_key": "dup:exe",
+"count": 57
+},
+{
+"category": "facility",
+"set_key": "dup:facility",
+"count": 62
+},
+{
+"category": "field",
+"set_key": "dup:field",
+"count": 243
+}
+]
