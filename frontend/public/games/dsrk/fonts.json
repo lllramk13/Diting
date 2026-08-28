@@ -1,0 +1,39 @@
+{
+  "fonts": [
+    {
+      "id": "font0",
+      "label": "FONT0",
+      "manifest": "fonts/font0.json"
+    },
+    {
+      "id": "font1",
+      "label": "FONT1",
+      "manifest": "fonts/font1.json"
+    },
+    {
+      "id": "font2",
+      "label": "FONT2",
+      "manifest": "fonts/font2.json"
+    },
+    {
+      "id": "font3",
+      "label": "FONT3",
+      "manifest": "fonts/font3.json"
+    },
+    {
+      "id": "name_ent",
+      "label": "NAME ENTRY",
+      "manifest": "fonts/name_ent.json"
+    },
+    {
+      "id": "staff1",
+      "label": "STAFF1",
+      "manifest": "fonts/staff1.json"
+    },
+    {
+      "id": "staff2",
+      "label": "STAFF2",
+      "manifest": "fonts/staff2.json"
+    }
+  ]
+}
