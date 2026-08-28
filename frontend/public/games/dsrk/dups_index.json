@@ -1,0 +1,42 @@
+[
+{
+"category": "battle",
+"set_key": "dup:battle",
+"count": 1482
+},
+{
+"category": "event",
+"set_key": "dup:event",
+"count": 19
+},
+{
+"category": "exe",
+"set_key": "dup:exe",
+"count": 82
+},
+{
+"category": "field",
+"set_key": "dup:field",
+"count": 4357
+},
+{
+"category": "gohmaden",
+"set_key": "dup:gohmaden",
+"count": 41
+},
+{
+"category": "jimusyo",
+"set_key": "dup:jimusyo",
+"count": 138
+},
+{
+"category": "shop",
+"set_key": "dup:shop",
+"count": 61
+},
+{
+"category": "ui",
+"set_key": "dup:ui",
+"count": 27
+}
+]

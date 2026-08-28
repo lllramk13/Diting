@@ -25,12 +25,14 @@ GAMES = {
     # bf and bmd negotiation scripts, and a translator picks work by scene, not by format.
     'dds1': ['field','event','battle','facility','exe','msgtbl','fldall','slpm_raw'],
     'dds2': ['field','event','battle','facility','exe','msgtbl','fldall','slpm_raw'],
+    'dsrk': ['field','event','battle','shop','jimusyo','gohmaden','exe','ui'],
 }
 
 SOURCE_NAME = {
     'p1': 'all_text.json',
     'dds1': 'translation.json',
     'dds2': 'all_text.json',
+    'dsrk': 'translation.json',
 }
 
 # dds1 flat address tables have no file boundary, so groups are address pages: the group
@@ -74,10 +76,26 @@ def dds1_group(cat, locator):
     The format (bf/bmd/pm1/...) stays readable in the flattened locator's extension."""
     return f'{cat}:' + locator.replace('/', '_').replace('.', '_').replace('@', '_')
 
-def dds1_category(fmt, locator, cats):
+# locator prefix -> category, per game. A category is a content domain, so the same
+# extractor format lands in different categories depending on where the file lives.
+# Changing a value here renames groups: the group name's prefix must stay equal to the
+# category, because the main-sets page classifies with source_file.startsWith(category).
+CATEGORY_PREFIXES = {
     # lmap is the 3-line world-map prompt set; folded into field rather than left as 其他
-    for prefix, cat in (('fld/', 'field'), ('lmap/', 'field'), ('event/', 'event'),
-                        ('battle/', 'battle'), ('facility/', 'facility'), ('SLPM', 'exe')):
+    'dds1': (('fld/', 'field'), ('lmap/', 'field'), ('event/', 'event'),
+             ('battle/', 'battle'), ('facility/', 'facility'), ('SLPM', 'exe')),
+    # dsrk keeps its scenes under map/ rather than fld/, and has three standalone
+    # locations (detective agency, Gouma-den, shops) large enough to be their own
+    # categories. The small menu/system sets are folded into ui.
+    'dsrk': (('map/', 'field'), ('lmap/', 'field'), ('event/', 'event'),
+             ('battle/', 'battle'), ('jimusyo/', 'jimusyo'), ('gohmaden/', 'gohmaden'),
+             ('shop/', 'shop'), ('result/', 'ui'), ('camp/', 'ui'), ('mjn/', 'ui'),
+             ('name/', 'ui'), ('font/', 'ui'), ('SLPM', 'exe')),
+}
+CATEGORY_PREFIXES['dds2'] = CATEGORY_PREFIXES['dds1']
+
+def dds1_category(game, fmt, locator, cats):
+    for prefix, cat in CATEGORY_PREFIXES[game]:
         if locator.startswith(prefix):
             return cat
     return fmt if fmt in cats else '其他'
@@ -85,7 +103,7 @@ def dds1_category(fmt, locator, cats):
 def build_positions(game, cats):
     source_name = SOURCE_NAME.get(game, 'merged_jp_zh.json')
     source_data = json.load(open(f'{ROOT}/{game}/{source_name}'))
-    items = source_data.get('entries', []) if game in ('p1', 'dds2') else source_data
+    items = source_data.get('entries', []) if game in ('p1', 'dds2', 'dsrk') else source_data
     # p2ep source must be the ORIGINAL deduped merged (with srcs); if the live file has already
     # been replaced by the per-position output, read the original from the backup instead.
     if game == 'p2ep' and not any(it.get('srcs') for it in items[:50]):
@@ -108,7 +126,7 @@ def build_positions(game, cats):
                 'speaker_jp': it.get('speaker_jp', '') or '',
                 'speaker_zh': it.get('speaker_zh', '') or '',
             })
-    elif game in ('dds1', 'dds2'):
+    elif game in ('dds1', 'dds2', 'dsrk'):
         # ids come in two shapes:
         #   <fmt>:<source file or table>#<label>  -> group = the source file (a scene, a table)
         #   <fmt>:<hex address>                   -> flat table, group = address page
@@ -117,7 +135,7 @@ def build_positions(game, cats):
             fmt, rest = it['id'].split(':', 1)
             if '#' in rest:
                 locator = rest.split('#', 1)[0]
-                category = dds1_category(fmt, locator, cats)
+                category = dds1_category(game, fmt, locator, cats)
                 group = dds1_group(category, locator)
                 # flattening '/' and '.' could in principle collide two distinct source files
                 if flattened.setdefault(group, f'{fmt}:{locator}') != f'{fmt}:{locator}':
@@ -127,8 +145,15 @@ def build_positions(game, cats):
                 locator, separator, address = rest.rpartition(':')
                 if not separator:
                     locator, address = '', rest
-                category = dds1_category(fmt, locator or rest, cats)
-                if '/' in locator:
+                category = dds1_category(game, fmt, locator or rest, cats)
+                if '/' in locator and game == 'dsrk':
+                    # dsrk's flat tables are large (SB_DATA.TBL alone is ~1950 rows), too big
+                    # for one main set, so page them like dds1's. The table name stays in the
+                    # group key or two different tables would collide on the same page number.
+                    bits = DDS1_PAGE_BITS.get(fmt, 12)
+                    page = (int(address, 16) >> bits) << bits
+                    group = dds1_group(category, locator) + f'_0x{page:05x}'
+                elif '/' in locator:
                     # DDS2 tables include the source path and row address but no label.
                     # Keep the whole table in one main set instead of making arbitrary pages.
                     group = dds1_group(category, locator)

@@ -33,7 +33,7 @@ export const dsrk: GameConfig = {
     font: '/game/ps2/dsrk/font',
   },
 
-  categories: ['field', 'event', 'battle', 'facility', 'exe', 'msgtbl', 'fldall', 'slpm_raw'],
+  categories: ['field', 'battle', 'jimusyo', 'gohmaden', 'shop', 'event', 'exe', 'ui'],
 
   announcement: {
     version: '筹备中',

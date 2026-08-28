@@ -1,0 +1,1 @@
+[{"id": "bf:shop/script/gyo_talk.bf@0xf4#GYO_ENTER", "jp": "⟦分页:FFFF⟧⟦函数:0/7 参数:4⟧何か買っていかれますか?⟦换行⟧⟦等待按键⟧⟦结束⟧", "zh": "", "speaker_jp": "行商人", "dup": null}, {"id": "bf:shop/script/gyo_talk.bf@0xf4#GYO_LEAVE", "jp": "⟦分页:FFFF⟧⟦函数:0/7 参数:4⟧ありがとうございました。⟦换行⟧またのご利用をお待ちしております。⟦换行⟧⟦等待按键⟧⟦结束⟧", "zh": "", "speaker_jp": "行商人", "dup": null}]
