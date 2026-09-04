@@ -12,8 +12,8 @@ export const dds2: GameConfig = {
   accentSoft: '#b43688',
   ghostChar: '魔',
 
-  status: 'translated',
-  progress: 90,
+  status: 'released',
+  progress: 100,
 
   coverImage: '',
 
@@ -22,6 +22,18 @@ export const dds2: GameConfig = {
   groupIndexPath: '/games/dds2/index.json',
 
   description: '《数码恶魔传说 天魔变 2》PS2 汉化项目',
+  credits: [
+    { role: '程序', members: ['Mark'] },
+    {
+      role: '翻译',
+      members: ['匿名1', '雷吼君','汣酌','福建千里香混沌王','Forget','JerryHOEI','Mark', '米跳拉斯'],
+    },
+    { role: '修图', members: ['Forget', '匿名1'] },
+    {
+      role: '测试',
+      members: ['Mark', 'Forget', 'Smirk', '雷吼君', '一个星期', '匿名1','迪元', 'JerryHOEI','伊恩'],
+    },
+  ],
 
   routes: {
     announce: '/game/ps2/dds2/announce',
@@ -36,18 +48,33 @@ export const dds2: GameConfig = {
   categories: ['field', 'event', 'battle', 'facility', 'exe', 'msgtbl', 'fldall', 'slpm_raw'],
 
   announcement: {
-    version: '筹备中',
-    updated: '2026-08-09',
-    downloadLinks: [],
+    version: '完成',
+    releaseKind: 'full_game',
+    updated: '2026-09-04',
+    downloadLinks: [
+      {
+        label: '百度网盘',
+        url: 'https://pan.baidu.com/s/14NZeF8cszpGa_l621kWHxA?pwd=ydz7',
+        note: "",
+      },
+      {
+        label: 'MEGA',
+        url: 'https://mega.nz/folder/PIAHDSiR#D4urQ5UqgUn3WCyXnlVQMQ',
+        note: '链接已更新',
+      },],
     notes: [
       '这是民间汉化项目，与 ATLUS 官方无关。',
       '项目目前处于筹备阶段，暂未提供可下载的汉化补丁。',
       '请使用合法来源的游戏镜像。',
     ],
     installGuide: [
-      '项目尚在筹备，补丁发布后将在此提供下载和使用说明。',
+      '下载即玩',
     ],
     changelog: [
+      {
+        version: '完成',
+        text: '完成',
+      },
       {
         version: '筹备中',
         text: '已创建项目页面，等待导入文本、字库与翻译数据。',
