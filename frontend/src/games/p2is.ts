@@ -13,8 +13,8 @@ export const p2is: GameConfig = {
     accentSoft: '#9FB8FF',
     ghostChar: '罪',
 
-    status: 'in_progress',
-    progress: 87.5,
+    status: 'released',
+    progress: 100,
 
     coverImage: "/games/p2is/cover.jpg",
 
@@ -23,6 +23,30 @@ export const p2is: GameConfig = {
     groupIndexPath: '/games/p2is/index.json',
 
     description: 'Persona 2: Innocent Sin PSX 汉化项目。',
+    credits: [
+    { role: '程序', members: ['Mark'] },
+    {
+      role: '校对&初翻',
+      members: [
+        '匿名1', 'kkksr', '雷吼君', 'Cattus.', 'lm11123lm', '平成鱼', 'yaetori', '匿名2',
+        'Phrygian', 'AAA国家电网哈萨维', '福建千里香混沌王', 'yang5000', 'silverman',
+        'lanberser', 'ycx', '迪元drivet', '夜里明光', 'zjh20061007', 'ylylk', 'spma',
+        'mark', 'Tharg', 'faraway', 'Hao66787012',
+      ],
+    },
+    {
+      role: '修图',
+      members: ['Forget', '渲酱', '与晕3d战至世界尽头', '企鹅handheld', 'OLDSCHOOL像素猫'],
+    },
+    {
+      role: '最终测试',
+      members: [
+        'Mark', 'Forget', 'Smirk', '芝士鹅瑞卷', '一个星期', '匿名1', '渲酱',
+        'yaetori', 'Phrygian', '汣酌', '哆啦海皇•A梦',
+      ],
+    },
+  ],
+
 
     routes: {
         announce: '/game/psx/p2is/announce',
@@ -48,7 +72,8 @@ export const p2is: GameConfig = {
     announcement: {
     version: 'v0.9.1',
     size: '',
-    updated: '2026-07-02',
+    releaseKind: 'full_game',
+    updated: '2026-09-13',
     videoUrl: '',
     downloadLinks: [
         {
@@ -64,13 +89,9 @@ export const p2is: GameConfig = {
     ],
     notes: [
         '这是民间汉化项目，与 ATLUS 官方无关。',
-        '请使用合法来源的游戏镜像。',
-        '补丁仍在更新中，可能存在文本错误、显示问题或未完成内容。',
     ],
     installGuide: [
-        '下载补丁文件。',
-        '根据发布说明将补丁应用到对应版本的游戏镜像。',
-        '使用模拟器或实机测试补丁。',
+        '下载文件并解压到游戏目录。使用模拟器启动即可游玩',
     ],
     knownIssues: [
         '部分菜单与系统文本在长字符串下可能溢出。',
@@ -78,13 +99,14 @@ export const p2is: GameConfig = {
         '战斗中较长的技能名可能出现换行异常。',
     ],
     changelog: [
+        {  version: 'v1.0.0', text: '完成，修复换行异常，漏翻，以及大量翻译重译' },
         {  version: 'v0.9.1', text: '修复换行异常，漏翻，以及大量翻译重译' },
         { version: 'v0.6.0', text: '翻译校对' },
     ],
     copyrightNotice:
         '本项目仅用于学习、研究和交流。游戏版权、商标和相关素材版权均属于 ATLUS 及原权利方。',
     resaleNotice:
-        '禁止打包转载、禁止转载资源、禁止倒卖、禁止打包收费、禁止将本补丁用于任何商业用途。',
+        '禁止打包转载、禁止转载资源、禁止倒卖、禁止打包收费、禁止用于任何商业用途。',
     sponsorNote:
         '如果你喜欢这个项目，可以选择赞助支持。赞助完全自愿，公开版本仍会正常发布。',
     },
