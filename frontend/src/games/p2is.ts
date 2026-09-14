@@ -70,7 +70,7 @@ export const p2is: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.9.1',
+    version: 'v1.0.0',
     size: '',
     releaseKind: 'full_game',
     updated: '2026-09-13',
