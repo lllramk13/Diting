@@ -28,6 +28,10 @@ GAMES = {
     'dsrk': ['field','event','battle','shop','jimusyo','gohmaden','exe','ui'],
 }
 
+# games whose bundled zh is a reviewed translation: a repeated jp line is only deduped
+# when every position already agrees on its zh
+KEEP_CONFLICTING_ZH_SEPARATE = {'p1'}
+
 SOURCE_NAME = {
     'p1': 'all_text.json',
     'dds1': 'translation.json',
@@ -213,13 +217,22 @@ def run(game, cats):
 
     jp_count = collections.Counter(p['jp'] for p in positions)
     jp_cats = collections.defaultdict(collections.Counter)
+    jp_zhs = collections.defaultdict(set)
     for p in positions:
         jp_cats[p['jp']][p['category']] += 1
+        jp_zhs[p['jp']].add(p['zh'])
+
+    def is_dup(jp):
+        # same jp spoken by different characters can be translated in different voices;
+        # sharing one translation would overwrite them, so those stay editable per position
+        if game in KEEP_CONFLICTING_ZH_SEPARATE and len(jp_zhs[jp]) > 1:
+            return False
+        return jp_count[jp] > 1
 
     dups = {}
     for p in positions:
         jp = p['jp']
-        if jp_count[jp] > 1 and jp not in dups:
+        if is_dup(jp) and jp not in dups:
             primary_cat = jp_cats[jp].most_common(1)[0][0]
             dups[jp] = {'id': dup_id(jp), 'jp': jp, 'zh': p['zh'],
                         'count': jp_count[jp], 'category': primary_cat}
@@ -233,7 +246,7 @@ def run(game, cats):
         row = {'id': p['pos_id'], 'jp': jp, 'zh': p['zh']}
         if p['speaker_jp']: row['speaker_jp'] = p['speaker_jp']
         if p['speaker_zh']: row['speaker_zh'] = p['speaker_zh']
-        row['dup'] = dups[jp]['id'] if jp_count[jp] > 1 else None
+        row['dup'] = dups[jp]['id'] if is_dup(jp) else None
         by_group[p['group']].append(row)
     for grp, rows in by_group.items():
         json.dump(rows, open(f'{ndir}/{fname(grp)}.json','w'), ensure_ascii=False)
@@ -257,7 +270,7 @@ def run(game, cats):
     json.dump({d['id']: {'category': d['category'], 'zh': d['zh']} for d in dups.values()},
               open(f'{OUT}/{game}/dup_map.json','w'), ensure_ascii=False)
 
-    editable = sum(1 for p in positions if jp_count[p['jp']] == 1)
+    editable = sum(1 for p in positions if not is_dup(p['jp']))
     print(f'  {game}: positions={len(positions)} groups={len(by_group)} '
           f'dup_sentences={len(dups)} editable={editable}')
 

@@ -1,0 +1,22 @@
+[
+{
+"category": "dfile",
+"set_key": "dup:dfile",
+"count": 10
+},
+{
+"category": "efile",
+"set_key": "dup:efile",
+"count": 75
+},
+{
+"category": "slps",
+"set_key": "dup:slps",
+"count": 29
+},
+{
+"category": "talk",
+"set_key": "dup:talk",
+"count": 2375
+}
+]
