@@ -36,7 +36,7 @@ export const p2is: GameConfig = {
     },
     {
       role: '修图',
-      members: ['Forget', '渲酱', '与晕3d战至世界尽头', '企鹅handheld', 'OLDSCHOOL像素猫'],
+      members: ['Forget', '渲酱', '与晕3d战至世界尽头', '企鹅handheld', 'OLDSCHOOL像素猫', 'starlightw'],
     },
     {
       role: '最终测试',
@@ -70,10 +70,10 @@ export const p2is: GameConfig = {
     ],
 
     announcement: {
-    version: 'v1.0.0',
+    version: 'v1.1.0',
     size: '',
     releaseKind: 'full_game',
-    updated: '2026-09-13',
+    updated: '2026-09-15',
     videoUrl: '',
     downloadLinks: [
         {
@@ -99,6 +99,7 @@ export const p2is: GameConfig = {
         '战斗中较长的技能名可能出现换行异常。',
     ],
     changelog: [
+        {  version: 'v1.1.0', text: '修复部分名词在其他对话差分下的不统一问题，修复部分文本措辞，修复部分文本顺序' },
         {  version: 'v1.0.0', text: '完成，修复换行异常，漏翻，以及大量翻译重译' },
         {  version: 'v0.9.1', text: '修复换行异常，漏翻，以及大量翻译重译' },
         { version: 'v0.6.0', text: '翻译校对' },
