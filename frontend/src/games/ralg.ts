@@ -4,7 +4,7 @@ export const ralg: GameConfig = {
   slug: 'ralg',
   title: 'Racing Lagoon',
   shortTitle: 'RALG',
-  platform: 'ps2',
+  platform: 'psx',
   series: 'Racing Lagoon',
 
   titleZh: '横滨极速传说',
