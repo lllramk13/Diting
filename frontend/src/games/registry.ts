@@ -7,8 +7,9 @@ import { dds1 } from './dds1'
 import { dds2 } from "./dds2";
 import { smtif } from "./smtif";
 import { dsrk } from "./dsrk";
+import { ralg } from "./ralg";
 
-export const games: GameConfig[] = [p2is, p2ep, p1, dds1, sf2, dds2, smtif, dsrk]
+export const games: GameConfig[] = [p2is, p2ep, p1, dds1, sf2, dds2, smtif, dsrk, ralg]
 
 export function getGameBySlug(slug: string): GameConfig | undefined {
     return games.find((game) => game.slug === slug)
