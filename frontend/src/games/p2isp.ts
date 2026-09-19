@@ -13,8 +13,8 @@ export const p2isp: GameConfig = {
     accentSoft: '#9FB8FF',
     ghostChar: '罪',
 
-    status: 'released',
-    progress: 100,
+    status: 'in_progress',
+    progress: 50,
 
     coverImage: "/games/p2isp/cover.jpg",
 
