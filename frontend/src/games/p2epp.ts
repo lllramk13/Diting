@@ -57,10 +57,6 @@ export const p2epp: GameConfig = {
         '根据发布说明将补丁应用到对应版本的游戏镜像。',
         '使用模拟器或实机测试补丁。',
     ],
-    knownIssues: [,
-    ],
-    changelog: [
-    ],
     copyrightNotice:
         '本项目仅用于学习、研究和交流。游戏版权、商标和相关素材版权均属于 ATLUS 及原权利方。',
     resaleNotice:

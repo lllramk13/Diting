@@ -60,8 +60,7 @@ export const p2isp: GameConfig = {
     installGuide: [
         '下载文件并解压到游戏目录。使用模拟器启动即可游玩',
     ],
-    knownIssues: [,
-    ],
+
     changelog: [
     ],
     copyrightNotice:
