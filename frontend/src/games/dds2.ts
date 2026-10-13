@@ -50,7 +50,7 @@ export const dds2: GameConfig = {
   announcement: {
     version: '完成',
     releaseKind: 'full_game',
-    updated: '2026-09-04',
+    updated: '2026-10-12',
     downloadLinks: [
       {
         label: '百度网盘',
