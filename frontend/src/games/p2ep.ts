@@ -12,8 +12,8 @@ export const p2ep: GameConfig = {
     accentSoft: '#FF8A98',
     ghostChar: '罚',
 
-    status: 'in_progress',
-    progress: 50,
+    status: 'released',
+    progress: 100,
 
     coverImage: "/games/p2ep/cover.jpg",
 
@@ -41,9 +41,9 @@ export const p2ep: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.3.2',
+    version: 'v0.4.0',
     size: '',
-    updated: '2026-07-02',
+    updated: '2026-10-26',
     videoUrl: '',
     downloadLinks: [
         {
@@ -73,6 +73,7 @@ export const p2ep: GameConfig = {
         '少量界面排版尚未适配长中文。',
     ],
     changelog: [
+        { version: 'v0.4.0', text: '修复大量乱码，漏翻，文本，程序问题' },
         { version: 'v0.3.1', text: '紧急修复错误补丁' },
         { version: 'v0.3.0', text: '修复输入法' },
         { version: 'v0.2.0', text: '修复搭话黑屏，地图乱码' },

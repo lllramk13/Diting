@@ -12,8 +12,8 @@ export const p2epp: GameConfig = {
     accentSoft: '#FF8A98',
     ghostChar: '罚',
 
-    status: 'in_progress',
-    progress: 50,
+    status: 'released',
+    progress: 100,
 
     coverImage: "/games/p2epp/cover.jpg",
 
@@ -22,6 +22,29 @@ export const p2epp: GameConfig = {
     groupIndexPath: '/games/p2epp/index.json',
 
     description: 'Persona 2: Eternal Punishment PSP 汉化项目。',
+    credits: [
+        { role: '程序', members: ['汣酌'] },
+        {
+            role: '校对&初翻',
+            members: [
+                '匿名1', 'kkksr', '雷吼君', 'Cattus.', 'lm11123lm', '平成鱼', 'yaetori', '匿名2',
+                'Phrygian', 'AAA国家电网哈萨维', '福建千里香混沌王', 'yang5000', 'silverman',
+                'lanberser', 'ycx', '迪元drivet', '夜里明光', 'zjh20061007', 'ylylk', 'spma',
+                'mark', 'Tharg', 'faraway', 'Hao66787012',
+            ],
+        },
+        {
+            role: '修图',
+            members: ['Forget', '渲酱', '与晕3d战至世界尽头', '企鹅handheld', 'OLDSCHOOL像素猫'],
+        },
+        {
+            role: 'PSP版最终测试',
+            members: [
+                'Mark', 'Forget', 'Smirk', '芝士鹅瑞卷', '一个星期', '匿名1', '渲酱',
+                'yaetori', 'Phrygian', '汣酌', '哆啦海皇•A梦',
+            ],
+        },
+    ],
 
     routes: {
         announce: '/game/psp/p2epp/announce',
@@ -41,11 +64,21 @@ export const p2epp: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.3.2',
+    version: 'v1.0.0',
     size: '',
-    updated: '2026-07-02',
+    updated: '2026-10-26',
     videoUrl: '',
-    downloadLinks: [
+    downloadLinks: [       
+        {
+        label: '百度网盘',
+        url: 'https://pan.baidu.com/s/1gK_N8fLeJTQrq1agvQ_39g?pwd=8k61',
+        note: '链接已更新',
+        },
+        {
+        label: 'MEGA',
+        url: 'https://mega.nz/folder/qIBxVLCR#JcUXe1m8P1COURR4nqxoTg',
+        note: '链接已更新',
+        },
     ],
     notes: [
         '这是民间汉化项目，与 ATLUS 官方无关。',

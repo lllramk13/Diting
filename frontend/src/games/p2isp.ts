@@ -13,8 +13,8 @@ export const p2isp: GameConfig = {
     accentSoft: '#9FB8FF',
     ghostChar: '罪',
 
-    status: 'in_progress',
-    progress: 50,
+    status: 'released',
+    progress: 100,
 
     coverImage: "/games/p2isp/cover.jpg",
 
@@ -23,6 +23,29 @@ export const p2isp: GameConfig = {
     groupIndexPath: '/games/p2isp/index.json',
 
     description: 'Persona 2: Innocent Sin PSP汉化项目。',
+    credits: [
+        { role: '程序', members: ['Mark'] },
+        {
+            role: '校对&初翻',
+            members: [
+                '匿名1', 'kkksr', '雷吼君', 'Cattus.', 'lm11123lm', '平成鱼', 'yaetori', '匿名2',
+                'Phrygian', 'AAA国家电网哈萨维', '福建千里香混沌王', 'yang5000', 'silverman',
+                'lanberser', 'ycx', '迪元drivet', '夜里明光', 'zjh20061007', 'ylylk', 'spma',
+                'mark', 'Tharg', 'faraway', 'Hao66787012',
+            ],
+        },
+        {
+            role: '修图',
+            members: ['Forget', '渲酱', '与晕3d战至世界尽头', '企鹅handheld', 'OLDSCHOOL像素猫'],
+        },
+        {
+            role: 'PSP版最终测试',
+            members: [
+                'Mark', 'Forget', 'Smirk', '芝士鹅瑞卷', '一个星期', '匿名1', '渲酱',
+                'yaetori', 'Phrygian', '汣酌', '哆啦海皇•A梦',
+            ],
+        },
+    ],
 
 
     routes: {
@@ -47,12 +70,22 @@ export const p2isp: GameConfig = {
     ],
 
     announcement: {
-    version: 'v0.0.0',
+    version: 'v1.0.0',
     size: '',
     releaseKind: 'full_game',
-    updated: '2026-09-19',
+    updated: '2026-10-26',
     videoUrl: '',
     downloadLinks: [
+    {
+        label: '百度网盘',
+        url: 'https://pan.baidu.com/s/15su2VVcuGgv1HofyPk7-Ow?pwd=wg5q',
+        note: '链接已更新',
+    },
+    {
+        label: 'MEGA',
+        url: 'https://mega.nz/folder/3RZ1QCLa#WG-GQc72Bcbh9tkBL2vdTg',
+        note: '链接已更新',
+    },
     ],
     notes: [
         '这是民间汉化项目，与 ATLUS 官方无关。',
