@@ -45,6 +45,7 @@ export const p2ep: GameConfig = {
     size: '',
     updated: '2026-10-26',
     videoUrl: '',
+    releaseKind: 'full_game',
     downloadLinks: [
         {
         label: '百度网盘',
