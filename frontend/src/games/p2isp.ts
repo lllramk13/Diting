@@ -30,7 +30,7 @@ export const p2isp: GameConfig = {
             members: [
                 '匿名1', 'kkksr', '雷吼君', 'Cattus.', '住院猫hiho', '平成鱼', 'yaetori', '匿名2',
                 'Phrygian', 'AAA国家电网哈萨维', '福建千里香混沌王', 'yang5000', 'silverman',
-                'lanberser', 'ycx', '迪元drivet', '夜里明光', 'zjh20061007', 'ylylk', 'spma',
+                'lanberser', 'ycx', '迪元drivet', '夜里明光', '住院猫hiho', 'ylylk', 'spma',
                 'mark', 'Tharg', 'faraway', 'Hao66787012',
             ],
         },
