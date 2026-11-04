@@ -17,7 +17,7 @@ export const ralg: GameConfig = {
 
   coverImage: '',
 
-  basePath: '/game/ps2/ralg',
+  basePath: '/game/ps1/ralg',
   dataPath: '/games/ralg',
   groupIndexPath: '/games/ralg/index.json',
 
@@ -29,13 +29,13 @@ export const ralg: GameConfig = {
   ],
 
   routes: {
-    announce: '/game/ps2/ralg/announce',
-    main: '/game/ps2/ralg/main',
-    search: '/game/ps2/ralg/search',
-    issues: '/game/ps2/ralg/issues',
-    glossary: '/game/ps2/ralg/glossary',
-    requests: '/game/ps2/ralg/requests',
-    font: '/game/ps2/ralg/font',
+    announce: '/game/ps1/ralg/announce',
+    main: '/game/ps1/ralg/main',
+    search: '/game/ps1/ralg/search',
+    issues: '/game/ps1/ralg/issues',
+    glossary: '/game/ps1/ralg/glossary',
+    requests: '/game/ps1/ralg/requests',
+    font: '/game/ps1/ralg/font',
   },
 
   categories: ['field', 'battle', 'jimusyo', 'gohmaden', 'shop', 'event', 'exe', 'ui'],
