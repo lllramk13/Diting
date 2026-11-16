@@ -64,9 +64,9 @@ export const p2epp: GameConfig = {
     ],
 
     announcement: {
-    version: 'v1.0.0',
+    version: 'v1.1.0',
     size: '',
-    updated: '2026-10-26',
+    updated: '2026-11-16',
     releaseKind: 'full_game',
     videoUrl: '',
     downloadLinks: [       

@@ -70,10 +70,10 @@ export const p2isp: GameConfig = {
     ],
 
     announcement: {
-    version: 'v1.0.0',
+    version: 'v1.1.0',
     size: '',
     releaseKind: 'full_game',
-    updated: '2026-10-26',
+    updated: '2026-11-16',
     videoUrl: '',
     downloadLinks: [
     {
